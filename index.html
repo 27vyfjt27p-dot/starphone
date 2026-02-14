@@ -49,17 +49,16 @@
 </head>
 <body class="pb-40">
     <div id="update-announcement" class="fixed top-24 inset-x-4 z-[5000] transform -translate-y-32 opacity-0 transition-all duration-700 pointer-events-none">
-        <div class="max-w-md mx-auto bg-white/80 backdrop-blur-xl border border-white/20 p-5 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.15)] flex items-center gap-4 pointer-events-auto">
-            <div class="flex-shrink-0 w-12 h-12 bg-slate-900 rounded-2xl flex items-center justify-center shadow-lg text-blue-400">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-                </svg>
+        <div class="max-w-md mx-auto bg-white/80 backdrop-blur-xl border border-white/20 p-4 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] flex items-center justify-between gap-4 pointer-events-auto">
+            <div class="flex items-center gap-3">
+                <div class="flex-shrink-0 w-10 h-10 bg-slate-900 rounded-2xl flex items-center justify-center text-blue-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                    </svg>
+                </div>
+                <h4 class="text-[14px] font-black uppercase tracking-wider text-slate-900">CATALOGO ACTUALIZADO</h4>
             </div>
-            <div class="flex-1">
-                <h4 class="text-[14px] font-black uppercase tracking-wider text-slate-900">Catálogo Actualizado</h4>
-                <p class="text-[11px] font-medium text-slate-500 leading-tight">Precios y stock sincronizados. Descubre nuestras novedades premium hoy.</p>
-            </div>
-            <button onclick="hideAnnouncement()" class="w-9 h-9 flex items-center justify-center bg-slate-100/50 hover:bg-white rounded-full text-slate-400 hover:text-slate-900 transition-all">✕</button>
+            <button onclick="hideAnnouncement()" class="w-8 h-8 flex items-center justify-center bg-slate-100 hover:bg-white rounded-full text-slate-400 hover:text-slate-900 transition-all">✕</button>
         </div>
     </div>
 
@@ -135,10 +134,7 @@
                 sources = await res.json();
                 if (sources.length > 0) {
                     currentSourceKey = sources[0].key;
-                    
-                    // --- 核心改动：直接监控 products.json 的日期 ---
                     checkProductsFileDate();
-
                     renderSourceTabs(); 
                     const allCarts = JSON.parse(localStorage.getItem('starphone_carts_v2') || '{}');
                     const allNotes = JSON.parse(localStorage.getItem('starphone_notes_v2') || '{}');
@@ -149,20 +145,15 @@
             } catch(e) { console.error(e); }
         }
 
-        // 新增：自动检查 products.json 修改日期
         async function checkProductsFileDate() {
             try {
-                // 直接 fetch products.json 获取 HEAD 信息
                 const response = await fetch('products.json', { method: 'HEAD' });
                 const lastModified = response.headers.get('Last-Modified');
-
                 if (lastModified) {
                     const savedDate = localStorage.getItem('starphone_products_modified');
-                    // 如果服务器日期变了，且本地已有记录，则弹窗
                     if (savedDate && savedDate !== lastModified) {
                         showAnnouncement(lastModified);
                     } else {
-                        // 首次访问或日期未变，静默更新记录
                         localStorage.setItem('starphone_products_modified', lastModified);
                     }
                 }
@@ -173,8 +164,8 @@
             const el = document.getElementById('update-announcement');
             el.classList.remove('-translate-y-32', 'opacity-0', 'pointer-events-none');
             el.classList.add('translate-y-0', 'opacity-100');
-            // 5秒后自动关闭
-            announcementTimer = setTimeout(() => { hideAnnouncement(newDate); }, 5000);
+            // 已修改：改为10秒（10000ms）
+            announcementTimer = setTimeout(() => { hideAnnouncement(newDate); }, 10000);
         }
 
         function hideAnnouncement(dateToSave) {
