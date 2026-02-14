@@ -7,7 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        /* 修复点 2：去掉 overflow-x: hidden，允许手机端横向滑动查看溢出部分 */
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
             background-color: #f8fafc; 
@@ -17,7 +16,6 @@
         }
         .no-scrollbar::-webkit-scrollbar { display: none; }
         
-        /* 电脑端基础样式 */
         .product-card { display: flex; flex-direction: column; height: 100%; position: relative; transition: all 0.3s ease; border-radius: 1.5rem; border: 1px solid #f1f5f9; background: white; }
         .image-container { position: relative; width: 100%; padding-top: 100%; background: #fff; border-radius: 1.5rem 1.5rem 0 0; overflow: hidden; cursor: zoom-in; }
         .image-container img { position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto; max-width: 90%; max-height: 90%; object-fit: contain; }
@@ -45,12 +43,26 @@
             .controls-container { width: 110px !important; flex-shrink: 0 !important; padding: 0 0 0 0.5rem !important; }
         }
 
-        /* 修复点 3：过滤器按钮激活变色样式 */
         #filter-btn.filter-active-notify { background-color: #ef4444 !important; position: relative; }
         #filter-btn.filter-active-notify::after { content: ""; position: absolute; top: -2px; right: -2px; width: 10px; height: 10px; background-color: #fbbf24; border-radius: 50%; border: 2px solid white; }
     </style>
 </head>
 <body class="pb-40">
+    <div id="update-announcement" class="fixed top-24 inset-x-4 z-[5000] transform -translate-y-32 opacity-0 transition-all duration-700 pointer-events-none">
+        <div class="max-w-md mx-auto bg-white/80 backdrop-blur-xl border border-white/20 p-5 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.15)] flex items-center gap-4 pointer-events-auto">
+            <div class="flex-shrink-0 w-12 h-12 bg-slate-900 rounded-2xl flex items-center justify-center shadow-lg text-blue-400">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                </svg>
+            </div>
+            <div class="flex-1">
+                <h4 class="text-[14px] font-black uppercase tracking-wider text-slate-900">Catálogo Actualizado</h4>
+                <p class="text-[11px] font-medium text-slate-500 leading-tight">Precios y stock sincronizados. Descubre nuestras novedades premium hoy.</p>
+            </div>
+            <button onclick="hideAnnouncement()" class="w-9 h-9 flex items-center justify-center bg-slate-100/50 hover:bg-white rounded-full text-slate-400 hover:text-slate-900 transition-all">✕</button>
+        </div>
+    </div>
+
     <header class="glass-header sticky top-0 z-40 p-4 lg:px-10 border-b border-slate-100">
         <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
             <h1 class="text-xl font-black text-slate-900 italic uppercase cursor-pointer" onclick="location.reload()">STARPHONE</h1>
@@ -111,11 +123,11 @@
     </div>
 
     <script>
-        // JS 核心逻辑（保持 300+ 行的完整内容）
         let products = [], cart = {}, productNotes = {}, sources = [], currentSourceKey = null;
         let activeContactIndex = 0;
         const CONTACTS = [{name: "Axin", phone: "56926108498"}, {name: "Ivan", phone: "59168043587"}];
         let activeFilters = { keyword: "", MARCA: null, CATEGORIA: null, TIPO: null };
+        let announcementTimer; 
 
         async function init() {
             try {
@@ -123,6 +135,10 @@
                 sources = await res.json();
                 if (sources.length > 0) {
                     currentSourceKey = sources[0].key;
+                    
+                    // --- 核心：自动检查文件修改日期 ---
+                    checkUpdateByFileDate();
+
                     renderSourceTabs(); 
                     const allCarts = JSON.parse(localStorage.getItem('starphone_carts_v2') || '{}');
                     const allNotes = JSON.parse(localStorage.getItem('starphone_notes_v2') || '{}');
@@ -133,6 +149,42 @@
             } catch(e) { console.error(e); }
         }
 
+        // 自动检查逻辑：利用 HEAD 请求获取 Last-Modified
+        async function checkUpdateByFileDate() {
+            try {
+                const mainFile = sources[0].file;
+                const response = await fetch(mainFile, { method: 'HEAD' });
+                const lastModified = response.headers.get('Last-Modified');
+
+                if (lastModified) {
+                    const savedDate = localStorage.getItem('starphone_last_file_modified');
+                    // 如果日期变了，且不是第一次访问（已有savedDate），则提示
+                    if (savedDate && savedDate !== lastModified) {
+                        showAnnouncement(lastModified);
+                    } else {
+                        // 记录当前日期作为基准
+                        localStorage.setItem('starphone_last_file_modified', lastModified);
+                    }
+                }
+            } catch (e) { console.log("Header check skip"); }
+        }
+
+        function showAnnouncement(newDate) {
+            const el = document.getElementById('update-announcement');
+            el.classList.remove('-translate-y-32', 'opacity-0', 'pointer-events-none');
+            el.classList.add('translate-y-0', 'opacity-100');
+            announcementTimer = setTimeout(() => { hideAnnouncement(newDate); }, 5000);
+        }
+
+        function hideAnnouncement(dateToSave) {
+            const el = document.getElementById('update-announcement');
+            el.classList.add('-translate-y-32', 'opacity-0', 'pointer-events-none');
+            el.classList.remove('translate-y-0', 'opacity-100');
+            clearTimeout(announcementTimer);
+            if (dateToSave) localStorage.setItem('starphone_last_file_modified', dateToSave);
+        }
+
+        // 以下为你原有的业务逻辑（loadProducts, render 等，完全保留）...
         async function loadProducts() {
             try {
                 const src = sources.find(s => s.key === currentSourceKey);
@@ -155,16 +207,12 @@
             if (currentSourceKey === key) return;
             saveToLocal();
             currentSourceKey = key; 
-            
-            // 修复点：强制重置视口位置，防止卡在右边
             window.scrollTo(0, 0);
             document.documentElement.scrollLeft = 0;
-
             const allCarts = JSON.parse(localStorage.getItem('starphone_carts_v2') || '{}');
             const allNotes = JSON.parse(localStorage.getItem('starphone_notes_v2') || '{}');
             cart = allCarts[key] || {};
             productNotes = allNotes[key] || {};
-            
             renderSourceTabs(); 
             closeAllModals(); 
             loadProducts(); 
@@ -176,14 +224,12 @@
                 const matchKeyword = !keyword || (p.PRODUCTO + (p.MARCA||"") + (p.CATEGORIA||"") + (p.TIPO||"")).toUpperCase().includes(keyword.toUpperCase());
                 return matchKeyword && (!MARCA || p.MARCA === MARCA) && (!CATEGORIA || p.CATEGORIA === CATEGORIA) && (!TIPO || p.TIPO === TIPO);
             });
-            
             const grid = document.getElementById('grid');
             if (filtered.length === 0) {
                 grid.innerHTML = `<div class="col-span-full py-20 text-center"><h3 class="text-lg font-black text-slate-900 uppercase">Sin resultados</h3><button onclick="resetFilters()" class="mt-6 px-8 py-3 bg-slate-900 text-white rounded-2xl font-bold text-xs uppercase shadow-lg">Limpiar filtros</button></div>`;
                 updateCartBar();
                 return;
             }
-
             grid.innerHTML = filtered.map(p => {
                 const q = cart[p.id] || 0;
                 const imgUrl = p.Imagen_Path ? encodeURI(p.Imagen_Path.replace(/\\/g, '/')) : '';
@@ -229,7 +275,6 @@
             const marcas = [...new Set(products.map(p => p.MARCA).filter(Boolean))].sort(); 
             const categorias = [...new Set(products.map(p => p.CATEGORIA).filter(Boolean))].sort(); 
             const tipos = [...new Set(products.map(p => p.TIPO).filter(Boolean))].sort(); 
-
             const createBtn = (list, type) => list.map(item => {
                 const isActive = activeFilters[type] === item;
                 const hasResults = products.some(p => {
@@ -242,7 +287,6 @@
                 let btnClass = isActive ? "bg-slate-800 text-white border-slate-800 shadow-inner" : (hasResults ? "bg-white text-slate-600 border-slate-100 hover:border-slate-300" : "bg-slate-50 text-slate-300 border-slate-50 opacity-50 cursor-not-allowed");
                 return `<button onclick="${hasResults || isActive ? `setFilter('${type}', '${item}')` : ''}" class="w-full text-left px-5 py-3 rounded-xl text-[11px] font-bold border uppercase transition-all duration-200 ${btnClass}">${item}${isActive ? '<span class="float-right">✕</span>' : ''}</button>`;
             }).join(''); 
-
             let html = ""; 
             if(categorias.length > 0) html += `<div><div class="flex justify-between items-center mb-3"><h3 class="text-blue-500 font-black text-[10px] uppercase tracking-widest">1. Categorías</h3>${activeFilters.CATEGORIA ? `<button onclick="setFilter('CATEGORIA', null)" class="text-[9px] font-bold text-slate-400 uppercase">Limpiar</button>` : ''}</div><div class="grid grid-cols-1 gap-1">${createBtn(categorias, 'CATEGORIA')}</div></div>`;
             if(marcas.length > 0) html += `<div class="mt-6"><div class="flex justify-between items-center mb-3"><h3 class="text-indigo-500 font-black text-[10px] uppercase tracking-widest">2. Marcas</h3>${activeFilters.MARCA ? `<button onclick="setFilter('MARCA', null)" class="text-[9px] font-bold text-slate-400 uppercase">Limpiar</button>` : ''}</div><div class="grid grid-cols-1 gap-1">${createBtn(marcas, 'MARCA')}</div></div>`;
@@ -250,7 +294,6 @@
             document.getElementById('filter-content').innerHTML = html; 
         }
 
-        // 购物车与杂项函数（完整保留）
         function updateQty(id, chg) { let n = (cart[id] || 0) + chg; if (n <= 0) { delete cart[id]; delete productNotes[id]; } else cart[id] = n; saveToLocal(); render(); if(document.getElementById('cart-modal').classList.contains('active')) refreshCartModal(); }
         function setQty(id, val) { let n = parseInt(val); if (isNaN(n) || n <= 0) { delete cart[id]; delete productNotes[id]; } else { cart[id] = n; } saveToLocal(); render(); if(document.getElementById('cart-modal').classList.contains('active')) refreshCartModal(); }
         function toggleCartModal() { const isActive = document.getElementById('cart-modal').classList.toggle('active'); document.getElementById('modal-overlay').classList.toggle('hidden', !isActive); if(isActive) refreshCartModal(); }
