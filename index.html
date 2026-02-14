@@ -136,8 +136,8 @@
                 if (sources.length > 0) {
                     currentSourceKey = sources[0].key;
                     
-                    // --- 核心：自动检查文件修改日期 ---
-                    checkUpdateByFileDate();
+                    // --- 核心改动：直接监控 products.json 的日期 ---
+                    checkProductsFileDate();
 
                     renderSourceTabs(); 
                     const allCarts = JSON.parse(localStorage.getItem('starphone_carts_v2') || '{}');
@@ -149,30 +149,31 @@
             } catch(e) { console.error(e); }
         }
 
-        // 自动检查逻辑：利用 HEAD 请求获取 Last-Modified
-        async function checkUpdateByFileDate() {
+        // 新增：自动检查 products.json 修改日期
+        async function checkProductsFileDate() {
             try {
-                const mainFile = sources[0].file;
-                const response = await fetch(mainFile, { method: 'HEAD' });
+                // 直接 fetch products.json 获取 HEAD 信息
+                const response = await fetch('products.json', { method: 'HEAD' });
                 const lastModified = response.headers.get('Last-Modified');
 
                 if (lastModified) {
-                    const savedDate = localStorage.getItem('starphone_last_file_modified');
-                    // 如果日期变了，且不是第一次访问（已有savedDate），则提示
+                    const savedDate = localStorage.getItem('starphone_products_modified');
+                    // 如果服务器日期变了，且本地已有记录，则弹窗
                     if (savedDate && savedDate !== lastModified) {
                         showAnnouncement(lastModified);
                     } else {
-                        // 记录当前日期作为基准
-                        localStorage.setItem('starphone_last_file_modified', lastModified);
+                        // 首次访问或日期未变，静默更新记录
+                        localStorage.setItem('starphone_products_modified', lastModified);
                     }
                 }
-            } catch (e) { console.log("Header check skip"); }
+            } catch (e) { console.log("Date check skipped"); }
         }
 
         function showAnnouncement(newDate) {
             const el = document.getElementById('update-announcement');
             el.classList.remove('-translate-y-32', 'opacity-0', 'pointer-events-none');
             el.classList.add('translate-y-0', 'opacity-100');
+            // 5秒后自动关闭
             announcementTimer = setTimeout(() => { hideAnnouncement(newDate); }, 5000);
         }
 
@@ -181,10 +182,9 @@
             el.classList.add('-translate-y-32', 'opacity-0', 'pointer-events-none');
             el.classList.remove('translate-y-0', 'opacity-100');
             clearTimeout(announcementTimer);
-            if (dateToSave) localStorage.setItem('starphone_last_file_modified', dateToSave);
+            if (dateToSave) localStorage.setItem('starphone_products_modified', dateToSave);
         }
 
-        // 以下为你原有的业务逻辑（loadProducts, render 等，完全保留）...
         async function loadProducts() {
             try {
                 const src = sources.find(s => s.key === currentSourceKey);
