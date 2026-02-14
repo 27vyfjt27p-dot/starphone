@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Starphone - Catálogo Premium</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         body { 
@@ -25,8 +26,31 @@
         .detail-content.active { visibility: visible !important; opacity: 1 !important; transform: translateY(0); pointer-events: auto; }
         .product-card.top-z { z-index: 50 !important; }
 
-        #lightbox-img { transition: transform 0.3s ease; max-width: 95%; max-height: 85vh; object-fit: contain; }
+        #lightbox-img { transition: transform 0.3s ease; max-width: 95%; max-height: 85vh; object-fit: contain; pointer-events: auto; }
         .zoom-active { cursor: zoom-out; transform: scale(1.5); }
+        
+        /* 💡 新增：好看且显眼的 X 按钮样式 */
+        .close-lightbox-btn { 
+            position: fixed; 
+            top: 25px; 
+            right: 25px; 
+            width: 50px; 
+            height: 50px; 
+            background: rgba(0, 0, 0, 0.6); 
+            border: 2px solid rgba(255, 255, 255, 0.8); 
+            border-radius: 50%; 
+            color: white; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 28px; 
+            font-weight: bold; 
+            z-index: 2200; 
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            backdrop-filter: blur(5px);
+        }
+
         .product-title { color: #dc2626; font-weight: 700; font-size: 0.9rem; cursor: pointer; }
         .glass-header { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); }
 
@@ -100,6 +124,14 @@
                 <span class="text-slate-500 font-bold uppercase text-[10px] tracking-widest">Total:</span>
                 <span id="cart-total-modal" class="text-2xl font-black text-slate-900">$0.00</span>
             </div>
+
+            <button onclick="generateOrderPoster(event)" class="w-full mb-3 bg-white border-2 border-slate-900 text-slate-900 py-3 rounded-2xl font-black uppercase text-xs flex items-center justify-center gap-2 active:scale-95 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                Generar Imagen de Pedido
+            </button>
+
             <div class="flex gap-2 mb-4 bg-slate-100 p-1 rounded-full">
                 <button id="btn-contact-0" onclick="selectContact(0)" class="flex-1 py-3 rounded-full text-xs font-bold transition-all">AXIN</button>
                 <button id="btn-contact-1" onclick="selectContact(1)" class="flex-1 py-3 rounded-full text-xs font-bold transition-all">IVAN</button>
@@ -117,7 +149,8 @@
         <button onclick="closeAllModals()" class="mt-4 w-full bg-slate-900 text-white py-4 rounded-xl font-bold uppercase text-sm">Ver Resultados</button>
     </div>
 
-    <div id="modal-overlay" class="fixed inset-0 bg-black/60 z-[1500] hidden backdrop-blur-sm flex items-center justify-center" onclick="closeAllModals()">
+    <div id="modal-overlay" class="fixed inset-0 bg-black/70 z-[1500] hidden backdrop-blur-sm flex items-center justify-center" onclick="closeAllModals()">
+        <button id="lightbox-close-btn" class="close-lightbox-btn hidden" onclick="event.stopPropagation(); closeAllModals()">✕</button>
         <img id="lightbox-img" src="" class="hidden" onclick="event.stopPropagation(); this.classList.toggle('zoom-active')">
     </div>
 
@@ -164,7 +197,6 @@
             const el = document.getElementById('update-announcement');
             el.classList.remove('-translate-y-32', 'opacity-0', 'pointer-events-none');
             el.classList.add('translate-y-0', 'opacity-100');
-            // 已修改：改为10秒（10000ms）
             announcementTimer = setTimeout(() => { hideAnnouncement(newDate); }, 10000);
         }
 
@@ -224,6 +256,19 @@
             grid.innerHTML = filtered.map(p => {
                 const q = cart[p.id] || 0;
                 const imgUrl = p.Imagen_Path ? encodeURI(p.Imagen_Path.replace(/\\/g, '/')) : '';
+                
+                let boxDisplay = '';
+                let rawBox = p['VIENE_LA_CAJA'];
+                if (rawBox && String(rawBox).trim() !== '' && String(rawBox).trim().toUpperCase() !== 'D') {
+                    let strBox = String(rawBox).trim();
+                    let isNumeric = /^\d+$/.test(strBox);
+                    if (isNumeric) {
+                        boxDisplay = `<span class="text-blue-600 text-[11px] font-bold ml-2 flex items-center gap-1">📦 ${strBox}</span>`;
+                    } else {
+                        boxDisplay = `<span class="text-blue-600 text-[10px] font-bold ml-2 uppercase">${strBox}</span>`;
+                    }
+                }
+
                 return `
                 <div id="card-${p.id}" class="product-card shadow-sm">
                     <div class="image-container" onclick="openLightbox('${imgUrl}')"><img src="${imgUrl}" loading="lazy"></div>
@@ -239,8 +284,9 @@
                                 ${p.DESC_FULL || 'Sin descripción.'}
                             </div>
                         </div>
-                        <div class="mt-2">
+                        <div class="mt-2 flex items-center flex-wrap">
                             <span class="text-lg font-black text-slate-900">$${p['Precio ( USD )']}</span>
+                            ${boxDisplay}
                         </div>
                     </div>
                     <div class="controls-container p-4 pt-0">
@@ -253,6 +299,83 @@
                 </div>`;
             }).join('');
             updateCartBar();
+        }
+
+        function updateQty(id, chg) { let n = (cart[id] || 0) + chg; if (n <= 0) { delete cart[id]; delete productNotes[id]; } else cart[id] = n; saveToLocal(); render(); if(document.getElementById('cart-modal').classList.contains('active')) refreshCartModal(); }
+        function setQty(id, val) { let n = parseInt(val); if (isNaN(n) || n <= 0) { delete cart[id]; delete productNotes[id]; } else { cart[id] = n; } saveToLocal(); render(); if(document.getElementById('cart-modal').classList.contains('active')) refreshCartModal(); }
+        function toggleCartModal() { const isActive = document.getElementById('cart-modal').classList.toggle('active'); document.getElementById('modal-overlay').classList.toggle('hidden', !isActive); if(isActive) refreshCartModal(); }
+        
+        function closeAllModals() { 
+            document.querySelectorAll('.detail-content').forEach(d => d.classList.remove('active')); 
+            document.getElementById('cart-modal').classList.remove('active'); 
+            document.getElementById('filter-menu').classList.add('translate-x-full'); 
+            document.getElementById('modal-overlay').classList.add('hidden'); 
+            document.getElementById('lightbox-img').classList.add('hidden'); 
+            document.getElementById('lightbox-close-btn').classList.add('hidden'); 
+            document.body.style.overflow = ''; 
+        }
+
+        function saveToLocal() { const allCarts = JSON.parse(localStorage.getItem('starphone_carts_v2') || '{}'); const allNotes = JSON.parse(localStorage.getItem('starphone_notes_v2') || '{}'); allCarts[currentSourceKey] = cart; allNotes[currentSourceKey] = productNotes; localStorage.setItem('starphone_carts_v2', JSON.stringify(allCarts)); localStorage.setItem('starphone_notes_v2', JSON.stringify(allNotes)); }
+        function updateCartBar() { let totalItems = 0, totalPrice = 0; for (let id in cart) { const p = products.find(i => i.id == id); if (p) { totalItems += cart[id]; totalPrice += (parseFloat(p['Precio ( USD )']) || 0) * cart[id]; } } document.getElementById('cart-bar').classList.toggle('hidden', totalItems === 0); document.getElementById('cart-info').innerText = totalItems; document.getElementById('cart-total-bar').innerText = `$${totalPrice.toLocaleString('en-US',{minimumFractionDigits:2})}`; }
+        
+        let searchTimeout;
+        function handleKeywordInput() {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                activeFilters.keyword = document.getElementById('search').value;
+                render();
+                renderFilters();
+                updateFilterIconStatus();
+            }, 300);
+        }
+
+        function setFilter(type, val) { if (activeFilters[type] === val) { activeFilters[type] = null; } else { activeFilters[type] = val; } renderFilters(); render(); updateFilterIconStatus(); }
+        function resetFilters(shouldRender = true) { activeFilters = { keyword: "", MARCA: null, CATEGORIA: null, TIPO: null }; document.getElementById('search').value = ""; if(shouldRender) { renderFilters(); render(); } updateFilterIconStatus(); }
+        
+        function openLightbox(src) { 
+            if(!src) return; 
+            const img = document.getElementById('lightbox-img'); 
+            img.src = src; 
+            img.classList.remove('hidden', 'zoom-active'); 
+            document.getElementById('lightbox-close-btn').classList.remove('hidden'); 
+            document.getElementById('modal-overlay').classList.remove('hidden'); 
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function toggleMenu() { const menu = document.getElementById('filter-menu'); menu.classList.toggle('translate-x-full'); document.getElementById('modal-overlay').classList.toggle('hidden', menu.classList.contains('translate-x-full')); }
+        function selectContact(i) { activeContactIndex = i; [0,1].forEach(idx => document.getElementById(`btn-contact-${idx}`).className = idx === i ? "flex-1 py-3 rounded-full text-xs font-black bg-blue-600 text-white shadow-md" : "flex-1 py-3 rounded-full text-xs font-bold bg-transparent text-slate-400"); }
+        function toggleDetail(id, isHover = false) { if(window.innerWidth <= 768) return; const el = document.getElementById(`detail-${id}`); const card = document.getElementById(`card-${id}`); if(isHover) { card.classList.add('top-z'); el.classList.add('active'); card.onmouseleave = () => { el.classList.remove('active'); card.classList.remove('top-z'); }; } }
+        function refreshCartModal() { const list = document.getElementById('cart-items-list'); let html = ""; for (let id in cart) { const p = products.find(i => i.id == id); if(!p) continue; html += `<div class="bg-white p-4 rounded-2xl border border-slate-200"><div class="flex items-center gap-3 mb-2"><img src="${p.Imagen_Path ? encodeURI(p.Imagen_Path.replace(/\\/g, '/')) : ''}" class="w-14 h-14 rounded-lg object-contain bg-slate-50"><div class="flex-1 min-w-0"><h4 class="text-[11px] font-bold text-slate-800 truncate uppercase">${p.PRODUCTO}</h4><span class="text-blue-600 font-bold">$${p['Precio ( USD )']}</span></div><div class="flex items-center bg-slate-50 rounded-lg border"><button onclick=\"updateQty(${id},-1)\" class=\"px-2 py-1 text-slate-400 font-bold\">-</button><input type=\"number\" value=\"${cart[id]}\" onchange=\"setQty(${id}, this.value)\" class=\"qty-input-manual\"><button onclick=\"updateQty(${id},1)\" class=\"px-2 py-1 text-blue-500 font-bold\">+</button></div><button onclick=\"setQty(${id}, 0)\" class=\"p-2 text-red-500\">×</button></div><input type=\"text\" placeholder=\"Nota...\" class=\"note-input\" value=\"${productNotes[id]||''}\" oninput=\"productNotes[${id}]=this.value; saveToLocal()\"></div>`; } list.innerHTML = html || "<p class='text-center py-20 text-slate-400 font-bold uppercase'>Tu lista está vacía</p>"; updateCartTotalDisplay(); }
+        function updateCartTotalDisplay() { let total = 0; for (let id in cart) { const p = products.find(i => i.id == id); if (p) total += (parseFloat(p['Precio ( USD )']) || 0) * cart[id]; } document.getElementById('cart-total-modal').innerText = `$${total.toLocaleString('en-US',{minimumFractionDigits:2})}`; }
+        function sendWhatsApp() { const contact = CONTACTS[activeContactIndex]; let total = 0, m = `⭐ *NUEVO PEDIDO STARPHONE*\n--------------------------\n`; for(let id in cart) { const p = products.find(i => i.id == id); if (p) { const sub = (parseFloat(p['Precio ( USD )']) || 0) * cart[id]; total += sub; m += `✅ *${p.PRODUCTO}*${productNotes[id] ? `\n   Nota: ${productNotes[id]}` : ''}\n   Cant: ${cart[id]} | Sub: *$${sub.toFixed(2)}*\n\n`; } } m += `--------------------------\n💰 *TOTAL PEDIDO: $${total.toFixed(2)}*`; window.open(`https://wa.me/${contact.phone}?text=${encodeURIComponent(m)}`); }
+
+        // --- 海报生成逻辑 ---
+        async function generateOrderPoster(event) {
+            if (Object.keys(cart).length === 0) return alert("El carrito está vacío");
+            const btn = event.currentTarget;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = "Generando...";
+            btn.disabled = true;
+            const poster = document.createElement('div');
+            poster.style.cssText = "position:fixed; left:-9999px; width:500px; background:white; padding:40px; font-family:'Plus Jakarta Sans',sans-serif;";
+            let itemsHtml = ""; let total = 0;
+            for (let id in cart) {
+                const p = products.find(i => i.id == id);
+                if (p) {
+                    const sub = (parseFloat(p['Precio ( USD )']) || 0) * cart[id];
+                    total += sub;
+                    itemsHtml += `<div style="display:flex; justify-content:space-between; border-bottom:1px solid #f1f5f9; padding:15px 0; align-items: center;"><div style="flex:1; padding-right:20px;"><div style="font-weight:800; font-size:14px; color:#0f172a; text-transform:uppercase; line-height:1.2; margin-bottom:4px;">${p.PRODUCTO}</div><div style="font-size:12px; color:#64748b;"><span style="background:#f1f5f9; padding:2px 6px; border-radius:4px; font-weight:700; color:#0f172a;">${cart[id]} UNI</span> x $${p['Precio ( USD )']} ${productNotes[id] ? `<span style="color:#2563eb; margin-left:8px;">[${productNotes[id]}]</span>` : ''}</div></div><div style="font-weight:900; font-size:16px; color:#0f172a; white-space:nowrap;">$${sub.toFixed(2)}</div></div>`;
+                }
+            }
+            poster.innerHTML = `<div style="border-bottom:5px solid #0f172a; padding-bottom:20px; margin-bottom:25px; display:flex; justify-content:space-between; align-items:flex-end;"><div><h1 style="font-size:36px; font-weight:900; font-style:italic; color:#0f172a; margin:0; letter-spacing:-1px;">STARPHONE</h1><p style="font-size:12px; font-weight:800; color:#2563eb; margin:4px 0 0 0; text-transform:uppercase; letter-spacing:2px;">Confirmación de Pedido</p></div><div style="text-align:right; font-size:11px; color:#64748b; font-weight:600;">${new Date().toLocaleDateString()}</div></div><div>${itemsHtml}</div><div style="margin-top:30px; display:flex; justify-content:space-between; align-items:center; background:#0f172a; padding:25px; border-radius:20px;"><span style="font-size:14px; font-weight:800; color:#94a3b8; text-transform:uppercase; tracking-widest">Total del Pedido:</span><span style="font-size:32px; font-weight:900; color:#ffffff;">$${total.toLocaleString('en-US',{minimumFractionDigits:2})}</span></div><div style="margin-top:30px; text-align:center;"><p style="font-size:11px; font-weight:700; color:#cbd5e1; text-transform:uppercase; letter-spacing:1px;">Generado el: ${new Date().toLocaleString()}</p></div>`;
+            document.body.appendChild(poster);
+            try {
+                const canvas = await html2canvas(poster, { scale: 2, useCORS: true, backgroundColor: "#ffffff" });
+                const link = document.createElement('a');
+                link.download = `Pedido_Starphone_${new Date().getTime()}.png`;
+                link.href = canvas.toDataURL("image/png");
+                link.click();
+            } catch (err) { alert("No se pudo generar la imagen"); } finally { document.body.removeChild(poster); btn.innerHTML = originalText; btn.disabled = false; }
         }
 
         function updateFilterIconStatus() {
@@ -284,23 +407,6 @@
             if(tipos.length > 0) html += `<div class="mt-6"><div class="flex justify-between items-center mb-3"><h3 class="text-slate-400 font-black text-[10px] uppercase tracking-widest">3. Otros Tipos</h3>${activeFilters.TIPO ? `<button onclick="setFilter('TIPO', null)" class="text-[9px] font-bold text-slate-400 uppercase">Limpiar</button>` : ''}</div><div class="grid grid-cols-1 gap-1">${createBtn(tipos, 'TIPO')}</div></div>`;
             document.getElementById('filter-content').innerHTML = html; 
         }
-
-        function updateQty(id, chg) { let n = (cart[id] || 0) + chg; if (n <= 0) { delete cart[id]; delete productNotes[id]; } else cart[id] = n; saveToLocal(); render(); if(document.getElementById('cart-modal').classList.contains('active')) refreshCartModal(); }
-        function setQty(id, val) { let n = parseInt(val); if (isNaN(n) || n <= 0) { delete cart[id]; delete productNotes[id]; } else { cart[id] = n; } saveToLocal(); render(); if(document.getElementById('cart-modal').classList.contains('active')) refreshCartModal(); }
-        function toggleCartModal() { const isActive = document.getElementById('cart-modal').classList.toggle('active'); document.getElementById('modal-overlay').classList.toggle('hidden', !isActive); if(isActive) refreshCartModal(); }
-        function closeAllModals() { document.querySelectorAll('.detail-content').forEach(d => d.classList.remove('active')); document.getElementById('cart-modal').classList.remove('active'); document.getElementById('filter-menu').classList.add('translate-x-full'); document.getElementById('modal-overlay').classList.add('hidden'); document.getElementById('lightbox-img').classList.add('hidden'); document.body.style.overflow = ''; }
-        function saveToLocal() { const allCarts = JSON.parse(localStorage.getItem('starphone_carts_v2') || '{}'); const allNotes = JSON.parse(localStorage.getItem('starphone_notes_v2') || '{}'); allCarts[currentSourceKey] = cart; allNotes[currentSourceKey] = productNotes; localStorage.setItem('starphone_carts_v2', JSON.stringify(allCarts)); localStorage.setItem('starphone_notes_v2', JSON.stringify(allNotes)); }
-        function updateCartBar() { let totalItems = 0, totalPrice = 0; for (let id in cart) { const p = products.find(i => i.id == id); if (p) { totalItems += cart[id]; totalPrice += (parseFloat(p['Precio ( USD )']) || 0) * cart[id]; } } document.getElementById('cart-bar').classList.toggle('hidden', totalItems === 0); document.getElementById('cart-info').innerText = totalItems; document.getElementById('cart-total-bar').innerText = `$${totalPrice.toLocaleString('en-US',{minimumFractionDigits:2})}`; }
-        function handleKeywordInput() { activeFilters.keyword = document.getElementById('search').value; render(); renderFilters(); updateFilterIconStatus(); }
-        function setFilter(type, val) { if (activeFilters[type] === val) { activeFilters[type] = null; } else { activeFilters[type] = val; } renderFilters(); render(); updateFilterIconStatus(); }
-        function resetFilters(shouldRender = true) { activeFilters = { keyword: "", MARCA: null, CATEGORIA: null, TIPO: null }; document.getElementById('search').value = ""; if(shouldRender) { renderFilters(); render(); } updateFilterIconStatus(); }
-        function openLightbox(src) { if(!src) return; const img = document.getElementById('lightbox-img'); img.src = src; img.classList.remove('hidden', 'zoom-active'); document.getElementById('modal-overlay').classList.remove('hidden'); if(window.innerWidth <= 768) document.body.style.overflow = 'hidden'; }
-        function toggleMenu() { const menu = document.getElementById('filter-menu'); menu.classList.toggle('translate-x-full'); document.getElementById('modal-overlay').classList.toggle('hidden', menu.classList.contains('translate-x-full')); }
-        function selectContact(i) { activeContactIndex = i; [0,1].forEach(idx => document.getElementById(`btn-contact-${idx}`).className = idx === i ? "flex-1 py-3 rounded-full text-xs font-black bg-blue-600 text-white shadow-md" : "flex-1 py-3 rounded-full text-xs font-bold bg-transparent text-slate-400"); }
-        function toggleDetail(id, isHover = false) { if(window.innerWidth <= 768) return; const el = document.getElementById(`detail-${id}`); const card = document.getElementById(`card-${id}`); if(isHover) { card.classList.add('top-z'); el.classList.add('active'); card.onmouseleave = () => { el.classList.remove('active'); card.classList.remove('top-z'); }; } }
-        function refreshCartModal() { const list = document.getElementById('cart-items-list'); let html = ""; for (let id in cart) { const p = products.find(i => i.id == id); if(!p) continue; html += `<div class="bg-white p-4 rounded-2xl border border-slate-200"><div class="flex items-center gap-3 mb-2"><img src="${p.Imagen_Path ? encodeURI(p.Imagen_Path.replace(/\\/g, '/')) : ''}" class="w-14 h-14 rounded-lg object-contain bg-slate-50"><div class="flex-1 min-w-0"><h4 class="text-[11px] font-bold text-slate-800 truncate uppercase">${p.PRODUCTO}</h4><span class="text-blue-600 font-bold">$${p['Precio ( USD )']}</span></div><div class="flex items-center bg-slate-50 rounded-lg border"><button onclick="updateQty(${id},-1)" class="px-2 py-1 text-slate-400 font-bold">-</button><input type="number" value="${cart[id]}" onchange="setQty(${id}, this.value)" class="qty-input-manual"><button onclick="updateQty(${id},1)" class="px-2 py-1 text-blue-500 font-bold">+</button></div><button onclick="setQty(${id}, 0)" class="p-2 text-red-500">×</button></div><input type="text" placeholder="Nota..." class="note-input" value="${productNotes[id]||''}" oninput="productNotes[${id}]=this.value; saveToLocal()"></div>`; } list.innerHTML = html || "<p class='text-center py-20 text-slate-400 font-bold uppercase'>Tu lista está vacía</p>"; updateCartTotalDisplay(); }
-        function updateCartTotalDisplay() { let total = 0; for (let id in cart) { const p = products.find(i => i.id == id); if (p) total += (parseFloat(p['Precio ( USD )']) || 0) * cart[id]; } document.getElementById('cart-total-modal').innerText = `$${total.toLocaleString('en-US',{minimumFractionDigits:2})}`; }
-        function sendWhatsApp() { const contact = CONTACTS[activeContactIndex]; let total = 0, m = `⭐ *NUEVO PEDIDO STARPHONE*\n--------------------------\n`; for(let id in cart) { const p = products.find(i => i.id == id); if (p) { const sub = (parseFloat(p['Precio ( USD )']) || 0) * cart[id]; total += sub; m += `✅ *${p.PRODUCTO}*${productNotes[id] ? `\n   Nota: ${productNotes[id]}` : ''}\n   Cant: ${cart[id]} | Sub: *$${sub.toFixed(2)}*\n\n`; } } m += `--------------------------\n💰 *TOTAL PEDIDO: $${total.toFixed(2)}*`; window.open(`https://wa.me/${contact.phone}?text=${encodeURIComponent(m)}`); }
 
         init();
     </script>
