@@ -1,0 +1,18 @@
+[
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Selfie Stick Tripod",
+    "PRODUCTO": "Xiaomi Selfie Stick Tripod Mini",
+    "DESC_FULL": "Diseño 3 en 1: combina palo selfie, trípode y soporte para livestream.\nExtensible hasta ≈ 52 cm y pesa solo ≈ 155 g.\nClip rotatorio 90°, cambia fácilmente entre modo horizontal y vertical.\nTrípode integrado con patas antideslizantes, estable y compacto.\nControl remoto Bluetooth incorporado, para fotos, ráfagas y vídeos cortos hasta ~10 m.\nEstructura de aleación de aluminio anodizado, ligera y resistente.\nCompatible con Android 4.3+ e iOS 5.0+, con pinza para teléfonos de 60–90 mm de ancho.",
+    "Precio ( USD )": 14,
+    "Imagen_Path": "2-15products_images/2-15products_001.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Selfie Stick Tripod",
+    "PRODUCTO": "Xiaomi Zoom Floor Selfie Stick Tripod 62\"",
+    "DESC_FULL": "Palo extensible de 62\" (10 secciones, ≈ 1,6 m) para tomas amplias naturales.\nTrípode integrado de despliegue rápido, plegado compacto y portable.\nBase ancha y estable, con estructura triangular reforzada y pies de silicona antideslizantes.\nPinza de teléfono giratoria, admite modos horizontal y vertical.\nControl remoto Bluetooth, almacenamiento magnético, hasta ~10 m; permite disparo, modo foto/vídeo, cambio de cámara y activación rápida.\nMontura de zapata fría oculta para añadir accesorios como luz LED.\nAluminio anodizado ligero y duradero, con pegatina reflectante para localizarlo en entornos con poca luz.\nBatería remota CR1632 (botón, pequeño y eficiente).",
+    "Precio ( USD )": 23,
+    "Imagen_Path": "2-15products_images/2-15products_002.png"
+  }
+]

@@ -1,0 +1,1554 @@
+[
+  {
+    "MARCA": "Lenovo",
+    "TIPO": "Laptop",
+    "PRODUCTO": "Lenovo Laptop Yangtian V15 i5-13420H 16G 512G Gráficos integrados IPS WIN11 Gris",
+    "DESC_FULL": "",
+    "Precio ( USD )": 540.0,
+    "Imagen_Path": "products_images/products_001.png"
+  },
+  {
+    "MARCA": "Lenovo",
+    "TIPO": "Laptop",
+    "PRODUCTO": "Lenovo Laptop Xiaoxin 16 2024 i5-13420H/16GB/512GB/16 pulgadas/Pantalla de alta gama de colores/Plata Hielo",
+    "DESC_FULL": "",
+    "Precio ( USD )": 580.0,
+    "Imagen_Path": "products_images/products_002.png"
+  },
+  {
+    "MARCA": "NINTENDO",
+    "TIPO": "SWITCH",
+    "PRODUCTO": "NINTENDO SWITCH 2 Bundled Game Mario Kart World KR BEE-S-KB6NA(KOR)",
+    "DESC_FULL": "",
+    "Precio ( USD )": 530.0,
+    "Imagen_Path": "products_images/products_003.png"
+  },
+  {
+    "MARCA": "FUJIFILM",
+    "TIPO": "CAMARA",
+    "PRODUCTO": "FUJIFILM Instax mini Link 3",
+    "DESC_FULL": "green white pink\nImpresora portátil para smartphone con conexión Bluetooth.\nImpresión instantánea rápida en formato instax mini.\nFunciones creativas desde la app (filtros, marcos y efectos).\nBatería recargable para múltiples impresiones.\nDiseño compacto y ligero, fácil de transportar.",
+    "Precio ( USD )": 108.0,
+    "Imagen_Path": "products_images/products_004.png"
+  },
+  {
+    "MARCA": "FUJIFILM",
+    "TIPO": "CAMARA",
+    "PRODUCTO": "FUJIFILM Instax mini evo Blac",
+    "DESC_FULL": "Cámara instantánea híbrida: captura fotos digitales y las imprime al instante.\n100 efectos creativos (10 lentes × 10 películas) con controles físicos.\nImpresión rápida en formato instax mini.\nPantalla LCD de 3,0″ para previsualizar antes de imprimir.\nConectividad Bluetooth para imprimir fotos desde el smartphone.\nMemoria interna y microSD para almacenar imágenes.",
+    "Precio ( USD )": 208.0,
+    "Imagen_Path": "products_images/products_005.png"
+  },
+  {
+    "MARCA": "FUJIFILM",
+    "TIPO": "CAMARA",
+    "PRODUCTO": "FUJIFILM Instax mini film  10PCS",
+    "DESC_FULL": "Stone Gray,Soft lavender,Spray art,Pink lemonade",
+    "Precio ( USD )": 12.0,
+    "Imagen_Path": "products_images/products_006.png"
+  },
+  {
+    "MARCA": "DJI",
+    "TIPO": "Micrófonos inalámbricos",
+    "PRODUCTO": "DJI 6941565991430 Mic Mini (1 TX+1 RX)",
+    "DESC_FULL": "Transmisor (~10 g) y receptor (~18 g), muy compacto.\nHasta 11.5 h de uso (TX) y 10.5 h (RX).\nModos de grabación: estéreo, mono, y pista de seguridad.\nAlcance hasta 400 m con señal estable.\nCancelación de ruido y limitador automático.\nCompatible con móviles, cámaras y productos DJI.",
+    "Precio ( USD )": 60.0,
+    "Imagen_Path": "products_images/products_007.png"
+  },
+  {
+    "MARCA": "DJI",
+    "TIPO": "Micrófonos inalámbricos",
+    "PRODUCTO": "DJI 6941565991454 Mic Mini (2 TX + 1 RX + Charging Case)",
+    "DESC_FULL": "",
+    "Precio ( USD )": 118.0,
+    "Imagen_Path": "products_images/products_008.png"
+  },
+  {
+    "MARCA": "DJI",
+    "TIPO": "Palos selfie",
+    "PRODUCTO": "DJI 6941565939012 Osmo Mobile SE",
+    "DESC_FULL": "Estabilización en 3 ejes: Reduce temblores para vídeos suaves.\nDiseño plegable con clip magnético: Fácil de transportar y conectar rápidamente.\nActiveTrack 5.0: Sigue automáticamente a personas u objetos.\nModos inteligentes: Timelapse, panorámica, DynamicZoom, modo Historia.\nControl fácil: Panel de estado y botón \"M\" para cambiar modos rápidamente.\nCompatible con la app DJI Mimo y LightCut para edición y guías de grabación.",
+    "Precio ( USD )": 68.0,
+    "Imagen_Path": "products_images/products_009.png"
+  },
+  {
+    "MARCA": "DJI",
+    "TIPO": "Palos selfie",
+    "PRODUCTO": "DJI 6941565997517 Osmo Mobile 7P",
+    "DESC_FULL": "Módulo con luz de relleno LED integrada (3 niveles de brillo).\nControl por gestos: inicia grabación o foto sin tocar el móvil.\nCompatible con DJI Mic: mejor audio para entrevistas o vlogs.\nActiveTrack 7.0 mejorado: mejor detección y seguimiento.\nHasta 5 horas de batería cuando se usa el módulo.\nPeso ligeramente mayor (~368g con módulo).",
+    "Precio ( USD )": 145.0,
+    "Imagen_Path": "products_images/products_010.png"
+  },
+  {
+    "MARCA": "DJI",
+    "TIPO": "Palos selfie",
+    "PRODUCTO": "DJI  Osmo Mobile 8",
+    "DESC_FULL": "Estabilización en 3 ejes, que permite videos suaves y sin temblores. \nRotación horizontal 360° continua, ideal para panorámicas y movimientos fluidos. \nSeguimiento automático de personas y mascotas con su módulo multifuncional, incluso con control por gestos. \nBrazo extensible y trípode integrados, lo que facilita selfies, tomas en grupo o grabaciones estables sin accesorios extra. \nHasta 10 horas de batería, y la posibilidad de cargar el teléfono mientras grabas.",
+    "Precio ( USD )": 170.0,
+    "Imagen_Path": "products_images/products_011.png"
+  },
+  {
+    "MARCA": "DJI",
+    "TIPO": "Palos selfie",
+    "PRODUCTO": "DJI RS 4",
+    "DESC_FULL": "Diseño liviano con carga útil de 3kg\nPantalla táctil OLED con bloqueo automático\nDisparo vertical nativo de segunda generación\nBloqueos de ejes automáticos\nCambio de modo mediante joystick o Bluetooth\nAdmite transmisor de imágenes inalámbrico\nEjes recubiertos de teflón\nTiempo de funcionamiento de 12 horas\nRevisa la compatibilidad de tu cámara aca",
+    "Precio ( USD )": 480.0,
+    "Imagen_Path": "products_images/products_012.png"
+  },
+  {
+    "MARCA": "DJI",
+    "TIPO": "Palos selfie",
+    "PRODUCTO": "DJI 6941565974693 RS 4 Combo",
+    "DESC_FULL": "Descubre el DJI RS 4: Estabilización avanzada para cineastas\nEstabilizador con grabación vertical nativa, mayor rendimiento y accesorios actualizados para una experiencia profesional y eficiente.\nGrabación vertical nativa 2.ª generación\nControl de zoom/estabilizador con palanca de mando\nBrazos con recubrimiento de teflón para movimiento más suave\nCapacidad de carga de 3 kg con eje de inclinación extendido\nPuerto RSA para ecosistema de control ampliado\nBatería de alta capacidad: hasta 2,5× más tiempo de uso",
+    "Precio ( USD )": 630.0,
+    "Imagen_Path": "products_images/products_013.png"
+  },
+  {
+    "MARCA": "DJI",
+    "TIPO": "camara",
+    "PRODUCTO": "DJI Osmo Pocket 3 Creator Combo",
+    "DESC_FULL": "Pantalla táctil OLED giratoria de 2\" para grabación horizontal o vertical.\nEstabilización mecánica en 3 ejes para vídeos fluidos.\nActiveTrack 6.0 con enfoque rápido de todos los píxeles.\nModo Exhibición de producto para priorizar objetos en primer plano.\nGrabación en D-Log M y 10 bits con audio estéreo.\nDiseño compacto de bolsillo.",
+    "Precio ( USD )": 670.0,
+    "Imagen_Path": "products_images/products_014.png"
+  },
+  {
+    "MARCA": "DJI",
+    "TIPO": "camara",
+    "PRODUCTO": "DJI Osmo Action 4 Standard Combo",
+    "DESC_FULL": "Cámara de acción 4K120 con sensor de 1/1,3″, campo de visión ultra ancho (155°) y modo de color D-Log M de 10 bits para mayor rango dinámico. Incluye pantallas duales, estabilización RockSteady 3.0, HorizonSteady y Balance de horizonte, cuerpo sumergible y sensor de temperatura de color para colores precisos bajo el agua. Compatible con microSD de gran capacidad y control mediante la app DJI Mimo.",
+    "Precio ( USD )": 260.0,
+    "Imagen_Path": "products_images/products_015.png"
+  },
+  {
+    "MARCA": "DJI",
+    "TIPO": "camara",
+    "PRODUCTO": "DJI Osmo Action 5 Pro Standard Combo (activado)",
+    "DESC_FULL": "Cámara de acción 4K/120 fps con sensor de 40 MP y fotos hasta 8K. Pantallas OLED frontales y traseras de alto brillo, estabilización RockSteady y HorizonSteady, batería de hasta 4 h, sumergible (20 m) con medidor de presión. Incluye 47 GB internos, ranura microSD (hasta 1 TB), seguimiento de sujetos, Wi-Fi 6 y USB 3.0 para transferencias rápidas, carga rápida (2 h de grabación en 15 min) y funciones creativas como pregrabación y fotos en vivo.",
+    "Precio ( USD )": 360.0,
+    "Imagen_Path": "products_images/products_016.png"
+  },
+  {
+    "MARCA": "DJI",
+    "TIPO": "camara",
+    "PRODUCTO": "DJI  OSMO Action 6 Adventure Combo (activado)",
+    "DESC_FULL": "Sensor: CMOS cuadrado 1/1.1 pulgadas. \nApertura variable: f/2.0 – f/4.0 — adaptativa según luz. \nVideo: hasta 4K a 120 fps (formato 4:3). \nSuperNoche / baja luz: excelente rendimiento en ambientes oscuros. \nEstabilización: incluye sistema de estabilización avanzado para movimientos y acción. \nGrabación lenta / cámara lenta: soporta slow motion y super slow motion. \nResistencia al agua: hasta 20 m sin carcasa adicional. \nAlmacenamiento interno: 50 GB + opción de microSD. \nAutonomía: batería con duración extendida (según uso).",
+    "Precio ( USD )": 528.0,
+    "Imagen_Path": "products_images/products_017.png"
+  },
+  {
+    "MARCA": "DJI",
+    "TIPO": "camara",
+    "PRODUCTO": "DJI Osmo 360 Adventure Combo",
+    "DESC_FULL": "Sensor de 1\", lentes duales 360°, vídeo 8K/30 fps y fotos 120 MP con excelente rendimiento en poca luz. Soporta 4K/120 fps con 170° Boost, color 10 bits D-Log M, micrófono OsmoAudio, 128 GB internos y grabación continua de 100 min. Incluye selfie stick de 3,9', adaptador de liberación rápida y funda de batería.",
+    "Precio ( USD )": 615.0,
+    "Imagen_Path": "products_images/products_018.png"
+  },
+  {
+    "MARCA": "Insta360",
+    "TIPO": "camara",
+    "PRODUCTO": "Insta360 X3 Pocket 360 Action Cam",
+    "DESC_FULL": "Video 360° en 5.7K y fotos panorámicas de 72 MP\nModo gran angular 4K con una sola lente\nEstabilización FlowState y horizonte nivelado\nReencuadre con IA para elegir el ángulo después\nResistente al agua hasta 10 m\nPantalla táctil grande y control por voz",
+    "Precio ( USD )": 260.0,
+    "Imagen_Path": "products_images/products_019.png"
+  },
+  {
+    "MARCA": "Insta360",
+    "TIPO": "camara",
+    "PRODUCTO": "Insta360 X4 Global activado",
+    "DESC_FULL": "Captura tus aventuras en 360° con vídeo H.265 hasta 8K y fotos de 72 MP.\nDiseño resistente con protectores de lente extraíbles, estabilización de nivel mundial, palo selfie invisible y bloqueo de horizonte.\nFunciones: 5,7K120 tiempo bala, 11K lapso de tiempo.\nResistente al agua hasta 10 m (se recomienda carcasa).\nIncluye protector de lente, cable USB-C, bolsita protectora y paño de limpieza.",
+    "Precio ( USD )": 355.0,
+    "Imagen_Path": "products_images/products_020.png"
+  },
+  {
+    "MARCA": "Insta360",
+    "TIPO": "CAMARA",
+    "PRODUCTO": "Insta360 Ace Pro 2 Dual Battery Global activado",
+    "DESC_FULL": "",
+    "Precio ( USD )": 385.0,
+    "Imagen_Path": "products_images/products_021.png"
+  },
+  {
+    "MARCA": "JBL",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "JBL FLIP 7",
+    "DESC_FULL": "VERSION VIETNAM",
+    "Precio ( USD )": 87.0,
+    "Imagen_Path": "products_images/products_022.png"
+  },
+  {
+    "MARCA": "BOMIDI\n1ano garantia",
+    "TIPO": "Heater",
+    "PRODUCTO": "BOMIDI Heater H6 white",
+    "DESC_FULL": "Calentamiento de doble velocidad: Ofrece dos modos de calor para adaptarse a diferentes necesidades.\nTermostato incorporado: Permite ajustar la temperatura para mantener un ambiente cómodo.\nTemporizador de 6 a 12 horas: Programable para apagarse automáticamente, ideal para uso nocturno.\nPantalla LED: Muestra claramente la configuración actual para un manejo sencillo.\nProtección contra sobrecalentamiento: Garantiza un uso seguro evitando el sobrecalentamiento.\nApagado automático por vuelco: El equipo se apaga automáticamente si se inclina o cae, previniendo accidentes.\nDiseño compacto y portátil: Dimensiones de 12 x 12 x 27 cm (aprox.) y peso ligero de 0.75 kg, fácil de transportar y almacenar.",
+    "Precio ( USD )": 16.0,
+    "Imagen_Path": "products_images/products_023.png"
+  },
+  {
+    "MARCA": "BOMIDI\n1ano garantia",
+    "TIPO": "Heater",
+    "PRODUCTO": "BOMIDI Heater H1 Black brown",
+    "DESC_FULL": "Potencia de 1500W：Proporciona un calentamiento rápido y eficiente del ambiente.\nTecnología de calefacción cerámica PTC：Calor uniforme y seguro para un uso prolongado.\nControl remoto incluido：Permite ajustar la configuración cómodamente desde una distancia.\nTermostato incorporado：Mantiene una temperatura constante según la configuración deseada.\nOscilación de 55° vertical y 120° horizontal：Distribución amplia del aire caliente en el entorno.\nTemporizador de 2 a 8 horas：Apagado automático programable para mayor comodidad.\nProtección contra sobrecalentamiento：Sistema de seguridad que previene el sobrecalentamiento del dispositivo.\nDiseño compacto y portátil：Fácil de mover y almacenar, ideal para el hogar o la oficina.",
+    "Precio ( USD )": 38.0,
+    "Imagen_Path": "products_images/products_024.png"
+  },
+  {
+    "MARCA": "HUAWEI",
+    "TIPO": "AUDIFONO",
+    "PRODUCTO": "HUAWEI FreeArc Black，Green，Grey",
+    "DESC_FULL": "",
+    "Precio ( USD )": 63.0,
+    "Imagen_Path": "products_images/products_025.png"
+  },
+  {
+    "MARCA": "HUAWEI",
+    "TIPO": "AUDIFONO",
+    "PRODUCTO": "HUAWEI FreeBuds 6 Black Purple",
+    "DESC_FULL": "",
+    "Precio ( USD )": 108.0,
+    "Imagen_Path": "products_images/products_026.png"
+  },
+  {
+    "MARCA": "HUAWEI",
+    "TIPO": "AUDIFONO",
+    "PRODUCTO": "HUAWEI FreeClip Rose Black,Gold",
+    "DESC_FULL": "",
+    "Precio ( USD )": 135.0,
+    "Imagen_Path": "products_images/products_027.png"
+  },
+  {
+    "MARCA": "HUAWEI",
+    "TIPO": "WATCH",
+    "PRODUCTO": "HUAWEI WATCH FIT 3 Black,Pink",
+    "DESC_FULL": "",
+    "Precio ( USD )": 93.0,
+    "Imagen_Path": "products_images/products_028.png"
+  },
+  {
+    "MARCA": "HUAWEI",
+    "TIPO": "WATCH",
+    "PRODUCTO": "HUAWEI WATCH FIT 4 PRO Black Blue Green",
+    "DESC_FULL": "",
+    "Precio ( USD )": 145.0,
+    "Imagen_Path": "products_images/products_029.png"
+  },
+  {
+    "MARCA": "HUAWEI",
+    "TIPO": "WATCH",
+    "PRODUCTO": "HUAWEI WATCH 5 Black",
+    "DESC_FULL": "",
+    "Precio ( USD )": 295.0,
+    "Imagen_Path": "products_images/products_030.png"
+  },
+  {
+    "MARCA": "HUAWEI",
+    "TIPO": "WATCH",
+    "PRODUCTO": "HUAWEI WATCH 5 Purple,Beige",
+    "DESC_FULL": "",
+    "Precio ( USD )": 325.0,
+    "Imagen_Path": "products_images/products_031.png"
+  },
+  {
+    "MARCA": "HUAWEI",
+    "TIPO": "WATCH",
+    "PRODUCTO": "HUAWEI WATCH GT 5 46mm SOLO Black",
+    "DESC_FULL": "",
+    "Precio ( USD )": 142.0,
+    "Imagen_Path": "products_images/products_032.png"
+  },
+  {
+    "MARCA": "HUAWEI",
+    "TIPO": "WATCH",
+    "PRODUCTO": "HUAWEI WATCH GT 5 41mm Blue",
+    "DESC_FULL": "",
+    "Precio ( USD )": 158.0,
+    "Imagen_Path": "products_images/products_033.png"
+  },
+  {
+    "MARCA": "HUAWEI",
+    "TIPO": "WATCH",
+    "PRODUCTO": "WATCH GT 5 Pro 42mm White 55020DHR",
+    "DESC_FULL": "",
+    "Precio ( USD )": 280.0,
+    "Imagen_Path": "products_images/products_034.png"
+  },
+  {
+    "MARCA": "HUAWEI",
+    "TIPO": "WATCH",
+    "PRODUCTO": "HUAWEI WATCH GT 5 Pro 42mm Ceramic White",
+    "DESC_FULL": "",
+    "Precio ( USD )": 395.0,
+    "Imagen_Path": "products_images/products_035.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Lavadora",
+    "PRODUCTO": "Mi Mini washing machine 3kg white",
+    "DESC_FULL": "Tamaño compacto: Solo ocupa 0.18㎡, aproximadamente la mitad de un azulejo de piso.\nLavado especializado: Capacidad de 3 kg, ideal para ropa de bebé y ropa interior, evitando contaminación cruzada.\nEliminación eficaz de ácaros: Elimina el 100% de los ácaros, brindando una experiencia de uso higiénica y saludable.\nLavado rápido: Ciclo rápido de 15minutos para un lavadoeficiente.\nOpciones programables: Permite programar el lavado, ajustar el nivel de agua y seleccionar entre varios programas.\nBloqueo infantil: Protección con seguro para niños, para mayor seguridad.\nEficiencia energética: Clasificación energética nivel 3, coeficiente de limpieza 0.8. Función de autolimpieza del tambor.\nFiltro de pelusas: Incluye un filtro para atrapar residuos y pelusas de la ropa, manteniéndola más limpia.",
+    "Precio ( USD )": 125.0,
+    "Imagen_Path": "products_images/products_036.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "TV STICK",
+    "PRODUCTO": "XIAOMI TV STICK",
+    "DESC_FULL": "",
+    "Precio ( USD )": 28.5,
+    "Imagen_Path": "products_images/products_037.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "MI stick",
+    "PRODUCTO": "4K TV STICK OB6-EU",
+    "DESC_FULL": "",
+    "Precio ( USD )": 38.0,
+    "Imagen_Path": "products_images/products_038.png"
+  },
+  {
+    "MARCA": "HiFuture",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "HiFuture  MEGA S  black white grey",
+    "DESC_FULL": "Potencia de 5W: Sonido claro y potente para espacios pequeños.\nTecnología Wireless 5.4: Conexión estable y sin interrupciones.\nCompatibilidad con MagSafe: Se adhiere magnéticamente a dispositivos compatibles.\nModo TWS (True Wireless Stereo): Conecta dos altavoces para un sonido estéreo envolvente.\nSoporte integrado para teléfono: Sujeta tu dispositivo mientras ves videos o juegas.\nBatería de larga duración: Hasta 10 horas de reproducción continua.\nCarga inalámbrica de 7.5W a 15W: Carga tus dispositivos sin cables.\nDiseño compacto y elegante: Disponible en colores como negro, beige, verde y gris.",
+    "Precio ( USD )": 12.0,
+    "Imagen_Path": "products_images/products_039.png"
+  },
+  {
+    "MARCA": "HiFuture",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "HiFuture ALTUS ROJO",
+    "DESC_FULL": "Potencia de salida de 10W: Proporciona un sonido nítido y bajos suaves, adecuados para diversos entornos.\nConectividad Bluetooth 5.3: Ofrece una conexión rápida y estable con tus dispositivos.\nResistencia al agua IPX5: Protege contra salpicaduras, ideal para uso en exteriores como piscinas o parques.  Digitec\nAutonomía de hasta 8 horas: Disfruta de música continua durante tus actividades sin preocuparte por la batería. \nModo TWS (True Wireless Stereo): Permite emparejar dos altavoces Altus para una experiencia de sonido estéreo envolvente.\nDiseño compacto y portátil: Con un peso de aproximadamente 155g y correa incorporada, es fácil de transportar y colgar en mochilas o bicicletas.\nCarga rápida mediante USB-C: Recarga completa en aproximadamente 2 horas.",
+    "Precio ( USD )": 13.0,
+    "Imagen_Path": "products_images/products_040.png"
+  },
+  {
+    "MARCA": "HiFuture",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "HiFuture ASCENDO black green pink white",
+    "DESC_FULL": "Potencia de sonido de 20W: Proporciona un audio claro y envolvente, ideal para interiores y exteriores. \nConectividad Bluetooth 5.3: Ofrece una conexión estable y rápida con tus dispositivos.\nResistencia al agua IPX7: Apto para uso en exteriores, resistente a salpicaduras y lluvia.\nBatería de larga duración: Hasta 15 horas de reproducción continua, ideal para acompañarte durante todo el día.\nModo TWS (True Wireless Stereo): Permite emparejar dos altavoces Ascendo para una experiencia de sonido estéreo más inmersiva.\nDiseño compacto y portátil: Fácil de transportar, perfecto para llevar tu música a cualquier lugar.",
+    "Precio ( USD )": 24.0,
+    "Imagen_Path": "products_images/products_041.png"
+  },
+  {
+    "MARCA": "HiFuture",
+    "TIPO": "AUDIFONO",
+    "PRODUCTO": "HiFuture FutureTour X black ,gold",
+    "DESC_FULL": "Cancelación activa de ruido híbrida (Hybrid ANC)：Reduce eficazmente el ruido exterior para una experiencia inmersiva.\nSonido de alta fidelidad：Reproducción equilibrada, ideal para música, películas y juegos.\nDiseño cómodo y plegable：Almohadillas suaves con espuma de proteína para uso prolongado.\nMicrófonos con cancelación de ruido por IA：Llamadas claras incluso en entornos ruidosos.\nBluetooth 5.4 con baja latencia：Conexión estable, sin retrasos.\nAutonomía de hasta 35 horas：Con ANC activado；hasta 25 horas sin ANC.\nEntrada AUX disponible：Puedes seguir usándolos con cable si se agota la batería.",
+    "Precio ( USD )": 28.0,
+    "Imagen_Path": "products_images/products_042.png"
+  },
+  {
+    "MARCA": "HiFuture",
+    "TIPO": "WATCH",
+    "PRODUCTO": "HiFuture Aura  silver",
+    "DESC_FULL": "Pantalla AMOLED de 1.04” – Brillo y claridad mejorados.\nMonitoreo de salud – Ritmo cardíaco, sueño y SpO2.\nModos deportivos – Seguimiento de múltiples actividades.\nLlamadas Bluetooth – Recibe y realiza llamadas sin el teléfono.\nResistencia al agua IP68 – Protección contra agua y sudor.\nBatería de hasta 7 días – Uso prolongado con una sola carga.\nNotificaciones inteligentes – Alertas de mensajes y eventos.\nDiseño de acero inoxidable – Elegante y duradero.",
+    "Precio ( USD )": 50.0,
+    "Imagen_Path": "products_images/products_043.png"
+  },
+  {
+    "MARCA": "REALME",
+    "TIPO": "AUDIFONO",
+    "PRODUCTO": "Realme H1 Negro rojo",
+    "DESC_FULL": "Driver dinámico de 40 mm con audio Hi‑Res y códec LDAC para graves potentes y sonido nítido.\nCancelación activa de ruido híbrida de hasta 43 dB, ajustable en 3 niveles.\nAudio espacial 360° para una experiencia envolvente.\nLatencia ultrabaja de 80 ms, ideal para juegos y películas.\nHasta 70 horas de reproducción, con carga rápida.\nConectividad Bluetooth 5.4, emparejamiento rápido y conexión dual.\nMicrófonos con cancelación de ruido (AI‑ENC) para llamadas claras.\nDiseño ergonómico, plegable y cómodo para uso prolongado.",
+    "Precio ( USD )": 33.0,
+    "Imagen_Path": "products_images/products_044.png"
+  },
+  {
+    "MARCA": "REALME",
+    "TIPO": "AUDIFONO",
+    "PRODUCTO": "Realme TechLife Buds white",
+    "DESC_FULL": "",
+    "Precio ( USD )": 10.0,
+    "Imagen_Path": "products_images/products_045.png"
+  },
+  {
+    "MARCA": "REALME",
+    "TIPO": "AUDIFONO",
+    "PRODUCTO": "Realme H1 Negro rojo",
+    "DESC_FULL": "Driver dinámico de 40 mm con audio Hi‑Res y códec LDAC para graves potentes y sonido nítido.\nCancelación activa de ruido híbrida de hasta 43 dB, ajustable en 3 niveles.\nAudio espacial 360° para una experiencia envolvente.\nLatencia ultrabaja de 80 ms, ideal para juegos y películas.\nHasta 70 horas de reproducción, con carga rápida.\nConectividad Bluetooth 5.4, emparejamiento rápido y conexión dual.\nMicrófonos con cancelación de ruido (AI‑ENC) para llamadas claras.\nDiseño ergonómico, plegable y cómodo para uso prolongado.",
+    "Precio ( USD )": 33.0,
+    "Imagen_Path": "products_images/products_046.png"
+  },
+  {
+    "MARCA": "REALME",
+    "TIPO": "AUDIFONO",
+    "PRODUCTO": "Realme Buds Air7 grey",
+    "DESC_FULL": "",
+    "Precio ( USD )": 28.0,
+    "Imagen_Path": "products_images/products_047.png"
+  },
+  {
+    "MARCA": "REALME",
+    "TIPO": "AUDIFONO",
+    "PRODUCTO": "Realme Buds Air7 Pro",
+    "DESC_FULL": "Gris blanco",
+    "Precio ( USD )": 58.0,
+    "Imagen_Path": "products_images/products_048.png"
+  },
+  {
+    "MARCA": "QCY",
+    "TIPO": "AUDIFONO",
+    "PRODUCTO": "QCY  LH1  white TYPE-C Earphones",
+    "DESC_FULL": "",
+    "Precio ( USD )": 3.0,
+    "Imagen_Path": "products_images/products_049.png"
+  },
+  {
+    "MARCA": "Black Shark",
+    "TIPO": "Teclado",
+    "PRODUCTO": "Black Shark Pad 7 Pro  keyboard",
+    "DESC_FULL": "",
+    "Precio ( USD )": 25.0,
+    "Imagen_Path": "products_images/products_050.png"
+  },
+  {
+    "MARCA": "Black Shark",
+    "TIPO": "AUDIFONO",
+    "PRODUCTO": "Black Shark V2 -Black",
+    "DESC_FULL": "Sonido Hi-Fi inmersivo con cancelación activa de ruido híbrida (ANC).\nHasta 100 horas de autonomía.\nEmparejamiento dual con Bluetooth 5.4.\nDiseño cómodo para uso durante todo el día.\nCompatible con audio de alta resolución LDAC y LHDC.\nCarga rápida mediante Type-C.",
+    "Precio ( USD )": 26.0,
+    "Imagen_Path": "products_images/products_051.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "WATCH",
+    "PRODUCTO": "Xiaomi Watch 5 Black Strap",
+    "DESC_FULL": "Juniper Green Strap",
+    "Precio ( USD )": 218.0,
+    "Imagen_Path": "products_images/products_052.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "AUDIFONO",
+    "PRODUCTO": "REDMI Buds 8 Lite Negro blanco AZUL",
+    "DESC_FULL": "",
+    "Precio ( USD )": 18.0,
+    "Imagen_Path": "products_images/products_053.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "AUDIFONO",
+    "PRODUCTO": "Redmi Buds 6 Pro Solo Color  Purple",
+    "DESC_FULL": "",
+    "Precio ( USD )": 45.0,
+    "Imagen_Path": "products_images/products_054.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "AUDIFONO",
+    "PRODUCTO": "Xiaomi Buds 5 Pro BT-Titanium",
+    "DESC_FULL": "Auriculares inalámbricos premium con diseño elegante y ergonómico.\nSonido de alta fidelidad gracias al sistema de triple driver (11 mm, tweeter cerámico y driver planar).\nCancelación activa de ruido (ANC) para una experiencia auditiva inmersiva.\nAudio sin pérdida de 48 kHz / 24 bits, con transmisión de hasta 2,1 Mbps.",
+    "Precio ( USD )": 125.0,
+    "Imagen_Path": "products_images/products_055.png"
+  },
+  {
+    "MARCA": "TRONSMART",
+    "TIPO": "AUDIFONO",
+    "PRODUCTO": "Tronsmart Sounfii NC 2  Black",
+    "DESC_FULL": "Cancelación Activa de Ruido 45dB\nReduce eficazmente el ruido para una experiencia inmersiva.\nAudio Hi-Res de Alta Calidad\nSonido claro y detallado, fiel al original.\nLlamadas Claras con IA (6 Micrófonos)\nElimina hasta el 90 % del ruido ambiental, incluso con viento.\nBatería de hasta 40 h\n10 h por carga + estuche.\nCarga rápida: 10 min = 1 h de uso.\nBluetooth 6.0 & Control Preciso\nConexión estable y controles por sensores de presión.",
+    "Precio ( USD )": 22.0,
+    "Imagen_Path": "products_images/products_056.png"
+  },
+  {
+    "MARCA": "TRONSMART",
+    "TIPO": "AUDIFONO",
+    "PRODUCTO": "Tronsmart  OpenFly 2 Pro black",
+    "DESC_FULL": "Autonomía de 40 horas de reproducción continua.\nBluetooth 5.0 para una conexión estable y rápida.\nResistencia al agua IPX7, ideal para deportes.\nDiseño ergonómico para mayor comodidad.\nCalidad de sonido premium para música y llamadas.",
+    "Precio ( USD )": 36.0,
+    "Imagen_Path": "products_images/products_057.png"
+  },
+  {
+    "MARCA": "QCY",
+    "TIPO": "AUDIFONO",
+    "PRODUCTO": "QCY Crossky GTR2  SOLO  blanco",
+    "DESC_FULL": "Auriculares de oído abierto: Comodidad y conciencia del entorno.\nBluetooth 5.4: Conexión rápida y estable.\nGanchos para la oreja: Seguridad en uso deportivo.\nBass Boost: Mejora los graves para mejor sonido.\nConexión multipunto: Conexión simultánea a dos dispositivos.\nIPX5: Resistencia al agua y sudor, ideales para deporte.",
+    "Precio ( USD )": 13.0,
+    "Imagen_Path": "products_images/products_058.png"
+  },
+  {
+    "MARCA": "QCY",
+    "TIPO": "AUDIFONO",
+    "PRODUCTO": "QCY MeloBuds Neo black",
+    "DESC_FULL": "Estuche de carga transparente: Con pantalla digital que muestra la batería en tiempo real.\nDiafragma biológico de 10 mm: Sonido amplio y voces claras, con 9 efectos preestablecidos.\nCancelación de ruido en llamadas: Cuatro micrófonos para filtrar ruido ambiental y viento.\nAutonomía: 7 horas de uso continuo, hasta 24 horas con estuche.\nBaja latencia: Conexión dual con 68ms en modo juego.",
+    "Precio ( USD )": 13.0,
+    "Imagen_Path": "products_images/products_059.png"
+  },
+  {
+    "MARCA": "QCY",
+    "TIPO": "AUDIFONO",
+    "PRODUCTO": "QCY AilyBuds Pro+",
+    "DESC_FULL": "color Negro azul verde purple\nSonido HD: Compatible con LDAC y Hi-Res Wireless.\nCancelación activa de ruido: Hasta 40dB.\nLlamadas claras: 3 micrófonos con reducción de ruido AI.\nBaja latencia: Modo gaming (~70ms).\nBluetooth 5.3: Conexión rápida y estable.\nLarga batería: 7h por carga, hasta 30h con estuche.",
+    "Precio ( USD )": 19.0,
+    "Imagen_Path": "products_images/products_060.png"
+  },
+  {
+    "MARCA": "QCY",
+    "TIPO": "AUDIFONO",
+    "PRODUCTO": "QCY H3 LITE   NEGRO",
+    "DESC_FULL": "",
+    "Precio ( USD )": 20.0,
+    "Imagen_Path": "products_images/products_061.png"
+  },
+  {
+    "MARCA": "QCY",
+    "TIPO": "AUDIFONO",
+    "PRODUCTO": "QCY H3 azul  negro blanco",
+    "DESC_FULL": "Batería de 500mAh: 60 horas de música, 35 horas con ANC activado.\nInterruptor inteligente: MFB/VOL/ANC ON.\nANC de 43dB: Cancelación activa de ruido y ENC.\nSonido envolvente 360°: Ajuste de tres bandas, modo de graves profundos.\nHi-Res: Calidad de audio de alta resolución.",
+    "Precio ( USD )": 24.0,
+    "Imagen_Path": "products_images/products_062.png"
+  },
+  {
+    "MARCA": "QCY",
+    "TIPO": "AUDIFONO",
+    "PRODUCTO": "QCY Era 7 Black brown white",
+    "DESC_FULL": "Diseño vintage y ligera (~130 g), ideal para el uso diario y cómodo de llevar.\nBluetooth 5.3, conexión estable y permite dual-echo (conectar dos dispositivos a la vez).\nCalidad de sonido equilibrada: graves llenos, voz clara, agudos suaves; escenario sonoro amplio aunque sin mucha profundidad o separación detallada.\nApp personalizable, con ecualización y reasignación de botones; incluye modo «game boost» para realzar efectos en juegos.\nGran autonomía (~60 h) y carga rápida: solo 10 min de carga dan hasta 7 h de reproducción.\nPráctico y sin pretensiones: estética retro con funcionalidad fiable, perfecto para commuting sin complicaciones.",
+    "Precio ( USD )": 26.0,
+    "Imagen_Path": "products_images/products_063.png"
+  },
+  {
+    "MARCA": "tronsmart",
+    "TIPO": "AUDIFONO",
+    "PRODUCTO": "Tronsmart Sounfii Q20",
+    "DESC_FULL": "Color Black Blanco\nCancelación activa de ruido: Reduce el ruido ambiental en un 85%.\nSonido potente: Controladores dinámicos de 40 mm para graves profundos y sonido envolvente.\nBatería de larga duración: Hasta 60 horas de reproducción continua.\nComodidad ergonómica: Almohadillas de espuma viscoelástica y diseño plegable con rotación de 90°.\nPersonalización de audio: Ecualizador ajustable mediante la aplicación Tronsmart.\nConectividad Bluetooth 5.3: Estable y eficiente.",
+    "Precio ( USD )": 15.0,
+    "Imagen_Path": "products_images/products_064.png"
+  },
+  {
+    "MARCA": "tronsmart",
+    "TIPO": "AUDIFONO",
+    "PRODUCTO": "Tronsmart Sounfii Q20S Hybrid Active Noise Cancellation Headphones black Y blanco",
+    "DESC_FULL": "Cancelación híbrida de ruido: Micrófonos avanzados cancelan hasta 40dB de ruido ambiental, ideal para ambientes ruidosos como aeropuertos y calles.\nAudio sin distorsión: Controladores dinámicos de 40mm para un sonido equilibrado y sin distorsión.\nIncreíble audio Hi-Res: Sonido detallado y enriquecido tres veces más con audio de alta resolución.\nOrejeras rotativas de 90°: Almohadillas de espuma viscoelástica que se ajustan cómodamente, y la diadema se adapta automáticamente a tu cabeza.\nLlamadas claras: Llamadas manos libres con calidad cristalina.\nSonido personalizado: Ajusta el ecualizador y personaliza el estilo de música a tu gusto. Tamaño del producto:18.6*18.2*8.3cm",
+    "Precio ( USD )": 21.0,
+    "Imagen_Path": "products_images/products_065.png"
+  },
+  {
+    "MARCA": "HAYLOU",
+    "TIPO": "AUDIFONO",
+    "PRODUCTO": "HAYLOU-auriculares inalámbricos S35 ANC",
+    "DESC_FULL": "color azul blanco\nCancelación activa de ruido: Hasta 42dB.\nAudio de alta resolución: Con driver de 40mm y Hi-Res Audio.\nBatería de larga duración: Hasta 60 horas.\nBluetooth 5.2: Conexión rápida y multipunto.\nModo de baja latencia: 60ms para juegos.\nComodidad: Almohadillas de espuma con memoria, ideal para uso prolongado.",
+    "Precio ( USD )": 30.0,
+    "Imagen_Path": "products_images/products_066.png"
+  },
+  {
+    "MARCA": "HAYLOU",
+    "TIPO": "WATCH",
+    "PRODUCTO": "Haylou Watch 2 Pro azul blanco",
+    "DESC_FULL": "accesorio de pulsera resistente al agua IP68 con pantalla grande HD TFT de 1,85 pulgadas, 100 modos de entrenamiento, control del ritmo cardíaco y del oxígeno en sangre",
+    "Precio ( USD )": 18.0,
+    "Imagen_Path": "products_images/products_067.png"
+  },
+  {
+    "MARCA": "HAYLOU",
+    "TIPO": "WATCH",
+    "PRODUCTO": "Haylou watch 4 black sliver",
+    "DESC_FULL": "Pantalla grande HD de 1,93″ clara y fácil de leer.\nGPS integrado para registro preciso de rutas deportivas.\nLlamadas por Bluetooth directamente desde el reloj.\nMonitoreo de salud 24/7: ritmo cardíaco, SpO₂, sueño y estrés.\nMás de 120 modos deportivos para entrenamiento diario.\nBatería de larga duración y resistencia al agua IP68",
+    "Precio ( USD )": 24.0,
+    "Imagen_Path": "products_images/products_068.png"
+  },
+  {
+    "MARCA": "HAYLOU",
+    "TIPO": "WATCH",
+    "PRODUCTO": "Haylou Vibe LS30 black",
+    "DESC_FULL": "Pantalla AMOLED de 1.43″: imagen nítida y colores vivos.\nSoporte para llamadas por Bluetooth (v5.4): puedes atender o hacer llamadas directamente desde la muñeca.\nMonitoreo de salud y actividad: frecuencia cardíaca, saturación de oxígeno (SpO₂) y sensor de movimiento.\nMás de 100 modos deportivos: permite registrar distintos ejercicios y hábitos de entrenamiento.\nResistencia IP68 al agua y polvo: ideal para uso diario, deportes o ambientes húmedos.\nBatería duradera (≈ 300 mAh): autonomía suficiente para un día completo de uso con funciones activas.",
+    "Precio ( USD )": 28.0,
+    "Imagen_Path": "products_images/products_069.png"
+  },
+  {
+    "MARCA": "HAYLOU",
+    "TIPO": "WATCH",
+    "PRODUCTO": "Haylou watch 4S black sliver",
+    "DESC_FULL": "Pantalla AMOLED de 1,43″ con alta resolución y excelente visibilidad.\nGPS multibanda (5 sistemas) para seguimiento preciso sin usar el teléfono.\nLlamadas por Bluetooth directamente desde el reloj.\nMás de 120 modos deportivos para entrenamiento diario.\nMonitoreo de salud 24/7: ritmo cardíaco, SpO₂, sueño y estrés.\nBatería de larga duración y resistencia al agua 1 ATM.",
+    "Precio ( USD )": 31.0,
+    "Imagen_Path": "products_images/products_070.png"
+  },
+  {
+    "MARCA": "Black Shark",
+    "TIPO": "Black Shark",
+    "PRODUCTO": "Black Shark Dark Magician Gamepad black",
+    "DESC_FULL": "Alta precisión: 1000Hz de tasa de respuesta y 2000 niveles de precisión en los joysticks.\nConexión múltiple: Inalámbrica 2.4GHz, Bluetooth y por cable.\nDiseño ergonómico: Cómodo y antideslizante para largas sesiones de juego.\nRGB personalizable: Luces y botones ajustables a través de la app Black Shark.\nBatería de larga duración: 1000mAh para sesiones prolongadas.",
+    "Precio ( USD )": 25.0,
+    "Imagen_Path": "products_images/products_071.png"
+  },
+  {
+    "MARCA": "Black Shark",
+    "TIPO": "WATCH",
+    "PRODUCTO": "Black Shark GS3",
+    "DESC_FULL": "1.43’’ AMOLED | Res 466*466 | Always on Display\n21 Days Battery Life \nGPS Satellite Positioning\nWireless Charging\n100+ Sports Modes\nHealth Monitoring，Shark GPT,AI Watch Face\nBT Calling (ENC),5ATM Water Resist\n2 Straps (1 Silicone +1 Woven)",
+    "Precio ( USD )": 48.0,
+    "Imagen_Path": "products_images/products_072.png"
+  },
+  {
+    "MARCA": "Black Shark",
+    "TIPO": "WATCH",
+    "PRODUCTO": "Black Shark Watch X Pro",
+    "DESC_FULL": "1.75” AMOLED Display \nHealth Monitoring Sports Modes\n75 Hours Battery Life\nSupports 4G LTE & Wifi\nAndroid System App Downloads\n2M Rotating Camera\n4GB RAM + 32GB ROM\n2 Straps (1 Silicone +1 Leather)",
+    "Precio ( USD )": 85.0,
+    "Imagen_Path": "products_images/products_073.png"
+  },
+  {
+    "MARCA": "AMAZFIT",
+    "TIPO": "WATCH",
+    "PRODUCTO": "Amazfit Balance NEGRO",
+    "DESC_FULL": "Asistente de IA Zepp Flow para control por voz y respuestas.\nAutonomía de hasta 14 días con una carga.\nMonitorización de salud: frecuencia cardíaca, SpO₂, estrés y respiración.\nMedición de composición corporal (grasa, músculo, agua, etc.) con BIA.\nPuntuación diaria de “preparación” para evaluar tu recuperación física y mental.\nPlanes de entrenamiento personalizados con IA mediante Zepp Coach.\nGPS de doble banda + mapas sin conexión para seguimiento deportivo.\nLlamadas vía Bluetooth, recepción de mensajes y asistente Amazon Alexa.\nPantalla AMOLED de 1,5″, diseño ligero y resistencia al agua (5 ATM).",
+    "Precio ( USD )": 128.0,
+    "Imagen_Path": "products_images/products_074.png"
+  },
+  {
+    "MARCA": "AMAZFIT",
+    "TIPO": "WATCH",
+    "PRODUCTO": "Amazfit T-rex 3 Negro  con llamadas",
+    "DESC_FULL": "Pantalla AMOLED: 2000 nits, modo nocturno, compatible con guantes.\nResistente: Acero inoxidable, resistente a temperaturas extremas y hasta 100 m de agua.\nBatería: 27 días de uso típico, 180 horas de GPS.\nGPS y mapas: GPS de doble banda, 6 satélites, mapas gratuitos.\nDeportes y AI: 170+ modos, entrenamientos personalizados.\nControl por voz: Zepp Flow con GPT-4.\nPrivacidad: Protección de datos y control de GPS.",
+    "Precio ( USD )": 148.0,
+    "Imagen_Path": "products_images/products_075.png"
+  },
+  {
+    "MARCA": "AMAZFIT",
+    "TIPO": "WATCH",
+    "PRODUCTO": "Amazfit Balance 2 Black",
+    "DESC_FULL": "Pantalla AMOLED de 1,5\" con cristal de zafiro.\nMás de 170 modos deportivos, incluidos running, fuerza, HYROX, esquí y golf.\nMonitoreo de salud y recuperación 24/7.\nGPS multibanda de alta precisión.\nBatería de hasta 21 días de uso típico.\nResistencia al agua 10ATM, apta para natación y buceo ligero.\nDiseño premium en acero/aluminio.",
+    "Precio ( USD )": 188.0,
+    "Imagen_Path": "products_images/products_076.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "Xiaomi Desktop Speaker",
+    "DESC_FULL": "Sonido de alta fidelidad (Hi-Fi)\nConexión inalámbrica por Bluetooth\nAlimentación por puerto USB-C\nIdeal para escritorios o espacios de trabajo en casa\nDiseño moderno y elegante con rejilla metálica",
+    "Precio ( USD )": 30.0,
+    "Imagen_Path": "products_images/products_077.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "Xiaomi Soundbar Pro 2.0 ch NS5-EU",
+    "DESC_FULL": "Configuración 2 canales (izquierdo + derecho) con 2 altavoces de rango medio-graves y 2 tweeters.\nPotencia máxima aproximada: 84 W.\nSoporta decodificación Dolby Audio™ para una experiencia de cine en casa.\nConectividad múltiple: HDMI ARC, entrada óptica, entrada coaxial, Bluetooth.\nIncluye seis modos de sonido predefinidos: Estándar, Película, Música, Juego, Noticias y Noche.\nTamaño aproximado: 840 × 87 × 60 mm; peso alrededor de 2,3 kg.\nDiseño elegante en negro con rejilla metálica; puede montarse en pared o colocarse sobre mueble.",
+    "Precio ( USD )": 80.0,
+    "Imagen_Path": "products_images/products_078.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "Xiaomi Soundbar Pro 2.1 ch NS4-EU",
+    "DESC_FULL": "Configuración de canal: 2.1 canales.\nPotencia máxima de salida: 300 W.\nIncluye subwoofer inalámbrico de 6,5 pulgadas (~180 W) + dos altavoces de rango completo para los canales izquierdo y derecho.\nCompatible con formatos de audio: Dolby Audio™, DTS Digital Surround y DTS Virtual:X para una experiencia envolvente.\nModos de sonido integrados: Estándar, Música, Película, Juego, Noticias, DTS Virtual:X.\nConectividad variada: HDMI (ARC), entrada óptica, entrada coaxial, Bluetooth, emparejamiento NFC rápido.\nDimensiones del sistema: barra de sonido aproximadamente 840 × 87 × 60 mm; subwoofer aproximadamente 363 × 249 × 249 mm.",
+    "Precio ( USD )": 130.0,
+    "Imagen_Path": "products_images/products_079.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "Xiaomi Bluetooth Speaker Mini",
+    "DESC_FULL": "",
+    "Precio ( USD )": 23.0,
+    "Imagen_Path": "products_images/products_080.png"
+  },
+  {
+    "MARCA": "QCY",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "QCY  SP2 BLACK GREY  RED BROWN",
+    "DESC_FULL": "Conexión Bluetooth 5.3, rápida y estable.\nCertificación IP67, resistente al agua y al polvo, ideal para exteriores.\nUltraligero (~187 g), fácil de transportar.\nAutonomía de hasta 17 h, batería interna de larga duración.\nPotencia de 5 W y ~89 dB, sonido potente y nítido.\nLuces RGB dinámicas, sincronizadas con la música.\nReproducción desde tarjeta Micro SD (TF), sin necesidad de dispositivo externo.\nTWS estéreo, posibilidad de emparejar dos altavoces para sonido estéreo inmersivo.",
+    "Precio ( USD )": 10.0,
+    "Imagen_Path": "products_images/products_081.png"
+  },
+  {
+    "MARCA": "QCY",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "QCY Bluetooth speaker SP7  black",
+    "DESC_FULL": "Salida estéreo de 40W con graves mejorados: Equipado con cuatro unidades de sonido, proporciona una potente salida de 40W para un audio profundo y envolvente.\nVolumen de hasta 105dB: Asegura un sonido claro y potente en cualquier entorno.\n15 efectos de luz RGB: Luces personalizables para crear ambiente y animar tus reuniones.\nAutonomía de 14 horas: Batería integrada de 5200mAh que permite hasta 14 horas de reproducción continua.\nConexión de múltiples altavoces: Se pueden conectar varios altavoces para una experiencia de sonido envolvente.\nResistencia al agua IPX7: Protección contra salpicaduras y agua, ideal para uso en exteriores sin preocupaciones.",
+    "Precio ( USD )": 26.0,
+    "Imagen_Path": "products_images/products_082.png"
+  },
+  {
+    "MARCA": "CUKTECH",
+    "TIPO": "Power Bank",
+    "PRODUCTO": "CUKTECH 30W Power Bank 1C1A(Pocket version)10000mAh Solo rosado",
+    "DESC_FULL": "Diseño compacto: Tamaño de tarjeta de crédito, peso de 6.9 onzas, fácil de transportar.\nEstilo elegante: Añade un toque sofisticado a tu día a día.\nCarga rápida bidireccional de 30W: Reduce el tiempo de carga y mejora la eficiencia.",
+    "Precio ( USD )": 12.5,
+    "Imagen_Path": "products_images/products_083.png"
+  },
+  {
+    "MARCA": "CUKTECH",
+    "TIPO": "Power Bank",
+    "PRODUCTO": "CUKTECH 30W Power Bank 1C1A (Pocket Transparent Version) PB100S  10000MAH",
+    "DESC_FULL": "Carga rápida de 30W con soporte PD3.0, PPS y QC3.0.\nPuertos 1C1A (USB-C + USB-A) para mayor compatibilidad.\nIndicador LED inteligente para monitorear la batería.\nDiseño compacto y ligero, fácil de transportar.",
+    "Precio ( USD )": 13.0,
+    "Imagen_Path": "products_images/products_084.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "bateria",
+    "PRODUCTO": "20000mAh Redmi 18W Fast Charge Power Bank (Black)",
+    "DESC_FULL": "",
+    "Precio ( USD )": 14.0,
+    "Imagen_Path": "products_images/products_085.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Power Bank",
+    "PRODUCTO": "Xiaomi Ultra Slim Power Bank 5000mAh GL",
+    "DESC_FULL": "Diseño ultra delgado (10mm de grosor, 93g de peso) para fácil portabilidad.\nCarga rápida de 20W para cargar dispositivos rápidamente.\nUSB Type-C de doble carga rápida (18W de entrada) y se recarga completamente en 1.75 horas.\nAlta compatibilidad con smartphones, tabletas y otros dispositivos.\nSeguridad avanzada con protección contra sobrecarga, sobrecalentamiento y cortocircuito",
+    "Precio ( USD )": 15.5,
+    "Imagen_Path": "products_images/products_086.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Power Bank",
+    "PRODUCTO": "Xiaomi 212W HyperCharge Power Bank 25000mAh GL",
+    "DESC_FULL": "Carga ultrarrápida\nHasta 212W en total, ideal para portátiles y móviles.\nGran capacidad\n25,000mAh, suficiente para varios ciclos de carga.\nPantalla LED\nMuestra el nivel de batería y velocidad de carga.\n3 puertos\nUSB-C x2 y USB-A, carga hasta 3 dispositivos a la vez.\nDiseño robusto\nCuerpo metálico con estilo transparente.",
+    "Precio ( USD )": 66.0,
+    "Imagen_Path": "products_images/products_087.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Power Bank",
+    "PRODUCTO": "Xiaomi 33W Power Bank 10000mAh (Integrated Cable)",
+    "DESC_FULL": "Tan GL Y Ice Blue GL",
+    "Precio ( USD )": 17.0,
+    "Imagen_Path": "products_images/products_088.png"
+  },
+  {
+    "MARCA": "CUKTECH",
+    "TIPO": "Power Bank",
+    "PRODUCTO": "CUKTECH 55W Power Bank 2C PB060 6000MAH",
+    "DESC_FULL": "Potencia de hasta 55W con carga rápida.\nDoble puerto USB-C para carga simultánea.\nFunción de auto-recarga mientras carga otros dispositivos.\nDiseño portátil y ligero, ideal para llevar a cualquier parte.",
+    "Precio ( USD )": 17.0,
+    "Imagen_Path": "products_images/products_089.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Power Bank",
+    "PRODUCTO": "Xiaomi 18W Power Bank 30000mAh",
+    "DESC_FULL": "",
+    "Precio ( USD )": 22.0,
+    "Imagen_Path": "products_images/products_090.png"
+  },
+  {
+    "MARCA": "BASEUS",
+    "TIPO": "CARGADOR",
+    "PRODUCTO": "Baseus GaN5 Pro Gallium nitride fast charger 100W C+U",
+    "DESC_FULL": "Tecnología GaN de 100W: Potente salida de 100W, carga rápida para dispositivos, puertos USB-C y USB-A para carga simultánea.\nTecnología BPS: Distribuye energía inteligentemente para carga eficiente, compatible con PD, QC y PPS.\nDiseño compacto y portátil: Carga hasta tres veces más rápido que cargadores convencionales, se mantiene fresco para evitar sobrecalentamiento y garantiza rendimiento seguro.",
+    "Precio ( USD )": 15.0,
+    "Imagen_Path": "products_images/products_091.png"
+  },
+  {
+    "MARCA": "BASEUS",
+    "TIPO": "CARGADOR",
+    "PRODUCTO": "Baseus  GaN3 Pro Gallium nitride desktop strip AC+2U+2C 65W SUPERVOOC edition",
+    "DESC_FULL": "Conector USB\nVoltaje de entrada: 12/24V (Bivolt)\nVoltaje de salida: 65W\nIncluye cable\n4 puertos de carga\nProtección contra sobrecarga",
+    "Precio ( USD )": 15.0,
+    "Imagen_Path": "products_images/products_092.png"
+  },
+  {
+    "MARCA": "BASEUS",
+    "TIPO": "CARGADOR",
+    "PRODUCTO": "Baseus  Linrui series digital plugboard 3AC+1U+1C+ extended cable C 65W 1.5m power cable",
+    "DESC_FULL": "",
+    "Precio ( USD )": 20.0,
+    "Imagen_Path": "products_images/products_093.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "CARGADOR",
+    "PRODUCTO": "Mi 67W desktop fast charging socket Pro",
+    "DESC_FULL": "Carga rápida + Expansión: Carga rápida de 67W y transmisión de datos, soporta múltiples dispositivos.\nSiete en uno: Incluye 1 puerto USB-A, 1 HDMI, 2 puertos USB-C, y 3 enchufes de corriente alterna.\nCable de carga rápida dedicado: Ideal para uso en escritorios de oficina.\nTransmisión de datos: Soporta discos duros y dispositivos de almacenamiento.\n4K @ 60Hz: Proyección ultra clara y fluida.\nCapacidad de carga: Carga rápida de 67W y hasta 2500W máximos en enchufes de corriente alterna.",
+    "Precio ( USD )": 20.0,
+    "Imagen_Path": "products_images/products_094.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "CABLE",
+    "PRODUCTO": "Xiaomi  jack board 4 position 4 control 1.8 meters",
+    "DESC_FULL": "",
+    "Precio ( USD )": 4.0,
+    "Imagen_Path": "products_images/products_095.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "CABLE",
+    "PRODUCTO": "Xiaomi  jack board 4 position 4 control 3 meters",
+    "DESC_FULL": "",
+    "Precio ( USD )": 5.0,
+    "Imagen_Path": "products_images/products_096.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "cable",
+    "PRODUCTO": "Xiaomi 6A High-speed USB4 Braided USB-C to USB-C Cable (1m)",
+    "DESC_FULL": "Transmisión USB4 ultrarrápida, hasta 40 Gbps y salida 8K.\nCarga rápida PD 3.1, hasta 240 W.\nDiseño trenzado duradero, más de 10,000 ciclos de uso.\nCompatibilidad universal, para smartphones, tablets y laptops, 1 m de longitud.",
+    "Precio ( USD )": 18.0,
+    "Imagen_Path": "products_images/products_097.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Etiqueta antipérdida",
+    "PRODUCTO": "Xiaomi Tag 1 Pack Xiaomi Tag",
+    "DESC_FULL": "Localizador de objetos por Bluetooth.\nPermite encontrar llaves, mochilas o maletas desde el móvil.\nAlcance aproximado de 50 m.\nSe puede hacer sonar o ver la última ubicación en la app.\nDiseño pequeño y ligero, incluye funda/llavero.",
+    "Precio ( USD )": 12.0,
+    "Imagen_Path": "products_images/products_098.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "cable",
+    "PRODUCTO": "Xiaomi 6A Braided USB-C to USB-C Cable (2m)",
+    "DESC_FULL": "",
+    "Precio ( USD )": 10.0,
+    "Imagen_Path": "products_images/products_099.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "CARGADOR",
+    "PRODUCTO": "Xiaomi 22.5W Power Adapter (Type-A) EU",
+    "DESC_FULL": "",
+    "Precio ( USD )": 5.0,
+    "Imagen_Path": "products_images/products_100.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "CARGADOR",
+    "PRODUCTO": "Xiaomi 67W HyperCharge Combo (Type-A) EU",
+    "DESC_FULL": "",
+    "Precio ( USD )": 13.0,
+    "Imagen_Path": "products_images/products_101.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "CAMARA",
+    "PRODUCTO": "Xiaomi Smart Camera C100",
+    "DESC_FULL": "Video en alta definición Full HD para imágenes claras y nítidas.\nDetección inteligente de personas con alertas en tiempo real.\nVisión nocturna infrarroja para vigilancia continua, incluso en la oscuridad.\nAudio bidireccional para escuchar y hablar a través de la cámara.\nAmplio ángulo de visión para mayor cobertura del espacio.\nModo de privacidad para proteger la intimidad del usuario.\nCompatible con la app Mi Home y dispositivos inteligentes del hogar.",
+    "Precio ( USD )": 20.0,
+    "Imagen_Path": "products_images/products_102.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "CAMARA",
+    "PRODUCTO": "Xiaomi Solar Outdoor Camera BW400 Pro Set",
+    "DESC_FULL": "batería alimentada por energía Solar, visión nocturna a todo Color, IP66, almacenamiento en la nube, Alexa",
+    "Precio ( USD )": 88.0,
+    "Imagen_Path": "products_images/products_103.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Solar Panel\nSIN CAMARA",
+    "PRODUCTO": "Xiaomi Outdoor Camera Solar Panel (BW 300- BW500)Energía Solar Continua: Conversión eficiente para suministro constante de energía.",
+    "DESC_FULL": "Conector USB-C Impermeable: Carga segura con protección contra líquidos.\nResistencia al Polvo y Agua IP66: Funcionamiento confiable en cualquier clima.\nAlta Potencia de 5W: Carga rápida y eficiente.\nCable de Extensión de 3 Metros: Facilita la instalación y conexión.",
+    "Precio ( USD )": 28.0,
+    "Imagen_Path": "products_images/products_104.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Router",
+    "PRODUCTO": "Mi Router 4C（White)",
+    "DESC_FULL": "Wi-Fi 2.4GHz: 300Mbps.\nCuatro antenas: Cobertura estable.\nApp Mi WiFi: Control desde el móvil.\nControl parental: Gestión de acceso.\n64MB de memoria: Conexión estable.\nFácil configuración: Intuitiva.\nOptimización: Selección automática de canal.",
+    "Precio ( USD )": 11.0,
+    "Imagen_Path": "products_images/products_105.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "casco",
+    "PRODUCTO": "Xiaomi Riding Helmet",
+    "DESC_FULL": "Peso ligero (~280 g ±15 g).\nEstructura doble (cáscara de PC + espuma EPS): resistente y absorbente de impactos.\nForro interior suave y transpirable para mayor comodidad.\n10 orificios de ventilación formando 4 canales, mantienen la cabeza fresca.\nAjuste de diámetro (55–59 cm) mediante girador, para un calce seguro.\nHebilla de liberación rápida y forro desmontable, fácil de limpiar.\nDimensiones aproximadas: 270,8 × 215,7 × 175,2 mm.",
+    "Precio ( USD )": 26.0,
+    "Imagen_Path": "products_images/products_106.png"
+  },
+  {
+    "MARCA": "HOTO",
+    "TIPO": "HERRAMIENTA",
+    "PRODUCTO": "HOTO 3.6V Screwdriver Kit (Classic)",
+    "DESC_FULL": "Perfecto para regalo de casa nueva, cumpleaños de papá, amigo o novio.\nDiseño elegante y compacto\nCaja de ABS resistente, estilo minimalista, fácil de llevar.\nTodo en uno para el hogar\nDestornillador 3.6V con 3 niveles de torque y luz LED\nLlave ajustable de gran apertura\nMartillo con cap de goma y sistema magnético para clavos\n10 brocas de acero S2 resistentes\nAlicates multifunción + Cinta métrica 3m con autobloqueo",
+    "Precio ( USD )": 32.0,
+    "Imagen_Path": "products_images/products_107.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "IRRIGADOR DENTAL",
+    "PRODUCTO": "Xiaomi Water Flosser Replacement Tips",
+    "DESC_FULL": "Boquillas estándar: para uso diario, eliminan restos entre los dientes.\nBoquilla ortodóntica: ideal para usuarios con brackets.\nDiseño giratorio 360°: permite una limpieza completa.\nMaterial seguro: apto para uso alimentario.",
+    "Precio ( USD )": 6.0,
+    "Imagen_Path": "products_images/products_108.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Electric Toothbrush",
+    "PRODUCTO": "Xiaomi Oscillation Electric Toothbrush BLUE  Y WHITE",
+    "DESC_FULL": "Modo de limpieza inteligente: Indicadores de zona para guiarte en la limpieza.\nLarga duración de la batería: Hasta 180 días de uso en modo suave.\nTres modos de limpieza: Suave, estándar y profundo.\nDiseño resistente al agua: Con clasificación IPX8.\nFunción de arranque gradual y memoria de modo para una experiencia personalizada.",
+    "Precio ( USD )": 14.0,
+    "Imagen_Path": "products_images/products_109.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Toothbrush Heads",
+    "PRODUCTO": "Xiaomi Oscillation Electric Toothbrush Replacement Heads (Clean) 3Pack",
+    "DESC_FULL": "",
+    "Precio ( USD )": 9.0,
+    "Imagen_Path": "products_images/products_110.png"
+  },
+  {
+    "MARCA": "BOMIDI\n1ano garantia",
+    "TIPO": "Household product",
+    "PRODUCTO": "BOMIDI Curling Iron HC02 Pink EN (EU Standard)",
+    "DESC_FULL": "Calentamiento rápido: Alcanza la temperatura deseada en 15 segundos.​\nAjuste de temperatura en 3 niveles: Permite seleccionar la temperatura adecuada según el tipo de cabello.​\nApagado automático: Se apaga después de 30 minutos de inactividad para mayor seguridad.​\nDiseño seguro: Incluye protección antiarañazos en la parte superior para evitar quemaduras.",
+    "Precio ( USD )": 10.0,
+    "Imagen_Path": "products_images/products_111.png"
+  },
+  {
+    "MARCA": "BOMIDI\n1ano garantia",
+    "TIPO": "Household product",
+    "PRODUCTO": "BOMIDI Electric Shaver M5 Black EN USB",
+    "DESC_FULL": "Afeitado en seco y húmedo: Todo el cuerpo de la máquina es resistente al agua con certificación IPX7 y puede lavarse directamente.\nCabezal con cuchillas 3D: Uso cómodo que no deja residuos de barba. Afilado automático ECM que mantiene las cuchillas siempre afiladas y duraderas.\nVelocidad constante incluso con batería baja, para un rendimiento uniforme.\nSistema de aviso por depósito lleno: La máquina notificará cuando el contenedor esté lleno, evitando sobrecalentamiento y daños.\nBloqueo de seguridad: Mantén presionado el botón de encendido durante 3 segundos para evitar encendidos accidentales.",
+    "Precio ( USD )": 14.0,
+    "Imagen_Path": "products_images/products_112.png"
+  },
+  {
+    "MARCA": "BOMIDI\n1ano garantia",
+    "TIPO": "Massage",
+    "PRODUCTO": "BOMIDI Massage Pillow MP1  White gray（Black red）",
+    "DESC_FULL": "Diseño en forma cuadrada: Fabricado con material EVA, ofrece un ángulo cómodo para usar.\nMasaje con vibración: Cuenta con 8 cabezales de masaje (4 a cada lado) de diferentes tamaños, que simulan el masaje con manos humanas y pueden girar en sentido horario o antihorario.\nAlivio de la tensión muscular: Reduce la fatiga y rigidez muscular, mejora la circulación sanguínea, restaura la elasticidad muscular, fortalece el sistema inmunológico y ayuda a eliminar toxinas.\nUso versátil: Incluye adaptador y enchufe para coche, ideal tanto para el hogar como para el automóvil.\nCompresa caliente: Tecnología de calefacción por infrarrojos que proporciona calor relajante, estimula la circulación y revitaliza durante sesiones de masaje cortas.",
+    "Precio ( USD )": 12.0,
+    "Imagen_Path": "products_images/products_113.png"
+  },
+  {
+    "MARCA": "BOMIDI\n1ano garantia",
+    "TIPO": "Massage",
+    "PRODUCTO": "BOMIDI Massage Pillow MP1 PRO",
+    "DESC_FULL": "grey blue (Black Orange）\nAmasado simulado con manos humanas\nCompresa caliente con sensación térmica y masaje 3D bidireccional\nDiseño ondulado apilado con combinación de 6° + 17°\nAlmohada de masaje con cabezal innovador en forma de ranura en U\nCalor infrarrojo sensorial que alivia rápidamente la fatiga muscular\nDiseño portátil, fácil de transportar",
+    "Precio ( USD )": 16.0,
+    "Imagen_Path": "products_images/products_114.png"
+  },
+  {
+    "MARCA": "BOMIDI\n1ano garantia",
+    "TIPO": "Household product",
+    "PRODUCTO": "BOMIDI Smart Body Fat Scale S1 White EN",
+    "DESC_FULL": "Pantalla LED brillante: fácil de leer en cualquier momento del día.\nAnálisis corporal completo: mide hasta 13 indicadores como peso, grasa corporal e IMC.\nConectividad Bluetooth 4.0: sincroniza datos automáticamente con la app Tuya Smart.\nDiseño seguro: esquinas redondeadas para evitar golpes.\nAlta precisión: sensores que detectan desde 0.2 hasta 180 kg.\nMaterial duradero: vidrio templado de 5 mm y plástico ABS.\nAlimentación: funciona con 3 pilas AAA.",
+    "Precio ( USD )": 11.0,
+    "Imagen_Path": "products_images/products_115.png"
+  },
+  {
+    "MARCA": "BOMIDI",
+    "TIPO": "Escoba ",
+    "PRODUCTO": "BOMIDI Broom 3 en 1 Set C3 White",
+    "DESC_FULL": "Cabezal giratorio de 180°: Limpia rincones y debajo de muebles.\nDiseño plegable de 90°: Fácil de almacenar.\nDientes raspadores de 25mm: Eliminan pelos y residuos.\nBanda de silicona resistente: Barrido eficiente de polvo y líquidos.\nMaterial duradero: Ideal para uso diario.",
+    "Precio ( USD )": 10.0,
+    "Imagen_Path": "products_images/products_116.png"
+  },
+  {
+    "MARCA": "BOMIDI",
+    "TIPO": "Household product",
+    "PRODUCTO": "BOMIDI Spin mop M20 white grey",
+    "DESC_FULL": "Diseño 2 en 1: Trapeador y balde en un solo sistema.\nSeparación de aguas: Evita la contaminación cruzada.\nCabezal plegable y giratorio 360°: Llega a rincones sin esfuerzo.\nRaspado triple y rociado 3D: Limpieza profunda y eficiente.\nBalde con drenaje dual: Vaciado fácil y sin contacto.\nMango de acero inoxidable: Resistente y duradero.\nAlmohadillas de microfibra: Lavables y reutilizables.",
+    "Precio ( USD )": 20.0,
+    "Imagen_Path": "products_images/products_117.png"
+  },
+  {
+    "MARCA": "ZOLELE",
+    "TIPO": "fan",
+    "PRODUCTO": "ZOLELE tower fan white TF02",
+    "DESC_FULL": "Diseño tipo torre: Estilo moderno y que ahorra espacio, ideal para el hogar u oficina\nFlujo de aire potente: Proporciona ventilación uniforme en el ambiente\nVelocidades ajustables: Múltiples niveles de viento según tus necesidades\nFuncionamiento silencioso: Perfecto para dormitorios o espacios de trabajo tranquilos\nEficiencia energética: Motor de bajo consumo, funcionamiento estable\nLigero y portátil: Fácil de mover y colocar en cualquier lugar",
+    "Precio ( USD )": 28.0,
+    "Imagen_Path": "products_images/products_118.png"
+  },
+  {
+    "MARCA": "BOMIDI\n1ano garantia",
+    "TIPO": "Heater",
+    "PRODUCTO": "BOMIDI Heater H6 white",
+    "DESC_FULL": "Calentamiento de doble velocidad: Ofrece dos modos de calor para adaptarse a diferentes necesidades.\nTermostato incorporado: Permite ajustar la temperatura para mantener un ambiente cómodo.\nTemporizador de 6 a 12 horas: Programable para apagarse automáticamente, ideal para uso nocturno.\nPantalla LED: Muestra claramente la configuración actual para un manejo sencillo.\nProtección contra sobrecalentamiento: Garantiza un uso seguro evitando el sobrecalentamiento.\nApagado automático por vuelco: El equipo se apaga automáticamente si se inclina o cae, previniendo accidentes.\nDiseño compacto y portátil: Dimensiones de 12 x 12 x 27 cm (aprox.) y peso ligero de 0.75 kg, fácil de transportar y almacenar.",
+    "Precio ( USD )": 16.0,
+    "Imagen_Path": "products_images/products_119.png"
+  },
+  {
+    "MARCA": "BOMIDI\n1ano garantia",
+    "TIPO": "Heater",
+    "PRODUCTO": "BOMIDI Heater H1 Black brown",
+    "DESC_FULL": "Potencia de 1500W：Proporciona un calentamiento rápido y eficiente del ambiente.\nTecnología de calefacción cerámica PTC：Calor uniforme y seguro para un uso prolongado.\nControl remoto incluido：Permite ajustar la configuración cómodamente desde una distancia.\nTermostato incorporado：Mantiene una temperatura constante según la configuración deseada.\nOscilación de 55° vertical y 120° horizontal：Distribución amplia del aire caliente en el entorno.\nTemporizador de 2 a 8 horas：Apagado automático programable para mayor comodidad.\nProtección contra sobrecalentamiento：Sistema de seguridad que previene el sobrecalentamiento del dispositivo.\nDiseño compacto y portátil：Fácil de mover y almacenar, ideal para el hogar o la oficina.",
+    "Precio ( USD )": 38.0,
+    "Imagen_Path": "products_images/products_120.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Heater",
+    "PRODUCTO": "Xiaomi Smart Graphene Heater EU",
+    "DESC_FULL": "Potencia nominal: 2000 W.\nTensión nominal: 220-230 V.\nDimensiones aproximadas: Ø 176 mm × alto 467 mm.\nPeso neto aproximado: 2,3 kg.\nTecnología de calefacción: Recubrimiento de grafeno + calefactor de cerámica PTC + resonancia infrarroja lejana (FIR), capaz de calentar en unos 3 segundos.\nOscilación de 70° para amplio alcance de calefacción; modos de flujo de aire: viento caliente, viento tibio, brisa natural.\nControl inteligente mediante la aplicación Mi Home, panel táctil en la parte superior y compatibilidad con Google Assistant para comandos de voz.\nFunciones de seguridad incorporadas: apagado automático en caso de vuelco, protección contra sobrecalentamiento y materiales retardantes al fuego.",
+    "Precio ( USD )": 52.0,
+    "Imagen_Path": "products_images/products_121.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "secadora",
+    "PRODUCTO": "Xiaomi Compact Hair Dryer H101",
+    "DESC_FULL": "Ligero y fácil de guardar, de secado rápido sin dañar el cabello",
+    "Precio ( USD )": 15.0,
+    "Imagen_Path": "products_images/products_122.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "plancha",
+    "PRODUCTO": "Xiaomi Handheld Garment Steamer EU",
+    "DESC_FULL": "El vaporizador portátil para prendas Xiaomi está diseñado para un cuidado fácil y eficiente de las prendas. Ofrece un vapor potente para eliminar rápidamente las arrugas, está listo para usar en solo 30 segundos y cuenta con un tanque de agua de 160 ml para una vaporización continua. El vaporizador es liviano y portátil. Es ideal para viajar. También tiene un diseño anti-escaldado de doble capa para garantizar un uso seguro.",
+    "Precio ( USD )": 20.0,
+    "Imagen_Path": "products_images/products_123.png"
+  },
+  {
+    "MARCA": "BOMIDI\n1ano garantia",
+    "TIPO": "CLIPPER",
+    "PRODUCTO": "BOMIDI clipper L2 Gunmetal Gray",
+    "DESC_FULL": "Diseño recargable (puerto USB-C) con carga completa en aproximadamente 70 minutos\nIncluye 4 peines guía (3 mm, 6 mm, 9 mm y 12 mm) para diferentes estilos de corte\nCuchillas de alta calidad, precisas y sin tirones, adecuadas para todo tipo de cabello\nCabezal desmontable y lavable, fácil de limpiar\nDiseño ligero y ergonómico, ideal para uso doméstico o profesional ligero",
+    "Precio ( USD )": 8.0,
+    "Imagen_Path": "products_images/products_124.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "impresora",
+    "PRODUCTO": "xiaomi Portable Photo Printer 1S",
+    "DESC_FULL": "Diseño ligero y portátil (≈ 124 × 82 × 22 mm; ≈ 180 g), ideal para llevar a cualquier parte.\nTecnología ZINK sin tinta: imprime mediante activación térmica sobre papel especial, sin cartuchos ni cintas.\nConexión Bluetooth 5.2, hasta 3 dispositivos pueden conectarse simultáneamente, sin necesidad de Wi-Fi.\nImpresión instantánea en aproximadamente 45 s, formato adhesivo de 50 × 76 mm, resolución hasta 313 × 512 dpi.\nApp Xiaomi Home permite personalizar fotos con bordes, filtros, marcas de agua, collages y división de imágenes.\nBatería de 500 mAh con autonomía para unas 20 fotos, recarga mediante USB-C.",
+    "Precio ( USD )": 45.0,
+    "Imagen_Path": "products_images/products_125.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Scale",
+    "PRODUCTO": "Mi Smart Scale S200 White Y Dark Grey",
+    "DESC_FULL": "Sensor de alta precisión: con incrementos mínimos de 0,05 kg, permite detectar cambios sutiles en el peso.\nRango de peso: de 0,1 kg a 150 kg, adecuado para personas y objetos pequeños.\nConectividad Bluetooth 5.4: se sincroniza con la aplicación Xiaomi Home para un seguimiento detallado.\nSoporte para hasta 36 usuarios: ideal para familias o grupos, con modo invitado sin almacenamiento de datos.\nFunciones de salud: mide peso, IMC, peso ideal y ofrece recomendaciones de control de peso.\nPrueba de equilibrio: evalúa la coordinación y estabilidad al estar de pie sobre un pie.\nCompatibilidad: requiere Android 8.0/iOS 12.0 o superior.",
+    "Precio ( USD )": 10.0,
+    "Imagen_Path": "products_images/products_126.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Scale",
+    "PRODUCTO": "Xiaomi Body Composition Scale S400",
+    "DESC_FULL": "Medición de bioimpedancia de doble frecuencia: Mayor precisión en la medición de grasa corporal, agua y masa muscular.\nAnálisis de 25 indicadores corporales: Incluye porcentaje de grasa corporal, masa muscular, contenido de agua, proteínas y densidad ósea.\nMonitorización de frecuencia cardíaca en reposo: Seguimiento de la salud cardíaca.\nModos múltiples: Peso de bebés, modo visitante y peso de objetos pequeños.\nAlmacenamiento amplio: Hasta 36 miembros de la familia.",
+    "Precio ( USD )": 15.0,
+    "Imagen_Path": "products_images/products_127.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Fragancia",
+    "PRODUCTO": "Xiaomi Smart Scent Diffuser",
+    "DESC_FULL": "Control inteligente: Se puede controlar a través de la app Mi Home, lo que permite ajustar la intensidad y el tiempo de difusión desde el teléfono.\nVariedad de fragancias: Compatible con cápsulas de fragancia intercambiables, ofreciendo diferentes opciones para ambientar el hogar.\nTecnología ultrasónica: Emite niebla fina para una difusión uniforme del aroma en el ambiente.\nModo nocturno: Disminuye la intensidad de la luz y el sonido para un uso cómodo durante la noche.\nDiseño elegante y minimalista: Con un diseño moderno y compacto, se adapta bien a cualquier espacio.",
+    "Precio ( USD )": 15.0,
+    "Imagen_Path": "products_images/products_128.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Fragancia",
+    "PRODUCTO": "Xiaomi Smart Scent Diffuser Refill ( Wood and Tea) Y ( Rose and Iychee)",
+    "DESC_FULL": "para usar maquina Xiaomi Smart Scent Diffuser",
+    "Precio ( USD )": 5.0,
+    "Imagen_Path": "products_images/products_129.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "SHAVER",
+    "PRODUCTO": "Xiaomi electric shaver S200",
+    "DESC_FULL": "Control inteligente por sensor: Activa el motor cuando entra en contacto con la piel.\nResistencia al agua IPX7: Se puede usar de manera segura bajo el agua, ideal para afeitado en seco o húmedo.\nDiseño compacto: Tamaño pequeño, fácil de llevar en el bolsillo y perfecto para viajes, sin añadir peso extra al equipaje.",
+    "Precio ( USD )": 20.0,
+    "Imagen_Path": "products_images/products_130.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Aspiradora",
+    "PRODUCTO": "Xiaomi Dust Mite Vacuum Cleaner EU",
+    "DESC_FULL": "Lámpara germicida UV\n99% de esterilización\n99% de eliminación de ácaros\nSucción poderosa\nMáximo de 12000Pa de succión potente\nFrecuencia de golpeteo\nGolpeteo de alta frecuencia a 12000\nSecado con aire caliente\nSecado con aire caliente a 50℃",
+    "Precio ( USD )": 35.0,
+    "Imagen_Path": "products_images/products_131.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Aspiradora",
+    "PRODUCTO": "Xiaomi Dust Mite Vacuum Cleaner Pro EU",
+    "DESC_FULL": "Lámpara germicida UV\n99% de esterilización\n99% de eliminación de ácaros\nSucción poderosa\nMáximo de 12000Pa de succión potente\nFrecuencia de golpeteo\nGolpeteo de alta frecuencia a 12000\nSecado con aire caliente\nSecado con aire caliente a 50℃",
+    "Precio ( USD )": 48.0,
+    "Imagen_Path": "products_images/products_132.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Vacuum",
+    "PRODUCTO": "Xiaomi Dust Mite Vacuum Cleaner 2 Pro",
+    "DESC_FULL": "Succión potente de 16 kPa para eliminar ácaros y polvo profundo.\nCepillo con vibración de alta frecuencia para desprender suciedad.\nLuz UV y ultrasonido para desinfección.\nAire caliente a 65 °C para secado y reducción de humedad.\nFiltro de 6 etapas con depósito de 0,8 L lavable.\nDetección inteligente que ajusta la potencia automáticamente.\nTres modos: Suave, Inteligente y Fuerte.",
+    "Precio ( USD )": 58.0,
+    "Imagen_Path": "products_images/products_133.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Robot Vacuum",
+    "PRODUCTO": "Xiaomi Robot Vacuum S20 Mop Pad",
+    "DESC_FULL": "",
+    "Precio ( USD )": 4.0,
+    "Imagen_Path": "products_images/products_134.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Robot Vacuum",
+    "PRODUCTO": "Xiaomi Robot Vacuum S20 Brush Cover (Black)",
+    "DESC_FULL": "",
+    "Precio ( USD )": 5.0,
+    "Imagen_Path": "products_images/products_135.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Aspiradora",
+    "PRODUCTO": "Xiaomi Robot Vacuum S40C",
+    "DESC_FULL": "Succión 5 000 Pa con 4 modos de limpieza.\nNavegación láser LDS 360° con mapas precisos.\nDepósitos: 520 mL polvo + 260 mL agua.\nFlujo de agua inteligente con 3 niveles.\nSensores para evitar obstáculos, caídas y subir bordes de 20 mm.\nApp Xiaomi Home, compatible con Alexa y Google Assistant.\nDimensiones: 340 × 340 × 97 mm, 3,44 kg, batería 2 400 mAh, potencia 55 W.",
+    "Precio ( USD )": 110.0,
+    "Imagen_Path": "products_images/products_136.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Aspiradora",
+    "PRODUCTO": "Xiaomi Robot  Vacuum S40Pro EU",
+    "DESC_FULL": "Succión de hasta 15 000 Pa.\nBatería de aproximadamente 5 200 mAh (capacidad nominal).\nDimensiones de la unidad principal aproximadamente 355 × 350 × 99 mm, peso neto aproximadamente 4,2 kg.\nCapacidad de depósito: agua 310 mL y polvo 430 mL.\nCon una carga completa puede limpiar una superficie de hasta unos 180 m².\nDiseño para limpieza al borde: brazos de fregado extensibles para llegar a la pared/ángulos sin dejar espacio, doble mopa rotativa con 3 niveles de caudal de agua.\nFunción inteligente de detección de alfombras: cuando se detecta una alfombra, las mopas se elevan unos 10 mm para evitar mojarla.\nSistema de navegación avanzado con láser (LDS) y sensor de luz estructurada de 129°, que mejora la evitación de obstáculos y la cartografía.",
+    "Precio ( USD )": 188.0,
+    "Imagen_Path": "products_images/products_137.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Aspiradora",
+    "PRODUCTO": "Xiaomi Robot Vacuum X20 Pro EU",
+    "DESC_FULL": "Succión potente de 7000Pa para todo tipo de suelos.\nBase todo en uno: limpia mopas, seca y vacía el polvo.\nDetecta alfombras y eleva las mopas automáticamente.\nNavegación precisa con sensores láser y de luz estructurada.\nBatería de 5200mAh para hasta 160 min de uso.\nControl total desde la app Mi Home/Xiaomi Home.",
+    "Precio ( USD )": 338.0,
+    "Imagen_Path": "products_images/products_138.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Cooker",
+    "PRODUCTO": "Xiaomi Multifunctional Cooker 1.5L TW 110V",
+    "DESC_FULL": "",
+    "Precio ( USD )": 15.0,
+    "Imagen_Path": "products_images/products_139.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Cooker",
+    "PRODUCTO": "Xiaomi Multifunctional Cooker 1.5L 220V",
+    "DESC_FULL": "Potencia: 1000W para una cocción rápida y eficiente.\nCapacidad: 1.5L para el interior y 1.2L para el vapor.\nModos de cocción: 6 preestablecidos: fondue, vapor, hervir, sopa, DIY y mantener caliente.\nControl de temperatura: 5 niveles ajustables con función de protección contra sobrecalentamiento.\nMateriales: Recubrimiento cerámico antiadherente, cesta de vapor de PP resistente al calor y tapa de vidrio templado.\nDiseño: Base antideslizante, ranura para 7 huevos y orificio de drenaje para mayor seguridad.",
+    "Precio ( USD )": 33.0,
+    "Imagen_Path": "products_images/products_140.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Environment Appliances",
+    "PRODUCTO": "Mi Smart Standing Fan 1C",
+    "DESC_FULL": "Control Inteligente:Control remoto mediante la app Mi Home.\nCompatible con comandos de voz (Xiao AI, Google Assistant, Amazon Alexa).\nModos de Viento y Velocidades:Tres niveles de velocidad ajustables.\nModos de viento natural y de sueño para mayor comodidad.\nEficiencia Energética:Motor silencioso y eficiente con bajo consumo de energía.\nAjustes de Ángulo y Altura:Oscilación horizontal de 90° y ajuste de inclinación de 36°.Puede usarse tanto en el suelo como en la mesa.",
+    "Precio ( USD )": 42.0,
+    "Imagen_Path": "products_images/products_141.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "microonda",
+    "PRODUCTO": "Xiaomi Microwave Oven EU",
+    "DESC_FULL": "Capacidad de 20L, ideal para el hogar.\nPotencia de 700W, calienta y cocina de manera eficiente.\nMúltiples modos de cocción, incluyendo descongelado y recalentado.\nControl mediante perilla y pantalla LED, fácil de usar.\nDiseño moderno y compacto, se adapta a cualquier cocina.",
+    "Precio ( USD )": 60.0,
+    "Imagen_Path": "products_images/products_142.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "comedero para mascotas",
+    "PRODUCTO": "Xiaomi Smart Pet Food Feeder 2 EU",
+    "DESC_FULL": "Alimentación automática programable por horarios y porciones.\nControl y gestión desde aplicación móvil.\nDiseño con sellado hermético que ayuda a mantener el alimento fresco.\nSistema de dispensado preciso para evitar atascos.\nDepósito de gran capacidad para varios días de uso.\nFuncionamiento estable con respaldo de energía para mayor seguridad.\nIdeal para gatos y perros pequeños.",
+    "Precio ( USD )": 66.0,
+    "Imagen_Path": "products_images/products_143.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "purificacion de aire",
+    "PRODUCTO": "Mijia Smart Air Purifier 6 EU",
+    "DESC_FULL": "Sistema de cinco sensores: detecta PM1, PM2.5, polvo, temperatura y humedad.\nSistema de purificación de cinco capas: filtros múltiples, carbón activado, luz UVC y iones negativos para eliminar alérgenos, formaldehído, olores, virus y bacterias.\nTasa CADR de aproximadamente 443 m³/h — adecuado para espacios amplios.\nDimensiones de alrededor de 250 × 250 × 555 mm y peso neto de unos 5,2 kg.\nModo de sueño con ruido muy bajo (~32 dB).\nCompatibilidad con la app Xiaomi Home, asistentes de voz y pantalla LCD que muestra la calidad del aire en tiempo real.",
+    "Precio ( USD )": 145.0,
+    "Imagen_Path": "products_images/products_144.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "repuestro para 4  Lite Pro",
+    "PRODUCTO": "Xiaomi Smart Air Purifier 4 Lite Filter Pro",
+    "DESC_FULL": "Filtración de tres capas: filtro primario, revestimiento antibacteriano y carbón activado.\nElimina el 99.97% de partículas de hasta 0.3 micras (polvo, polen, PM2.5).\nNeutraliza bacterias y elimina olores.\nDuración de 6 a 12 meses, recomendable cambiarlo para mantener la eficacia.\nCompatible solo con Xiaomi Smart Air Purifier 4 Lite.",
+    "Precio ( USD )": 30.0,
+    "Imagen_Path": "products_images/products_145.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "repuestro para 4 Pro",
+    "PRODUCTO": "Xiaomi Smart Air Purifier 4 Pro Filter",
+    "DESC_FULL": "El filtro Xiaomi Smart Air Purifier 4 Pro tiene tres capas de filtración que eliminan el 99.97% de partículas hasta 0.3 micras. Contiene 650,000 mg de carbón activado para absorber olores y gases nocivos. Su duración es de 6 a 12 meses. Compatible solo con Xiaomi Air Purifier 4 Pro.",
+    "Precio ( USD )": 32.0,
+    "Imagen_Path": "products_images/products_146.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Humidifier",
+    "PRODUCTO": "Xiaomi Smart Evaporative Humidifier EU",
+    "DESC_FULL": "Humidificación eficiente: Hasta 400 mL/h para mejorar el confort ambiental.\nGran capacidad: Depósito de agua de 4 L para hasta 19 horas de uso continuo.\nFuncionamiento silencioso: Solo 32 dB(A), ideal para dormir o trabajar.\nPurificación antibacteriana: Filtro con eficacia del 99 % + iones de plata para agua más limpia.\nPantalla inteligente: Muestra en tiempo real el nivel de humedad.\nControl inteligente: Compatible con la app Xiaomi Home y asistentes de voz.",
+    "Precio ( USD )": 65.0,
+    "Imagen_Path": "products_images/products_147.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Botella de agua",
+    "PRODUCTO": "Xiaomi Tritan Water Bottle gris  y blanco",
+    "DESC_FULL": "Capacidad de 600 mL, ideal para el uso diario.\nMaterial Tritan sin BPA, resistente y seguro.\nApertura con una mano y tapa a prueba de fugas.\nFiltro integrado, perfecto para té o frutas.\nAsa de silicona, fácil de transportar.",
+    "Precio ( USD )": 7.0,
+    "Imagen_Path": "products_images/products_148.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Termo",
+    "PRODUCTO": "Mi home thermos cup pocket version white 350ML",
+    "DESC_FULL": "Materiales de alta calidad: interior de acero inoxidable 316L y exterior de acero inoxidable 304, garantizando durabilidad y resistencia. \nAislamiento térmico eficiente: mantiene las bebidas calientes por más de 58 °C durante aproximadamente 6 horas y frías por debajo de 12 °C en el mismo período.",
+    "Precio ( USD )": 7.0,
+    "Imagen_Path": "products_images/products_149.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Botella de agua",
+    "PRODUCTO": "Xiaomi Sport Water Bottle",
+    "DESC_FULL": "Capacidad de 1L, ideal para deportes y uso diario.\nMaterial Tritan de grado seguro, sin olores ni BPA.\nApertura con un botón y tapa a prueba de fugas.\nFiltro integrado, perfecto para té o frutas.\nDiseño resistente y portátil, fácil de llevar.",
+    "Precio ( USD )": 11.0,
+    "Imagen_Path": "products_images/products_150.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Termo",
+    "PRODUCTO": "Mi home thermos Cup Ti 2 grey 480ML",
+    "DESC_FULL": "La Taza Termo Xiaomi Mijia Ti 2 está fabricada con titanio puro TA1, un material seguro, saludable y resistente a la corrosión.\npuede mantener la temperatura de las bebidas hasta 6 horas.\nSu diseño ligero y duradero es ideal para quienes buscan una opción saludable y práctica para conservar sus bebidas calientes o frías.",
+    "Precio ( USD )": 26.0,
+    "Imagen_Path": "products_images/products_151.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "TERMO",
+    "PRODUCTO": "Xiaomi Insulated Kettle 1.8L GL",
+    "DESC_FULL": "Capacidad de 1.8 litros, adecuada para uso familiar o de oficina.\nAislamiento térmico que conserva la temperatura durante horas.\nDiseño de doble pared para un uso seguro al tacto.\nInterior de acero inoxidable resistente y fácil de limpiar.\nVertido cómodo y controlado sin goteos.\nDiseño minimalista y elegante.\nIdeal para agua caliente, té o café.",
+    "Precio ( USD )": 18.0,
+    "Imagen_Path": "products_images/products_152.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "hervidor",
+    "PRODUCTO": "Xiaomi Double Wall Electric Kettle S1",
+    "DESC_FULL": "Capacidad: 1,7 l.\nPotencia: 1800 W.\nVoltaje/frecuencia: 220-240 V, 50/60 Hz.\nDimensiones: 220 × 150 × 251,5 mm.\nPeso neto: 1,11 kg.",
+    "Precio ( USD )": 23.0,
+    "Imagen_Path": "products_images/products_153.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "hervidor",
+    "PRODUCTO": "Xiaomi Smart Kettle 2 Pro EU",
+    "DESC_FULL": "Capacidad de 1,7 litros.\nPotencia nominal de 1800 W.\nDimensiones aproximadas: 273 × 155 × 242 mm.\nPeso neto aproximado: 1,20 kg.\nConectividad Wi-Fi (2,4 GHz) para control mediante aplicación móvil.\nAjuste de temperatura de forma precisa (en incrementos de 1 °C), múltiples modos de hervido, y función de mantener la temperatura hasta 24 horas.",
+    "Precio ( USD )": 35.0,
+    "Imagen_Path": "products_images/products_154.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Rice Cooker",
+    "PRODUCTO": "Xiaomi Smart Multifunctional Rice Cooker 3L",
+    "DESC_FULL": "Xiaomi electric rice cooker is great for home use\nMore than 3000 kinds of rice cooking schemes\nAPP control ( Chinese and English ), convenient to use\nAutomatic heat preservation system\nWith accurate temperature control system\nElectromagnetic heating, easy to infuse flavor",
+    "Precio ( USD )": 33.0,
+    "Imagen_Path": "products_images/products_155.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Toaster",
+    "PRODUCTO": "Xiaomi Toaster",
+    "DESC_FULL": "6 niveles de tostado, para un dorado personalizado.\nRanuras anchas, compatibles con diferentes tipos de pan.\nFunciones múltiples, como recalentado y descongelado.\nDiseño minimalista y compacto, fácil de limpiar y almacenar.",
+    "Precio ( USD )": 20.0,
+    "Imagen_Path": "products_images/products_156.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "licuadora",
+    "PRODUCTO": "Xiaomi Blender Pro EU",
+    "DESC_FULL": "Gran capacidad: 1,75 L para frío / 1,4 L para caliente, ideal para compartir.\nMultifunción: 6 modos para bebidas calientes y frías (sopa, soja, papilla, smoothies, jugo, batido).\nPotencia dual: motor 500 W + calefacción 800 W con micro‑presión para retener sabor y nutrientes.\n6 sistemas de seguridad: anti‑desbordes, bloqueo magnético, protección contra sobre‑calentamiento, funcionamiento en seco o sin jarra.\nAuto‑limpieza y esterilización en caliente (99,99 % de eficacia).\nPantalla LED táctil, programación hasta 12 h y modo de conservación caliente por 12 h.\nBase de calentamiento con recubrimiento cerámico antiadherente.",
+    "Precio ( USD )": 62.0,
+    "Imagen_Path": "products_images/products_157.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Cafetera",
+    "PRODUCTO": "Mi Capsule Coffee Machine N1 S1301 White (Standard Version)",
+    "DESC_FULL": "Material de vidrio de borosilicato: Resistente al calor y al frío, garantiza durabilidad y seguridad.​\nPotencia de 2200W: Permite hervir agua rápidamente, en aproximadamente 5 minutos.​\nDiseño funcional: Incluye indicador LED de funcionamiento, apertura de tapa con un solo toque para facilitar el llenado y la limpieza, y filtro extraíble para una mayor pureza del agua.​\nSeguridad: Cuenta con múltiples sistemas de protección, como apagado automático al hervir y protección contra ebullición en seco.",
+    "Precio ( USD )": 55.0,
+    "Imagen_Path": "products_images/products_158.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Dispensador de agua",
+    "PRODUCTO": "Xiaomi Instant Hot Water Dispenser EU",
+    "DESC_FULL": "Modos de agua caliente y fría: Suministro rápido para diferentes necesidades.\nTecnología de calentamiento instantáneo: Calienta de manera rápida y precisa.\nControl inteligente: Compatible con Mi Home para ajustar temperatura y monitoreo.\nEficiencia energética: Modo ahorro de energía para reducir consumo.\nSeguridad: Bloqueo infantil, protección contra sobrecalentamiento y funcionamiento en seco.\nDiseño elegante: Compacto y moderno, ideal para cualquier espacio.",
+    "Precio ( USD )": 45.0,
+    "Imagen_Path": "products_images/products_159.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "LUZ",
+    "PRODUCTO": "Xiaomi Night Light 3",
+    "DESC_FULL": "Sensor inteligente: Se enciende al detectar movimiento y se apaga después de 15 segundos sin movimiento.\nIluminación suave: Dos niveles de brillo (3 lúmenes y 15 lúmenes).\nLarga duración: Batería de 600 mAh, hasta 8 meses de uso en modo bajo brillo.\nInstalación fácil: Imán integrado y base adhesiva para montarla en diversas superficies.",
+    "Precio ( USD )": 9.0,
+    "Imagen_Path": "products_images/products_160.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Ceiling Light",
+    "PRODUCTO": "Xiaomi Smart Ceiling Light D40",
+    "DESC_FULL": "Luz LED de espectro completo (Ra97) – Iluminación natural con colores reales.\nDiseño antideslumbrante – Protege la vista con tecnología óptica de microprismas.\nControl inteligente – Compatible con app Mi Home, control remoto, Google Assistant y Alexa.\nDiseño delgado (6 cm) – Estilo moderno y minimalista.\nProtección contra polvo (IP50) – Evita entrada de polvo e insectos.",
+    "Precio ( USD )": 55.0,
+    "Imagen_Path": "products_images/products_161.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Ceiling Light",
+    "PRODUCTO": "Xiaomi Smart Ceiling Light D30",
+    "DESC_FULL": "Luz LED de espectro completo (Ra97) – Iluminación natural y colores realistas.\nDiseño antideslumbrante – Protege los ojos con óptica de microprismas.\nControl inteligente – Compatible con app Mi Home, control remoto, Google Assistant y Alexa.\nDiseño delgado (6 cm) – Estilo moderno y minimalista.\nProtección contra polvo (IP50) – Evita entrada de polvo e insectos.",
+    "Precio ( USD )": 40.0,
+    "Imagen_Path": "products_images/products_162.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "lampara",
+    "PRODUCTO": "Lámpara de escritorio Mijia 1S",
+    "DESC_FULL": "4 modos de iluminación\nPotencia: 9W\nFlujo luminoso: hasta 520 lm\nVida útil: 25.000 horas aprox.\nControl por voz con el Asistente de Google, Alexa y Siri\nConectividad: Wi-Fi",
+    "Precio ( USD )": 26.0,
+    "Imagen_Path": "products_images/products_163.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "LUZ",
+    "PRODUCTO": "Xiaomi LED Desk Lamp 2",
+    "DESC_FULL": "Iluminación LED uniforme que reduce sombras y deslumbramiento.\nTemperatura de color ajustable para diferentes escenarios de uso.\nBrillo regulable para mayor comodidad visual.\nDiseño minimalista y flexible que se adapta al escritorio.\nProtección ocular para largas jornadas de estudio o trabajo.\nControl táctil sencillo e intuitivo.\nEficiencia energética y larga vida útil.",
+    "Precio ( USD )": 30.0,
+    "Imagen_Path": "products_images/products_164.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "mouse",
+    "PRODUCTO": "Xiaomi Wireless Mouse Lite 2 Negro",
+    "DESC_FULL": "",
+    "Precio ( USD )": 6.5,
+    "Imagen_Path": "products_images/products_165.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "mouse",
+    "PRODUCTO": "Xiaomi Wireless Mouse Comfort Edition Negro blanco",
+    "DESC_FULL": "",
+    "Precio ( USD )": 7.5,
+    "Imagen_Path": "products_images/products_166.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "mouse",
+    "PRODUCTO": "Xiaomi Dual-mode Wireless Mouse 2 Negro blanco",
+    "DESC_FULL": "",
+    "Precio ( USD )": 9.0,
+    "Imagen_Path": "products_images/products_167.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "mouse",
+    "PRODUCTO": "Xiaomi Wireless Mouse 3 white pink blue black",
+    "DESC_FULL": "",
+    "Precio ( USD )": 11.0,
+    "Imagen_Path": "products_images/products_168.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Mouse",
+    "PRODUCTO": "Xiaomi Gaming Mouse Lite GL",
+    "DESC_FULL": "Sensor de alto rendimiento: Seguimiento óptico preciso y respuesta rápida.\nDPI ajustable: Varios niveles de DPI para personalizar la experiencia de juego.\nRetroiluminación RGB: Personalizable para mejorar la atmósfera de juego.\nDiseño ligero y ergonómico: Cómodo para largas sesiones de juego.\nDiseño de seis botones: Control multifuncional para mayor funcionalidad en juegos.",
+    "Precio ( USD )": 14.0,
+    "Imagen_Path": "products_images/products_169.png"
+  },
+  {
+    "MARCA": "Lenovo",
+    "TIPO": "proyector",
+    "PRODUCTO": "Lenovo XiaoXin 100S Smart Projector L-PJT100L White",
+    "DESC_FULL": "Brillo: 650 ANSI lúmenes\nResolución: 1080P + soporte HDR10\nEnfoque y Corrección: Autofoco + corrección trapezoidal automática\nAudio: Altavoces integrados de 2x5W (HiFi)\nSistema Operativo: Android 9.0\nFunciones Destacadas: WiFi 6, Bluetooth 5.0, HDMI, USB, salida de 3.5mm, adecuado para cine en casa.",
+    "Precio ( USD )": 158.0,
+    "Imagen_Path": "products_images/products_170.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "luz",
+    "PRODUCTO": "Mi Computer Monitor Light Bar",
+    "DESC_FULL": "Lámpara de lectura para monitor LCD, regulable y portátil.\nNo utiliza espacio en pantalla.\nNo refleja la luz en pantalla.\nBrillo, color y temperatura ajustable.\nControl remoto inalámbrico.\nSistema de Rotación magnética.\nPuerto USB tipo-C.",
+    "Precio ( USD )": 30.0,
+    "Imagen_Path": "products_images/products_171.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Monitor",
+    "PRODUCTO": "Xiaomi Curved Gaming Monitor G34WQi EU",
+    "DESC_FULL": "Pantalla curva: Experiencia inmersiva mejorada.\nAlta definición: Monitor ultrapanorámico de 34” (3440x1440).\nFluidez en juegos: Alta tasa de actualización y bajo tiempo de respuesta.\nColores vibrantes: Amplia gama cromática para trabajo y entretenimiento.\nDiseño ajustable: Altura e inclinación personalizables.",
+    "Precio ( USD )": 230.0,
+    "Imagen_Path": "products_images/products_172.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Monitor",
+    "PRODUCTO": "Xiaomi Mini LED Gaming Monitor G Pro 27i EU",
+    "DESC_FULL": "180Hz: Juego ultra fluido.\n1ms: Menos desenfoque y ghosting.\nHDR1000: Alto contraste y brillo.\nMini LED 1152 zonas: Imagen detallada.\n99% DCI-P3: Colores vibrantes.\nErgonómico: Soporte ajustable.",
+    "Precio ( USD )": 258.0,
+    "Imagen_Path": "products_images/products_173.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Sports Fanny Pack",
+    "PRODUCTO": "Xiaomi Sports Fanny Pack",
+    "DESC_FULL": "Ligero y resistente al agua: Diseño portátil y a prueba de agua.\nAlmacenamiento multifuncional: Varios bolsillos para organizar tus pertenencias.\nComodidad al llevarlo puesto: Con respaldo transpirable para un ajuste cómodo.\nCorrea ajustable: Se adapta a diferentes tamaños para una mejor experiencia de uso.",
+    "Precio ( USD )": 12.0,
+    "Imagen_Path": "products_images/products_174.png"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "mochila",
+    "PRODUCTO": "Xiaomi Roll Top Casual Backpack GL 23L",
+    "DESC_FULL": "Capacidad de aproximadamente 23 litros, con diseño enrollable para ajustar el espacio.\nDimensiones: 290 x 170 x 430 mm, apta para equipaje de mano.\nPeso ligero, alrededor de 840 gramos.\nMaterial resistente al agua (poliuretano y poliéster), fácil de limpiar.\nCompartimento principal con sección para laptop de hasta 15.6 pulgadas.\nBolsillos frontales y laterales para acceso rápido a objetos y botellas.\nEspalda acolchonada y ventilada para mayor comodidad al llevarla.",
+    "Precio ( USD )": 38.0,
+    "Imagen_Path": "products_images/products_175.png"
+  },
+  {
+    "MARCA": "Tronsmart",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "Tronsmart Element T2 Plus UPGRADED 20W Bluetooth Speaker",
+    "DESC_FULL": "20W with passive radiator & 24 Hours Playtime\n*7.4V 2000mAh Battery",
+    "Precio ( USD )": 25.0,
+    "Imagen_Path": "products_images/products_176.png"
+  },
+  {
+    "MARCA": "Tronsmart",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "Tronsmart Bang  SE 40W+ USB de 64G de regalo",
+    "DESC_FULL": "Sonido de alta calidad: Potente y adecuado para todo tipo de música.\nResistencia al agua IPX7: Totalmente impermeable, ideal para exteriores.\nBatería de larga duración: Hasta 24 horas de reproducción con una sola carga.\nConexión Bluetooth 5.3: Rápida y estable.\nDiseño portátil: Con correa para facilitar el transporte.\nBajos profundos: Mejora la experiencia de sonido con bajos potentes.\nTamaño del producto:29.8*11.88*16.45cm",
+    "Precio ( USD )": 45.0,
+    "Imagen_Path": "products_images/products_177.png"
+  },
+  {
+    "MARCA": "Tronsmart",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "Tronsmart Bang Mini",
+    "DESC_FULL": "Sonido detallado: 2 cavidades independientes; agudos claros (tweeters y radiador pasivo) y graves potentes (woofers).\nDuración de batería: 15 horas con batería de 4,000 mAh; también funciona como banco de carga (entrada USB).\nLuces LED: Estilo pulsante y circular para animar la fiesta.\nImpermeable IPX6: Resistente al sudor, salpicaduras y arena.\nTecnología SoundPulse™: Audio equilibrado y detallado con chip personalizado y cámara de poder.\nBluetooth 5.3: Transmisión rápida hasta 18 m; conecta hasta 2 dispositivos.\nAsistente personal: Acceso a Siri, Cortana y Asistente de Google con un toque.\nConectividad: Bluetooth y NFC para transmisión inalámbrica.\nApp Tronsmart: Personaliza modos LED y ecualizadores.\nPortátil: Con mango integrado para facilitar el transporte\nTamaño del producto:30.2*12.5*16.9CM",
+    "Precio ( USD )": 56.0,
+    "Imagen_Path": "products_images/products_178.png"
+  },
+  {
+    "MARCA": "Tronsmart",
+    "TIPO": "Bluetooth Speaker",
+    "PRODUCTO": "Tronsmart Bang 60W+ USB de 64G de regalo",
+    "DESC_FULL": "Tecnología SoundPulse: Salida de hasta 60 W para graves intensos y detallados.\nLuz LED: Ilumina al ritmo de la música.\n15 horas de reproducción: Batería de 10.800 mAh y función de banco de carga.\nImpermeable IPX6: Resistente al agua, sudor y arena.\nAsistente personal: Acceso a Siri o Google para gestionar tu agenda.\nInalámbrico: Bluetooth y NFC para una conexión sin esfuerzo.\nCompatible con APP Tronsmart: Personaliza modos LED y ecualizadores.\nTecnología TuneConn: Sincroniza audio con más de 100 altavoces.\nPortátil: Mango integrado para fácil transporte.\nTamaño del producto:36.1* 18.3*15cm",
+    "Precio ( USD )": 66.0,
+    "Imagen_Path": "products_images/products_179.png"
+  },
+  {
+    "MARCA": "Tronsmart",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "Tronsmart Force Max",
+    "DESC_FULL": "Resistencia al agua: IPX7, resistente a inmersión.\nPotencia y tecnología: 80 RMS, SoundPulse, 2.2 canales, 4 controladores con radiadores pasivos.\nDuración de batería: 15 horas con batería de 10,000 mAh.\nEstéreo inalámbrico: Conecta dos parlantes Force para sonido estéreo 3D.\nEfectos de audio: 3 modos de ecualización (estéreo 3D, bajos extra, estándar).\nConectividad: Bluetooth 5.0 (20 m), ranura para tarjeta microSD (64 GB), USB-A para unidades flash (64 GB), entrada auxiliar (3.5 mm).\nCompatibilidad: Asistentes de voz (Google, Siri, Cortana).\nTamaño del producto:25.8*15.3*8.8cm",
+    "Precio ( USD )": 72.0,
+    "Imagen_Path": "products_images/products_180.png"
+  },
+  {
+    "MARCA": "Tronsmart",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "Tronsmart FIITUNE X30 Grey",
+    "DESC_FULL": "Potencia de sonido: 80W con audio de alta resolución (Hi-Res).\nResistencia al agua: certificado IPX6, ideal para uso interior y exterior.\nConectividad: Bluetooth versión 5.3 para conexión estable y rápida.\nEmparejamiento estéreo: permite conectar dos altavoces para sonido envolvente.\nPortabilidad: diseño compacto y fácil de transportar.\nBatería: duración prolongada para uso extendido sin recarga frecuente.",
+    "Precio ( USD )": 115.0,
+    "Imagen_Path": "products_images/products_181.png"
+  },
+  {
+    "MARCA": "Tronsmart",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "Tronsmart T7 Mini",
+    "DESC_FULL": "Tipo de parlante: Woofer, manos libres.\nCaracterísticas: A prueba de agua, Bluetooth, luces LED, batería recargable de 15W.\nIncluye: Micrófono de accesorio.\nLugar de colocación: Interiores y exteriores.\nTiempo de carga: 3 horas.\nTamaño del producto:12.6*12,6*14.2CM",
+    "Precio ( USD )": 14.0,
+    "Imagen_Path": "products_images/products_182.png"
+  },
+  {
+    "MARCA": "Tronsmart",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "Tronsmart T7",
+    "DESC_FULL": "Tipo de parlante: Portátil.\nCaracterísticas: A prueba de agua, Bluetooth, luces LED, batería recargable de 30W.\nUbicación: Escritorio.\nTiempo de carga: 3h.\nTamaño del producto:7.7*7.7*21cm",
+    "Precio ( USD )": 29.0,
+    "Imagen_Path": "products_images/products_183.png"
+  },
+  {
+    "MARCA": "Tronsmart",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "Tronsmart T7 Lite",
+    "DESC_FULL": "Tipo de parlante: Subwoofer, manos libres.\nCaracterísticas: A prueba de agua, Bluetooth, luces LED, batería recargable de 24W, micrófono de accesorio.\nCantidad: 2 parlantes.\nUbicación: En el piso.\nTiempo de carga: 3h.\nTamaño del producto:19.5*7.2*7.2CM",
+    "Precio ( USD )": 20.0,
+    "Imagen_Path": "products_images/products_184.png"
+  },
+  {
+    "MARCA": "TRONSMART",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "Tronsmart T8 Black Grey 40W",
+    "DESC_FULL": "Potencia mejorada de 40W: Ofrece un sonido más potente y nítido de 40W, ideal para disfrutar al aire libre.\nSonido de 360°: Proporciona una inmersión sonora de 360°, envolviendo a todos en una experiencia auditiva completa.\nAudio de 2.1 canales: La tecnología SoundPulse se une a un chip DSP de alta gama, ofreciendo graves más potentes y un sonido envolvente incluso al aire libre.\nResistente a los elementos exteriores: Hasta 18 horas de reproducción y certificación IPX7 a prueba de agua, para que tu música no se detenga ante la lluvia, salpicaduras o aventuras extremas.\nControl de rueda suave: Gira la rueda intuitiva para ajustar el sonido al instante.\nPersonalizados audio y luces: Personaliza tu experiencia con ajustes de EQ y espectáculos de luces vibrantes mediante la aplicación.",
+    "Precio ( USD )": 36.0,
+    "Imagen_Path": "products_images/products_185.png"
+  },
+  {
+    "MARCA": "Tronsmart",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "Tronsmart Halo 100",
+    "DESC_FULL": "Sistema de Sonido de 3 Vías\nEfectos de Iluminación Espléndidos\n18 Horas de Reproducción\nEmparejamiento Estéreo\nPersonaliza los Efectos de Audio a través de la App\nTamaño del producto:28.67*17.97*15CM",
+    "Precio ( USD )": 63.0,
+    "Imagen_Path": "products_images/products_186.png"
+  },
+  {
+    "MARCA": "Tronsmart",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "Tronsmart Halo 110",
+    "DESC_FULL": "Sonido Estéreo Superior de 60W\nEfectos de Iluminación Espléndidos\n18 Horas de Reproducción\nEmparejamiento Estéreo\nPersonaliza los Efectos de Audio a través de la App\nSoporta Karaoke\nTamaño del producto:28.7*19.8*15CM",
+    "Precio ( USD )": 66.0,
+    "Imagen_Path": "products_images/products_187.png"
+  },
+  {
+    "MARCA": "Tronsmart",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "Tronsmart  Halo 300 black+ USB de 64G de regalo",
+    "DESC_FULL": "Potente sonido estéreo: Se puede emparejar con otro altavoz para un sonido envolvente.\nLuces LED dinámicas: Iluminación personalizable para crear ambiente de fiesta.\nModos de reproducción versátiles: Bluetooth, entrada auxiliar (3.5 mm), USB y modo de guitarra.\nFunción karaoke: Entrada para micrófono con control de volumen.\nBanco de energía USB: Puede cargar otros dispositivos mientras está encendido.\nAutonomía optimizada: Apagado automático tras 30 minutos de inactividad.\nControl mediante app: Personalización de ecualización y efectos de luces con la aplicación Tronsmart.",
+    "Precio ( USD )": 220.0,
+    "Imagen_Path": "products_images/products_188.png"
+  },
+  {
+    "MARCA": "Tronsmart",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "Tronsmart Trip",
+    "DESC_FULL": "Parlante Bluetooth 5.3: Manos libres, apto para exteriores, a prueba de agua.\nConectividad: Bluetooth.\nCaracterísticas: Potencia de 10W, batería recargable, micrófono interno y de accesorio, soporte incluido.\nTiempo de carga: 3 horas.\nTamaño del producto：16.8*3.8*7.8CM",
+    "Precio ( USD )": 12.0,
+    "Imagen_Path": "products_images/products_189.png"
+  },
+  {
+    "MARCA": "Tronsmart",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "Tronsmart Trip 2 Blue Grey Red",
+    "DESC_FULL": "EDriver de 42 mm + radiadores duales: graves 20 % más profundos con tecnología SoundPulse.\nAutonomía de 20 h con certificación IPX7 resistente al agua.\nPortátil: asa y clip para mochila o bolsillo.\nAsistentes de voz y llamadas siempre a mano.",
+    "Precio ( USD )": 20.0,
+    "Imagen_Path": "products_images/products_190.png"
+  },
+  {
+    "MARCA": "Tronsmart",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "Tronsmart Mirtune H1  8W Portable Outdoor Speaker black",
+    "DESC_FULL": "Diseño compacto: Fácil de llevar.\nSonido estéreo: Graves profundos y agudos claros.\nConexión Bluetooth: Compatible con móviles y tabletas.\nResistente al agua: Ideal para exteriores.\nBatería duradera: Horas de reproducción continua.\nTamaño del producto:13.8*8.1*4.6cm",
+    "Precio ( USD )": 16.0,
+    "Imagen_Path": "products_images/products_191.png"
+  },
+  {
+    "MARCA": "Tronsmart",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "Tronsmart Mirtune C3 24W Portable Speaker",
+    "DESC_FULL": "Negro Y Azul\nSonido Potente: Woofer en forma de pista + tweeter + radiadores pasivos para graves intensos y agudos claros.\nSúper Portátil: Diseño compacto con correa para llevar fácilmente.\nResistente al Agua IPX7: Ideal para la piscina, el parque o la playa.\nEmparejamiento Estéreo: Conecta 2 altavoces para un sonido estéreo envolvente.\nHasta 12 Horas de Reproducción: Disfruta más con una sola carga.\nModo Doble: Conecta 2 dispositivos a la vez y alterna la música fácilmente.",
+    "Precio ( USD )": 22.0,
+    "Imagen_Path": "products_images/products_192.png"
+  },
+  {
+    "MARCA": "Tronsmart",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "Tronsmart Mirtune C3 30W Plus Portable Speaker black Y azul",
+    "DESC_FULL": "Sonido potente de 30W: Claro y con graves profundos para todo tipo de música.\nResistencia al agua IPX7: Impermeable, perfecto para exteriores y cerca del agua.\nBatería de larga duración: Hasta 24 horas de reproducción con una carga.\nFunción TWS: Empareja dos altavoces para un sonido estéreo.\nConexión Bluetooth: Rápida y estable para múltiples dispositivos\nTamaño del producto:18*7*7.2cm",
+    "Precio ( USD )": 30.0,
+    "Imagen_Path": "products_images/products_193.png"
+  },
+  {
+    "MARCA": "Sounarc",
+    "TIPO": "PARLANTE",
+    "PRODUCTO": "Sounarc K2 200W Karaoke Party Speaker black",
+    "DESC_FULL": "Sonido potente: 200W de sonido estéreo.\nMicrófonos incluidos: 2 micrófonos inalámbricos.\nBatería de larga duración: 24.000 mAh, hasta 24 horas de uso.\nLuces LED: Efectos de luz multicolor para animar el ambiente.\nCambio de voz: Efectos divertidos para karaoke.\nConectividad: Bluetooth, transmisión en vivo y entrada auxiliar.\nControl remoto: Para mayor comodidad.\nResistente al agua: Certificación IPX6.\nFunción power bank: Carga otros dispositivos.",
+    "Precio ( USD )": 95.0,
+    "Imagen_Path": "products_images/products_194.png"
+  }
+]
