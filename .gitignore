@@ -1,2 +1,13 @@
-config.txt
-.env
+# 1. 保护隐私：绝对禁止上传包含 Token 的脚本文件
+*.bat
+
+# 2. 忽略 Excel 临时产生的垃圾文件（这些没用，不用上传）
+~$*
+
+# 3. 忽略 Python 运行产生的缓存
+__pycache__/
+
+# 4. 强制放行所有关键数据（不管文件名带不带日期）
+!*.json
+!*.xlsx
+!products_images/
