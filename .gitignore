@@ -1,0 +1,13 @@
+# 忽略所有 Excel
+*.xlsx
+~$*.xlsx
+# 忽略脚本和代码
+*.bat
+main.py
+# 忽略 Python 缓存
+__pycache__/
+# 仅保留网页必须的文件
+!index.html
+!sources.json
+!*.json
+!*_images/

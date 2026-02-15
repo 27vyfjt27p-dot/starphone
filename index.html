@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <title>Starphone - Catálogo Premium</title>
+    
+        <meta property="og:title" content="Starphone - Catálogo Premium">
+        <meta property="og:description" content="Consulta nuestro catálogo actualizado.">
+        <meta property="og:image" content="https://starphone.cl/wp-content/uploads/2025/02/cropped-cropped-3-e1767369334585.jpg">
+        <meta property="og:image:width" content="300">
+        <meta property="og:image:height" content="300">
+        <meta property="og:type" content="website">
+        <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAk1BMVEVHcEwrwro00so00ck00sotxb000ck00ck00ckmp6E00soktKwhr6c108s00ck00ckZj4kbl5Aks6s00ckQaWQakYsks6sKSEUakowks6sks6sPZWEPZmEakowgp6Aks6sLUEwPZ2IakowKTUkPZ2IakYsakYsktKwakYsKS0cSa2YQaWQQaWQQaGMJS0YQaWQLTEh7hPogAAAAMXRSTlMAEFTfZhy8OP8EfHNbrPR3Zij40pOlmE29/9U7noVHt3h87mC45ptl/yUW/u7ICmCH8NindAAAAKtJREFUeAFiGHjAiEeOiRmfTkAzY43FMBBEsW+eDZmZmeH+lwu0hj5q9SRRulSygmsEutSiAplIPnWMJwZ2o9P2/ni+VA6QTpymG3gRmSI7mVr23YF0E4jUg3Qtj/nBXQITzUMbRlqcBL7vp4+Tb5YXAPR76vvBQZZVXDeaDoBrpYO0Qq/ouq62Nf0w7svoVyWxV8fD8TuO4zRbC87IWLjmK84ptwGXLD3+gQ85MAr2UWxdtwAAAABJRU5ErkJggg==" type="image/png">
+        
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* 开关基础样式 */
+        .toggle-checkbox:checked + .toggle-label { background-color: #2563eb; }
+        .toggle-checkbox:checked + .toggle-label .toggle-dot { transform: translateX(100%); }
+        .toggle-dot { transition: transform 0.2s ease-in-out; }
+        .toggle-label { transition: background-color 0.2s ease-in-out; }
+        body.dark .hover\:bg-red-50:hover { background-color: rgba(239, 68, 68, 0.1); }
+        /* --- 补丁：暗黑模式全局变量 --- */
+        :root { --bg: #f8fafc; --card: #ffffff; --text: #0f172a; --border: #f1f5f9; }
+        body.dark { --bg: #0f172a; --card: #1e293b; --text: #f8fafc; --border: #334155; }
+
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--bg); /* 改用变量 */
+            color: var(--text); /* 改用变量 */
+            overflow-x: auto; 
+            width: 100%; 
+            transition: background 0.3s ease; /* 补丁：平滑切换 */
+            -webkit-tap-highlight-color: transparent; 
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        
+        /* 补丁：适配暗黑模式的卡片样式 */
+        .product-card { display: flex; flex-direction: column; height: 100%; position: relative; transition: all 0.3s ease; border-radius: 1.5rem; border: 1px solid var(--border); background: var(--card); }
+        
+        /* 补丁：骨架屏加载动画 & 悬浮放大镜 */
+        .image-container { 
+            position: relative; width: 100%; padding-top: 100%; 
+            background: linear-gradient(90deg, #f1f5f9 25%, #f8fafc 50%, #f1f5f9 75%);
+            background-size: 200% 100%; animation: shimmer 1.5s infinite;
+            border-radius: 1.5rem 1.5rem 0 0; overflow: hidden; cursor: zoom-in; 
+        }
+        @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+        .image-container img { position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto; max-width: 90%; max-height: 90%; object-fit: contain; z-index: 1; transition: transform 0.4s ease; }
+        
+        /* 补丁：PC端悬浮放大效果 */
+        @media (min-width: 1024px) {
+            .image-container:hover img { transform: scale(1.1); }
+        }
+
+        /* 补丁：红心收藏按钮样式 */
+        .fav-btn { 
+            position: absolute; top: 12px; left: 12px; z-index: 20; width: 36px; height: 36px; border-radius: 50%; 
+            background: rgba(255,255,255,0.9); display: flex; align-items: center; justify-content: center; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+            border: 1px solid #f1f5f9; cursor: pointer; font-size: 18px;
+        }
+        body.dark .fav-btn { background: rgba(30, 41, 59, 0.9); border-color: #475569; }
+
+        .detail-tooltip { position: relative; width: 100%; }
+        .detail-content { visibility: hidden; opacity: 0; position: absolute; top: 20px; left: -10px; right: -10px; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(12px); color: #fff; padding: 20px; border-radius: 1.2rem; font-size: 12px; line-height: 1.6; z-index: 1000; box-shadow: 0 20px 40px rgba(0,0,0,0.4); max-height: 350px; overflow-y: auto; border: 1px solid rgba(255,255,255,0.15); white-space: pre-line; transition: all 0.2s ease; transform: translateY(10px); pointer-events: none; }
+        .detail-content.active { visibility: visible !important; opacity: 1 !important; transform: translateY(0); pointer-events: auto; }
+        .product-card.top-z { z-index: 50 !important; }
+
+        #lightbox-img { transition: transform 0.3s ease; max-width: 95%; max-height: 85vh; object-fit: contain; pointer-events: auto; }
+        .zoom-active { cursor: zoom-out; transform: scale(1.5); }
+        
+        .close-lightbox-btn { position: fixed; top: 25px; right: 25px; width: 50px; height: 50px; background: rgba(0, 0, 0, 0.6); border: 2px solid rgba(255, 255, 255, 0.8); border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: bold; z-index: 2200; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.3); backdrop-filter: blur(5px); }
+
+        .product-title { color: #dc2626; font-weight: 700; font-size: 0.9rem; cursor: pointer; }
+        .glass-header { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); }
+        /* 补丁：暗黑模式页头 */
+        body.dark .glass-header { background: rgba(15, 23, 42, 0.9); border-bottom-color: #334155; }
+        body.dark h1, body.dark #search { color: white; }
+        body.dark #search { background-color: #1e293b; }
+
+        #cart-modal { transform: translateY(100%); transition: transform 0.3s cubic-bezier(0, 0, 0.2, 1); }
+        #cart-modal.active { transform: translateY(0); }
+        /* 补丁：暗黑模式购物车 */
+        body.dark #cart-modal { background-color: #1e293b; color: white; }
+        body.dark #cart-items-list { background-color: #0f172a; }
+        body.dark .note-input { background-color: #334155; color: white; border-color: #475569; }
+        body.dark .qty-input-manual { color: white; }
+
+        .note-input { width: 100%; background: #fff; border: 1px solid #e2e8f0; border-radius: 0.5rem; padding: 4px 8px; font-size: 11px; color: #475569; margin-top: 6px; outline: none; }
+        .qty-input-manual { width: 45px; background: transparent; text-align: center; font-weight: 800; font-size: 0.85rem; border: none; outline: none; color: #1e293b; }
+
+        @media (max-width: 768px) {
+            .product-grid { grid-template-columns: 1fr !important; gap: 0.5rem !important; }
+            .product-card { flex-direction: row !important; height: auto !important; padding: 0.5rem !important; align-items: center; border-radius: 1rem !important; }
+            .image-container { width: 24vw !important; height: 24vw !important; max-width: 85px; max-height: 85px; padding-top: 0 !important; margin-right: 0.75rem !important; border-radius: 0.75rem !important; flex-shrink: 0; }
+            .info-container { flex: 1; padding: 0 !important; min-width: 0; }
+            .controls-container { width: 110px !important; flex-shrink: 0 !important; padding: 0 0 0 0.5rem !important; }
+            .detail-content { position: fixed !important; top: 50% !important; left: 50% !important; right: auto !important; width: 85% !important; transform: translate(-50%, -50%) !important; z-index: 9999 !important; margin: 0 !important; }
+        }
+
+        #filter-btn.filter-active-notify { background-color: #ef4444 !important; position: relative; }
+        #filter-btn.filter-active-notify::after { content: ""; position: absolute; top: -2px; right: -2px; width: 10px; height: 10px; background-color: #fbbf24; border-radius: 50%; border: 2px solid white; }
+        
+        /* 补丁：暗黑模式筛选菜单 */
+        body.dark #filter-menu { background-color: #1e293b; color: white; }
+        body.dark .bg-white { background-color: #1e293b !important; }
+        body.dark .text-slate-900 { color: white !important; }
+       /* --- 补丁：PC端价格、箱规、控制条全对齐置底 --- */
+       @media (min-width: 769px) {
+            .product-card {
+                display: flex !important;
+                flex-direction: column !important;
+                height: 100% !important;
+            }
+
+            /* 文字容器补丁：它是弹簧，负责把下面的内容顶到底部 */
+            .info-container {
+                flex: 1 !important; 
+                display: flex !important;
+                flex-direction: column !important;
+                padding: 1.25rem !important;
+                padding-bottom: 0 !important; 
+            }
+
+            /* 标题部分：确保它能自由占据上方空间 */
+            .product-details {
+                flex-grow: 1; 
+            }
+
+            /* 价格和箱规层补丁：强制置底的关键 */
+            .price-section {
+                margin-top: auto !important; /* 核心：把这一行推到最下面 */
+                padding: 0.75rem 0 !important;
+                display: flex !important;
+                align-items: center !important;
+                gap: 8px !important;
+                border-top: 1px dashed var(--border); /* 加一条虚线，视觉上更整齐 */
+            }
+
+            /* 底部控制区（加减框）：紧跟价格下方 */
+            .controls-container {
+                padding: 0 1.25rem 1.25rem 1.25rem !important;
+                margin-top: 0 !important;
+            }
+        }
+    </style>
+</head>
+<body class="pb-40">
+    <div id="update-announcement" class="fixed top-24 inset-x-4 z-[5000] transform -translate-y-32 opacity-0 transition-all duration-700 pointer-events-none">
+        <div class="max-w-md mx-auto bg-white/80 backdrop-blur-xl border border-white/20 p-4 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] flex items-center justify-between gap-4 pointer-events-auto">
+            <div class="flex items-center gap-3">
+                <div class="flex-shrink-0 w-10 h-10 bg-slate-900 rounded-2xl flex items-center justify-center text-blue-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                    </svg>
+                </div>
+                <h4 class="text-[14px] font-black uppercase tracking-wider text-slate-900">CATALOGO ACTUALIZADO</h4>
+            </div>
+            <button onclick="hideAnnouncement()" class="w-8 h-8 flex items-center justify-center bg-slate-100 hover:bg-white rounded-full text-slate-400 hover:text-slate-900 transition-all">✕</button>
+        </div>
+    </div>
+
+    <header class="glass-header sticky top-0 z-40 p-4 lg:px-10 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+            <div class="flex items-center cursor-pointer flex-shrink-0" onclick="location.reload()">
+                <img src="https://starphone.cl/wp-content/uploads/2025/02/cropped-cropped-3-e1767369334585.jpg" 
+                     alt="Starphone" 
+                     class="h-8 w-auto object-contain rounded-lg">
+            </div>
+
+            <div class="flex-1 flex items-center gap-2">
+                <input type="text" id="search" oninput="handleKeywordInput()" placeholder="Busca..." class="w-full px-4 py-2.5 bg-slate-100 rounded-2xl outline-none text-sm border-none">
+            </div>
+
+            <button id="filter-btn" onclick="vibrate(); toggleMenu()" class="p-2.5 bg-slate-900 text-white rounded-xl shadow-lg active:scale-90 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h10M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-4 lg:p-10">
+        <div id="source-tabs" class="flex flex-nowrap gap-2 mb-4 no-scrollbar overflow-x-auto pb-2"></div>
+        <div id="grid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 product-grid"></div>
+    </main>
+
+    <div id="cart-bar" class="fixed bottom-6 inset-x-4 max-w-xl mx-auto hidden z-40">
+        <div class="bg-slate-900 text-white p-4 rounded-[2.5rem] shadow-2xl flex justify-between items-center cursor-pointer" onclick="vibrate(); toggleCartModal()">
+            <div class="pl-4">
+                <span id="cart-info" class="text-2xl font-black text-blue-400">0</span>
+                <span id="cart-total-bar" class="text-xl font-bold text-white ml-2">$0.00</span>
+            </div>
+            <div class="bg-blue-600 px-6 py-3 rounded-2xl text-sm font-black uppercase">Ver Pedido</div>
+        </div>
+    </div>
+
+    <div id="cart-modal" class="fixed z-[2000] bg-white transition-all duration-300 flex flex-col shadow-2xl
+    /* 📱 手机端：底部抽屉 */
+    bottom-0 inset-x-0 rounded-t-[2.5rem] max-h-[85vh] overflow-hidden
+    /* 💻 PC端：右侧侧边栏 */
+    md:top-0 md:right-0 md:bottom-0 md:left-auto md:inset-x-auto
+    md:w-[420px] md:h-screen md:max-h-none md:rounded-l-[2.5rem] md:rounded-t-none">
+
+    <div class="p-6 border-b border-slate-100 flex justify-between items-center shrink-0">
+        <div class="flex items-center gap-4">
+            <h2 class="text-xl font-black text-slate-900 dark:text-white uppercase">Mi Pedido</h2>
+            <button onclick="clearCart()" class="text-[10px] font-bold text-red-500 border border-red-100 px-2 py-1 rounded-lg uppercase hover:bg-red-50 transition-all">
+                Vaciar 🗑️
+            </button>
+        </div>
+        <button onclick="closeAllModals()" class="w-10 h-10 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-full text-slate-400">✕</button>
+    </div>
+
+    <div id="cart-items-list" class="flex-1 overflow-y-auto p-4 space-y-3 bg-slate-50">
+        </div>
+
+    <div class="p-6 bg-white border-t border-slate-100 shrink-0">
+        <div class="flex justify-between items-center mb-6 px-2">
+            <span class="text-slate-500 font-bold uppercase text-[10px] tracking-widest">Total:</span>
+            <span id="cart-total-modal" class="text-2xl font-black text-slate-900">$0.00</span>
+        </div>
+
+        <div class="flex flex-col gap-2">
+            <div class="flex gap-2">
+                <button onclick="generateOrderPoster(event)" class="flex-1 bg-white border-2 border-slate-900 text-slate-900 py-2.5 rounded-2xl font-black uppercase text-[9px] flex items-center justify-center gap-2 hover:bg-slate-900 hover:text-white transition-all active:scale-95 shadow-sm">
+                    📸 <span>Generar Imagen de Pedido</span>
+                </button>
+                
+                <div class="flex bg-slate-100 p-1 rounded-full w-28 shrink-0">
+                    <button id="btn-contact-0" onclick="selectContact(0)" class="flex-1 py-2 rounded-full text-[10px] font-bold transition-all">AXIN</button>
+                    <button id="btn-contact-1" onclick="selectContact(1)" class="flex-1 py-2 rounded-full text-[10px] font-bold transition-all">IVAN</button>
+                </div>
+            </div>
+
+            <button onclick="sendWhatsApp()" class="w-full bg-blue-600 text-white py-4 rounded-2xl font-black uppercase shadow-lg text-sm hover:bg-blue-700 transition-all active:scale-[0.98]">
+                Enviar WhatsApp
+            </button>
+        </div>
+    </div>
+</div>
+
+    <div id="filter-menu" class="fixed inset-y-0 right-0 w-80 bg-white dark:bg-slate-900 shadow-2xl z-[3000] transform translate-x-full p-6 transition-transform duration-300 flex flex-col">
+        
+        <div class="mb-6 p-5 bg-slate-50 dark:bg-slate-800/50 rounded-[2rem] border border-slate-100 dark:border-slate-800 shadow-sm">
+            <h3 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4 pl-1">Configuración</h3>
+            <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-bold text-slate-600 dark:text-slate-300">Modo Oscuro</span>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="dark-mode-toggle" onchange="toggleDarkMode()" class="sr-only peer">
+                        <div class="w-10 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                    </label>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-bold text-slate-600 dark:text-slate-300">Vibración</span>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="vibration-toggle" onchange="toggleVibration()" checked class="sr-only peer">
+                        <div class="w-10 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-between items-center mb-6 border-b pb-4">
+            <div>
+                <h2 class="text-xl font-black text-slate-900 dark:text-white uppercase leading-none">Filtros</h2>
+                <button onclick="resetFilters()" class="text-[10px] font-black text-blue-600 uppercase mt-1">Limpiar Todo</button>
+            </div>
+            <button onclick="closeAllModals()" class="text-slate-400 font-bold text-xl">✕</button>
+        </div>
+
+        <div id="filter-content" class="space-y-6 overflow-y-auto no-scrollbar flex-1"></div>
+
+        <button onclick="closeAllModals()" class="mt-4 w-full bg-slate-900 dark:bg-blue-600 text-white py-4 rounded-xl font-bold uppercase text-sm active:scale-95 transition-all">Ver Resultados</button>
+    </div>
+
+    <div id="modal-overlay" class="fixed inset-0 bg-black/70 z-[1500] hidden backdrop-blur-sm flex items-center justify-center" onclick="closeAllModals()">
+        <button id="lightbox-close-btn" class="close-lightbox-btn hidden" onclick="event.stopPropagation(); closeAllModals()">✕</button>
+        <img id="lightbox-img" src="" class="hidden" onclick="event.stopPropagation(); this.classList.toggle('zoom-active')">
+    </div>
+
+    <script>
+        function clearCart() {
+    // 1. 弹出确认框防止误删
+    if (!confirm("¿Estás seguro de que deseas vaciar todo el pedido?")) return;
+    
+    vibrate(); // 震动反馈
+    
+    // 2. 清空当前数据源的对象
+    cart = {};
+    productNotes = {};
+    
+    // 3. 同步到本地存储 (LocalStorage)
+    saveToLocal();
+    
+    // 4. 刷新界面
+    render();             // 刷新主页列表（按钮变回加号或数量清零）
+    refreshCartModal();   // 刷新购物车弹窗显示
+    updateCartBar();      // 更新底部的蓝色总数条（会自动隐藏，因为数量为0）
+    
+    // 5. 如果购物车空了，自动关闭弹窗（可选）
+    setTimeout(() => {
+        closeAllModals();
+    }, 500);
+}
+        let products = [], cart = {}, productNotes = {}, favorites = {}, sources = [], currentSourceKey = null;
+       
+        let activeContactIndex = 0;
+        let isFavoriteMode = false; /* 补丁：收藏模式开关 */
+        const CONTACTS = [{name: "Axin", phone: "56926108498"}, {name: "Ivan", phone: "59168043587"}];
+        let activeFilters = { keyword: "", MARCA: null, CATEGORIA: null, TIPO: null, priceRange: null };
+        let announcementTimer; 
+
+        /* 补丁：功能逻辑 */
+       // --- 1. 震动控制逻辑 ---
+let isVibrationEnabled = localStorage.getItem('vibration_enabled') !== 'false';
+
+function vibrate() {
+    if (isVibrationEnabled && navigator.vibrate) {
+        navigator.vibrate(15);
+    }
+}
+
+function toggleVibration() {
+    isVibrationEnabled = document.getElementById('vibration-toggle').checked;
+    localStorage.setItem('vibration_enabled', isVibrationEnabled);
+    if (isVibrationEnabled) vibrate();
+}
+
+// --- 2. 升级版暗黑模式切换 ---
+function toggleDarkMode() {
+    document.body.classList.toggle('dark');
+    const isDark = document.body.classList.contains('dark');
+    localStorage.setItem('starphone_dark', isDark);
+    
+    // 同步侧边栏的开关状态
+    const checkbox = document.getElementById('dark-mode-toggle');
+    if(checkbox) checkbox.checked = isDark;
+    
+    // 同步顶部导航栏图标
+    const icon = document.getElementById('dark-icon');
+    if(icon) icon.innerText = isDark ? '☀️' : '🌙';
+    
+    vibrate();
+}
+        function handleImgError(img) { img.onerror = null; img.src = "https://via.placeholder.com/300?text=Starphone+Premium"; }
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeAllModals();
+            if (e.key === '/' && document.activeElement.tagName !== 'INPUT') { e.preventDefault(); document.getElementById('search').focus(); }
+        });
+
+        async function init() {
+             // 补丁：版本检测，如果是老用户则清理一次旧缓存，确保新版收藏 ID 生效
+            if (!localStorage.getItem('app_version_v2')) {
+                localStorage.clear(); 
+                localStorage.setItem('app_version_v2', '1.0');
+                // 清理完后需要重新加载页面设置，防止变量为空
+                location.reload(); 
+                return;
+            }
+            // 补丁：加载收藏夹和暗黑设置
+            favorites = JSON.parse(localStorage.getItem('starphone_favs') || '{}');
+            if (localStorage.getItem('starphone_dark') === 'true') document.body.classList.add('dark');
+
+            try {
+                const res = await fetch('sources.json');
+                sources = await res.json();
+                if (sources.length > 0) {
+                    currentSourceKey = sources[0].key;
+                    checkProductsFileDate();
+                    renderSourceTabs(); 
+                    const allCarts = JSON.parse(localStorage.getItem('starphone_carts_v2') || '{}');
+                    const allNotes = JSON.parse(localStorage.getItem('starphone_notes_v2') || '{}');
+                    cart = allCarts[currentSourceKey] || {};
+                    productNotes = allNotes[currentSourceKey] || {};
+                    await loadProducts();
+                    // 初始化侧边栏开关的视觉状态
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    if(darkModeToggle) {
+        darkModeToggle.checked = document.body.classList.contains('dark');
+    }
+    
+    const vibrationToggle = document.getElementById('vibration-toggle');
+    if(vibrationToggle) {
+        vibrationToggle.checked = isVibrationEnabled;
+    }
+                }
+            } catch(e) { console.error(e); }
+        }
+
+        async function checkProductsFileDate() {
+            try {
+                const response = await fetch('products.json', { method: 'HEAD' });
+                const lastModified = response.headers.get('Last-Modified');
+                if (lastModified) {
+                    const savedDate = localStorage.getItem('starphone_products_modified');
+                    if (savedDate && savedDate !== lastModified) {
+                        showAnnouncement(lastModified);
+                    } else {
+                        localStorage.setItem('starphone_products_modified', lastModified);
+                    }
+                }
+            } catch (e) { console.log("Date check skipped"); }
+        }
+
+        function showAnnouncement(newDate) {
+            const el = document.getElementById('update-announcement');
+            el.classList.remove('-translate-y-32', 'opacity-0', 'pointer-events-none');
+            el.classList.add('translate-y-0', 'opacity-100');
+            announcementTimer = setTimeout(() => { hideAnnouncement(newDate); }, 10000);
+        }
+
+        function hideAnnouncement(dateToSave) {
+            const el = document.getElementById('update-announcement');
+            el.classList.add('-translate-y-32', 'opacity-0', 'pointer-events-none');
+            el.classList.remove('translate-y-0', 'opacity-100');
+            clearTimeout(announcementTimer);
+            if (dateToSave) localStorage.setItem('starphone_products_modified', dateToSave);
+        }
+
+        async function loadProducts() {
+            try {
+                const src = sources.find(s => s.key === currentSourceKey);
+                const res = await fetch(src.file);
+                const raw = await res.json();
+                products = raw.map((p, i) => ({ ...p, id: i }));
+                resetFilters(false); renderFilters(); render(); selectContact(0);
+            } catch(e) { console.error("Error:", e); }
+        }
+
+        function renderSourceTabs() {
+            const container = document.getElementById('source-tabs');
+            let html = sources.map(s => {
+                const isActive = !isFavoriteMode && s.key === currentSourceKey;
+                return `<button onclick="vibrate(); isFavoriteMode=false; setSource('${s.key}')" class="whitespace-nowrap px-6 py-2.5 rounded-2xl text-[11px] font-bold border-2 transition-all duration-200 ${isActive ? 'bg-slate-900 text-white border-slate-900 shadow-md' : 'bg-white text-slate-400 border-slate-100 hover:border-slate-300'}">${s.label}</button>`;
+            }).join('');
+            
+            // 补丁：收藏标签
+            html += `<button onclick="vibrate(); isFavoriteMode=true; renderSourceTabs(); render();" class="whitespace-nowrap px-6 py-2.5 rounded-2xl text-[11px] font-bold border-2 transition-all ${isFavoriteMode ? 'bg-red-500 text-white border-red-500 shadow-md' : 'bg-white text-red-400 border-red-100 hover:border-red-300'}">FAVORITOS ❤️</button>`;
+            container.innerHTML = html;
+        }
+
+        function setSource(key) { 
+            if (currentSourceKey === key && !isFavoriteMode) return;
+            saveToLocal();
+            currentSourceKey = key; 
+            window.scrollTo(0, 0);
+            document.documentElement.scrollLeft = 0;
+            const allCarts = JSON.parse(localStorage.getItem('starphone_carts_v2') || '{}');
+            const allNotes = JSON.parse(localStorage.getItem('starphone_notes_v2') || '{}');
+            cart = allCarts[key] || {};
+            productNotes = allNotes[key] || {};
+            renderSourceTabs(); 
+            closeAllModals(); 
+            loadProducts(); 
+        }
+
+        function toggleFav(id) {
+            vibrate();
+            if (favorites[id]) delete favorites[id];
+            else favorites[id] = true;
+            localStorage.setItem('starphone_favs', JSON.stringify(favorites));
+            render();
+        }
+
+        function getBoxTagHtml(boxValue) {
+            let val = String(boxValue || '').trim();
+            if (val === '' || val.toUpperCase() === 'D') return '';
+            
+            if (val.toUpperCase().includes('POR CAJA')) {
+                return `<span class="text-blue-700 text-[10px] font-black flex items-center gap-1 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-100 italic">📦 1 CAJA: ${val.replace(/POR CAJA/gi, '').trim()}</span>`;
+            } else if (/^\d+$/.test(val)) {
+                return `<span class="text-blue-600 text-[11px] font-bold flex items-center gap-1">📦 ${val}</span>`;
+            } else {
+                return `<span class="text-red-600 text-[10px] font-black uppercase tracking-tighter">${val}</span>`;
+            }
+        }
+
+        function render() {
+            const { keyword, MARCA, CATEGORIA, TIPO, priceRange } = activeFilters;
+            const filtered = products.filter(p => {
+                // 补丁：收藏夹过滤
+                if (isFavoriteMode && !favorites[p.id]) return false;
+
+                const matchKeyword = !keyword || (p.PRODUCTO + (p.MARCA||"") + (p.CATEGORIA||"") + (p.TIPO||"")).toUpperCase().includes(keyword.toUpperCase());
+                
+                let matchPrice = true;
+                const price = parseFloat(p['Precio ( USD )']) || 0;
+                if(priceRange === 'under50') matchPrice = price < 50;
+                else if(priceRange === '50to200') matchPrice = price >= 50 && price <= 200;
+                else if(priceRange === 'over200') matchPrice = price > 200;
+
+                return matchKeyword && matchPrice && (!MARCA || p.MARCA === MARCA) && (!CATEGORIA || p.CATEGORIA === CATEGORIA) && (!TIPO || p.TIPO === TIPO);
+            });
+            const grid = document.getElementById('grid');
+            if (filtered.length === 0) {
+                grid.innerHTML = `<div class="col-span-full py-20 text-center"><h3 class="text-lg font-black text-slate-900 uppercase">Sin resultados</h3><button onclick="resetFilters()" class="mt-6 px-8 py-3 bg-slate-900 text-white rounded-2xl font-bold text-xs uppercase shadow-lg">Limpiar filtros</button></div>`;
+                updateCartBar();
+                return;
+            }
+            grid.innerHTML = filtered.map(p => {
+                const q = cart[p.id] || 0;
+                const imgUrl = p.Imagen_Path ? encodeURI(p.Imagen_Path.replace(/\\/g, '/')) : '';
+                const boxTag = getBoxTagHtml(p['VIENE_LA_CAJA']);
+
+                return `
+                <div id="card-${p.id}" class="product-card shadow-sm">
+                    <button onclick="event.stopPropagation(); toggleFav(${p.id})" class="fav-btn">${favorites[p.id] ? '❤️' : '🤍'}</button>
+                    
+                    <div class="image-container" onclick="openLightbox('${imgUrl}')">
+                        <img src="${imgUrl}" onerror="handleImgError(this)" loading="lazy">
+                    </div>
+
+                    <div class="info-container p-4">
+                        <div class="product-details">
+                            <p class="text-[10px] font-bold text-indigo-500 uppercase tracking-wider">${p.MARCA || ''}</p>
+                            <div class="detail-tooltip">
+                                <h3 class="product-title" 
+                                    onclick="event.stopPropagation(); toggleDetail(${p.id}, false)" 
+                                    onmouseenter="toggleDetail(${p.id}, true)">${p.PRODUCTO}</h3>
+                                <div id="detail-${p.id}" class="detail-content no-scrollbar" onclick="event.stopPropagation()">
+                                    <div class="flex justify-between items-center mb-3 border-b border-white/10 pb-1">
+                                        <span class="text-blue-400 font-black uppercase">Detalles</span>
+                                        <button onclick="closeAllModals()" class="text-white bg-white/20 w-8 h-8 rounded-full flex items-center justify-center font-bold">✕</button>
+                                    </div>
+                                    <div class="text-[13px] leading-relaxed">${p.DESC_FULL || 'Sin descripción.'}</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="price-section mt-2 flex items-center flex-wrap gap-2">
+                            <span class="text-lg font-black text-slate-900">$${p['Precio ( USD )']}</span>
+                            ${boxTag}
+                        </div>
+                    </div>
+
+                    <div class="controls-container p-4 pt-0">
+                        <div class="flex items-center bg-slate-900 rounded-xl p-1">
+                            <button onclick="vibrate(); updateQty(${p.id},-1)" class="w-9 h-9 text-white">-</button>
+                            <input type="number" value="${q}" onchange="setQty(${p.id}, this.value)" class="w-full bg-transparent text-white text-center text-sm font-black border-none outline-none">
+                            <button onclick="vibrate(); updateQty(${p.id},1)" class="w-9 h-9 bg-blue-500 text-white rounded-lg">+</button>
+                        </div>
+                    </div>
+                </div>`;
+            }).join('');
+            updateCartBar();
+        }
+
+        function toggleDetail(id, isHoverAction) {
+            const el = document.getElementById(`detail-${id}`);
+            const card = document.getElementById(`card-${id}`);
+            const isMobile = window.innerWidth <= 768;
+
+            if (isHoverAction) {
+                if (!isMobile) {
+                    card.classList.add('top-z');
+                    el.classList.add('active');
+                    card.onmouseleave = () => {
+                        el.classList.remove('active');
+                        card.classList.remove('top-z');
+                    };
+                }
+            } else {
+                if (isMobile) {
+                    const wasActive = el.classList.contains('active');
+                    closeAllModals(); 
+                    if (!wasActive) {
+                        el.classList.add('active');
+                        document.getElementById('modal-overlay').classList.remove('hidden'); 
+                        document.body.style.overflow = 'hidden'; 
+                    }
+                }
+            }
+        }
+
+        function updateQty(id, chg) { vibrate(); let n = (cart[id] || 0) + chg; if (n <= 0) { delete cart[id]; delete productNotes[id]; } else cart[id] = n; saveToLocal(); render(); if(document.getElementById('cart-modal').classList.contains('active')) refreshCartModal(); }
+        function setQty(id, val) { let n = parseInt(val); if (isNaN(n) || n <= 0) { delete cart[id]; delete productNotes[id]; } else { cart[id] = n; } saveToLocal(); render(); if(document.getElementById('cart-modal').classList.contains('active')) refreshCartModal(); }
+        function toggleCartModal() { const isActive = document.getElementById('cart-modal').classList.toggle('active'); document.getElementById('modal-overlay').classList.toggle('hidden', !isActive); if(isActive) refreshCartModal(); }
+        
+        function closeAllModals() { 
+            document.querySelectorAll('.detail-content').forEach(d => d.classList.remove('active')); 
+            document.querySelectorAll('.product-card').forEach(c => c.classList.remove('top-z'));
+            document.getElementById('cart-modal').classList.remove('active'); 
+            document.getElementById('filter-menu').classList.add('translate-x-full'); 
+            document.getElementById('modal-overlay').classList.add('hidden'); 
+            document.getElementById('lightbox-img').classList.add('hidden'); 
+            document.getElementById('lightbox-close-btn').classList.add('hidden'); 
+            document.body.style.overflow = ''; 
+        }
+
+        function saveToLocal() { const allCarts = JSON.parse(localStorage.getItem('starphone_carts_v2') || '{}'); const allNotes = JSON.parse(localStorage.getItem('starphone_notes_v2') || '{}'); allCarts[currentSourceKey] = cart; allNotes[currentSourceKey] = productNotes; localStorage.setItem('starphone_carts_v2', JSON.stringify(allCarts)); localStorage.setItem('starphone_notes_v2', JSON.stringify(allNotes)); }
+        function updateCartBar() { let totalItems = 0, totalPrice = 0; for (let id in cart) { const p = products.find(i => i.id == id); if (p) { totalItems += cart[id]; totalPrice += (parseFloat(p['Precio ( USD )']) || 0) * cart[id]; } } document.getElementById('cart-bar').classList.toggle('hidden', totalItems === 0); document.getElementById('cart-info').innerText = totalItems; document.getElementById('cart-total-bar').innerText = `$${totalPrice.toLocaleString('en-US',{minimumFractionDigits:2})}`; }
+        
+        let searchTimeout;
+        function handleKeywordInput() {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                activeFilters.keyword = document.getElementById('search').value;
+                render();
+                renderFilters();
+                updateFilterIconStatus();
+            }, 300);
+        }
+
+        function setFilter(type, val) { 
+            vibrate();
+            if (activeFilters[type] === val) { activeFilters[type] = null; } 
+            else { activeFilters[type] = val; } 
+            renderFilters(); 
+            render(); 
+            updateFilterIconStatus(); 
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function resetFilters(shouldRender = true) { 
+            activeFilters = { keyword: "", MARCA: null, CATEGORIA: null, TIPO: null, priceRange: null }; 
+            document.getElementById('search').value = ""; 
+            if(shouldRender) { renderFilters(); render(); } 
+            updateFilterIconStatus(); 
+        }
+        
+        function openLightbox(src) { 
+            vibrate();
+            if(!src) return; 
+            const img = document.getElementById('lightbox-img'); 
+            img.src = src; 
+            img.classList.remove('hidden', 'zoom-active'); 
+            document.getElementById('lightbox-close-btn').classList.remove('hidden'); 
+            document.getElementById('modal-overlay').classList.remove('hidden'); 
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function toggleMenu() { vibrate(); const menu = document.getElementById('filter-menu'); menu.classList.toggle('translate-x-full'); document.getElementById('modal-overlay').classList.toggle('hidden', menu.classList.contains('translate-x-full')); }
+        function selectContact(i) { vibrate(); activeContactIndex = i; [0,1].forEach(idx => document.getElementById(`btn-contact-${idx}`).className = idx === i ? "flex-1 py-3 rounded-full text-xs font-black bg-blue-600 text-white shadow-md" : "flex-1 py-3 rounded-full text-xs font-bold bg-transparent text-slate-400"); }
+        
+        function refreshCartModal() { 
+            const list = document.getElementById('cart-items-list'); 
+            let html = ""; 
+            for (let id in cart) { 
+                const p = products.find(i => i.id == id); 
+                if(!p) continue; 
+                const boxTag = getBoxTagHtml(p['VIENE_LA_CAJA']);
+                html += `
+                <div class="bg-white p-4 rounded-2xl border border-slate-200">
+                    <div class="flex items-center gap-3 mb-2">
+                        <img src="${p.Imagen_Path ? encodeURI(p.Imagen_Path.replace(/\\/g, '/')) : ''}" class="w-14 h-14 rounded-lg object-contain bg-slate-50">
+                        <div class="flex-1 min-w-0">
+                            <h4 class="text-[11px] font-bold text-slate-800 truncate uppercase">${p.PRODUCTO}</h4>
+                            <div class="flex items-center flex-wrap gap-2 mt-1">
+                                <span class="text-blue-600 font-black">$${p['Precio ( USD )']}</span>
+                                ${boxTag}
+                            </div>
+                        </div>
+                        <div class="flex items-center bg-slate-50 rounded-lg border">
+                            <button onclick="updateQty(${id},-1)" class="px-2 py-1 text-slate-400 font-bold">-</button>
+                            <input type="number" value="${cart[id]}" onchange="setQty(${id}, this.value)" class="qty-input-manual">
+                            <button onclick="updateQty(${id},1)" class="px-2 py-1 text-blue-500 font-bold">+</button>
+                        </div>
+                        <button onclick="setQty(${id}, 0)" class="p-2 text-red-500">×</button>
+                    </div>
+                    <input type="text" placeholder="Nota..." class="note-input" value="${productNotes[id]||''}" oninput="productNotes[${id}]=this.value; saveToLocal()">
+                </div>`; 
+            } 
+            list.innerHTML = html || "<p class='text-center py-20 text-slate-400 font-bold uppercase'>Tu lista está vacía</p>"; 
+            updateCartTotalDisplay(); 
+        }
+
+        function updateCartTotalDisplay() { let total = 0; for (let id in cart) { const p = products.find(i => i.id == id); if (p) total += (parseFloat(p['Precio ( USD )']) || 0) * cart[id]; } document.getElementById('cart-total-modal').innerText = `$${total.toLocaleString('en-US',{minimumFractionDigits:2})}`; }
+        function sendWhatsApp() { 
+    vibrate(); 
+    const contact = CONTACTS[activeContactIndex]; 
+    let total = 0;
+    let m = `⭐ *NUEVO PEDIDO STARPHONE*\n`;
+    m += `--------------------------\n`; 
+
+    let itemCount = 1; 
+    for(let id in cart) { 
+        const p = products.find(i => i.id == id); 
+        if (p) { 
+            const sub = (parseFloat(p['Precio ( USD )']) || 0) * cart[id]; 
+            total += sub; 
+            
+            // 拼接第一行：序号和产品名
+            m += `*item ${itemCount}.* *${p.PRODUCTO}*\n`; 
+            
+            // 拼接第二行：如果有备注才加，没有就不占位
+            if(productNotes[id]) {
+                m += `Nota: ${productNotes[id]}\n`;
+            }
+            
+            // 拼接第三行：数量和金额。注意这里结尾只用一个 \n
+            m += `Cant: ${cart[id]} | Sub: *$${sub.toFixed(2)}*`; 
+            
+            // 核心逻辑：如果不是最后一个产品，才加换行；如果是最后一个，直接结束
+            // 这样能保证 item1 和 item2 之间绝对只有一个回车
+            m += `\n`; 
+            
+            itemCount++; 
+        } 
+    } 
+
+    m += `--------------------------\n`;
+    m += `💰 *TOTAL PEDIDO: $${total.toFixed(2)}*`;
+
+    window.open(`https://wa.me/${contact.phone}?text=${encodeURIComponent(m)}`); 
+}
+        async function generateOrderPoster(event) {
+            vibrate();
+            if (Object.keys(cart).length === 0) return alert("El carrito está vacío");
+            const btn = event.currentTarget;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = "Generando...";
+            btn.disabled = true;
+            const poster = document.createElement('div');
+            poster.style.cssText = "position:fixed; left:-9999px; width:500px; background:white; padding:40px; font-family:'Plus Jakarta Sans',sans-serif;";
+            let itemsHtml = ""; let total = 0;
+            for (let id in cart) {
+                const p = products.find(i => i.id == id);
+                if (p) {
+                    const sub = (parseFloat(p['Precio ( USD )']) || 0) * cart[id];
+                    total += sub;
+                    itemsHtml += `<div style="display:flex; justify-content:space-between; border-bottom:1px solid #f1f5f9; padding:15px 0; align-items: center;"><div style="flex:1; padding-right:20px;"><div style="font-weight:800; font-size:14px; color:#0f172a; text-transform:uppercase; line-height:1.2; margin-bottom:4px;">${p.PRODUCTO}</div><div style="font-size:12px; color:#64748b;"><span style="background:#f1f5f9; padding:2px 6px; border-radius:4px; font-weight:700; color:#0f172a;">${cart[id]} UNI</span> x $${p['Precio ( USD )']} ${productNotes[id] ? `<span style="color:#2563eb; margin-left:8px;">[${productNotes[id]}]</span>` : ''}</div></div><div style="font-weight:900; font-size:16px; color:#0f172a; white-space:nowrap;">$${sub.toFixed(2)}</div></div>`;
+                }
+            }
+            poster.innerHTML = `<div style="border-bottom:5px solid #0f172a; padding-bottom:20px; margin-bottom:25px; display:flex; justify-content:space-between; align-items:flex-end;"><div><h1 style="font-size:36px; font-weight:900; font-style:italic; color:#0f172a; margin:0; letter-spacing:-1px;">STARPHONE</h1><p style="font-size:12px; font-weight:800; color:#2563eb; margin:4px 0 0 0; text-transform:uppercase; letter-spacing:2px;">Confirmación de Pedido</p></div><div style="text-align:right; font-size:11px; color:#64748b; font-weight:600;">${new Date().toLocaleDateString()}</div></div><div>${itemsHtml}</div><div style="margin-top:30px; display:flex; justify-content:space-between; align-items:center; background:#0f172a; padding:25px; border-radius:20px;"><span style="font-size:14px; font-weight:800; color:#94a3b8; text-transform:uppercase; tracking-widest">Total del Pedido:</span><span style="font-size:32px; font-weight:900; color:#ffffff;">$${total.toLocaleString('en-US',{minimumFractionDigits:2})}</span></div><div style="margin-top:30px; text-align:center;"><p style="font-size:11px; font-weight:700; color:#cbd5e1; text-transform:uppercase; letter-spacing:1px;">Generado el: ${new Date().toLocaleString()}</p></div>`;
+            document.body.appendChild(poster);
+            try {
+                const canvas = await html2canvas(poster, { scale: 2, useCORS: true, backgroundColor: "#ffffff" });
+                const link = document.createElement('a');
+                link.download = `Pedido_Starphone_${new Date().getTime()}.png`;
+                link.href = canvas.toDataURL("image/png");
+                link.click();
+            } catch (err) { alert("No se pudo generar la imagen"); } finally { document.body.removeChild(poster); btn.innerHTML = originalText; btn.disabled = false; }
+        }
+
+        function updateFilterIconStatus() {
+            const btn = document.getElementById('filter-btn');
+            const isFiltering = activeFilters.keyword !== "" || activeFilters.MARCA !== null || activeFilters.CATEGORIA !== null || activeFilters.TIPO !== null || activeFilters.priceRange !== null;
+            if (isFiltering) btn.classList.add('filter-active-notify'); else btn.classList.remove('filter-active-notify');
+        }
+
+        function renderFilters() {
+            const { keyword, MARCA, CATEGORIA, TIPO, priceRange } = activeFilters;
+            const marcas = [...new Set(products.map(p => p.MARCA).filter(Boolean))].sort(); 
+            const categorias = [...new Set(products.map(p => p.CATEGORIA).filter(Boolean))].sort(); 
+            const tipos = [...new Set(products.map(p => p.TIPO).filter(Boolean))].sort(); 
+            
+            const createBtn = (list, type) => list.map(item => {
+                const isActive = activeFilters[type] === item;
+                const hasResults = products.some(p => {
+                    const mK = !keyword || (p.PRODUCTO + (p.MARCA||"") + (p.CATEGORIA||"") + (p.TIPO||"")).toUpperCase().includes(keyword.toUpperCase());
+                    const mM = (type === 'MARCA') ? true : (!activeFilters.MARCA || p.MARCA === activeFilters.MARCA);
+                    const mC = (type === 'CATEGORIA') ? true : (!activeFilters.CATEGORIA || p.CATEGORIA === activeFilters.CATEGORIA);
+                    const mT = (type === 'TIPO') ? true : (!activeFilters.TIPO || p.TIPO === activeFilters.TIPO);
+                    
+                    let matchPrice = true;
+                    const price = parseFloat(p['Precio ( USD )']) || 0;
+                    if(activeFilters.priceRange === 'under50') matchPrice = price < 50;
+                    else if(activeFilters.priceRange === '50to200') matchPrice = price >= 50 && price <= 200;
+                    else if(activeFilters.priceRange === 'over200') matchPrice = price > 200;
+
+                    return mK && mM && mC && mT && matchPrice && p[type] === item;
+                });
+                let btnClass = isActive ? "bg-blue-600 text-white border-blue-600 shadow-lg scale-[1.02]" : (hasResults ? "bg-white text-slate-600 border-slate-100 dark:bg-slate-800 dark:text-slate-300 hover:border-slate-300" : "bg-slate-50 text-slate-300 border-slate-50 opacity-50 cursor-not-allowed");
+                return `<button onclick="${hasResults || isActive ? `setFilter('${type}', '${item}')` : ''}" class="w-full flex justify-between items-center px-4 py-3 rounded-xl border text-[11px] font-bold transition-all ${btnClass}"><span>${item}</span>${isActive ? '<span class="ml-2 text-[14px]">✕</span>' : ''}</button>`;
+            }).join(''); 
+
+            const priceRanges = [
+                { label: 'Bajo $50', value: 'under50' },
+                { label: '$50 - $200', value: '50to200' },
+                { label: 'Sobre $200', value: 'over200' }
+            ];
+            const priceBtns = priceRanges.map(item => {
+                const isActive = activeFilters.priceRange === item.value;
+                let btnClass = isActive ? "bg-blue-600 text-white border-blue-600 shadow-lg scale-[1.02]" : "bg-white text-slate-600 border-slate-100 dark:bg-slate-800 dark:text-slate-300 hover:border-slate-300";
+                return `<button onclick="setFilter('priceRange', '${item.value}')" class="w-full flex justify-between items-center px-4 py-3 rounded-xl border text-[11px] font-bold transition-all ${btnClass}"><span>${item.label}</span>${isActive ? '<span class="ml-2 text-[14px]">✕</span>' : ''}</button>`;
+            }).join('');
+
+            // --- 已经去掉了 MENU 标题栏，html 从空字符串开始 ---
+            let html = ""; 
+            
+            // 直接渲染价格、分类等
+            html += `<div><h3 class="text-emerald-600 font-black text-[10px] uppercase tracking-widest mb-3 flex items-center gap-2"><span>Precios</span><div class="h-[1px] flex-1 bg-emerald-100 dark:bg-emerald-900/20"></div></h3><div class="grid grid-cols-1 gap-1">${priceBtns}</div></div>`;
+            if(categorias.length > 0) html += `<div class="mt-6"><h3 class="text-blue-600 font-black text-[10px] uppercase tracking-widest mb-3 flex items-center gap-2"><span>Categorías</span><div class="h-[1px] flex-1 bg-blue-100 dark:bg-blue-900/20"></div></h3><div class="grid grid-cols-1 gap-1">${createBtn(categorias, 'CATEGORIA')}</div></div>`;
+            if(marcas.length > 0) html += `<div class="mt-6"><h3 class="text-indigo-600 font-black text-[10px] uppercase tracking-widest mb-3 flex items-center gap-2"><span>Marcas</span><div class="h-[1px] flex-1 bg-indigo-100 dark:bg-indigo-900/20"></div></h3><div class="grid grid-cols-1 gap-1">${createBtn(marcas, 'MARCA')}</div></div>`;
+            if(tipos.length > 0) html += `<div class="mt-6"><h3 class="text-slate-500 font-black text-[10px] uppercase tracking-widest mb-3 flex items-center gap-2"><span>Otros</span><div class="h-[1px] flex-1 bg-slate-100 dark:bg-slate-800/20"></div></h3><div class="grid grid-cols-1 gap-1">${createBtn(tipos, 'TIPO')}</div></div>`;
+            
+            document.getElementById('filter-content').innerHTML = html || "<p class='text-slate-400 text-xs font-bold uppercase'>No hay filtros disponibles</p>";
+        }
+        init(); // 网页初始化，这行保留
+
+        // --- 精准背景锁定逻辑：只针对结算清单 ---
+        function handleScrollLock() {
+            const cartModal = document.getElementById('cart-modal');
+            // 判断结算面板是否包含 'active' 类 (即是否打开了清单)
+            if (cartModal && cartModal.classList.contains('active')) {
+                document.body.style.overflow = 'hidden'; // 打开时禁止背景滚动
+            } else {
+                document.body.style.overflow = ''; // 其他情况(如筛选时)允许背景滚动
+            }
+        }
+
+        // 绑定监听
+        const cartTarget = document.getElementById('cart-modal');
+        if (cartTarget) {
+            const cartObserver = new MutationObserver(handleScrollLock);
+            cartObserver.observe(cartTarget, { 
+                attributes: true, 
+                attributeFilter: ['class'] 
+            });
+        }
+    </script>
+</body>
+</html>
