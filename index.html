@@ -429,8 +429,7 @@ function toggleDarkMode() {
         const cacheBuster = `?v=${new Date().getTime()}`;
         const res = await fetch(src.file + cacheBuster); 
         const raw = await res.json();
-
-        // --- 核心修改：将 id 从索引 i 改为产品名称 p.PRODUCTO ---
+         // --- 核心修改：将 id 从索引 i 改为产品名称 p.PRODUCTO ---
         products = raw.map((p) => ({ ...p, id: p.PRODUCTO })); 
         // --------------------------------------------------
 
@@ -549,12 +548,14 @@ function toggleDarkMode() {
                     </div>
 
                     <div class="controls-container p-4 pt-0">
-                        <div class="flex items-center bg-slate-900 rounded-xl p-1">
-                            <button onclick="vibrate(); updateQty(${p.id},-1)" class="w-9 h-9 text-white">-</button>
-                            <input type="number" value="${q}" onchange="setQty(${p.id}, this.value)" class="w-full bg-transparent text-white text-center text-sm font-black border-none outline-none">
-                            <button onclick="vibrate(); updateQty(${p.id},1)" class="w-9 h-9 bg-blue-500 text-white rounded-lg">+</button>
-                        </div>
-                    </div>
+    <div class="flex items-center bg-slate-900 rounded-xl p-1">
+        <button onclick="vibrate(); updateQty('${p.id}',-1)" class="w-9 h-9 text-white">-</button>
+        
+        <input type="number" value="${q}" onchange="setQty('${p.id}', this.value)" class="w-full bg-transparent text-white text-center text-sm font-black border-none outline-none">
+        
+        <button onclick="vibrate(); updateQty('${p.id}',1)" class="w-9 h-9 bg-blue-500 text-white rounded-lg">+</button>
+    </div>
+</div>
                 </div>`;
             }).join('');
             updateCartBar();
@@ -691,12 +692,12 @@ function toggleDarkMode() {
                             </div>
                         </div>
                         <div class="flex items-center bg-slate-50 rounded-lg border">
-                            <button onclick="updateQty('${id}',-1)" class="px-2 py-1 text-slate-400 font-bold">-</button>
-<input type="number" value="${cart[id]}" onchange="setQty('${id}', this.value)" class="qty-input-manual">
-<button onclick="updateQty('${id}',1)" class="px-2 py-1 text-blue-500 font-bold">+</button>
-<button onclick="setQty('${id}', 0)" class="p-2 text-red-500">×</button>
+                        <button onclick="updateQty('${id}',-1)" class="px-2 py-1 text-slate-400 font-bold">-</button>
+                        <input type="number" value="${cart[id]}" onchange="setQty('${id}', this.value)" class="qty-input-manual">
+                        <button onclick="updateQty('${id}',1)" class="px-2 py-1 text-blue-500 font-bold">+</button>
+                        <button onclick="setQty('${id}', 0)" class="p-2 text-red-500">×</button>
                         </div>
-                        <button onclick="setQty(${id}, 0)" class="p-2 text-red-500">×</button>
+                        <button onclick="setQty('${id}', 0)" class="p-2 text-red-500">×</button>
                     </div>
                     <input type="text" placeholder="Nota..." class="note-input" value="${productNotes[id]||''}" oninput="productNotes['${id}']=this.value; saveToLocal()">
                 </div>`; 

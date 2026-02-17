@@ -1,19 +1,19 @@
 [
   {
-    "MARCA": "NINTENDO",
-    "TIPO": "SWITCH",
-    "PRODUCTO": "NINTENDO SWITCH 2 Bundled Game Mario Kart World KR BEE-S-KB6NA(KOR)",
-    "DESC_FULL": "",
-    "Precio ( USD )": 530.0,
+    "MARCA": "DJI",
+    "TIPO": "Micrófonos inalámbricos",
+    "PRODUCTO": "DJI 6941565991430 Mic Mini (1 TX+1 RX)",
+    "DESC_FULL": "Transmisor (~10 g) y receptor (~18 g), muy compacto.\nHasta 11.5 h de uso (TX) y 10.5 h (RX).\nModos de grabación: estéreo, mono, y pista de seguridad.\nAlcance hasta 400 m con señal estable.\nCancelación de ruido y limitador automático.\nCompatible con móviles, cámaras y productos DJI.",
+    "Precio ( USD )": 60.0,
     "Imagen_Path": "products_images/products_001.png",
-    "VIENE_LA_CAJA": ""
+    "VIENE_LA_CAJA": "D"
   },
   {
     "MARCA": "FUJIFILM",
     "TIPO": "CAMARA",
-    "PRODUCTO": "FUJIFILM Instax mini Link 3",
-    "DESC_FULL": "green white pink\nImpresora portátil para smartphone con conexión Bluetooth.\nImpresión instantánea rápida en formato instax mini.\nFunciones creativas desde la app (filtros, marcos y efectos).\nBatería recargable para múltiples impresiones.\nDiseño compacto y ligero, fácil de transportar.",
-    "Precio ( USD )": 108.0,
+    "PRODUCTO": "FUJIFILM Instax mini film  10PCS",
+    "DESC_FULL": "Stone Gray,Soft lavender,Spray art,Pink lemonade",
+    "Precio ( USD )": 12.0,
     "Imagen_Path": "products_images/products_002.png",
     "VIENE_LA_CAJA": "D"
   },
@@ -29,19 +29,10 @@
   {
     "MARCA": "FUJIFILM",
     "TIPO": "CAMARA",
-    "PRODUCTO": "FUJIFILM Instax mini film  10PCS",
-    "DESC_FULL": "Stone Gray,Soft lavender,Spray art,Pink lemonade",
-    "Precio ( USD )": 12.0,
+    "PRODUCTO": "FUJIFILM Instax mini Link 3",
+    "DESC_FULL": "green white pink\nImpresora portátil para smartphone con conexión Bluetooth.\nImpresión instantánea rápida en formato instax mini.\nFunciones creativas desde la app (filtros, marcos y efectos).\nBatería recargable para múltiples impresiones.\nDiseño compacto y ligero, fácil de transportar.",
+    "Precio ( USD )": 108.0,
     "Imagen_Path": "products_images/products_004.png",
-    "VIENE_LA_CAJA": "D"
-  },
-  {
-    "MARCA": "DJI",
-    "TIPO": "Micrófonos inalámbricos",
-    "PRODUCTO": "DJI 6941565991430 Mic Mini (1 TX+1 RX)",
-    "DESC_FULL": "Transmisor (~10 g) y receptor (~18 g), muy compacto.\nHasta 11.5 h de uso (TX) y 10.5 h (RX).\nModos de grabación: estéreo, mono, y pista de seguridad.\nAlcance hasta 400 m con señal estable.\nCancelación de ruido y limitador automático.\nCompatible con móviles, cámaras y productos DJI.",
-    "Precio ( USD )": 60.0,
-    "Imagen_Path": "products_images/products_005.png",
     "VIENE_LA_CAJA": "D"
   },
   {
@@ -50,8 +41,17 @@
     "PRODUCTO": "DJI 6941565991454 Mic Mini (2 TX + 1 RX + Charging Case)",
     "DESC_FULL": "",
     "Precio ( USD )": 118.0,
-    "Imagen_Path": "products_images/products_006.png",
+    "Imagen_Path": "products_images/products_005.png",
     "VIENE_LA_CAJA": "D"
+  },
+  {
+    "MARCA": "NINTENDO",
+    "TIPO": "SWITCH",
+    "PRODUCTO": "NINTENDO SWITCH 2 Bundled Game Mario Kart World KR BEE-S-KB6NA(KOR)",
+    "DESC_FULL": "",
+    "Precio ( USD )": 530.0,
+    "Imagen_Path": "products_images/products_006.png",
+    "VIENE_LA_CAJA": ""
   },
   {
     "MARCA": "DJI",
