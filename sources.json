@@ -1,14 +1,8 @@
 [
   {
-    "key": "lista_actual",
-    "label": "LISTA ACTUAL",
-    "desc": "Lista actual",
-    "file": "products.json"
-  },
-  {
-    "key": "2-19products",
-    "label": "2-19PRODUCTS",
-    "desc": "2-19products",
-    "file": "2-19products.json"
+    "key": "2-20products",
+    "label": "2-20PRODUCTS",
+    "desc": "2-20products",
+    "file": "2-20products.json"
   }
 ]
