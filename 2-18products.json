@@ -1,20 +1,26 @@
 [
   {
-    "MARCA": "XIAOMI",
-    "TIPO": "Selfie Stick Tripod",
-    "PRODUCTO": "Xiaomi Selfie Stick Tripod Mini",
-    "DESC_FULL": "Diseño 3 en 1: combina palo selfie, trípode y soporte para livestream.\nExtensible hasta ≈ 52 cm y pesa solo ≈ 155 g.\nClip rotatorio 90°, cambia fácilmente entre modo horizontal y vertical.\nTrípode integrado con patas antideslizantes, estable y compacto.\nControl remoto Bluetooth incorporado, para fotos, ráfagas y vídeos cortos hasta ~10 m.\nEstructura de aleación de aluminio anodizado, ligera y resistente.\nCompatible con Android 4.3+ e iOS 5.0+, con pinza para teléfonos de 60–90 mm de ancho.",
-    "Precio ( USD )": 14,
+    "MARCA": "HiFuture",
+    "PRODUCTO": "HiFuture  MEGA S  black white grey",
+    "DESC_FULL": "Potencia de 5W: Sonido claro y potente para espacios pequeños.\nTecnología Wireless 5.4: Conexión estable y sin interrupciones.\nCompatibilidad con MagSafe: Se adhiere magnéticamente a dispositivos compatibles.\nModo TWS (True Wireless Stereo): Conecta dos altavoces para un sonido estéreo envolvente.\nSoporte integrado para teléfono: Sujeta tu dispositivo mientras ves videos o juegas.\nBatería de larga duración: Hasta 10 horas de reproducción continua.\nCarga inalámbrica de 7.5W a 15W: Carga tus dispositivos sin cables.\nDiseño compacto y elegante: Disponible en colores como negro, beige, verde y gris.",
+    "Precio ( USD )": 12,
     "Imagen_Path": "2-18products_images/2-18products_001.png",
-    "VIENE_LA_CAJA": 36
+    "VIENE_LA_CAJA": "D"
   },
   {
-    "MARCA": "XIAOMI",
-    "TIPO": "Selfie Stick Tripod",
-    "PRODUCTO": "Xiaomi Zoom Floor Selfie Stick Tripod 62\"",
-    "DESC_FULL": "Palo extensible de 62\" (10 secciones, ≈ 1,6 m) para tomas amplias naturales.\nTrípode integrado de despliegue rápido, plegado compacto y portable.\nBase ancha y estable, con estructura triangular reforzada y pies de silicona antideslizantes.\nPinza de teléfono giratoria, admite modos horizontal y vertical.\nControl remoto Bluetooth, almacenamiento magnético, hasta ~10 m; permite disparo, modo foto/vídeo, cambio de cámara y activación rápida.\nMontura de zapata fría oculta para añadir accesorios como luz LED.\nAluminio anodizado ligero y duradero, con pegatina reflectante para localizarlo en entornos con poca luz.\nBatería remota CR1632 (botón, pequeño y eficiente).",
-    "Precio ( USD )": 23,
+    "MARCA": "1HORA",
+    "PRODUCTO": "1HORA Cylinder Bluetooth Speaker",
+    "DESC_FULL": "",
+    "Precio ( USD )": 10,
     "Imagen_Path": "2-18products_images/2-18products_002.png",
-    "VIENE_LA_CAJA": 27
+    "VIENE_LA_CAJA": 40
+  },
+  {
+    "MARCA": "BASEUS",
+    "PRODUCTO": "Baseus GaN5 Pro Gallium nitride fast charger 100W C+U",
+    "DESC_FULL": "Tecnología GaN de 100W: Potente salida de 100W, carga rápida para dispositivos, puertos USB-C y USB-A para carga simultánea.\nTecnología BPS: Distribuye energía inteligentemente para carga eficiente, compatible con PD, QC y PPS.\nDiseño compacto y portátil: Carga hasta tres veces más rápido que cargadores convencionales, se mantiene fresco para evitar sobrecalentamiento y garantiza rendimiento seguro.",
+    "Precio ( USD )": 15,
+    "Imagen_Path": "2-18products_images/2-18products_003.png",
+    "VIENE_LA_CAJA": "super oferta"
   }
 ]
