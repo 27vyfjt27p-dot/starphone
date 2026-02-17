@@ -1,5 +1,11 @@
 [
   {
+    "key": "lista_actual",
+    "label": "LISTA ACTUAL",
+    "desc": "Lista actual",
+    "file": "products.json"
+  },
+  {
     "key": "2-20products",
     "label": "2-20PRODUCTS",
     "desc": "2-20products",
