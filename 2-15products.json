@@ -1,0 +1,47 @@
+[
+  {
+    "MARCA": "Lenovo",
+    "TIPO": "Laptop",
+    "PRODUCTO": "Lenovo Laptop Yangtian V15 i5-13420H 16G 512G Gráficos integrados IPS WIN11 Gris",
+    "DESC_FULL": "",
+    "Precio ( USD )": 540,
+    "Imagen_Path": "2-15products_images/2-15products_001.png",
+    "VIENE_LA_CAJA": "super oferta"
+  },
+  {
+    "MARCA": "Lenovo",
+    "TIPO": "Laptop",
+    "PRODUCTO": "Lenovo Laptop Xiaoxin 16 2024 i5-13420H/16GB/512GB/16 pulgadas/Pantalla de alta gama de colores/Plata Hielo",
+    "DESC_FULL": "",
+    "Precio ( USD )": 580,
+    "Imagen_Path": "2-15products_images/2-15products_002.png",
+    "VIENE_LA_CAJA": "super oferta"
+  },
+  {
+    "MARCA": "NINTENDO",
+    "TIPO": "SWITCH",
+    "PRODUCTO": "NINTENDO SWITCH 2 Bundled Game Mario Kart World KR BEE-S-KB6NA(KOR)",
+    "DESC_FULL": "",
+    "Precio ( USD )": 530,
+    "Imagen_Path": "2-15products_images/2-15products_003.png",
+    "VIENE_LA_CAJA": NaN
+  },
+  {
+    "MARCA": "FUJIFILM",
+    "TIPO": "CAMARA",
+    "PRODUCTO": "FUJIFILM Instax mini Link 3",
+    "DESC_FULL": "green white pink\nImpresora portátil para smartphone con conexión Bluetooth.\nImpresión instantánea rápida en formato instax mini.\nFunciones creativas desde la app (filtros, marcos y efectos).\nBatería recargable para múltiples impresiones.\nDiseño compacto y ligero, fácil de transportar.",
+    "Precio ( USD )": 108,
+    "Imagen_Path": "2-15products_images/2-15products_004.png",
+    "VIENE_LA_CAJA": "D"
+  },
+  {
+    "MARCA": "FUJIFILM",
+    "TIPO": "CAMARA",
+    "PRODUCTO": "FUJIFILM Instax mini evo Blac",
+    "DESC_FULL": "Cámara instantánea híbrida: captura fotos digitales y las imprime al instante.\n100 efectos creativos (10 lentes × 10 películas) con controles físicos.\nImpresión rápida en formato instax mini.\nPantalla LCD de 3,0″ para previsualizar antes de imprimir.\nConectividad Bluetooth para imprimir fotos desde el smartphone.\nMemoria interna y microSD para almacenar imágenes.",
+    "Precio ( USD )": 208,
+    "Imagen_Path": "2-15products_images/2-15products_005.png",
+    "VIENE_LA_CAJA": "D"
+  }
+]
