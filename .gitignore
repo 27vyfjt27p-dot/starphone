@@ -5,6 +5,7 @@
 *.bat
 main.py
 *.txt
+*.exe
 报表自动化工具.py
 # 忽略 Python 缓存
 __pycache__/
