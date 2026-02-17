@@ -4,11 +4,5 @@
     "label": "LISTA ACTUAL",
     "desc": "Lista actual",
     "file": "products.json"
-  },
-  {
-    "key": "1-1products",
-    "label": "1-1PRODUCTS",
-    "desc": "1-1products",
-    "file": "1-1products.json"
   }
 ]
