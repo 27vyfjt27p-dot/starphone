@@ -712,26 +712,24 @@ function toggleDarkMode() {
     const contact = CONTACTS[activeContactIndex]; 
     
     // 1. 定义分组容器
-    // 顺序很重要：这里定义的顺序就是最终消息显示的顺序
     const groups = {
         'STARPHONE': [], // 对应 yf
         'QUE VIVO': [],   // 对应 qcy
-        'OTROS': []      // 对应没有标记或者其他标记的
+        'OTROS': []      
     };
 
     let grandTotal = 0;
 
-    // 2. 将购物车商品按 qcy-yf 字段分堆
+    // 2. 将购物车商品按 qcy-yf 字段分类
     for (let id in cart) {
         const p = products.find(i => i.id == id);
         if (p) {
             const sub = (parseFloat(p['Precio ( USD )']) || 0) * cart[id];
             grandTotal += sub;
             
-            // 读取 main.py 传过来的 qcy-yf 字段 (转为小写对比)
+            // 获取 qcy-yf 字段值
             const tag = String(p['qcy-yf'] || '').toLowerCase();
-            
-            const itemData = { p, sub, qty: cart[id], note: productNotes[id] };
+            const itemData = { p, sub, qty: cart[id], note: productNotes[id] || '' };
 
             if (tag.includes('yf')) {
                 groups['STARPHONE'].push(itemData);
@@ -743,56 +741,48 @@ function toggleDarkMode() {
         }
     }
 
-    // 3. 开始编辑消息内容
+    // 3. 开始构建消息
     let m = `📦 *NUEVO PEDIDO*\n`;
     m += `━━━━━━━━━━━━━━━━━━\n\n`;
 
     let globalItemCount = 1;
-
-    // 4. 按照顺序渲染分组 (STARPHONE 会先被遍历)
     const order = ['STARPHONE', 'QUE VIVO', 'OTROS'];
     
+    // 4. 按顺序循环处理每个组
     order.forEach(groupName => {
         const items = groups[groupName];
-        if (items.length === 0) return; // 如果这组没东西，跳过
+        if (items && items.length > 0) {
+            m += `🏢 *${groupName}*\n`;
+            m += `--------------------------\n`;
 
-        // 显示公司表头
-        m += `🏢 *${groupName}*\n`;
-        m += `--------------------------\n`;
+            let groupSubtotal = 0;
+            items.forEach(item => {
+                groupSubtotal += item.sub;
+                
+                // 产品行
+                m += `*item ${globalItemCount}.* *${item.p.PRODUCTO}*\n`; 
+                
+                // 备注行
+                if(item.note) {
+                    m += `_Nota: ${item.note}_\n`;
+                }
+                
+                // 数量金额行
+                m += `Cant: ${item.qty} | Sub: *$${item.sub.toFixed(2)}*\n\n`; 
+                
+                globalItemCount++;
+            });
 
-        let groupSubtotal = 0;
-        items.forEach(item => {
-            groupSubtotal += item.sub;
-            
-            // 拼接第一行：序号和产品名
-            m += `*item ${globalItemCount}.* *${item.p.PRODUCTO}*\n`; 
-            
-            // 拼接第二行：备注
-            if(item.note) {
-                m += `_Nota: ${item.note}_\n`;
-            }
-            
-            // 拼接第三行：数量和金额
-            m += `Cant: ${item.qty} | Sub: *$${item.sub.toFixed(2)}*\n\n`; 
-            
-            globalItemCount++;
-        });
-
-        // 显示该组的小计
-        m += `*Subtotal ${groupName}: $${groupSubtotal.toFixed(2)}*\n`;
-        m += `━━━━━━━━━━━━━━━━━━\n\n`;
+            // 分组小计
+            m += `*Subtotal ${groupName}: $${groupSubtotal.toFixed(2)}*\n`;
+            m += `━━━━━━━━━━━━━━━━━━\n\n`;
+        }
     });
 
-    // 5. 底部总计
+    // 5. 总计
     m += `💰 *TOTAL GENERAL: $${grandTotal.toFixed(2)}*`;
 
-    // 6. 发送
-    window.open(`https://wa.me/${contact.phone}?text=${encodeURIComponent(m)}`); 
-}
-
-    m += `--------------------------\n`;
-    m += `💰 *TOTAL PEDIDO: $${total.toFixed(2)}*`;
-
+    // 6. 调用 WhatsApp
     window.open(`https://wa.me/${contact.phone}?text=${encodeURIComponent(m)}`); 
 }
         async function generateOrderPoster(event) {
