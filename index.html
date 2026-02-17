@@ -710,79 +710,39 @@ function toggleDarkMode() {
         function sendWhatsApp() { 
     vibrate(); 
     const contact = CONTACTS[activeContactIndex]; 
-    
-    // 1. 定义分组容器
-    const groups = {
-        'STARPHONE': [], // 对应 yf
-        'QUEVIVO': [],   // 对应 qcy
-        'OTROS': []      
-    };
+    let total = 0;
+    let m = `⭐ *NUEVO PEDIDO STARPHONE*\n`;
+    m += `--------------------------\n`; 
 
-    let grandTotal = 0;
-
-    // 2. 将购物车商品按 qcy-yf 字段分类
-    for (let id in cart) {
-        const p = products.find(i => i.id == id);
-        if (p) {
-            const sub = (parseFloat(p['Precio ( USD )']) || 0) * cart[id];
-            grandTotal += sub;
+    let itemCount = 1; 
+    for(let id in cart) { 
+        const p = products.find(i => i.id == id); 
+        if (p) { 
+            const sub = (parseFloat(p['Precio ( USD )']) || 0) * cart[id]; 
+            total += sub; 
             
-            // 获取 qcy-yf 字段值
-            const tag = String(p['qcy-yf'] || '').toLowerCase();
-            const itemData = { p, sub, qty: cart[id], note: productNotes[id] || '' };
-
-            if (tag.includes('yf')) {
-                groups['STARPHONE'].push(itemData);
-            } else if (tag.includes('qcy')) {
-                groups['QUEVIVO'].push(itemData);
-            } else {
-                groups['OTROS'].push(itemData);
+            // 拼接第一行：序号和产品名
+            m += `*item ${itemCount}.* *${p.PRODUCTO}*\n`; 
+            
+            // 拼接第二行：如果有备注才加，没有就不占位
+            if(productNotes[id]) {
+                m += `Nota: ${productNotes[id]}\n`;
             }
-        }
-    }
+            
+            // 拼接第三行：数量和金额。注意这里结尾只用一个 \n
+            m += `Cant: ${cart[id]} | Sub: *$${sub.toFixed(2)}*`; 
+            
+            // 核心逻辑：如果不是最后一个产品，才加换行；如果是最后一个，直接结束
+            // 这样能保证 item1 和 item2 之间绝对只有一个回车
+            m += `\n`; 
+            
+            itemCount++; 
+        } 
+    } 
 
-    // 3. 开始构建消息
-    let m = `📦 *NUEVO PEDIDO*\n`;
-    m += `━━━━━━━━━━━━━━━━━━\n\n`;
+    m += `--------------------------\n`;
+    m += `💰 *TOTAL PEDIDO: $${total.toFixed(2)}*`;
 
-    let globalItemCount = 1;
-    const order = ['STARPHONE', 'QUEVIVO', 'OTROS'];
-    
-    // 4. 按顺序循环处理每个组
-    order.forEach(groupName => {
-        const items = groups[groupName];
-        if (items && items.length > 0) {
-            m += `🏢 *${groupName}*\n`;
-            m += `--------------------------\n`;
-
-            let groupSubtotal = 0;
-            items.forEach(item => {
-                groupSubtotal += item.sub;
-                
-                // 产品行
-                m += `*item ${globalItemCount}.* *${item.p.PRODUCTO}*\n`; 
-                
-                // 备注行
-                if(item.note) {
-                    m += `_Nota: ${item.note}_\n`;
-                }
-                
-                // 数量金额行
-                m += `Cant: ${item.qty} | Sub: *$${item.sub.toFixed(2)}*\n\n`; 
-                
-                globalItemCount++;
-            });
-
-            // 分组小计
-            m += `*Subtotal ${groupName}: $${groupSubtotal.toFixed(2)}*\n`;
-            m += `━━━━━━━━━━━━━━━━━━\n\n`;
-        }
-    });
-
-    // 5. 总计
-    m += `💰 *TOTAL GENERAL: $${grandTotal.toFixed(2)}*`;
-
-    // 6. 调用 WhatsApp
     window.open(`https://wa.me/${contact.phone}?text=${encodeURIComponent(m)}`); 
 }
         async function generateOrderPoster(event) {
