@@ -1,0 +1,74 @@
+[
+  {
+    "MARCA": "DJI",
+    "TIPO": "Micrófonos inalámbricos",
+    "PRODUCTO": "DJI 6941565991430 Mic Mini (1 TX+1 RX)",
+    "DESC_FULL": "Transmisor (~10 g) y receptor (~18 g), muy compacto.\nHasta 11.5 h de uso (TX) y 10.5 h (RX).\nModos de grabación: estéreo, mono, y pista de seguridad.\nAlcance hasta 400 m con señal estable.\nCancelación de ruido y limitador automático.\nCompatible con móviles, cámaras y productos DJI.",
+    "Precio ( USD )": 60,
+    "Imagen_Path": "2-18products_images/2-18products_001.png",
+    "VIENE_LA_CAJA": "D"
+  },
+  {
+    "MARCA": "DJI",
+    "TIPO": "Micrófonos inalámbricos",
+    "PRODUCTO": "DJI 6941565991454 Mic Mini (2 TX + 1 RX + Charging Case)",
+    "DESC_FULL": "",
+    "Precio ( USD )": 118,
+    "Imagen_Path": "2-18products_images/2-18products_002.png",
+    "VIENE_LA_CAJA": "D"
+  },
+  {
+    "MARCA": "DJI",
+    "TIPO": "Palos selfie",
+    "PRODUCTO": "DJI 6941565939012 Osmo Mobile SE",
+    "DESC_FULL": "Estabilización en 3 ejes: Reduce temblores para vídeos suaves.\nDiseño plegable con clip magnético: Fácil de transportar y conectar rápidamente.\nActiveTrack 5.0: Sigue automáticamente a personas u objetos.\nModos inteligentes: Timelapse, panorámica, DynamicZoom, modo Historia.\nControl fácil: Panel de estado y botón \"M\" para cambiar modos rápidamente.\nCompatible con la app DJI Mimo y LightCut para edición y guías de grabación.",
+    "Precio ( USD )": 68,
+    "Imagen_Path": "2-18products_images/2-18products_003.png",
+    "VIENE_LA_CAJA": "D"
+  },
+  {
+    "MARCA": "DJI",
+    "TIPO": "Palos selfie",
+    "PRODUCTO": "DJI 6941565997517 Osmo Mobile 7P",
+    "DESC_FULL": "Módulo con luz de relleno LED integrada (3 niveles de brillo).\nControl por gestos: inicia grabación o foto sin tocar el móvil.\nCompatible con DJI Mic: mejor audio para entrevistas o vlogs.\nActiveTrack 7.0 mejorado: mejor detección y seguimiento.\nHasta 5 horas de batería cuando se usa el módulo.\nPeso ligeramente mayor (~368g con módulo).",
+    "Precio ( USD )": 145,
+    "Imagen_Path": "2-18products_images/2-18products_004.png",
+    "VIENE_LA_CAJA": "D"
+  },
+  {
+    "MARCA": "DJI",
+    "TIPO": "Palos selfie",
+    "PRODUCTO": "DJI  Osmo Mobile 8",
+    "DESC_FULL": "Estabilización en 3 ejes, que permite videos suaves y sin temblores. \nRotación horizontal 360° continua, ideal para panorámicas y movimientos fluidos. \nSeguimiento automático de personas y mascotas con su módulo multifuncional, incluso con control por gestos. \nBrazo extensible y trípode integrados, lo que facilita selfies, tomas en grupo o grabaciones estables sin accesorios extra. \nHasta 10 horas de batería, y la posibilidad de cargar el teléfono mientras grabas.",
+    "Precio ( USD )": 170,
+    "Imagen_Path": "2-18products_images/2-18products_005.png",
+    "VIENE_LA_CAJA": "D"
+  },
+  {
+    "MARCA": "DJI",
+    "TIPO": "Palos selfie",
+    "PRODUCTO": "DJI RS 4",
+    "DESC_FULL": "Diseño liviano con carga útil de 3kg\nPantalla táctil OLED con bloqueo automático\nDisparo vertical nativo de segunda generación\nBloqueos de ejes automáticos\nCambio de modo mediante joystick o Bluetooth\nAdmite transmisor de imágenes inalámbrico\nEjes recubiertos de teflón\nTiempo de funcionamiento de 12 horas\nRevisa la compatibilidad de tu cámara aca",
+    "Precio ( USD )": 480,
+    "Imagen_Path": "2-18products_images/2-18products_006.png",
+    "VIENE_LA_CAJA": "D"
+  },
+  {
+    "MARCA": "DJI",
+    "TIPO": "Palos selfie",
+    "PRODUCTO": "DJI 6941565974693 RS 4 Combo",
+    "DESC_FULL": "Descubre el DJI RS 4: Estabilización avanzada para cineastas\nEstabilizador con grabación vertical nativa, mayor rendimiento y accesorios actualizados para una experiencia profesional y eficiente.\nGrabación vertical nativa 2.ª generación\nControl de zoom/estabilizador con palanca de mando\nBrazos con recubrimiento de teflón para movimiento más suave\nCapacidad de carga de 3 kg con eje de inclinación extendido\nPuerto RSA para ecosistema de control ampliado\nBatería de alta capacidad: hasta 2,5× más tiempo de uso",
+    "Precio ( USD )": 630,
+    "Imagen_Path": "2-18products_images/2-18products_007.png",
+    "VIENE_LA_CAJA": "D"
+  },
+  {
+    "MARCA": "DJI",
+    "TIPO": "camara",
+    "PRODUCTO": "DJI Osmo Pocket 3 Creator Combo",
+    "DESC_FULL": "Pantalla táctil OLED giratoria de 2\" para grabación horizontal o vertical.\nEstabilización mecánica en 3 ejes para vídeos fluidos.\nActiveTrack 6.0 con enfoque rápido de todos los píxeles.\nModo Exhibición de producto para priorizar objetos en primer plano.\nGrabación en D-Log M y 10 bits con audio estéreo.\nDiseño compacto de bolsillo.",
+    "Precio ( USD )": 670,
+    "Imagen_Path": "2-18products_images/2-18products_008.png",
+    "VIENE_LA_CAJA": "D"
+  }
+]
