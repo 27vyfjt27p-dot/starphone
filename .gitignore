@@ -4,6 +4,9 @@
 # 忽略脚本和代码
 *.bat
 main.py
+*.txt
+*.exe
+报表自动化工具.py
 # 忽略 Python 缓存
 __pycache__/
 # 仅保留网页必须的文件
