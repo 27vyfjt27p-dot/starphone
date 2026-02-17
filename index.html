@@ -530,7 +530,7 @@ function toggleDarkMode() {
                             <p class="text-[10px] font-bold text-indigo-500 uppercase tracking-wider">${p.MARCA || ''}</p>
                             <div class="detail-tooltip">
                                 <h3 class="product-title" 
-                                    onclick="event.stopPropagation(); toggleDetail(${p.id}, false)" 
+                                    onclick="event.stopPropagation(); toggleDetail('${p.id}', false)" 
                                     onmouseenter="toggleDetail(${p.id}, true)">${p.PRODUCTO}</h3>
                                 <div id="detail-${p.id}" class="detail-content no-scrollbar" onclick="event.stopPropagation()">
                                     <div class="flex justify-between items-center mb-3 border-b border-white/10 pb-1">
