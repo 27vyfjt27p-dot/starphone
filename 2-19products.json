@@ -5,16 +5,7 @@
     "PRODUCTO": "DJI 6941565991454 Mic Mini (2 TX + 1 RX + Charging Case)",
     "DESC_FULL": "",
     "Precio ( USD )": 118,
-    "Imagen_Path": "2-18products_images/2-18products_001.png",
-    "VIENE_LA_CAJA": "D"
-  },
-  {
-    "MARCA": "DJI",
-    "TIPO": "Palos selfie",
-    "PRODUCTO": "DJI 6941565939012 Osmo Mobile SE",
-    "DESC_FULL": "Estabilización en 3 ejes: Reduce temblores para vídeos suaves.\nDiseño plegable con clip magnético: Fácil de transportar y conectar rápidamente.\nActiveTrack 5.0: Sigue automáticamente a personas u objetos.\nModos inteligentes: Timelapse, panorámica, DynamicZoom, modo Historia.\nControl fácil: Panel de estado y botón \"M\" para cambiar modos rápidamente.\nCompatible con la app DJI Mimo y LightCut para edición y guías de grabación.",
-    "Precio ( USD )": 68,
-    "Imagen_Path": "2-18products_images/2-18products_002.png",
+    "Imagen_Path": "2-19products_images/2-19products_001.png",
     "VIENE_LA_CAJA": "D"
   },
   {
@@ -23,7 +14,7 @@
     "PRODUCTO": "DJI 6941565997517 Osmo Mobile 7P",
     "DESC_FULL": "Módulo con luz de relleno LED integrada (3 niveles de brillo).\nControl por gestos: inicia grabación o foto sin tocar el móvil.\nCompatible con DJI Mic: mejor audio para entrevistas o vlogs.\nActiveTrack 7.0 mejorado: mejor detección y seguimiento.\nHasta 5 horas de batería cuando se usa el módulo.\nPeso ligeramente mayor (~368g con módulo).",
     "Precio ( USD )": 145,
-    "Imagen_Path": "2-18products_images/2-18products_003.png",
+    "Imagen_Path": "2-19products_images/2-19products_002.png",
     "VIENE_LA_CAJA": "D"
   },
   {
@@ -32,7 +23,16 @@
     "PRODUCTO": "DJI  Osmo Mobile 8",
     "DESC_FULL": "Estabilización en 3 ejes, que permite videos suaves y sin temblores. \nRotación horizontal 360° continua, ideal para panorámicas y movimientos fluidos. \nSeguimiento automático de personas y mascotas con su módulo multifuncional, incluso con control por gestos. \nBrazo extensible y trípode integrados, lo que facilita selfies, tomas en grupo o grabaciones estables sin accesorios extra. \nHasta 10 horas de batería, y la posibilidad de cargar el teléfono mientras grabas.",
     "Precio ( USD )": 170,
-    "Imagen_Path": "2-18products_images/2-18products_004.png",
+    "Imagen_Path": "2-19products_images/2-19products_003.png",
+    "VIENE_LA_CAJA": "D"
+  },
+  {
+    "MARCA": "DJI",
+    "TIPO": "Palos selfie",
+    "PRODUCTO": "DJI 6941565939012 Osmo Mobile SE",
+    "DESC_FULL": "Estabilización en 3 ejes: Reduce temblores para vídeos suaves.\nDiseño plegable con clip magnético: Fácil de transportar y conectar rápidamente.\nActiveTrack 5.0: Sigue automáticamente a personas u objetos.\nModos inteligentes: Timelapse, panorámica, DynamicZoom, modo Historia.\nControl fácil: Panel de estado y botón \"M\" para cambiar modos rápidamente.\nCompatible con la app DJI Mimo y LightCut para edición y guías de grabación.",
+    "Precio ( USD )": 68,
+    "Imagen_Path": "2-19products_images/2-19products_004.png",
     "VIENE_LA_CAJA": "D"
   }
 ]

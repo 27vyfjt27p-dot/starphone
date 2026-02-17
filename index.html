@@ -368,7 +368,7 @@ function toggleDarkMode() {
             if (localStorage.getItem('starphone_dark') === 'true') document.body.classList.add('dark');
 
             try {
-                const res = await fetch('sources.json');
+                const res = await fetch('sources.json?v=' + new Date().getTime());
                 sources = await res.json();
                 if (sources.length > 0) {
                     currentSourceKey = sources[0].key;
@@ -424,15 +424,24 @@ function toggleDarkMode() {
         }
 
         async function loadProducts() {
-            try {
-                const src = sources.find(s => s.key === currentSourceKey);
-                const res = await fetch(src.file);
-                const raw = await res.json();
-                products = raw.map((p, i) => ({ ...p, id: i }));
-                resetFilters(false); renderFilters(); render(); selectContact(0);
-            } catch(e) { console.error("Error:", e); }
-        }
+    try {
+        const src = sources.find(s => s.key === currentSourceKey);
+        const cacheBuster = `?v=${new Date().getTime()}`;
+        const res = await fetch(src.file + cacheBuster); 
+        const raw = await res.json();
 
+        // --- 核心修改：将 id 从索引 i 改为产品名称 p.PRODUCTO ---
+        products = raw.map((p) => ({ ...p, id: p.PRODUCTO })); 
+        // --------------------------------------------------
+
+        resetFilters(false); 
+        renderFilters(); 
+        render(); 
+        selectContact(0);
+    } catch(e) { 
+        console.error("Error:", e); 
+    }
+}
         function renderSourceTabs() {
             const container = document.getElementById('source-tabs');
             let html = sources.map(s => {
@@ -510,7 +519,7 @@ function toggleDarkMode() {
 
                 return `
                 <div id="card-${p.id}" class="product-card shadow-sm">
-                    <button onclick="event.stopPropagation(); toggleFav(${p.id})" class="fav-btn">${favorites[p.id] ? '❤️' : '🤍'}</button>
+                    <button onclick="event.stopPropagation(); toggleFav('${p.id}')" class="fav-btn">${favorites[p.id] ? '❤️' : '🤍'}</button>
                     
                     <div class="image-container" onclick="openLightbox('${imgUrl}')">
                         <img src="${imgUrl}" onerror="handleImgError(this)" loading="lazy">
@@ -594,8 +603,33 @@ function toggleDarkMode() {
         }
 
         function saveToLocal() { const allCarts = JSON.parse(localStorage.getItem('starphone_carts_v2') || '{}'); const allNotes = JSON.parse(localStorage.getItem('starphone_notes_v2') || '{}'); allCarts[currentSourceKey] = cart; allNotes[currentSourceKey] = productNotes; localStorage.setItem('starphone_carts_v2', JSON.stringify(allCarts)); localStorage.setItem('starphone_notes_v2', JSON.stringify(allNotes)); }
-        function updateCartBar() { let totalItems = 0, totalPrice = 0; for (let id in cart) { const p = products.find(i => i.id == id); if (p) { totalItems += cart[id]; totalPrice += (parseFloat(p['Precio ( USD )']) || 0) * cart[id]; } } document.getElementById('cart-bar').classList.toggle('hidden', totalItems === 0); document.getElementById('cart-info').innerText = totalItems; document.getElementById('cart-total-bar').innerText = `$${totalPrice.toLocaleString('en-US',{minimumFractionDigits:2})}`; }
-        
+        function updateCartBar() { 
+    let totalItems = 0, totalPrice = 0; 
+    for (let id in cart) { 
+        // 核心修改：使用严格等于 === 来查找匹配产品名的 ID
+        const p = products.find(i => i.id === id); 
+        if (p) { 
+            totalItems += cart[id]; 
+            // 确保价格解析为数字，防止报表中有空格导致计算失败
+            const price = parseFloat(p['Precio ( USD )']) || 0;
+            totalPrice += price * cart[id]; 
+        } 
+    } 
+    
+    // 更新界面显示
+    const cartBar = document.getElementById('cart-bar');
+    if (cartBar) {
+        cartBar.classList.toggle('hidden', totalItems === 0); 
+    }
+    
+    const infoEl = document.getElementById('cart-info');
+    if (infoEl) infoEl.innerText = totalItems; 
+    
+    const totalBarEl = document.getElementById('cart-total-bar');
+    if (totalBarEl) {
+        totalBarEl.innerText = `$${totalPrice.toLocaleString('en-US', {minimumFractionDigits: 2})}`; 
+    }
+}
         let searchTimeout;
         function handleKeywordInput() {
             clearTimeout(searchTimeout);
@@ -642,7 +676,7 @@ function toggleDarkMode() {
             const list = document.getElementById('cart-items-list'); 
             let html = ""; 
             for (let id in cart) { 
-                const p = products.find(i => i.id == id); 
+                const p = products.find(i => i.id === id);
                 if(!p) continue; 
                 const boxTag = getBoxTagHtml(p['VIENE_LA_CAJA']);
                 html += `
@@ -657,20 +691,21 @@ function toggleDarkMode() {
                             </div>
                         </div>
                         <div class="flex items-center bg-slate-50 rounded-lg border">
-                            <button onclick="updateQty(${id},-1)" class="px-2 py-1 text-slate-400 font-bold">-</button>
-                            <input type="number" value="${cart[id]}" onchange="setQty(${id}, this.value)" class="qty-input-manual">
-                            <button onclick="updateQty(${id},1)" class="px-2 py-1 text-blue-500 font-bold">+</button>
+                            <button onclick="updateQty('${id}',-1)" class="px-2 py-1 text-slate-400 font-bold">-</button>
+<input type="number" value="${cart[id]}" onchange="setQty('${id}', this.value)" class="qty-input-manual">
+<button onclick="updateQty('${id}',1)" class="px-2 py-1 text-blue-500 font-bold">+</button>
+<button onclick="setQty('${id}', 0)" class="p-2 text-red-500">×</button>
                         </div>
                         <button onclick="setQty(${id}, 0)" class="p-2 text-red-500">×</button>
                     </div>
-                    <input type="text" placeholder="Nota..." class="note-input" value="${productNotes[id]||''}" oninput="productNotes[${id}]=this.value; saveToLocal()">
+                    <input type="text" placeholder="Nota..." class="note-input" value="${productNotes[id]||''}" oninput="productNotes['${id}']=this.value; saveToLocal()">
                 </div>`; 
             } 
             list.innerHTML = html || "<p class='text-center py-20 text-slate-400 font-bold uppercase'>Tu lista está vacía</p>"; 
             updateCartTotalDisplay(); 
         }
 
-        function updateCartTotalDisplay() { let total = 0; for (let id in cart) { const p = products.find(i => i.id == id); if (p) total += (parseFloat(p['Precio ( USD )']) || 0) * cart[id]; } document.getElementById('cart-total-modal').innerText = `$${total.toLocaleString('en-US',{minimumFractionDigits:2})}`; }
+        function updateCartTotalDisplay() { let total = 0; for (let id in cart) { const p = products.find(i => i.id === id);; if (p) total += (parseFloat(p['Precio ( USD )']) || 0) * cart[id]; } document.getElementById('cart-total-modal').innerText = `$${total.toLocaleString('en-US',{minimumFractionDigits:2})}`; }
         function sendWhatsApp() { 
     vibrate(); 
     const contact = CONTACTS[activeContactIndex]; 
