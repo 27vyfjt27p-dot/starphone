@@ -714,7 +714,7 @@ function toggleDarkMode() {
     // 1. 定义分组容器
     const groups = {
         'STARPHONE': [], // 对应 yf
-        'QUE VIVO': [],   // 对应 qcy
+        'QUEVIVO': [],   // 对应 qcy
         'OTROS': []      
     };
 
@@ -734,7 +734,7 @@ function toggleDarkMode() {
             if (tag.includes('yf')) {
                 groups['STARPHONE'].push(itemData);
             } else if (tag.includes('qcy')) {
-                groups['QUE VIVO'].push(itemData);
+                groups['QUEVIVO'].push(itemData);
             } else {
                 groups['OTROS'].push(itemData);
             }
@@ -746,7 +746,7 @@ function toggleDarkMode() {
     m += `━━━━━━━━━━━━━━━━━━\n\n`;
 
     let globalItemCount = 1;
-    const order = ['STARPHONE', 'QUE VIVO', 'OTROS'];
+    const order = ['STARPHONE', 'QUEVIVO', 'OTROS'];
     
     // 4. 按顺序循环处理每个组
     order.forEach(groupName => {
