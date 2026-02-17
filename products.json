@@ -24,7 +24,7 @@
     "DESC_FULL": "",
     "Precio ( USD )": 530.0,
     "Imagen_Path": "products_images/products_003.png",
-    "VIENE_LA_CAJA": NaN
+    "VIENE_LA_CAJA": ""
   },
   {
     "MARCA": "FUJIFILM",
@@ -132,7 +132,7 @@
     "DESC_FULL": "Cámara de acción 4K120 con sensor de 1/1,3″, campo de visión ultra ancho (155°) y modo de color D-Log M de 10 bits para mayor rango dinámico. Incluye pantallas duales, estabilización RockSteady 3.0, HorizonSteady y Balance de horizonte, cuerpo sumergible y sensor de temperatura de color para colores precisos bajo el agua. Compatible con microSD de gran capacidad y control mediante la app DJI Mimo.",
     "Precio ( USD )": 260.0,
     "Imagen_Path": "products_images/products_015.png",
-    "VIENE_LA_CAJA": NaN
+    "VIENE_LA_CAJA": ""
   },
   {
     "MARCA": "DJI",
@@ -168,7 +168,7 @@
     "DESC_FULL": "Video 360° en 5.7K y fotos panorámicas de 72 MP\nModo gran angular 4K con una sola lente\nEstabilización FlowState y horizonte nivelado\nReencuadre con IA para elegir el ángulo después\nResistente al agua hasta 10 m\nPantalla táctil grande y control por voz",
     "Precio ( USD )": 260.0,
     "Imagen_Path": "products_images/products_019.png",
-    "VIENE_LA_CAJA": NaN
+    "VIENE_LA_CAJA": ""
   },
   {
     "MARCA": "Insta360",
@@ -186,7 +186,7 @@
     "DESC_FULL": "",
     "Precio ( USD )": 385.0,
     "Imagen_Path": "products_images/products_021.png",
-    "VIENE_LA_CAJA": NaN
+    "VIENE_LA_CAJA": ""
   },
   {
     "MARCA": "JBL",
@@ -465,7 +465,7 @@
     "DESC_FULL": "Juniper Green Strap",
     "Precio ( USD )": 218.0,
     "Imagen_Path": "products_images/products_052.png",
-    "VIENE_LA_CAJA": NaN
+    "VIENE_LA_CAJA": ""
   },
   {
     "MARCA": "XIAOMI",
@@ -1194,7 +1194,7 @@
     "DESC_FULL": "Succión potente de 16 kPa para eliminar ácaros y polvo profundo.\nCepillo con vibración de alta frecuencia para desprender suciedad.\nLuz UV y ultrasonido para desinfección.\nAire caliente a 65 °C para secado y reducción de humedad.\nFiltro de 6 etapas con depósito de 0,8 L lavable.\nDetección inteligente que ajusta la potencia automáticamente.\nTres modos: Suave, Inteligente y Fuerte.",
     "Precio ( USD )": 58.0,
     "Imagen_Path": "products_images/products_133.png",
-    "VIENE_LA_CAJA": NaN
+    "VIENE_LA_CAJA": ""
   },
   {
     "MARCA": "XIAOMI",
