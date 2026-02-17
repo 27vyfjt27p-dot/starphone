@@ -1,12 +1,22 @@
 # 忽略所有 Excel
 *.xlsx
 ~$*.xlsx
-# 忽略脚本和代码
+
+# 忽略脚本和执行文件
 *.bat
+*.py
+*.exe
 main.py
+
+# 忽略打包工具生成的临时文件夹 (新增)
+build/
+dist/
+*.spec
+
 # 忽略 Python 缓存
 __pycache__/
-# 仅保留网页必须的文件
+
+# --- 仅保留网页必须的文件 ---
 !index.html
 !sources.json
 !*.json
