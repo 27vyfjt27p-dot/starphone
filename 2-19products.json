@@ -1,0 +1,272 @@
+[
+  {
+    "MARCA": "Lenovo",
+    "PRODUCTO": "Lenovo Laptop Yangtian V15 i5-13420H 16G 512G Gráficos integrados IPS WIN11 Gris",
+    "DESC_FULL": "",
+    "Precio ( USD )": 540,
+    "Imagen_Path": "2-19products_images/2-19products_001.png",
+    "VIENE_LA_CAJA": "super oferta",
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "Lenovo",
+    "PRODUCTO": "ThinkBook 14 SE SLCD i5-13420H/16GB/512GB/FHD/WIN11",
+    "DESC_FULL": "",
+    "Precio ( USD )": 580,
+    "Imagen_Path": "2-19products_images/2-19products_002.png",
+    "VIENE_LA_CAJA": "super oferta",
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "Lenovo",
+    "PRODUCTO": "Lenovo Laptop Xiaoxin 16 2024 i5-13420H/16GB/512GB/16 pulgadas/Pantalla de alta gama de colores/Plata Hielo",
+    "DESC_FULL": "",
+    "Precio ( USD )": 580,
+    "Imagen_Path": "2-19products_images/2-19products_003.png",
+    "VIENE_LA_CAJA": "super oferta",
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "HiFuture",
+    "PRODUCTO": "HiFuture  MEGA S  black white grey",
+    "DESC_FULL": "Potencia de 5W: Sonido claro y potente para espacios pequeños.\nTecnología Wireless 5.4: Conexión estable y sin interrupciones.\nCompatibilidad con MagSafe: Se adhiere magnéticamente a dispositivos compatibles.\nModo TWS (True Wireless Stereo): Conecta dos altavoces para un sonido estéreo envolvente.\nSoporte integrado para teléfono: Sujeta tu dispositivo mientras ves videos o juegas.\nBatería de larga duración: Hasta 10 horas de reproducción continua.\nCarga inalámbrica de 7.5W a 15W: Carga tus dispositivos sin cables.\nDiseño compacto y elegante: Disponible en colores como negro, beige, verde y gris.",
+    "Precio ( USD )": 12,
+    "Imagen_Path": "2-19products_images/2-19products_004.png",
+    "VIENE_LA_CAJA": "D",
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "1HORA",
+    "PRODUCTO": "1HORA Cylinder Bluetooth Speaker",
+    "DESC_FULL": "",
+    "Precio ( USD )": 10,
+    "Imagen_Path": "2-19products_images/2-19products_005.png",
+    "VIENE_LA_CAJA": 40,
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "BASEUS",
+    "PRODUCTO": "Baseus GaN5 Pro Gallium nitride fast charger 100W C+U",
+    "DESC_FULL": "Tecnología GaN de 100W: Potente salida de 100W, carga rápida para dispositivos, puertos USB-C y USB-A para carga simultánea.\nTecnología BPS: Distribuye energía inteligentemente para carga eficiente, compatible con PD, QC y PPS.\nDiseño compacto y portátil: Carga hasta tres veces más rápido que cargadores convencionales, se mantiene fresco para evitar sobrecalentamiento y garantiza rendimiento seguro.",
+    "Precio ( USD )": 15,
+    "Imagen_Path": "2-19products_images/2-19products_006.png",
+    "VIENE_LA_CAJA": "super oferta",
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "BASEUS",
+    "PRODUCTO": "Baseus  GaN3 Pro Gallium nitride desktop strip AC+2U+2C 65W SUPERVOOC edition",
+    "DESC_FULL": "Conector USB\nVoltaje de entrada: 12/24V (Bivolt)\nVoltaje de salida: 65W\nIncluye cable\n4 puertos de carga\nProtección contra sobrecarga",
+    "Precio ( USD )": 15,
+    "Imagen_Path": "2-19products_images/2-19products_007.png",
+    "VIENE_LA_CAJA": "super oferta",
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "BASEUS",
+    "PRODUCTO": "Baseus  Linrui series digital plugboard 3AC+1U+1C+ extended cable C 65W 1.5m power cable",
+    "DESC_FULL": "",
+    "Precio ( USD )": 20,
+    "Imagen_Path": "2-19products_images/2-19products_008.png",
+    "VIENE_LA_CAJA": "super oferta",
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "PRODUCTO": "Mi 67W desktop fast charging socket Pro",
+    "DESC_FULL": "Carga rápida + Expansión: Carga rápida de 67W y transmisión de datos, soporta múltiples dispositivos.\nSiete en uno: Incluye 1 puerto USB-A, 1 HDMI, 2 puertos USB-C, y 3 enchufes de corriente alterna.\nCable de carga rápida dedicado: Ideal para uso en escritorios de oficina.\nTransmisión de datos: Soporta discos duros y dispositivos de almacenamiento.\n4K @ 60Hz: Proyección ultra clara y fluida.\nCapacidad de carga: Carga rápida de 67W y hasta 2500W máximos en enchufes de corriente alterna.",
+    "Precio ( USD )": 20,
+    "Imagen_Path": "2-19products_images/2-19products_009.png",
+    "VIENE_LA_CAJA": "super oferta",
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "PRODUCTO": "Xiaomi  jack board 4 position 4 control 1.8 meters",
+    "DESC_FULL": "",
+    "Precio ( USD )": 4,
+    "Imagen_Path": "2-19products_images/2-19products_010.png",
+    "VIENE_LA_CAJA": "OFERTA!!!",
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "PRODUCTO": "Xiaomi  jack board 4 position 4 control 3 meters",
+    "DESC_FULL": "",
+    "Precio ( USD )": 5,
+    "Imagen_Path": "2-19products_images/2-19products_011.png",
+    "VIENE_LA_CAJA": "OFERTA!!!",
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "PRODUCTO": "Xiaomi Electric Scooter 5",
+    "DESC_FULL": "Velocidad máxima: 25 km/h (modo peatón: 6 km/h; modo estándar: 20 km/h; modo deportivo: 25 km/h)\nAutonomía: Aprox. 60 km\nMotor: 350 W nominal, hasta 700 W de potencia máxima\nSuspensión: Amortiguadores de doble resorte delanteros\nFrenos: Freno de tambor delantero y E-ABS trasero\nNeumáticos: Ruedas sin cámara de 10\"\nCarga máxima: 120 kg\nClasificación IP: IPX5 (resistente a salpicaduras)\nTiempo de carga: Aprox. 9 horas",
+    "Precio ( USD )": 290,
+    "Imagen_Path": "2-19products_images/2-19products_012.png",
+    "VIENE_LA_CAJA": 1,
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "HOTO",
+    "PRODUCTO": "HOTO 3.6V Screwdriver Kit (Classic)",
+    "DESC_FULL": "Perfecto para regalo de casa nueva, cumpleaños de papá, amigo o novio.\nDiseño elegante y compacto\nCaja de ABS resistente, estilo minimalista, fácil de llevar.\nTodo en uno para el hogar\nDestornillador 3.6V con 3 niveles de torque y luz LED\nLlave ajustable de gran apertura\nMartillo con cap de goma y sistema magnético para clavos\n10 brocas de acero S2 resistentes\nAlicates multifunción + Cinta métrica 3m con autobloqueo",
+    "Precio ( USD )": 32,
+    "Imagen_Path": "2-19products_images/2-19products_013.png",
+    "VIENE_LA_CAJA": "super oferta",
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "RISETIME",
+    "PRODUCTO": "RUMBRELLA Smart Technology Electric Umbrella REMI33110 black",
+    "DESC_FULL": "Apertura y cierre automáticos con un solo botón: Gracias a un sistema motorizado, se abre y se cierra automáticamente al presionar un botón, ideal para usar al entrar o salir de autos o edificios.\nCarga rápida por USB-C: Incorpora una batería de litio de 280mAh que se carga en solo 90 minutos y permite hasta 150 usos por carga.\nDiseño premium y compacto: Es plegable y elegante, ideal para llevarlo en el bolso o la mochila.",
+    "Precio ( USD )": 22,
+    "Imagen_Path": "2-19products_images/2-19products_014.png",
+    "VIENE_LA_CAJA": "D",
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "ZOLELE",
+    "PRODUCTO": "ZOLELE tower fan white TF02",
+    "DESC_FULL": "Diseño tipo torre: Estilo moderno y que ahorra espacio, ideal para el hogar u oficina\nFlujo de aire potente: Proporciona ventilación uniforme en el ambiente\nVelocidades ajustables: Múltiples niveles de viento según tus necesidades\nFuncionamiento silencioso: Perfecto para dormitorios o espacios de trabajo tranquilos\nEficiencia energética: Motor de bajo consumo, funcionamiento estable\nLigero y portátil: Fácil de mover y colocar en cualquier lugar",
+    "Precio ( USD )": 28,
+    "Imagen_Path": "2-19products_images/2-19products_015.png",
+    "VIENE_LA_CAJA": "D",
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "PRODUCTO": "Mi Smart Scale S200 White Y Dark Grey",
+    "DESC_FULL": "Sensor de alta precisión: con incrementos mínimos de 0,05 kg, permite detectar cambios sutiles en el peso.\nRango de peso: de 0,1 kg a 150 kg, adecuado para personas y objetos pequeños.\nConectividad Bluetooth 5.4: se sincroniza con la aplicación Xiaomi Home para un seguimiento detallado.\nSoporte para hasta 36 usuarios: ideal para familias o grupos, con modo invitado sin almacenamiento de datos.\nFunciones de salud: mide peso, IMC, peso ideal y ofrece recomendaciones de control de peso.\nPrueba de equilibrio: evalúa la coordinación y estabilidad al estar de pie sobre un pie.\nCompatibilidad: requiere Android 8.0/iOS 12.0 o superior.",
+    "Precio ( USD )": 10,
+    "Imagen_Path": "2-19products_images/2-19products_016.png",
+    "VIENE_LA_CAJA": 10,
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "LYDSTO",
+    "PRODUCTO": "Intelligent Desktop Fan CL08",
+    "DESC_FULL": "CL08 Smart Desktop Air Conditioner Mini Air Cooler Fan Water Cooling Fan Spray Room Office Portable Air Conditioner",
+    "Precio ( USD )": 13,
+    "Imagen_Path": "2-19products_images/2-19products_017.png",
+    "VIENE_LA_CAJA": "OFERTA",
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "PRODUCTO": "Mi home thermos Cup Ti 2 grey 480ML",
+    "DESC_FULL": "La Taza Termo Xiaomi Mijia Ti 2 está fabricada con titanio puro TA1, un material seguro, saludable y resistente a la corrosión.\npuede mantener la temperatura de las bebidas hasta 6 horas.\nSu diseño ligero y duradero es ideal para quienes buscan una opción saludable y práctica para conservar sus bebidas calientes o frías.",
+    "Precio ( USD )": 26,
+    "Imagen_Path": "2-19products_images/2-19products_018.png",
+    "VIENE_LA_CAJA": "D",
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "PRODUCTO": "Mi Capsule Coffee Machine N1 S1301 White (Standard Version)",
+    "DESC_FULL": "Material de vidrio de borosilicato: Resistente al calor y al frío, garantiza durabilidad y seguridad.​\nPotencia de 2200W: Permite hervir agua rápidamente, en aproximadamente 5 minutos.​\nDiseño funcional: Incluye indicador LED de funcionamiento, apertura de tapa con un solo toque para facilitar el llenado y la limpieza, y filtro extraíble para una mayor pureza del agua.​\nSeguridad: Cuenta con múltiples sistemas de protección, como apagado automático al hervir y protección contra ebullición en seco.",
+    "Precio ( USD )": 55,
+    "Imagen_Path": "2-19products_images/2-19products_019.png",
+    "VIENE_LA_CAJA": "D",
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "Lenovo",
+    "PRODUCTO": "Lenovo XiaoXin 100S Smart Projector L-PJT100L White",
+    "DESC_FULL": "Brillo: 650 ANSI lúmenes\nResolución: 1080P + soporte HDR10\nEnfoque y Corrección: Autofoco + corrección trapezoidal automática\nAudio: Altavoces integrados de 2x5W (HiFi)\nSistema Operativo: Android 9.0\nFunciones Destacadas: WiFi 6, Bluetooth 5.0, HDMI, USB, salida de 3.5mm, adecuado para cine en casa.",
+    "Precio ( USD )": 158,
+    "Imagen_Path": "2-19products_images/2-19products_020.png",
+    "VIENE_LA_CAJA": "D",
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "Tronsmart",
+    "PRODUCTO": "Tronsmart T7 Mini",
+    "DESC_FULL": "Tipo de parlante: Woofer, manos libres.\nCaracterísticas: A prueba de agua, Bluetooth, luces LED, batería recargable de 15W.\nIncluye: Micrófono de accesorio.\nLugar de colocación: Interiores y exteriores.\nTiempo de carga: 3 horas.\nTamaño del producto:12.6*12,6*14.2CM",
+    "Precio ( USD )": 15,
+    "Imagen_Path": "2-19products_images/2-19products_021.png",
+    "VIENE_LA_CAJA": 24,
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "Tronsmart",
+    "PRODUCTO": "Tronsmart Element T2 Plus UPGRADED 20W Bluetooth Speaker",
+    "DESC_FULL": "20W with passive radiator & 24 Hours Playtime\n*7.4V 2000mAh Battery",
+    "Precio ( USD )": 25,
+    "Imagen_Path": "2-19products_images/2-19products_022.png",
+    "VIENE_LA_CAJA": "D",
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "Tronsmart",
+    "PRODUCTO": "Tronsmart T7 Lite",
+    "DESC_FULL": "Tipo de parlante: Subwoofer, manos libres.\nCaracterísticas: A prueba de agua, Bluetooth, luces LED, batería recargable de 24W, micrófono de accesorio.\nCantidad: 2 parlantes.\nUbicación: En el piso.\nTiempo de carga: 3h.\nTamaño del producto:19.5*7.2*7.2CM",
+    "Precio ( USD )": 22,
+    "Imagen_Path": "2-19products_images/2-19products_023.png",
+    "VIENE_LA_CAJA": 24,
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "Tronsmart",
+    "PRODUCTO": "Tronsmart Trip",
+    "DESC_FULL": "Parlante Bluetooth 5.3: Manos libres, apto para exteriores, a prueba de agua.\nConectividad: Bluetooth.\nCaracterísticas: Potencia de 10W, batería recargable, micrófono interno y de accesorio, soporte incluido.\nTiempo de carga: 3 horas.\nTamaño del producto：16.8*3.8*7.8CM",
+    "Precio ( USD )": 12,
+    "Imagen_Path": "2-19products_images/2-19products_024.png",
+    "VIENE_LA_CAJA": 40,
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "Tronsmart",
+    "PRODUCTO": "Tronsmart Mirtune H1  8W Portable Outdoor Speaker black",
+    "DESC_FULL": "Diseño compacto: Fácil de llevar.\nSonido estéreo: Graves profundos y agudos claros.\nConexión Bluetooth: Compatible con móviles y tabletas.\nResistente al agua: Ideal para exteriores.\nBatería duradera: Horas de reproducción continua.\nTamaño del producto:13.8*8.1*4.6cm",
+    "Precio ( USD )": 16,
+    "Imagen_Path": "2-19products_images/2-19products_025.png",
+    "VIENE_LA_CAJA": 40,
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "Tronsmart",
+    "PRODUCTO": "Tronsmart Mirtune C3 24W Portable Speaker",
+    "DESC_FULL": "Negro Y Azul\nSonido Potente: Woofer en forma de pista + tweeter + radiadores pasivos para graves intensos y agudos claros.\nSúper Portátil: Diseño compacto con correa para llevar fácilmente.\nResistente al Agua IPX7: Ideal para la piscina, el parque o la playa.\nEmparejamiento Estéreo: Conecta 2 altavoces para un sonido estéreo envolvente.\nHasta 12 Horas de Reproducción: Disfruta más con una sola carga.\nModo Doble: Conecta 2 dispositivos a la vez y alterna la música fácilmente.",
+    "Precio ( USD )": 22,
+    "Imagen_Path": "2-19products_images/2-19products_026.png",
+    "VIENE_LA_CAJA": 24,
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "Tronsmart",
+    "PRODUCTO": "Tronsmart Mirtune C3 30W Plus Portable Speaker black Y azul",
+    "DESC_FULL": "Sonido potente de 30W: Claro y con graves profundos para todo tipo de música.\nResistencia al agua IPX7: Impermeable, perfecto para exteriores y cerca del agua.\nBatería de larga duración: Hasta 24 horas de reproducción con una carga.\nFunción TWS: Empareja dos altavoces para un sonido estéreo.\nConexión Bluetooth: Rápida y estable para múltiples dispositivos\nTamaño del producto:18*7*7.2cm",
+    "Precio ( USD )": 30,
+    "Imagen_Path": "2-19products_images/2-19products_027.png",
+    "VIENE_LA_CAJA": 24,
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "Sounarc",
+    "PRODUCTO": "Tronsmart  Sounarc XR3  10W Portable Speaker black",
+    "DESC_FULL": "Sonido potente: Agudos claros y bajos profundos.\nLuces dinámicas: Varios modos de iluminación.\nPortátil: Diseño ligero y fácil de llevar.\nEmparejamiento estéreo: Conecta dos altavoces.\nConectividad flexible: Bluetooth, SD y Aux.\nBatería duradera: 1500 mAh, hasta 8 horas de uso.",
+    "Precio ( USD )": 12,
+    "Imagen_Path": "2-19products_images/2-19products_028.png",
+    "VIENE_LA_CAJA": 24,
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "Sounarc",
+    "PRODUCTO": "Tronsmart  Sounarc L2  black",
+    "DESC_FULL": "Sonido estéreo potente de 80W\n4 unidades de controladores\nVarios modos de iluminación\nCompatible con karaoke\nBatería integrada de 10,000 mAh\nEmparejamiento estéreo\nPowerbank incorporado\nHasta 13 horas de reproducción",
+    "Precio ( USD )": 75,
+    "Imagen_Path": "2-19products_images/2-19products_029.png",
+    "VIENE_LA_CAJA": "SOLO\n9 PCS",
+    "qcy-yf": "QUE VIVO"
+  },
+  {
+    "MARCA": "Sounarc",
+    "PRODUCTO": "Sounarc K2 200W Karaoke Party Speaker black",
+    "DESC_FULL": "Sonido potente: 200W de sonido estéreo.\nMicrófonos incluidos: 2 micrófonos inalámbricos.\nBatería de larga duración: 24.000 mAh, hasta 24 horas de uso.\nLuces LED: Efectos de luz multicolor para animar el ambiente.\nCambio de voz: Efectos divertidos para karaoke.\nConectividad: Bluetooth, transmisión en vivo y entrada auxiliar.\nControl remoto: Para mayor comodidad.\nResistente al agua: Certificación IPX6.\nFunción power bank: Carga otros dispositivos.",
+    "Precio ( USD )": 95,
+    "Imagen_Path": "2-19products_images/2-19products_030.png",
+    "VIENE_LA_CAJA": "",
+    "qcy-yf": "QUE VIVO"
+  }
+]

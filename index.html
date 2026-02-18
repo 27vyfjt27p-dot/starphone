@@ -710,38 +710,58 @@ function toggleDarkMode() {
         function sendWhatsApp() { 
     vibrate(); 
     const contact = CONTACTS[activeContactIndex]; 
-    let total = 0;
-    let m = `⭐ *NUEVO PEDIDO STARPHONE*\n`;
-    m += `--------------------------\n`; 
+    
+    const groups = {
+        'STARPHONE': [], 
+        'QUE VIVO': [],   
+        'OTROS': []      
+    };
 
-    let itemCount = 1; 
-    for(let id in cart) { 
-        const p = products.find(i => i.id == id); 
-        if (p) { 
-            const sub = (parseFloat(p['Precio ( USD )']) || 0) * cart[id]; 
-            total += sub; 
+    let grandTotal = 0;
+
+    for (let id in cart) {
+        const p = products.find(i => i.id == id);
+        if (p) {
+            const sub = (parseFloat(p['Precio ( USD )']) || 0) * cart[id];
+            grandTotal += sub;
             
-            // 拼接第一行：序号和产品名
-            m += `*item ${itemCount}.* *${p.PRODUCTO}*\n`; 
-            
-            // 拼接第二行：如果有备注才加，没有就不占位
-            if(productNotes[id]) {
-                m += `Nota: ${productNotes[id]}\n`;
+            // 关键修正：直接读取 products.json 里的内容
+            const tag = String(p['qcy-yf'] || '').toUpperCase().trim();
+            const itemData = { p, sub, qty: cart[id], note: productNotes[id] || '' };
+
+            // 修正匹配逻辑：根据你 json 里的实际文字来判断
+            if (tag === 'STARPHONE' || tag.includes('YF')) {
+                groups['STARPHONE'].push(itemData);
+            } else if (tag === 'QUE VIVO' || tag.includes('QCY')) {
+                groups['QUE VIVO'].push(itemData);
+            } else {
+                groups['OTROS'].push(itemData);
             }
-            
-            // 拼接第三行：数量和金额。注意这里结尾只用一个 \n
-            m += `Cant: ${cart[id]} | Sub: *$${sub.toFixed(2)}*`; 
-            
-            // 核心逻辑：如果不是最后一个产品，才加换行；如果是最后一个，直接结束
-            // 这样能保证 item1 和 item2 之间绝对只有一个回车
-            m += `\n`; 
-            
-            itemCount++; 
-        } 
-    } 
+        }
+    }
 
-    m += `--------------------------\n`;
-    m += `💰 *TOTAL PEDIDO: $${total.toFixed(2)}*`;
+    let m = ""; 
+    let globalItemCount = 1;
+    const groupOrder = ['STARPHONE', 'QUE VIVO', 'OTROS'];
+
+    groupOrder.forEach((name) => {
+        const items = groups[name];
+        if (items.length > 0) {
+            m += `⭐ *NUEVO PEDIDO ${name}*\n`;
+            m += `--------------------------\n`;
+
+            items.forEach(item => {
+                m += `*item ${globalItemCount}.* *${item.p.PRODUCTO}*\n`; 
+                if(item.note) m += `_Nota: ${item.note}_\n`;
+                m += `Cant: ${item.qty} | Sub: *$${item.sub.toFixed(2)}*\n`; 
+                globalItemCount++;
+            });
+
+            m += `--------------------------\n\n`; 
+        }
+    });
+
+    m += `💰 *TOTAL PEDIDO: $${grandTotal.toFixed(2)}*`;
 
     window.open(`https://wa.me/${contact.phone}?text=${encodeURIComponent(m)}`); 
 }
