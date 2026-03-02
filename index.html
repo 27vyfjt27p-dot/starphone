@@ -685,7 +685,11 @@ function toggleDarkMode() {
                     <div class="flex items-center gap-3 mb-2">
                         <img src="${p.Imagen_Path ? encodeURI(p.Imagen_Path.replace(/\\/g, '/')) : ''}" class="w-14 h-14 rounded-lg object-contain bg-slate-50">
                         <div class="flex-1 min-w-0">
-                            <h4 class="text-[11px] font-bold text-slate-800 truncate uppercase">${p.PRODUCTO}</h4>
+                            <h4 class="text-[11px] font-bold text-slate-800 truncate uppercase cursor-help" 
+                             title="${p.PRODUCTO}" 
+                             onclick="alert(this.title)">
+                             ${p.PRODUCTO}
+                            </h4>
                             <div class="flex items-center flex-wrap gap-2 mt-1">
                                 <span class="text-blue-600 font-black">$${p['Precio ( USD )']}</span>
                                 ${boxTag}
