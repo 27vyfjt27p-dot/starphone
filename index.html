@@ -552,17 +552,19 @@ async function loadProducts() {
                         <div class="product-details">
                             <p class="text-[10px] font-bold text-indigo-500 uppercase tracking-wider">${p.MARCA || ''}</p>
                             <div class="detail-tooltip">
-                                <h3 class="product-title" 
-                                    onclick="event.stopPropagation(); toggleDetail('${p.id}', false)" 
-                                    onmouseenter="toggleDetail('${p.id}', true)">${p.PRODUCTO}</h3>
-                                <div id="detail-${p.id}" class="detail-content no-scrollbar" onclick="event.stopPropagation()">
-                                    <div class="flex justify-between items-center mb-3 border-b border-white/10 pb-1">
-                                        <span class="text-blue-400 font-black uppercase">Detalles</span>
-                                        <button onclick="closeAllModals()" class="text-white bg-white/20 w-8 h-8 rounded-full flex items-center justify-center font-bold">✕</button>
-                                    </div>
-                                    <div class="text-[13px] leading-relaxed">${p.DESC_FULL || 'Sin descripción.'}</div>
-                                </div>
-                            </div>
+    <h3 class="product-title break-words line-clamp-2" 
+        onclick="event.stopPropagation(); toggleDetail('${p.id}', false)" 
+        onmouseenter="toggleDetail('${p.id}', true)">
+        ${p.PRODUCTO}
+    </h3>
+    <div id="detail-${p.id}" class="detail-content no-scrollbar" onclick="event.stopPropagation()">
+        <div class="flex justify-between items-start mb-3 border-b border-white/10 pb-2">
+            <div class="font-black text-blue-400 uppercase text-[14px] leading-tight pr-4">${p.PRODUCTO}</div>
+            <button onclick="closeAllModals()" class="text-white bg-white/20 w-6 h-6 rounded-full flex items-center justify-center text-[10px]">✕</button>
+        </div>
+        <div class="text-[13px] leading-relaxed text-white">${p.DESC_FULL || 'Sin descripción adicional.'}</div>
+    </div>
+</div>
                         </div>
 
                         <div class="price-section mt-2 flex items-center flex-wrap gap-2">
@@ -586,31 +588,37 @@ async function loadProducts() {
         }
 
         function toggleDetail(id, isHoverAction) {
-            const el = document.getElementById(`detail-${id}`);
-            const card = document.getElementById(`card-${id}`);
-            const isMobile = window.innerWidth <= 768;
+    const el = document.getElementById(`detail-${id}`);
+    const card = document.getElementById(`card-${id}`);
+    if (!el || !card) return;
 
-            if (isHoverAction) {
-                if (!isMobile) {
-                    card.classList.add('top-z');
-                    el.classList.add('active');
-                    card.onmouseleave = () => {
-                        el.classList.remove('active');
-                        card.classList.remove('top-z');
-                    };
-                }
-            } else {
-                if (isMobile) {
-                    const wasActive = el.classList.contains('active');
-                    closeAllModals(); 
-                    if (!wasActive) {
-                        el.classList.add('active');
-                        document.getElementById('modal-overlay').classList.remove('hidden'); 
-                        document.body.style.overflow = 'hidden'; 
-                    }
-                }
+    const isMobile = window.innerWidth <= 768;
+
+    if (isHoverAction) {
+        // PC端逻辑：悬浮显示
+        if (!isMobile) {
+            closeAllModals(); 
+            card.classList.add('top-z');
+            el.classList.add('active');
+            
+            card.onmouseleave = () => {
+                el.classList.remove('active');
+                card.classList.remove('top-z');
+            };
+        }
+    } else {
+        // 手机端逻辑：点击显示
+        if (isMobile) {
+            const wasActive = el.classList.contains('active');
+            closeAllModals(); 
+            if (!wasActive) {
+                el.classList.add('active');
+                document.getElementById('modal-overlay').classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
             }
         }
+    }
+}
 
         function updateQty(id, chg) { vibrate(); let n = (cart[id] || 0) + chg; if (n <= 0) { delete cart[id]; delete productNotes[id]; } else cart[id] = n; saveToLocal(); render(); if(document.getElementById('cart-modal').classList.contains('active')) refreshCartModal(); }
         function setQty(id, val) { let n = parseInt(val); if (isNaN(n) || n <= 0) { delete cart[id]; delete productNotes[id]; } else { cart[id] = n; } saveToLocal(); render(); if(document.getElementById('cart-modal').classList.contains('active')) refreshCartModal(); }
@@ -710,56 +718,62 @@ function saveToLocal() {
         function selectContact(i) { vibrate(); activeContactIndex = i; [0,1].forEach(idx => document.getElementById(`btn-contact-${idx}`).className = idx === i ? "flex-1 py-3 rounded-full text-xs font-black bg-blue-600 text-white shadow-md" : "flex-1 py-3 rounded-full text-xs font-bold bg-transparent text-slate-400"); }
         
         // --- 3. 渲染清单：增加下架检测 ---
+// --- 补丁 1：修改 refreshCartModal 函数中的循环部分 ---
 function refreshCartModal() {
     const list = document.getElementById('cart-items-list');
     let html = "";
     
     for (let id in cart) {
-        // 在当前表格中寻找该产品
         const p = products.find(i => i.id === id);
         
         if (!p) {
-            // --- 西班牙语下架提示样式 ---
+            // 1.1 为下架产品添加（或确认）删除按钮
             html += `
-            <div class="bg-slate-50 p-4 rounded-2xl border border-dashed border-slate-300 opacity-60">
+            <div class="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-2xl border border-dashed border-slate-300 dark:border-slate-700 opacity-60">
                 <div class="flex items-center gap-3">
-                    <div class="w-12 h-12 rounded-lg bg-slate-200 flex items-center justify-center text-slate-400">
-                        <i class="bi bi-slash-circle text-xl"></i>
-                    </div>
                     <div class="flex-1">
                         <h4 class="text-[11px] font-bold text-slate-400 uppercase">${id}</h4>
-                        <p class="text-[10px] font-black text-red-500 uppercase mt-1 italic">
-                            ⚠️ PRODUCTO NO DISPONIBLE EN ESTA LISTA
-                        </p>
+                        <p class="text-[10px] font-black text-red-500 uppercase mt-1 italic">⚠️ NO DISPONIBLE</p>
                     </div>
-                    <button onclick="setQty('${id}', 0)" class="p-2 text-slate-400 hover:text-red-500">
-                        <i class="bi bi-trash3"></i>
+                    <button onclick="vibrate(); setQty('${id}', 0)" class="p-2 text-red-500 hover:bg-red-50 rounded-full transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
                     </button>
                 </div>
             </div>`;
             continue;
         }
 
-        // --- 以下是正常产品显示代码 ---
-        const boxTag = getBoxTagHtml(p['VIENE_LA_CAJA']);
-        html += `
-        <div class="bg-white p-4 rounded-2xl border border-slate-200">
-            <div class="flex items-center gap-3 mb-2">
-                <img src="${p.Imagen_Path ? encodeURI(p.Imagen_Path.replace(/\\/g, '/')) : ''}" class="w-14 h-14 rounded-lg object-contain bg-slate-50">
-                <div class="flex-1 min-w-0">
-                    <h4 class="text-[11px] font-bold text-slate-800 truncate uppercase">${p.PRODUCTO}</h4>
-                    <div class="flex items-center gap-2 mt-1">
-                        <span class="text-blue-600 font-black">$${p['Precio ( USD )']}</span>
-                        ${boxTag}
-                    </div>
-                </div>
-                <div class="flex items-center bg-slate-50 rounded-lg border">
-                    <button onclick="updateQty('${id}',-1)" class="px-2 py-1">-</button>
-                    <input type="number" value="${cart[id]}" class="w-8 text-center text-xs font-bold bg-transparent border-none">
-                    <button onclick="updateQty('${id}',1)" class="px-2 py-1">+</button>
-                </div>
+        // 1.2 为正常产品添加删除按钮
+        // --- 补丁 1：购物车删除按钮（置于加减号右侧） ---
+const boxTag = getBoxTagHtml(p['VIENE_LA_CAJA']);
+html += `
+<div class="bg-white dark:bg-slate-800 p-4 rounded-2xl border border-slate-200 dark:border-slate-700">
+    <div class="flex items-center gap-3">
+        <img src="${p.Imagen_Path ? encodeURI(p.Imagen_Path.replace(/\\/g, '/')) : ''}" class="w-14 h-14 rounded-lg object-contain bg-slate-50 dark:bg-slate-900">
+        
+        <div class="flex-1 min-w-0">
+            <h4 class="text-[11px] font-bold text-slate-800 dark:text-slate-200 truncate uppercase">${p.PRODUCTO}</h4>
+            <div class="flex items-center gap-2 mt-1">
+                <span class="text-blue-600 font-black">$${p['Precio ( USD )']}</span>
+                ${boxTag}
             </div>
-        </div>`;
+        </div>
+
+        <div class="flex items-center gap-2">
+            <div class="flex items-center bg-slate-50 dark:bg-slate-900 rounded-lg border dark:border-slate-700">
+                <button onclick="updateQty('${id}',-1)" class="px-2 py-1 text-slate-500">-</button>
+                <input type="number" value="${cart[id]}" onchange="setQty('${id}', this.value)" class="w-8 text-center text-xs font-bold bg-transparent dark:text-white border-none outline-none">
+                <button onclick="updateQty('${id}',1)" class="px-2 py-1 text-slate-500">+</button>
+            </div>
+
+            <button onclick="vibrate(); setQty('${id}', 0)" class="p-2 text-slate-300 hover:text-red-500 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>`;
     }
     list.innerHTML = html || "<p class='text-center py-20 text-slate-400 font-bold uppercase'>Tu lista está vacía</p>";
     updateCartTotalDisplay();
