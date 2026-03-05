@@ -354,44 +354,68 @@ function toggleDarkMode() {
             if (e.key === '/' && document.activeElement.tagName !== 'INPUT') { e.preventDefault(); document.getElementById('search').focus(); }
         });
 
-        async function init() {
-             // 补丁：版本检测，如果是老用户则清理一次旧缓存，确保新版收藏 ID 生效
-            if (!localStorage.getItem('app_version_v2')) {
-                localStorage.clear(); 
-                localStorage.setItem('app_version_v2', '1.0');
-                // 清理完后需要重新加载页面设置，防止变量为空
-                location.reload(); 
-                return;
-            }
-            // 补丁：加载收藏夹和暗黑设置
-            favorites = JSON.parse(localStorage.getItem('starphone_favs') || '{}');
-            if (localStorage.getItem('starphone_dark') === 'true') document.body.classList.add('dark');
+        // --- 1. 初始化函数：处理多表与缓存补丁 ---
+async function init() {
+    // 版本检测补丁：确保老用户能平滑过渡到以“产品名”为 ID 的新系统
+    if (!localStorage.getItem('app_version_v3')) {
+        localStorage.clear(); 
+        localStorage.setItem('app_version_v3', '1.0');
+        location.reload(); 
+        return;
+    }
 
-            try {
-                const res = await fetch('sources.json?v=' + new Date().getTime());
-                sources = await res.json();
-                if (sources.length > 0) {
-                    currentSourceKey = sources[0].key;
-                    checkProductsFileDate();
-                    renderSourceTabs(); 
-                    const allCarts = JSON.parse(localStorage.getItem('starphone_carts_v2') || '{}');
-                    const allNotes = JSON.parse(localStorage.getItem('starphone_notes_v2') || '{}');
-                    cart = allCarts[currentSourceKey] || {};
-                    productNotes = allNotes[currentSourceKey] || {};
-                    await loadProducts();
-                    // 初始化侧边栏开关的视觉状态
-    const darkModeToggle = document.getElementById('dark-mode-toggle');
-    if(darkModeToggle) {
-        darkModeToggle.checked = document.body.classList.contains('dark');
-    }
-    
-    const vibrationToggle = document.getElementById('vibration-toggle');
-    if(vibrationToggle) {
-        vibrationToggle.checked = isVibrationEnabled;
-    }
-                }
-            } catch(e) { console.error(e); }
+    // 加载基础设置
+    favorites = JSON.parse(localStorage.getItem('starphone_favs') || '{}');
+    if (localStorage.getItem('starphone_dark') === 'true') document.body.classList.add('dark');
+
+    try {
+        // 实时获取目录（?v= 彻底消除浏览器缓存）
+        const res = await fetch('sources.json?v=' + new Date().getTime());
+        sources = await res.json();
+        
+        if (sources.length > 0) {
+            // 默认选中第一个数据源
+            currentSourceKey = sources[0].key;
+            
+            // 加载当前数据源对应的购物车和备注
+            const allCarts = JSON.parse(localStorage.getItem('starphone_carts_v2') || '{}');
+            const allNotes = JSON.parse(localStorage.getItem('starphone_notes_v2') || '{}');
+            cart = allCarts[currentSourceKey] || {};
+            productNotes = allNotes[currentSourceKey] || {};
+
+            await loadProducts(); // 加载具体产品数据
+            renderSourceTabs();   // 渲染顶部标签页
+            
+            // 同步侧边栏开关状态
+            const dmt = document.getElementById('dark-mode-toggle');
+            if(dmt) dmt.checked = document.body.classList.contains('dark');
+            const vt = document.getElementById('vibration-toggle');
+            if(vt) vt.checked = isVibrationEnabled;
         }
+    } catch(e) { 
+        console.error("Init Error:", e); 
+    }
+}
+
+// --- 2. 产品加载函数：确保 ID 唯一并支持实时更新 ---
+async function loadProducts() {
+    const src = sources.find(s => s.key === currentSourceKey);
+    if (!src) return;
+
+    try {
+        // 获取当前表格数据（带时间戳防止旧数据）
+        const res = await fetch(src.file + '?v=' + new Date().getTime());
+        const raw = await res.json();
+        
+        // 【关键】将 ID 统一设置为产品名称，确保收藏和清单跨表同步
+        products = raw.map((p) => ({ ...p, id: p.PRODUCTO }));
+
+        resetFilters(false);
+        render(); 
+    } catch(e) {
+        console.error("Load Error:", e);
+    }
+}
 
         async function checkProductsFileDate() {
             try {
@@ -603,7 +627,19 @@ function toggleDarkMode() {
             document.body.style.overflow = ''; 
         }
 
-        function saveToLocal() { const allCarts = JSON.parse(localStorage.getItem('starphone_carts_v2') || '{}'); const allNotes = JSON.parse(localStorage.getItem('starphone_notes_v2') || '{}'); allCarts[currentSourceKey] = cart; allNotes[currentSourceKey] = productNotes; localStorage.setItem('starphone_carts_v2', JSON.stringify(allCarts)); localStorage.setItem('starphone_notes_v2', JSON.stringify(allNotes)); }
+        // --- 4. 保存数据：按 Key 分类存储购物车 ---
+function saveToLocal() {
+    const allCarts = JSON.parse(localStorage.getItem('starphone_carts_v2') || '{}');
+    const allNotes = JSON.parse(localStorage.getItem('starphone_notes_v2') || '{}');
+
+    // 只保存当前激活标签的数据
+    allCarts[currentSourceKey] = cart;
+    allNotes[currentSourceKey] = productNotes;
+
+    localStorage.setItem('starphone_carts_v2', JSON.stringify(allCarts));
+    localStorage.setItem('starphone_notes_v2', JSON.stringify(allNotes));
+    localStorage.setItem('starphone_favs', JSON.stringify(favorites)); // 收藏是全局的（通过产品名识别）
+}
         function updateCartBar() { 
     let totalItems = 0, totalPrice = 0; 
     for (let id in cart) { 
@@ -673,42 +709,61 @@ function toggleDarkMode() {
         function toggleMenu() { vibrate(); const menu = document.getElementById('filter-menu'); menu.classList.toggle('translate-x-full'); document.getElementById('modal-overlay').classList.toggle('hidden', menu.classList.contains('translate-x-full')); }
         function selectContact(i) { vibrate(); activeContactIndex = i; [0,1].forEach(idx => document.getElementById(`btn-contact-${idx}`).className = idx === i ? "flex-1 py-3 rounded-full text-xs font-black bg-blue-600 text-white shadow-md" : "flex-1 py-3 rounded-full text-xs font-bold bg-transparent text-slate-400"); }
         
-        function refreshCartModal() { 
-            const list = document.getElementById('cart-items-list'); 
-            let html = ""; 
-            for (let id in cart) { 
-                const p = products.find(i => i.id === id);
-                if(!p) continue; 
-                const boxTag = getBoxTagHtml(p['VIENE_LA_CAJA']);
-                html += `
-                <div class="bg-white p-4 rounded-2xl border border-slate-200">
-                    <div class="flex items-center gap-3 mb-2">
-                        <img src="${p.Imagen_Path ? encodeURI(p.Imagen_Path.replace(/\\/g, '/')) : ''}" class="w-14 h-14 rounded-lg object-contain bg-slate-50">
-                        <div class="flex-1 min-w-0">
-                            <h4 class="text-[11px] font-bold text-slate-800 truncate uppercase cursor-help" 
-                             title="${p.PRODUCTO}" 
-                             onclick="alert(this.title)">
-                             ${p.PRODUCTO}
-                            </h4>
-                            <div class="flex items-center flex-wrap gap-2 mt-1">
-                                <span class="text-blue-600 font-black">$${p['Precio ( USD )']}</span>
-                                ${boxTag}
-                            </div>
-                        </div>
-                        <div class="flex items-center bg-slate-50 rounded-lg border">
-                        <button onclick="updateQty('${id}',-1)" class="px-2 py-1 text-slate-400 font-bold">-</button>
-                        <input type="number" value="${cart[id]}" onchange="setQty('${id}', this.value)" class="qty-input-manual">
-                        <button onclick="updateQty('${id}',1)" class="px-2 py-1 text-blue-500 font-bold">+</button>
-                        <button onclick="setQty('${id}', 0)" class="p-2 text-red-500">×</button>
-                        </div>
-                        <button onclick="setQty('${id}', 0)" class="p-2 text-red-500">×</button>
+        // --- 3. 渲染清单：增加下架检测 ---
+function refreshCartModal() {
+    const list = document.getElementById('cart-items-list');
+    let html = "";
+    
+    for (let id in cart) {
+        // 在当前表格中寻找该产品
+        const p = products.find(i => i.id === id);
+        
+        if (!p) {
+            // --- 西班牙语下架提示样式 ---
+            html += `
+            <div class="bg-slate-50 p-4 rounded-2xl border border-dashed border-slate-300 opacity-60">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-lg bg-slate-200 flex items-center justify-center text-slate-400">
+                        <i class="bi bi-slash-circle text-xl"></i>
                     </div>
-                    <input type="text" placeholder="Nota..." class="note-input" value="${productNotes[id]||''}" oninput="productNotes['${id}']=this.value; saveToLocal()">
-                </div>`; 
-            } 
-            list.innerHTML = html || "<p class='text-center py-20 text-slate-400 font-bold uppercase'>Tu lista está vacía</p>"; 
-            updateCartTotalDisplay(); 
+                    <div class="flex-1">
+                        <h4 class="text-[11px] font-bold text-slate-400 uppercase">${id}</h4>
+                        <p class="text-[10px] font-black text-red-500 uppercase mt-1 italic">
+                            ⚠️ PRODUCTO NO DISPONIBLE EN ESTA LISTA
+                        </p>
+                    </div>
+                    <button onclick="setQty('${id}', 0)" class="p-2 text-slate-400 hover:text-red-500">
+                        <i class="bi bi-trash3"></i>
+                    </button>
+                </div>
+            </div>`;
+            continue;
         }
+
+        // --- 以下是正常产品显示代码 ---
+        const boxTag = getBoxTagHtml(p['VIENE_LA_CAJA']);
+        html += `
+        <div class="bg-white p-4 rounded-2xl border border-slate-200">
+            <div class="flex items-center gap-3 mb-2">
+                <img src="${p.Imagen_Path ? encodeURI(p.Imagen_Path.replace(/\\/g, '/')) : ''}" class="w-14 h-14 rounded-lg object-contain bg-slate-50">
+                <div class="flex-1 min-w-0">
+                    <h4 class="text-[11px] font-bold text-slate-800 truncate uppercase">${p.PRODUCTO}</h4>
+                    <div class="flex items-center gap-2 mt-1">
+                        <span class="text-blue-600 font-black">$${p['Precio ( USD )']}</span>
+                        ${boxTag}
+                    </div>
+                </div>
+                <div class="flex items-center bg-slate-50 rounded-lg border">
+                    <button onclick="updateQty('${id}',-1)" class="px-2 py-1">-</button>
+                    <input type="number" value="${cart[id]}" class="w-8 text-center text-xs font-bold bg-transparent border-none">
+                    <button onclick="updateQty('${id}',1)" class="px-2 py-1">+</button>
+                </div>
+            </div>
+        </div>`;
+    }
+    list.innerHTML = html || "<p class='text-center py-20 text-slate-400 font-bold uppercase'>Tu lista está vacía</p>";
+    updateCartTotalDisplay();
+}
 
         function updateCartTotalDisplay() { let total = 0; for (let id in cart) { const p = products.find(i => i.id === id);; if (p) total += (parseFloat(p['Precio ( USD )']) || 0) * cart[id]; } document.getElementById('cart-total-modal').innerText = `$${total.toLocaleString('en-US',{minimumFractionDigits:2})}`; }
         function sendWhatsApp() { 
