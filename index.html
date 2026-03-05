@@ -394,37 +394,20 @@ function toggleDarkMode() {
         }
 
         async function checkProductsFileDate() {
-    try {
-        // 1. 获取服务器上文件的最后修改时间
-        // 加一个随机数参数 ?t= 确保拿到的是服务器最新的，而不是浏览器缓存的
-        const response = await fetch('products.json?t=' + Date.now(), { method: 'HEAD' });
-        const lastModified = response.headers.get('Last-Modified');
-        
-        if (lastModified) {
-            const savedDate = localStorage.getItem('starphone_products_modified');
-            
-            // 2. 如果保存的时间和服务器时间对不上，说明你上传了新报价
-            if (savedDate && savedDate !== lastModified) {
-                console.log("检测到新报价，正在自动更新...");
-                
-                // --- 关键：精准删除报价缓存，不要用 localStorage.clear() ---
-                localStorage.removeItem('products_cache'); 
-                localStorage.removeItem('sources_cache');
-                
-                // 更新本地保存的时间戳
-                localStorage.setItem('starphone_products_modified', lastModified);
-                
-                // 3. 刷新页面，此时页面会因为没有缓存而强制去下载最新的 JSON
-                location.reload(); 
-            } else {
-                // 如果是第一次访问，记录下当前时间
-                localStorage.setItem('starphone_products_modified', lastModified);
-            }
+            try {
+                const response = await fetch('products.json', { method: 'HEAD' });
+                const lastModified = response.headers.get('Last-Modified');
+                if (lastModified) {
+                    const savedDate = localStorage.getItem('starphone_products_modified');
+                    if (savedDate && savedDate !== lastModified) {
+                        showAnnouncement(lastModified);
+                    } else {
+                        localStorage.setItem('starphone_products_modified', lastModified);
+                    }
+                }
+            } catch (e) { console.log("Date check skipped"); }
         }
-    } catch (e) { 
-        console.log("Date check skipped", e); 
-    }
-}
+
         function showAnnouncement(newDate) {
             const el = document.getElementById('update-announcement');
             el.classList.remove('-translate-y-32', 'opacity-0', 'pointer-events-none');
