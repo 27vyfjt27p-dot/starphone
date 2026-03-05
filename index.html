@@ -367,24 +367,33 @@ function toggleDarkMode() {
             favorites = JSON.parse(localStorage.getItem('starphone_favs') || '{}');
             if (localStorage.getItem('starphone_dark') === 'true') document.body.classList.add('dark');
 
-            try {
-                const res = await fetch('sources.json?v=' + new Date().getTime());
-                sources = await res.json();
-                if (sources.length > 0) {
-                    currentSourceKey = sources[0].key;
-                    checkProductsFileDate();
-                    renderSourceTabs(); 
-                    const allCarts = JSON.parse(localStorage.getItem('starphone_carts_v2') || '{}');
-                    const allNotes = JSON.parse(localStorage.getItem('starphone_notes_v2') || '{}');
-                    cart = allCarts[currentSourceKey] || {};
-                    productNotes = allNotes[currentSourceKey] || {};
-                    await loadProducts();
-                    // 初始化侧边栏开关的视觉状态
-    const darkModeToggle = document.getElementById('dark-mode-toggle');
-    if(darkModeToggle) {
-        darkModeToggle.checked = document.body.classList.contains('dark');
+            // --- 修改后的 init 部分 ---
+async function init() {
+    try {
+        // 1. 获取目录（加上时间戳，防止浏览器只读旧目录）
+        const res = await fetch('sources.json?v=' + new Date().getTime());
+        sources = await res.json();
+        
+        if (sources.length > 0) {
+            // 设置默认数据源
+            currentSourceKey = sources[0].key;
+            
+            // 2. 加载本地存储（购物车和备注会被保留）
+            const allCarts = JSON.parse(localStorage.getItem('starphone_carts_v2') || '{}');
+            const allNotes = JSON.parse(localStorage.getItem('starphone_notes_v2') || '{}');
+            cart = allCarts[currentSourceKey] || {};
+            productNotes = allNotes[currentSourceKey] || {};
+
+            // 3. 加载产品（这里最关键，见下一步修改）
+            await loadProducts(); 
+            
+            renderSourceTabs();
+            // ... 其余逻辑
+        }
+    } catch (e) {
+        console.error("Initialization failed:", e);
     }
-    
+}
     const vibrationToggle = document.getElementById('vibration-toggle');
     if(vibrationToggle) {
         vibrationToggle.checked = isVibrationEnabled;
