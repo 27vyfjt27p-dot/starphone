@@ -4,11 +4,5 @@
     "label": "LISTA ACTUAL",
     "desc": "Lista actual",
     "file": "products.json"
-  },
-  {
-    "key": "en camino products",
-    "label": "EN CAMINO PRODUCTS",
-    "desc": "en camino products",
-    "file": "en camino products.json"
   }
 ]
