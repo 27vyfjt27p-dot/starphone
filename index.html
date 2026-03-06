@@ -621,6 +621,11 @@ async function loadProducts() {
 }
 
         function updateQty(id, chg) { vibrate(); let n = (cart[id] || 0) + chg; if (n <= 0) { delete cart[id]; delete productNotes[id]; } else cart[id] = n; saveToLocal(); render(); if(document.getElementById('cart-modal').classList.contains('active')) refreshCartModal(); }
+        function updateProductNote(id, val) {
+    productNotes[id] = val; // 将备注存入当前内存
+    if (!val.trim()) delete productNotes[id]; // 如果输入为空则删除
+    saveToLocal(); // 调用你原有的函数保存到 LocalStorage
+}
         function setQty(id, val) { let n = parseInt(val); if (isNaN(n) || n <= 0) { delete cart[id]; delete productNotes[id]; } else { cart[id] = n; } saveToLocal(); render(); if(document.getElementById('cart-modal').classList.contains('active')) refreshCartModal(); }
         function toggleCartModal() { const isActive = document.getElementById('cart-modal').classList.toggle('active'); document.getElementById('modal-overlay').classList.toggle('hidden', !isActive); if(isActive) refreshCartModal(); }
         
@@ -745,7 +750,12 @@ function refreshCartModal() {
 
         // 1.2 为正常产品添加删除按钮
         // --- 补丁 1：购物车删除按钮（置于加减号右侧） ---
+// --- 在 refreshCartModal 函数的循环内部替换此部分 ---
+// ... 前面是获取产品 p 的逻辑 ...
+
 const boxTag = getBoxTagHtml(p['VIENE_LA_CAJA']);
+const currentNote = productNotes[id] || ""; // 获取已有的备注内容
+
 html += `
 <div class="bg-white dark:bg-slate-800 p-4 rounded-2xl border border-slate-200 dark:border-slate-700">
     <div class="flex items-center gap-3">
@@ -757,6 +767,13 @@ html += `
                 <span class="text-blue-600 font-black">$${p['Precio ( USD )']}</span>
                 ${boxTag}
             </div>
+            
+            <input type="text" 
+                   placeholder="Color (indicar en nota)" 
+                   value="${currentNote}"
+                   oninput="updateProductNote('${id}', this.value)"
+                   class="w-full mt-2 px-3 py-1.5 bg-slate-100 dark:bg-slate-900 border-none rounded-lg text-[10px] text-slate-600 dark:text-slate-400 outline-none focus:ring-1 focus:ring-blue-400 transition-all"
+            >
         </div>
 
         <div class="flex items-center gap-2">
@@ -773,7 +790,7 @@ html += `
             </button>
         </div>
     </div>
-</div>`;
+</div>`; // 确保这里结束正确
     }
     list.innerHTML = html || "<p class='text-center py-20 text-slate-400 font-bold uppercase'>Tu lista está vacía</p>";
     updateCartTotalDisplay();
