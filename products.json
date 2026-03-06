@@ -1161,21 +1161,11 @@
   },
   {
     "MARCA": "XIAOMI",
-    "TIPO": "impresora",
-    "PRODUCTO": "xiaomi Portable Photo Printer 1S",
-    "DESC_FULL": "Diseño ligero y portátil (≈ 124 × 82 × 22 mm; ≈ 180 g), ideal para llevar a cualquier parte.\nTecnología ZINK sin tinta: imprime mediante activación térmica sobre papel especial, sin cartuchos ni cintas.\nConexión Bluetooth 5.2, hasta 3 dispositivos pueden conectarse simultáneamente, sin necesidad de Wi-Fi.\nImpresión instantánea en aproximadamente 45 s, formato adhesivo de 50 × 76 mm, resolución hasta 313 × 512 dpi.\nApp Xiaomi Home permite personalizar fotos con bordes, filtros, marcas de agua, collages y división de imágenes.\nBatería de 500 mAh con autonomía para unas 20 fotos, recarga mediante USB-C.",
-    "Precio ( USD )": 45.0,
-    "Imagen_Path": "products_images/products_117.png",
-    "VIENE_LA_CAJA": 36,
-    "qcy-yf": "YF"
-  },
-  {
-    "MARCA": "XIAOMI",
     "TIPO": "Scale",
     "PRODUCTO": "Mi Smart Scale S200 White Y Dark Grey",
     "DESC_FULL": "Sensor de alta precisión: con incrementos mínimos de 0,05 kg, permite detectar cambios sutiles en el peso.\nRango de peso: de 0,1 kg a 150 kg, adecuado para personas y objetos pequeños.\nConectividad Bluetooth 5.4: se sincroniza con la aplicación Xiaomi Home para un seguimiento detallado.\nSoporte para hasta 36 usuarios: ideal para familias o grupos, con modo invitado sin almacenamiento de datos.\nFunciones de salud: mide peso, IMC, peso ideal y ofrece recomendaciones de control de peso.\nPrueba de equilibrio: evalúa la coordinación y estabilidad al estar de pie sobre un pie.\nCompatibilidad: requiere Android 8.0/iOS 12.0 o superior.",
     "Precio ( USD )": 10.0,
-    "Imagen_Path": "products_images/products_118.png",
+    "Imagen_Path": "products_images/products_117.png",
     "VIENE_LA_CAJA": 10,
     "qcy-yf": "QCY"
   },
@@ -1185,7 +1175,7 @@
     "PRODUCTO": "Xiaomi Smart Scent Diffuser",
     "DESC_FULL": "Control inteligente: Se puede controlar a través de la app Mi Home, lo que permite ajustar la intensidad y el tiempo de difusión desde el teléfono.\nVariedad de fragancias: Compatible con cápsulas de fragancia intercambiables, ofreciendo diferentes opciones para ambientar el hogar.\nTecnología ultrasónica: Emite niebla fina para una difusión uniforme del aroma en el ambiente.\nModo nocturno: Disminuye la intensidad de la luz y el sonido para un uso cómodo durante la noche.\nDiseño elegante y minimalista: Con un diseño moderno y compacto, se adapta bien a cualquier espacio.",
     "Precio ( USD )": 15.0,
-    "Imagen_Path": "products_images/products_119.png",
+    "Imagen_Path": "products_images/products_118.png",
     "VIENE_LA_CAJA": 48,
     "qcy-yf": "yf"
   },
@@ -1195,7 +1185,7 @@
     "PRODUCTO": "Xiaomi Smart Scent Diffuser Refill ( Wood and Tea) Y ( Rose and Iychee)",
     "DESC_FULL": "para usar maquina Xiaomi Smart Scent Diffuser",
     "Precio ( USD )": 5.0,
-    "Imagen_Path": "products_images/products_120.png",
+    "Imagen_Path": "products_images/products_119.png",
     "VIENE_LA_CAJA": "D",
     "qcy-yf": "yf"
   },
@@ -1205,7 +1195,7 @@
     "PRODUCTO": "Xiaomi Dust Mite Vacuum Cleaner EU",
     "DESC_FULL": "Lámpara germicida UV\n99% de esterilización\n99% de eliminación de ácaros\nSucción poderosa\nMáximo de 12000Pa de succión potente\nFrecuencia de golpeteo\nGolpeteo de alta frecuencia a 12000\nSecado con aire caliente\nSecado con aire caliente a 50℃",
     "Precio ( USD )": 35.0,
-    "Imagen_Path": "products_images/products_121.png",
+    "Imagen_Path": "products_images/products_120.png",
     "VIENE_LA_CAJA": 4,
     "qcy-yf": "YF"
   },
@@ -1215,7 +1205,7 @@
     "PRODUCTO": "Xiaomi Dust Mite Vacuum Cleaner Pro EU",
     "DESC_FULL": "Lámpara germicida UV\n99% de esterilización\n99% de eliminación de ácaros\nSucción poderosa\nMáximo de 12000Pa de succión potente\nFrecuencia de golpeteo\nGolpeteo de alta frecuencia a 12000\nSecado con aire caliente\nSecado con aire caliente a 50℃",
     "Precio ( USD )": 48.0,
-    "Imagen_Path": "products_images/products_122.png",
+    "Imagen_Path": "products_images/products_121.png",
     "VIENE_LA_CAJA": 4,
     "qcy-yf": "YF"
   },
@@ -1225,7 +1215,7 @@
     "PRODUCTO": "Xiaomi Dust Mite Vacuum Cleaner 2 Pro",
     "DESC_FULL": "Succión potente de 16 kPa para eliminar ácaros y polvo profundo.\nCepillo con vibración de alta frecuencia para desprender suciedad.\nLuz UV y ultrasonido para desinfección.\nAire caliente a 65 °C para secado y reducción de humedad.\nFiltro de 6 etapas con depósito de 0,8 L lavable.\nDetección inteligente que ajusta la potencia automáticamente.\nTres modos: Suave, Inteligente y Fuerte.",
     "Precio ( USD )": 58.0,
-    "Imagen_Path": "products_images/products_123.png",
+    "Imagen_Path": "products_images/products_122.png",
     "VIENE_LA_CAJA": "",
     "qcy-yf": "YF"
   },
@@ -1235,7 +1225,7 @@
     "PRODUCTO": "Xiaomi Robot Vacuum S20 Mop Pad",
     "DESC_FULL": "",
     "Precio ( USD )": 4.0,
-    "Imagen_Path": "products_images/products_124.png",
+    "Imagen_Path": "products_images/products_123.png",
     "VIENE_LA_CAJA": 1,
     "qcy-yf": "yf"
   },
@@ -1245,7 +1235,7 @@
     "PRODUCTO": "Xiaomi Robot Vacuum S20 Brush Cover (Black)",
     "DESC_FULL": "",
     "Precio ( USD )": 5.0,
-    "Imagen_Path": "products_images/products_125.png",
+    "Imagen_Path": "products_images/products_124.png",
     "VIENE_LA_CAJA": 1,
     "qcy-yf": "yf"
   },
@@ -1255,7 +1245,7 @@
     "PRODUCTO": "Xiaomi Robot Vacuum S40C",
     "DESC_FULL": "Succión 5 000 Pa con 4 modos de limpieza.\nNavegación láser LDS 360° con mapas precisos.\nDepósitos: 520 mL polvo + 260 mL agua.\nFlujo de agua inteligente con 3 niveles.\nSensores para evitar obstáculos, caídas y subir bordes de 20 mm.\nApp Xiaomi Home, compatible con Alexa y Google Assistant.\nDimensiones: 340 × 340 × 97 mm, 3,44 kg, batería 2 400 mAh, potencia 55 W.",
     "Precio ( USD )": 110.0,
-    "Imagen_Path": "products_images/products_126.png",
+    "Imagen_Path": "products_images/products_125.png",
     "VIENE_LA_CAJA": 1,
     "qcy-yf": "YF"
   },
@@ -1265,7 +1255,7 @@
     "PRODUCTO": "Xiaomi Multifunctional Cooker 1.5L TW 110V",
     "DESC_FULL": "",
     "Precio ( USD )": 15.0,
-    "Imagen_Path": "products_images/products_127.png",
+    "Imagen_Path": "products_images/products_126.png",
     "VIENE_LA_CAJA": 4,
     "qcy-yf": "qcy"
   },
@@ -1275,7 +1265,7 @@
     "PRODUCTO": "Xiaomi Multifunctional Cooker 1.5L 220V",
     "DESC_FULL": "Potencia: 1000W para una cocción rápida y eficiente.\nCapacidad: 1.5L para el interior y 1.2L para el vapor.\nModos de cocción: 6 preestablecidos: fondue, vapor, hervir, sopa, DIY y mantener caliente.\nControl de temperatura: 5 niveles ajustables con función de protección contra sobrecalentamiento.\nMateriales: Recubrimiento cerámico antiadherente, cesta de vapor de PP resistente al calor y tapa de vidrio templado.\nDiseño: Base antideslizante, ranura para 7 huevos y orificio de drenaje para mayor seguridad.",
     "Precio ( USD )": 33.0,
-    "Imagen_Path": "products_images/products_128.png",
+    "Imagen_Path": "products_images/products_127.png",
     "VIENE_LA_CAJA": 4,
     "qcy-yf": "YF"
   },
@@ -1285,7 +1275,7 @@
     "PRODUCTO": "Mi Smart Standing Fan 1C",
     "DESC_FULL": "Control Inteligente:Control remoto mediante la app Mi Home.\nCompatible con comandos de voz (Xiao AI, Google Assistant, Amazon Alexa).\nModos de Viento y Velocidades:Tres niveles de velocidad ajustables.\nModos de viento natural y de sueño para mayor comodidad.\nEficiencia Energética:Motor silencioso y eficiente con bajo consumo de energía.\nAjustes de Ángulo y Altura:Oscilación horizontal de 90° y ajuste de inclinación de 36°.Puede usarse tanto en el suelo como en la mesa.",
     "Precio ( USD )": 42.0,
-    "Imagen_Path": "products_images/products_129.png",
+    "Imagen_Path": "products_images/products_128.png",
     "VIENE_LA_CAJA": "D",
     "qcy-yf": "yf"
   },
@@ -1295,7 +1285,7 @@
     "PRODUCTO": "Xiaomi Microwave Oven EU",
     "DESC_FULL": "Capacidad de 20L, ideal para el hogar.\nPotencia de 700W, calienta y cocina de manera eficiente.\nMúltiples modos de cocción, incluyendo descongelado y recalentado.\nControl mediante perilla y pantalla LED, fácil de usar.\nDiseño moderno y compacto, se adapta a cualquier cocina.",
     "Precio ( USD )": 60.0,
-    "Imagen_Path": "products_images/products_130.png",
+    "Imagen_Path": "products_images/products_129.png",
     "VIENE_LA_CAJA": 1,
     "qcy-yf": "yf"
   },
@@ -1305,7 +1295,7 @@
     "PRODUCTO": "Xiaomi Smart Pet Food Feeder 2 EU",
     "DESC_FULL": "Alimentación automática programable por horarios y porciones.\nControl y gestión desde aplicación móvil.\nDiseño con sellado hermético que ayuda a mantener el alimento fresco.\nSistema de dispensado preciso para evitar atascos.\nDepósito de gran capacidad para varios días de uso.\nFuncionamiento estable con respaldo de energía para mayor seguridad.\nIdeal para gatos y perros pequeños.",
     "Precio ( USD )": 66.0,
-    "Imagen_Path": "products_images/products_131.png",
+    "Imagen_Path": "products_images/products_130.png",
     "VIENE_LA_CAJA": 1,
     "qcy-yf": "yf"
   },
@@ -1315,7 +1305,7 @@
     "PRODUCTO": "Xiaomi Smart Air Purifier 4 Lite Filter Pro",
     "DESC_FULL": "Filtración de tres capas: filtro primario, revestimiento antibacteriano y carbón activado.\nElimina el 99.97% de partículas de hasta 0.3 micras (polvo, polen, PM2.5).\nNeutraliza bacterias y elimina olores.\nDuración de 6 a 12 meses, recomendable cambiarlo para mantener la eficacia.\nCompatible solo con Xiaomi Smart Air Purifier 4 Lite.",
     "Precio ( USD )": 30.0,
-    "Imagen_Path": "products_images/products_132.png",
+    "Imagen_Path": "products_images/products_131.png",
     "VIENE_LA_CAJA": "D",
     "qcy-yf": "yf"
   },
@@ -1325,7 +1315,7 @@
     "PRODUCTO": "Xiaomi Smart Air Purifier 4 Pro Filter",
     "DESC_FULL": "El filtro Xiaomi Smart Air Purifier 4 Pro tiene tres capas de filtración que eliminan el 99.97% de partículas hasta 0.3 micras. Contiene 650,000 mg de carbón activado para absorber olores y gases nocivos. Su duración es de 6 a 12 meses. Compatible solo con Xiaomi Air Purifier 4 Pro.",
     "Precio ( USD )": 32.0,
-    "Imagen_Path": "products_images/products_133.png",
+    "Imagen_Path": "products_images/products_132.png",
     "VIENE_LA_CAJA": "D",
     "qcy-yf": "yf"
   },
@@ -1335,7 +1325,7 @@
     "PRODUCTO": "Xiaomi Tritan Water Bottle gris  y blanco",
     "DESC_FULL": "Capacidad de 600 mL, ideal para el uso diario.\nMaterial Tritan sin BPA, resistente y seguro.\nApertura con una mano y tapa a prueba de fugas.\nFiltro integrado, perfecto para té o frutas.\nAsa de silicona, fácil de transportar.",
     "Precio ( USD )": 7.0,
-    "Imagen_Path": "products_images/products_134.png",
+    "Imagen_Path": "products_images/products_133.png",
     "VIENE_LA_CAJA": 30,
     "qcy-yf": "yf"
   },
@@ -1345,7 +1335,7 @@
     "PRODUCTO": "Mi home thermos cup pocket version white 350ML",
     "DESC_FULL": "Materiales de alta calidad: interior de acero inoxidable 316L y exterior de acero inoxidable 304, garantizando durabilidad y resistencia. \nAislamiento térmico eficiente: mantiene las bebidas calientes por más de 58 °C durante aproximadamente 6 horas y frías por debajo de 12 °C en el mismo período.",
     "Precio ( USD )": 7.0,
-    "Imagen_Path": "products_images/products_135.png",
+    "Imagen_Path": "products_images/products_134.png",
     "VIENE_LA_CAJA": "D",
     "qcy-yf": "QCY"
   },
@@ -1355,7 +1345,7 @@
     "PRODUCTO": "Xiaomi Sport Water Bottle",
     "DESC_FULL": "Capacidad de 1L, ideal para deportes y uso diario.\nMaterial Tritan de grado seguro, sin olores ni BPA.\nApertura con un botón y tapa a prueba de fugas.\nFiltro integrado, perfecto para té o frutas.\nDiseño resistente y portátil, fácil de llevar.",
     "Precio ( USD )": 11.0,
-    "Imagen_Path": "products_images/products_136.png",
+    "Imagen_Path": "products_images/products_135.png",
     "VIENE_LA_CAJA": 25,
     "qcy-yf": "YF"
   },
@@ -1365,7 +1355,7 @@
     "PRODUCTO": "Mi home thermos Cup Ti 2 grey 480ML",
     "DESC_FULL": "La Taza Termo Xiaomi Mijia Ti 2 está fabricada con titanio puro TA1, un material seguro, saludable y resistente a la corrosión.\npuede mantener la temperatura de las bebidas hasta 6 horas.\nSu diseño ligero y duradero es ideal para quienes buscan una opción saludable y práctica para conservar sus bebidas calientes o frías.",
     "Precio ( USD )": 26.0,
-    "Imagen_Path": "products_images/products_137.png",
+    "Imagen_Path": "products_images/products_136.png",
     "VIENE_LA_CAJA": "D",
     "qcy-yf": "QCY"
   },
@@ -1375,7 +1365,7 @@
     "PRODUCTO": "Xiaomi Insulated Kettle 1.8L GL",
     "DESC_FULL": "Capacidad de 1.8 litros, adecuada para uso familiar o de oficina.\nAislamiento térmico que conserva la temperatura durante horas.\nDiseño de doble pared para un uso seguro al tacto.\nInterior de acero inoxidable resistente y fácil de limpiar.\nVertido cómodo y controlado sin goteos.\nDiseño minimalista y elegante.\nIdeal para agua caliente, té o café.",
     "Precio ( USD )": 18.0,
-    "Imagen_Path": "products_images/products_138.png",
+    "Imagen_Path": "products_images/products_137.png",
     "VIENE_LA_CAJA": 12,
     "qcy-yf": "yf"
   },
@@ -1385,7 +1375,7 @@
     "PRODUCTO": "Xiaomi Double Wall Electric Kettle S1",
     "DESC_FULL": "Capacidad: 1,7 l.\nPotencia: 1800 W.\nVoltaje/frecuencia: 220-240 V, 50/60 Hz.\nDimensiones: 220 × 150 × 251,5 mm.\nPeso neto: 1,11 kg.",
     "Precio ( USD )": 23.0,
-    "Imagen_Path": "products_images/products_139.png",
+    "Imagen_Path": "products_images/products_138.png",
     "VIENE_LA_CAJA": 4,
     "qcy-yf": "yf"
   },
@@ -1395,7 +1385,7 @@
     "PRODUCTO": "Xiaomi Smart Kettle 2 Pro EU",
     "DESC_FULL": "Capacidad de 1,7 litros.\nPotencia nominal de 1800 W.\nDimensiones aproximadas: 273 × 155 × 242 mm.\nPeso neto aproximado: 1,20 kg.\nConectividad Wi-Fi (2,4 GHz) para control mediante aplicación móvil.\nAjuste de temperatura de forma precisa (en incrementos de 1 °C), múltiples modos de hervido, y función de mantener la temperatura hasta 24 horas.",
     "Precio ( USD )": 35.0,
-    "Imagen_Path": "products_images/products_140.png",
+    "Imagen_Path": "products_images/products_139.png",
     "VIENE_LA_CAJA": 8,
     "qcy-yf": "yf"
   },
@@ -1405,7 +1395,7 @@
     "PRODUCTO": "Xiaomi Smart Multifunctional Rice Cooker 3L",
     "DESC_FULL": "Xiaomi electric rice cooker is great for home use\nMore than 3000 kinds of rice cooking schemes\nAPP control ( Chinese and English ), convenient to use\nAutomatic heat preservation system\nWith accurate temperature control system\nElectromagnetic heating, easy to infuse flavor",
     "Precio ( USD )": 33.0,
-    "Imagen_Path": "products_images/products_141.png",
+    "Imagen_Path": "products_images/products_140.png",
     "VIENE_LA_CAJA": 1,
     "qcy-yf": "yf"
   },
@@ -1415,7 +1405,7 @@
     "PRODUCTO": "Mi Capsule Coffee Machine N1 S1301 White (Standard Version)",
     "DESC_FULL": "Material de vidrio de borosilicato: Resistente al calor y al frío, garantiza durabilidad y seguridad.​\nPotencia de 2200W: Permite hervir agua rápidamente, en aproximadamente 5 minutos.​\nDiseño funcional: Incluye indicador LED de funcionamiento, apertura de tapa con un solo toque para facilitar el llenado y la limpieza, y filtro extraíble para una mayor pureza del agua.​\nSeguridad: Cuenta con múltiples sistemas de protección, como apagado automático al hervir y protección contra ebullición en seco.",
     "Precio ( USD )": 55.0,
-    "Imagen_Path": "products_images/products_142.png",
+    "Imagen_Path": "products_images/products_141.png",
     "VIENE_LA_CAJA": "D",
     "qcy-yf": "qcy"
   },
@@ -1425,7 +1415,7 @@
     "PRODUCTO": "Xiaomi Smart Ceiling Light D40",
     "DESC_FULL": "Luz LED de espectro completo (Ra97) – Iluminación natural con colores reales.\nDiseño antideslumbrante – Protege la vista con tecnología óptica de microprismas.\nControl inteligente – Compatible con app Mi Home, control remoto, Google Assistant y Alexa.\nDiseño delgado (6 cm) – Estilo moderno y minimalista.\nProtección contra polvo (IP50) – Evita entrada de polvo e insectos.",
     "Precio ( USD )": 55.0,
-    "Imagen_Path": "products_images/products_143.png",
+    "Imagen_Path": "products_images/products_142.png",
     "VIENE_LA_CAJA": "nuevo",
     "qcy-yf": "yf"
   },
@@ -1435,7 +1425,7 @@
     "PRODUCTO": "Xiaomi Smart Ceiling Light D30",
     "DESC_FULL": "Luz LED de espectro completo (Ra97) – Iluminación natural y colores realistas.\nDiseño antideslumbrante – Protege los ojos con óptica de microprismas.\nControl inteligente – Compatible con app Mi Home, control remoto, Google Assistant y Alexa.\nDiseño delgado (6 cm) – Estilo moderno y minimalista.\nProtección contra polvo (IP50) – Evita entrada de polvo e insectos.",
     "Precio ( USD )": 40.0,
-    "Imagen_Path": "products_images/products_144.png",
+    "Imagen_Path": "products_images/products_143.png",
     "VIENE_LA_CAJA": "nuevo",
     "qcy-yf": "yf"
   },
@@ -1445,7 +1435,7 @@
     "PRODUCTO": "Xiaomi Wireless Mouse Lite 2 Negro",
     "DESC_FULL": "",
     "Precio ( USD )": 6.5,
-    "Imagen_Path": "products_images/products_145.png",
+    "Imagen_Path": "products_images/products_144.png",
     "VIENE_LA_CAJA": 60,
     "qcy-yf": "yf"
   },
@@ -1455,7 +1445,7 @@
     "PRODUCTO": "Xiaomi Wireless Mouse Comfort Edition Negro blanco",
     "DESC_FULL": "",
     "Precio ( USD )": 7.5,
-    "Imagen_Path": "products_images/products_146.png",
+    "Imagen_Path": "products_images/products_145.png",
     "VIENE_LA_CAJA": 50,
     "qcy-yf": "yf"
   },
@@ -1465,7 +1455,7 @@
     "PRODUCTO": "Xiaomi Dual-mode Wireless Mouse 2 Negro blanco",
     "DESC_FULL": "",
     "Precio ( USD )": 9.0,
-    "Imagen_Path": "products_images/products_147.png",
+    "Imagen_Path": "products_images/products_146.png",
     "VIENE_LA_CAJA": 50,
     "qcy-yf": "yf"
   },
@@ -1475,7 +1465,7 @@
     "PRODUCTO": "Xiaomi Wireless Mouse 3 white pink blue black",
     "DESC_FULL": "",
     "Precio ( USD )": 11.0,
-    "Imagen_Path": "products_images/products_148.png",
+    "Imagen_Path": "products_images/products_147.png",
     "VIENE_LA_CAJA": 50,
     "qcy-yf": "yf"
   },
@@ -1485,7 +1475,7 @@
     "PRODUCTO": "Xiaomi Gaming Mouse Lite GL",
     "DESC_FULL": "Sensor de alto rendimiento: Seguimiento óptico preciso y respuesta rápida.\nDPI ajustable: Varios niveles de DPI para personalizar la experiencia de juego.\nRetroiluminación RGB: Personalizable para mejorar la atmósfera de juego.\nDiseño ligero y ergonómico: Cómodo para largas sesiones de juego.\nDiseño de seis botones: Control multifuncional para mayor funcionalidad en juegos.",
     "Precio ( USD )": 14.0,
-    "Imagen_Path": "products_images/products_149.png",
+    "Imagen_Path": "products_images/products_148.png",
     "VIENE_LA_CAJA": 40,
     "qcy-yf": "yf"
   },
@@ -1495,7 +1485,7 @@
     "PRODUCTO": "Lenovo XiaoXin 100S Smart Projector L-PJT100L White",
     "DESC_FULL": "Brillo: 650 ANSI lúmenes\nResolución: 1080P + soporte HDR10\nEnfoque y Corrección: Autofoco + corrección trapezoidal automática\nAudio: Altavoces integrados de 2x5W (HiFi)\nSistema Operativo: Android 9.0\nFunciones Destacadas: WiFi 6, Bluetooth 5.0, HDMI, USB, salida de 3.5mm, adecuado para cine en casa.",
     "Precio ( USD )": 158.0,
-    "Imagen_Path": "products_images/products_150.png",
+    "Imagen_Path": "products_images/products_149.png",
     "VIENE_LA_CAJA": "D",
     "qcy-yf": "QCY"
   },
@@ -1505,7 +1495,7 @@
     "PRODUCTO": "Mi Computer Monitor Light Bar",
     "DESC_FULL": "Lámpara de lectura para monitor LCD, regulable y portátil.\nNo utiliza espacio en pantalla.\nNo refleja la luz en pantalla.\nBrillo, color y temperatura ajustable.\nControl remoto inalámbrico.\nSistema de Rotación magnética.\nPuerto USB tipo-C.",
     "Precio ( USD )": 30.0,
-    "Imagen_Path": "products_images/products_151.png",
+    "Imagen_Path": "products_images/products_150.png",
     "VIENE_LA_CAJA": 10,
     "qcy-yf": "YF"
   },
@@ -1515,7 +1505,7 @@
     "PRODUCTO": "Xiaomi Roll Top Casual Backpack GL 23L",
     "DESC_FULL": "Capacidad de aproximadamente 23 litros, con diseño enrollable para ajustar el espacio.\nDimensiones: 290 x 170 x 430 mm, apta para equipaje de mano.\nPeso ligero, alrededor de 840 gramos.\nMaterial resistente al agua (poliuretano y poliéster), fácil de limpiar.\nCompartimento principal con sección para laptop de hasta 15.6 pulgadas.\nBolsillos frontales y laterales para acceso rápido a objetos y botellas.\nEspalda acolchonada y ventilada para mayor comodidad al llevarla.",
     "Precio ( USD )": 38.0,
-    "Imagen_Path": "products_images/products_152.png",
+    "Imagen_Path": "products_images/products_151.png",
     "VIENE_LA_CAJA": "D",
     "qcy-yf": "yf"
   },
@@ -1525,7 +1515,7 @@
     "PRODUCTO": "Tronsmart Element T2 Plus UPGRADED 20W Bluetooth Speaker",
     "DESC_FULL": "20W with passive radiator & 24 Hours Playtime\n*7.4V 2000mAh Battery",
     "Precio ( USD )": 25.0,
-    "Imagen_Path": "products_images/products_153.png",
+    "Imagen_Path": "products_images/products_152.png",
     "VIENE_LA_CAJA": "D",
     "qcy-yf": "qcy"
   },
@@ -1535,7 +1525,7 @@
     "PRODUCTO": "Tronsmart Bang  SE 40W+ USB de 64G de regalo",
     "DESC_FULL": "Sonido de alta calidad: Potente y adecuado para todo tipo de música.\nResistencia al agua IPX7: Totalmente impermeable, ideal para exteriores.\nBatería de larga duración: Hasta 24 horas de reproducción con una sola carga.\nConexión Bluetooth 5.3: Rápida y estable.\nDiseño portátil: Con correa para facilitar el transporte.\nBajos profundos: Mejora la experiencia de sonido con bajos potentes.\nTamaño del producto:29.8*11.88*16.45cm",
     "Precio ( USD )": 45.0,
-    "Imagen_Path": "products_images/products_154.png",
+    "Imagen_Path": "products_images/products_153.png",
     "VIENE_LA_CAJA": 6,
     "qcy-yf": "qcy"
   },
@@ -1545,7 +1535,7 @@
     "PRODUCTO": "Tronsmart Bang Mini",
     "DESC_FULL": "Sonido detallado: 2 cavidades independientes; agudos claros (tweeters y radiador pasivo) y graves potentes (woofers).\nDuración de batería: 15 horas con batería de 4,000 mAh; también funciona como banco de carga (entrada USB).\nLuces LED: Estilo pulsante y circular para animar la fiesta.\nImpermeable IPX6: Resistente al sudor, salpicaduras y arena.\nTecnología SoundPulse™: Audio equilibrado y detallado con chip personalizado y cámara de poder.\nBluetooth 5.3: Transmisión rápida hasta 18 m; conecta hasta 2 dispositivos.\nAsistente personal: Acceso a Siri, Cortana y Asistente de Google con un toque.\nConectividad: Bluetooth y NFC para transmisión inalámbrica.\nApp Tronsmart: Personaliza modos LED y ecualizadores.\nPortátil: Con mango integrado para facilitar el transporte\nTamaño del producto:30.2*12.5*16.9CM",
     "Precio ( USD )": 56.0,
-    "Imagen_Path": "products_images/products_155.png",
+    "Imagen_Path": "products_images/products_154.png",
     "VIENE_LA_CAJA": 6,
     "qcy-yf": "qcy"
   },
@@ -1555,7 +1545,7 @@
     "PRODUCTO": "Tronsmart FIITUNE X30 Grey",
     "DESC_FULL": "Potencia de sonido: 80W con audio de alta resolución (Hi-Res).\nResistencia al agua: certificado IPX6, ideal para uso interior y exterior.\nConectividad: Bluetooth versión 5.3 para conexión estable y rápida.\nEmparejamiento estéreo: permite conectar dos altavoces para sonido envolvente.\nPortabilidad: diseño compacto y fácil de transportar.\nBatería: duración prolongada para uso extendido sin recarga frecuente.",
     "Precio ( USD )": 115.0,
-    "Imagen_Path": "products_images/products_156.png",
+    "Imagen_Path": "products_images/products_155.png",
     "VIENE_LA_CAJA": 1,
     "qcy-yf": "QCY"
   },
@@ -1565,7 +1555,7 @@
     "PRODUCTO": "Tronsmart T7 Mini",
     "DESC_FULL": "Tipo de parlante: Woofer, manos libres.\nCaracterísticas: A prueba de agua, Bluetooth, luces LED, batería recargable de 15W.\nIncluye: Micrófono de accesorio.\nLugar de colocación: Interiores y exteriores.\nTiempo de carga: 3 horas.\nTamaño del producto:12.6*12,6*14.2CM",
     "Precio ( USD )": 14.0,
-    "Imagen_Path": "products_images/products_157.png",
+    "Imagen_Path": "products_images/products_156.png",
     "VIENE_LA_CAJA": 24,
     "qcy-yf": "qcy"
   },
@@ -1575,7 +1565,7 @@
     "PRODUCTO": "Tronsmart T7",
     "DESC_FULL": "Tipo de parlante: Portátil.\nCaracterísticas: A prueba de agua, Bluetooth, luces LED, batería recargable de 30W.\nUbicación: Escritorio.\nTiempo de carga: 3h.\nTamaño del producto:7.7*7.7*21cm",
     "Precio ( USD )": 29.0,
-    "Imagen_Path": "products_images/products_158.png",
+    "Imagen_Path": "products_images/products_157.png",
     "VIENE_LA_CAJA": 16,
     "qcy-yf": "qcy"
   },
@@ -1585,7 +1575,7 @@
     "PRODUCTO": "Tronsmart T7 Lite",
     "DESC_FULL": "Tipo de parlante: Subwoofer, manos libres.\nCaracterísticas: A prueba de agua, Bluetooth, luces LED, batería recargable de 24W, micrófono de accesorio.\nCantidad: 2 parlantes.\nUbicación: En el piso.\nTiempo de carga: 3h.\nTamaño del producto:19.5*7.2*7.2CM",
     "Precio ( USD )": 20.0,
-    "Imagen_Path": "products_images/products_159.png",
+    "Imagen_Path": "products_images/products_158.png",
     "VIENE_LA_CAJA": 24,
     "qcy-yf": "qcy"
   },
@@ -1595,7 +1585,7 @@
     "PRODUCTO": "Tronsmart T8 Black Grey 40W",
     "DESC_FULL": "Potencia mejorada de 40W: Ofrece un sonido más potente y nítido de 40W, ideal para disfrutar al aire libre.\nSonido de 360°: Proporciona una inmersión sonora de 360°, envolviendo a todos en una experiencia auditiva completa.\nAudio de 2.1 canales: La tecnología SoundPulse se une a un chip DSP de alta gama, ofreciendo graves más potentes y un sonido envolvente incluso al aire libre.\nResistente a los elementos exteriores: Hasta 18 horas de reproducción y certificación IPX7 a prueba de agua, para que tu música no se detenga ante la lluvia, salpicaduras o aventuras extremas.\nControl de rueda suave: Gira la rueda intuitiva para ajustar el sonido al instante.\nPersonalizados audio y luces: Personaliza tu experiencia con ajustes de EQ y espectáculos de luces vibrantes mediante la aplicación.",
     "Precio ( USD )": 36.0,
-    "Imagen_Path": "products_images/products_160.png",
+    "Imagen_Path": "products_images/products_159.png",
     "VIENE_LA_CAJA": 16,
     "qcy-yf": "QCY"
   },
@@ -1605,7 +1595,7 @@
     "PRODUCTO": "Tronsmart Halo 100",
     "DESC_FULL": "Sistema de Sonido de 3 Vías\nEfectos de Iluminación Espléndidos\n18 Horas de Reproducción\nEmparejamiento Estéreo\nPersonaliza los Efectos de Audio a través de la App\nTamaño del producto:28.67*17.97*15CM",
     "Precio ( USD )": 63.0,
-    "Imagen_Path": "products_images/products_161.png",
+    "Imagen_Path": "products_images/products_160.png",
     "VIENE_LA_CAJA": 4,
     "qcy-yf": "qcy"
   },
@@ -1615,7 +1605,7 @@
     "PRODUCTO": "Tronsmart Halo 110",
     "DESC_FULL": "Sonido Estéreo Superior de 60W\nEfectos de Iluminación Espléndidos\n18 Horas de Reproducción\nEmparejamiento Estéreo\nPersonaliza los Efectos de Audio a través de la App\nSoporta Karaoke\nTamaño del producto:28.7*19.8*15CM",
     "Precio ( USD )": 66.0,
-    "Imagen_Path": "products_images/products_162.png",
+    "Imagen_Path": "products_images/products_161.png",
     "VIENE_LA_CAJA": 4,
     "qcy-yf": "qcy"
   },
@@ -1625,7 +1615,7 @@
     "PRODUCTO": "Tronsmart Trip",
     "DESC_FULL": "Parlante Bluetooth 5.3: Manos libres, apto para exteriores, a prueba de agua.\nConectividad: Bluetooth.\nCaracterísticas: Potencia de 10W, batería recargable, micrófono interno y de accesorio, soporte incluido.\nTiempo de carga: 3 horas.\nTamaño del producto：16.8*3.8*7.8CM",
     "Precio ( USD )": 12.0,
-    "Imagen_Path": "products_images/products_163.png",
+    "Imagen_Path": "products_images/products_162.png",
     "VIENE_LA_CAJA": 40,
     "qcy-yf": "qcy"
   },
@@ -1635,7 +1625,7 @@
     "PRODUCTO": "Tronsmart Trip 2 Blue Grey Red",
     "DESC_FULL": "EDriver de 42 mm + radiadores duales: graves 20 % más profundos con tecnología SoundPulse.\nAutonomía de 20 h con certificación IPX7 resistente al agua.\nPortátil: asa y clip para mochila o bolsillo.\nAsistentes de voz y llamadas siempre a mano.",
     "Precio ( USD )": 20.0,
-    "Imagen_Path": "products_images/products_164.png",
+    "Imagen_Path": "products_images/products_163.png",
     "VIENE_LA_CAJA": 40,
     "qcy-yf": "qcy"
   },
@@ -1645,7 +1635,7 @@
     "PRODUCTO": "Tronsmart Mirtune H1  8W Portable Outdoor Speaker black",
     "DESC_FULL": "Diseño compacto: Fácil de llevar.\nSonido estéreo: Graves profundos y agudos claros.\nConexión Bluetooth: Compatible con móviles y tabletas.\nResistente al agua: Ideal para exteriores.\nBatería duradera: Horas de reproducción continua.\nTamaño del producto:13.8*8.1*4.6cm",
     "Precio ( USD )": 16.0,
-    "Imagen_Path": "products_images/products_165.png",
+    "Imagen_Path": "products_images/products_164.png",
     "VIENE_LA_CAJA": 40,
     "qcy-yf": "qcy"
   },
@@ -1655,7 +1645,7 @@
     "PRODUCTO": "Tronsmart Mirtune C3 24W Portable Speaker",
     "DESC_FULL": "Negro Y Azul\nSonido Potente: Woofer en forma de pista + tweeter + radiadores pasivos para graves intensos y agudos claros.\nSúper Portátil: Diseño compacto con correa para llevar fácilmente.\nResistente al Agua IPX7: Ideal para la piscina, el parque o la playa.\nEmparejamiento Estéreo: Conecta 2 altavoces para un sonido estéreo envolvente.\nHasta 12 Horas de Reproducción: Disfruta más con una sola carga.\nModo Doble: Conecta 2 dispositivos a la vez y alterna la música fácilmente.",
     "Precio ( USD )": 22.0,
-    "Imagen_Path": "products_images/products_166.png",
+    "Imagen_Path": "products_images/products_165.png",
     "VIENE_LA_CAJA": 24,
     "qcy-yf": "qcy"
   },
@@ -1665,7 +1655,7 @@
     "PRODUCTO": "Tronsmart Mirtune C3 30W Plus Portable Speaker black Y azul",
     "DESC_FULL": "Sonido potente de 30W: Claro y con graves profundos para todo tipo de música.\nResistencia al agua IPX7: Impermeable, perfecto para exteriores y cerca del agua.\nBatería de larga duración: Hasta 24 horas de reproducción con una carga.\nFunción TWS: Empareja dos altavoces para un sonido estéreo.\nConexión Bluetooth: Rápida y estable para múltiples dispositivos\nTamaño del producto:18*7*7.2cm",
     "Precio ( USD )": 30.0,
-    "Imagen_Path": "products_images/products_167.png",
+    "Imagen_Path": "products_images/products_166.png",
     "VIENE_LA_CAJA": 24,
     "qcy-yf": "qcy"
   },
@@ -1675,7 +1665,7 @@
     "PRODUCTO": "Sounarc K2 200W Karaoke Party Speaker black",
     "DESC_FULL": "Sonido potente: 200W de sonido estéreo.\nMicrófonos incluidos: 2 micrófonos inalámbricos.\nBatería de larga duración: 24.000 mAh, hasta 24 horas de uso.\nLuces LED: Efectos de luz multicolor para animar el ambiente.\nCambio de voz: Efectos divertidos para karaoke.\nConectividad: Bluetooth, transmisión en vivo y entrada auxiliar.\nControl remoto: Para mayor comodidad.\nResistente al agua: Certificación IPX6.\nFunción power bank: Carga otros dispositivos.",
     "Precio ( USD )": 95.0,
-    "Imagen_Path": "products_images/products_168.png",
+    "Imagen_Path": "products_images/products_167.png",
     "VIENE_LA_CAJA": "D",
     "qcy-yf": "qcy"
   }
