@@ -4,17 +4,5 @@
     "label": "LISTA ACTUAL",
     "desc": "Lista actual",
     "file": "products.json"
-  },
-  {
-    "key": "3-10products",
-    "label": "3-10PRODUCTS",
-    "desc": "3-10products",
-    "file": "3-10products.json"
-  },
-  {
-    "key": "3-9products",
-    "label": "3-9PRODUCTS",
-    "desc": "3-9products",
-    "file": "3-9products.json"
   }
 ]
