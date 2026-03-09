@@ -15,6 +15,8 @@
         
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         /* 开关基础样式 */
@@ -248,6 +250,12 @@
         
         <div class="mb-6 p-5 bg-slate-50 dark:bg-slate-800/50 rounded-[2rem] border border-slate-100 dark:border-slate-800 shadow-sm">
             <h3 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4 pl-1">Configuración</h3>
+            <button onclick="downloadProductCatalogPDF()" class="w-full mb-4 bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-2xl font-black uppercase text-[10px] flex items-center justify-center gap-2 shadow-lg transition-all active:scale-95">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+                <span>Descargar PDF (Sin Precios)</span>
+            </button>
             <div class="space-y-4">
                 <div class="flex items-center justify-between">
                     <span class="text-xs font-bold text-slate-600 dark:text-slate-300">Modo Oscuro</span>
@@ -939,6 +947,84 @@ html += `
             document.getElementById('filter-content').innerHTML = html || "<p class='text-slate-400 text-xs font-bold uppercase'>No hay filtros disponibles</p>";
         }
         init(); // 网页初始化，这行保留
+        async function downloadProductCatalogPDF() {
+    if (typeof vibrate === 'function') vibrate();
+    const { jsPDF } = window.jspdf;
+    
+    // 1. 获取当前筛选后的产品列表
+    const filteredProducts = products.filter(p => {
+        const { keyword, MARCA, CATEGORIA, TIPO } = activeFilters;
+        const matchKeyword = !keyword || (p.PRODUCTO + (p.MARCA||"") + (p.CATEGORIA||"") + (p.TIPO||"")).toUpperCase().includes(keyword.toUpperCase());
+        return matchKeyword && (!MARCA || p.MARCA === MARCA) && (!CATEGORIA || p.CATEGORIA === CATEGORIA) && (!TIPO || p.TIPO === TIPO);
+    });
+
+    if (filteredProducts.length === 0) return alert("No hay productos");
+
+    // 2. 创建一个足够长的临时容器
+    const printContainer = document.createElement('div');
+    // 注意：去掉了 fixed 定位，改用 absolute 并确保宽度固定
+    printContainer.style.cssText = "position:absolute; top:0; left:-2000px; width:800px; background:white; padding:30px; display:block;";
+    
+    let htmlContent = `
+        <div style="border-bottom:5px solid #0f172a; padding-bottom:20px; margin-bottom:30px; display:flex; justify-content:space-between; align-items:flex-end;">
+            <div>
+                <h1 style="font-size:42px; font-weight:900; color:#0f172a; margin:0;">STARPHONE</h1>
+                <p style="font-size:14px; font-weight:800; color:#2563eb; margin:5px 0 0 0; text-transform:uppercase; letter-spacing:3px;">Catálogo Completo</p>
+            </div>
+            <div style="text-align:right; font-size:12px; color:#64748b; font-weight:700;">Total: ${filteredProducts.length} items</div>
+        </div>
+        <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+    `;
+
+    filteredProducts.forEach(p => {
+        const imgUrl = p.Imagen_Path ? encodeURI(p.Imagen_Path.replace(/\\/g, '/')) : '';
+        htmlContent += `
+            <div style="border: 1px solid #f1f5f9; border-radius: 15px; padding: 15px; display: flex; align-items: center; gap: 15px; background:white; page-break-inside: avoid;">
+                <img src="${imgUrl}" style="width:90px; height:90px; object-fit:contain; border-radius:10px;">
+                <div style="flex:1;">
+                    <p style="font-size:10px; font-weight:800; color:#6366f1; margin:0; text-transform:uppercase;">${p.MARCA || ''}</p>
+                    <h4 style="font-size:12px; font-weight:800; color:#0f172a; margin:4px 0; line-height:1.2;">${p.PRODUCTO}</h4>
+                    <p style="font-size:10px; color:#64748b; margin:0;">${p.CATEGORIA || ''}</p>
+                </div>
+            </div>
+        `;
+    });
+
+    htmlContent += `</div>`;
+    printContainer.innerHTML = htmlContent;
+    document.body.appendChild(printContainer);
+
+    // 等待图片加载完成，防止 PDF 里图片空白
+    await new Promise(resolve => setTimeout(resolve, 1500));
+
+    try {
+        const canvas = await html2canvas(printContainer, { 
+            scale: 2, 
+            useCORS: true,
+            allowTaint: true,
+            height: printContainer.scrollHeight, // 强制截取完整高度
+            windowHeight: printContainer.scrollHeight
+        });
+        
+        const imgData = canvas.toDataURL('image/jpeg', 0.8);
+        const pdf = new jsPDF('p', 'mm', 'a4');
+        const pdfWidth = pdf.internal.pageSize.getWidth();
+        const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+        
+        // 如果高度超过 A4 纸一页，jsPDF 会自动缩放图表
+        // 为了保持清晰度，这里我们让 PDF 高度自适应内容
+        const pdfDynamicHeight = (canvas.height * pdfWidth) / canvas.width;
+        const customPdf = new jsPDF('p', 'mm', [pdfWidth, pdfDynamicHeight]);
+        customPdf.addImage(imgData, 'JPEG', 0, 0, pdfWidth, pdfDynamicHeight);
+        
+        customPdf.save(`Starphone_Full_${new Date().getTime()}.pdf`);
+    } catch (err) {
+        console.error(err);
+        alert("Error al generar PDF");
+    } finally {
+        document.body.removeChild(printContainer);
+    }
+}
 
         // --- 精准背景锁定逻辑：只针对结算清单 ---
         function handleScrollLock() {
