@@ -1660,22 +1660,12 @@
     "qcy-yf": "qcy"
   },
   {
-    "MARCA": "Tronsmart",
-    "TIPO": "PARLANTE",
-    "PRODUCTO": "Tronsmart T7 Lite",
-    "DESC_FULL": "Tipo de parlante: Subwoofer, manos libres.\nCaracterísticas: A prueba de agua, Bluetooth, luces LED, batería recargable de 24W, micrófono de accesorio.\nCantidad: 2 parlantes.\nUbicación: En el piso.\nTiempo de carga: 3h.\nTamaño del producto:19.5*7.2*7.2CM",
-    "Precio ( USD )": 20.0,
-    "Imagen_Path": "products_images/products_167.png",
-    "VIENE_LA_CAJA": 24,
-    "qcy-yf": "qcy"
-  },
-  {
     "MARCA": "TRONSMART",
     "TIPO": "PARLANTE",
     "PRODUCTO": "Tronsmart T8 Black Grey 40W",
     "DESC_FULL": "Potencia mejorada de 40W: Ofrece un sonido más potente y nítido de 40W, ideal para disfrutar al aire libre.\nSonido de 360°: Proporciona una inmersión sonora de 360°, envolviendo a todos en una experiencia auditiva completa.\nAudio de 2.1 canales: La tecnología SoundPulse se une a un chip DSP de alta gama, ofreciendo graves más potentes y un sonido envolvente incluso al aire libre.\nResistente a los elementos exteriores: Hasta 18 horas de reproducción y certificación IPX7 a prueba de agua, para que tu música no se detenga ante la lluvia, salpicaduras o aventuras extremas.\nControl de rueda suave: Gira la rueda intuitiva para ajustar el sonido al instante.\nPersonalizados audio y luces: Personaliza tu experiencia con ajustes de EQ y espectáculos de luces vibrantes mediante la aplicación.",
     "Precio ( USD )": 36.0,
-    "Imagen_Path": "products_images/products_168.png",
+    "Imagen_Path": "products_images/products_167.png",
     "VIENE_LA_CAJA": 16,
     "qcy-yf": "QCY"
   },
@@ -1685,7 +1675,7 @@
     "PRODUCTO": "Tronsmart Halo 100",
     "DESC_FULL": "Sistema de Sonido de 3 Vías\nEfectos de Iluminación Espléndidos\n18 Horas de Reproducción\nEmparejamiento Estéreo\nPersonaliza los Efectos de Audio a través de la App\nTamaño del producto:28.67*17.97*15CM",
     "Precio ( USD )": 63.0,
-    "Imagen_Path": "products_images/products_169.png",
+    "Imagen_Path": "products_images/products_168.png",
     "VIENE_LA_CAJA": 4,
     "qcy-yf": "qcy"
   },
@@ -1695,7 +1685,7 @@
     "PRODUCTO": "Tronsmart Halo 110",
     "DESC_FULL": "Sonido Estéreo Superior de 60W\nEfectos de Iluminación Espléndidos\n18 Horas de Reproducción\nEmparejamiento Estéreo\nPersonaliza los Efectos de Audio a través de la App\nSoporta Karaoke\nTamaño del producto:28.7*19.8*15CM",
     "Precio ( USD )": 66.0,
-    "Imagen_Path": "products_images/products_170.png",
+    "Imagen_Path": "products_images/products_169.png",
     "VIENE_LA_CAJA": 4,
     "qcy-yf": "qcy"
   },
@@ -1705,7 +1695,7 @@
     "PRODUCTO": "Tronsmart Trip",
     "DESC_FULL": "Parlante Bluetooth 5.3: Manos libres, apto para exteriores, a prueba de agua.\nConectividad: Bluetooth.\nCaracterísticas: Potencia de 10W, batería recargable, micrófono interno y de accesorio, soporte incluido.\nTiempo de carga: 3 horas.\nTamaño del producto：16.8*3.8*7.8CM",
     "Precio ( USD )": 12.0,
-    "Imagen_Path": "products_images/products_171.png",
+    "Imagen_Path": "products_images/products_170.png",
     "VIENE_LA_CAJA": 40,
     "qcy-yf": "qcy"
   },
@@ -1715,7 +1705,7 @@
     "PRODUCTO": "Tronsmart Trip 2 Blue Grey Red",
     "DESC_FULL": "EDriver de 42 mm + radiadores duales: graves 20 % más profundos con tecnología SoundPulse.\nAutonomía de 20 h con certificación IPX7 resistente al agua.\nPortátil: asa y clip para mochila o bolsillo.\nAsistentes de voz y llamadas siempre a mano.",
     "Precio ( USD )": 20.0,
-    "Imagen_Path": "products_images/products_172.png",
+    "Imagen_Path": "products_images/products_171.png",
     "VIENE_LA_CAJA": 40,
     "qcy-yf": "qcy"
   },
@@ -1725,7 +1715,7 @@
     "PRODUCTO": "Tronsmart Mirtune H1  8W Portable Outdoor Speaker black",
     "DESC_FULL": "Diseño compacto: Fácil de llevar.\nSonido estéreo: Graves profundos y agudos claros.\nConexión Bluetooth: Compatible con móviles y tabletas.\nResistente al agua: Ideal para exteriores.\nBatería duradera: Horas de reproducción continua.\nTamaño del producto:13.8*8.1*4.6cm",
     "Precio ( USD )": 16.0,
-    "Imagen_Path": "products_images/products_173.png",
+    "Imagen_Path": "products_images/products_172.png",
     "VIENE_LA_CAJA": 40,
     "qcy-yf": "qcy"
   },
@@ -1735,7 +1725,7 @@
     "PRODUCTO": "Tronsmart Mirtune C3 24W Portable Speaker",
     "DESC_FULL": "Negro Y Azul\nSonido Potente: Woofer en forma de pista + tweeter + radiadores pasivos para graves intensos y agudos claros.\nSúper Portátil: Diseño compacto con correa para llevar fácilmente.\nResistente al Agua IPX7: Ideal para la piscina, el parque o la playa.\nEmparejamiento Estéreo: Conecta 2 altavoces para un sonido estéreo envolvente.\nHasta 12 Horas de Reproducción: Disfruta más con una sola carga.\nModo Doble: Conecta 2 dispositivos a la vez y alterna la música fácilmente.",
     "Precio ( USD )": 22.0,
-    "Imagen_Path": "products_images/products_174.png",
+    "Imagen_Path": "products_images/products_173.png",
     "VIENE_LA_CAJA": 24,
     "qcy-yf": "qcy"
   },
@@ -1745,7 +1735,7 @@
     "PRODUCTO": "Tronsmart Mirtune C3 30W Plus Portable Speaker black Y azul",
     "DESC_FULL": "Sonido potente de 30W: Claro y con graves profundos para todo tipo de música.\nResistencia al agua IPX7: Impermeable, perfecto para exteriores y cerca del agua.\nBatería de larga duración: Hasta 24 horas de reproducción con una carga.\nFunción TWS: Empareja dos altavoces para un sonido estéreo.\nConexión Bluetooth: Rápida y estable para múltiples dispositivos\nTamaño del producto:18*7*7.2cm",
     "Precio ( USD )": 30.0,
-    "Imagen_Path": "products_images/products_175.png",
+    "Imagen_Path": "products_images/products_174.png",
     "VIENE_LA_CAJA": 24,
     "qcy-yf": "qcy"
   },
@@ -1755,7 +1745,7 @@
     "PRODUCTO": "Sounarc K2 200W Karaoke Party Speaker black",
     "DESC_FULL": "Sonido potente: 200W de sonido estéreo.\nMicrófonos incluidos: 2 micrófonos inalámbricos.\nBatería de larga duración: 24.000 mAh, hasta 24 horas de uso.\nLuces LED: Efectos de luz multicolor para animar el ambiente.\nCambio de voz: Efectos divertidos para karaoke.\nConectividad: Bluetooth, transmisión en vivo y entrada auxiliar.\nControl remoto: Para mayor comodidad.\nResistente al agua: Certificación IPX6.\nFunción power bank: Carga otros dispositivos.",
     "Precio ( USD )": 95.0,
-    "Imagen_Path": "products_images/products_176.png",
+    "Imagen_Path": "products_images/products_175.png",
     "VIENE_LA_CAJA": "D",
     "qcy-yf": "qcy"
   }
