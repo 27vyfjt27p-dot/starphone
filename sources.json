@@ -4,11 +4,5 @@
     "label": "LISTA ACTUAL",
     "desc": "Lista actual",
     "file": "products.json"
-  },
-  {
-    "key": "va a llegar en3-11products",
-    "label": "VA A LLEGAR EN3-11PRODUCTS",
-    "desc": "va a llegar en3-11products",
-    "file": "va a llegar en3-11products.json"
   }
 ]
