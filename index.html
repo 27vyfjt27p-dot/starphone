@@ -233,9 +233,11 @@
                     📸 <span>Generar Imagen de Pedido</span>
                 </button>
                 
-                <div class="flex bg-slate-100 p-1 rounded-full w-28 shrink-0">
-                    <button id="btn-contact-0" onclick="selectContact(0)" class="flex-1 py-2 rounded-full text-[10px] font-bold transition-all">AXIN</button>
-                    <button id="btn-contact-1" onclick="selectContact(1)" class="flex-1 py-2 rounded-full text-[10px] font-bold transition-all">IVAN</button>
+                <div class="grid grid-cols-2 gap-1 bg-slate-100 dark:bg-slate-800 p-1 rounded-2xl w-auto shrink-0">
+                    <button id="btn-contact-0" onclick="selectContact(0)" class="py-1.5 px-3 rounded-xl text-[10px] font-black transition-all bg-blue-600 text-white shadow-sm">AXIN</button>
+                    <button id="btn-contact-1" onclick="selectContact(1)" class="py-1.5 px-3 rounded-xl text-[10px] font-bold transition-all bg-transparent text-slate-400">IVAN</button>
+                    <button id="btn-contact-2" onclick="selectContact(2)" class="py-1.5 px-3 rounded-xl text-[10px] font-bold transition-all bg-transparent text-slate-400">MARIA</button>
+                    <button id="btn-contact-3" onclick="selectContact(3)" class="py-1.5 px-3 rounded-xl text-[10px] font-bold transition-all bg-transparent text-slate-400">MATEO</button>
                 </div>
             </div>
 
@@ -320,7 +322,12 @@
        
         let activeContactIndex = 0;
         let isFavoriteMode = false; /* 补丁：收藏模式开关 */
-        const CONTACTS = [{name: "Axin", phone: "56926108498"}, {name: "Ivan", phone: "59168043587"}];
+        const CONTACTS = [
+    {name: "AXIN", phone: "56926108498"}, 
+    {name: "IVAN", phone: "59168043587"},
+    {name: "MARIA", phone: "56944611255"}, // 新增销售 1
+    {name: "MATEO", phone: "56945507248"} // 新增销售 2
+];
         let activeFilters = { keyword: "", MARCA: null, CATEGORIA: null, TIPO: null, priceRange: null };
         let announcementTimer; 
 
@@ -728,7 +735,19 @@ function saveToLocal() {
         }
 
         function toggleMenu() { vibrate(); const menu = document.getElementById('filter-menu'); menu.classList.toggle('translate-x-full'); document.getElementById('modal-overlay').classList.toggle('hidden', menu.classList.contains('translate-x-full')); }
-        function selectContact(i) { vibrate(); activeContactIndex = i; [0,1].forEach(idx => document.getElementById(`btn-contact-${idx}`).className = idx === i ? "flex-1 py-3 rounded-full text-xs font-black bg-blue-600 text-white shadow-md" : "flex-1 py-3 rounded-full text-xs font-bold bg-transparent text-slate-400"); }
+        function selectContact(i) { 
+    vibrate(); 
+    activeContactIndex = i; 
+    // 将写死的 [0,1] 修改为遍历 CONTACTS 数组的所有索引
+    CONTACTS.forEach((_, idx) => {
+        const btn = document.getElementById(`btn-contact-${idx}`);
+        if (btn) {
+            btn.className = idx === i 
+                ? "flex-1 py-3 rounded-full text-[10px] font-black bg-blue-600 text-white shadow-md" 
+                : "flex-1 py-3 rounded-full text-[10px] font-bold bg-transparent text-slate-400";
+        }
+    }); 
+}   
         
         // --- 3. 渲染清单：增加下架检测 ---
 // --- 补丁 1：修改 refreshCartModal 函数中的循环部分 ---
