@@ -149,6 +149,18 @@
                 margin-top: 0 !important;
             }
         }
+        /* 角标动画效果 */
+.image-container div[class*="absolute"] {
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    letter-spacing: 0.5px;
+    animation: fadeInBadge 0.5s ease;
+}
+
+@keyframes fadeInBadge {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
     </style>
 </head>
 <body class="pb-40">
@@ -560,8 +572,12 @@ async function loadProducts() {
                     <button onclick="event.stopPropagation(); toggleFav('${p.id}')" class="fav-btn">${favorites[p.id] ? '❤️' : '🤍'}</button>
                     
                     <div class="image-container" onclick="openLightbox('${imgUrl}')">
-                        <img src="${imgUrl}" onerror="handleImgError(this)" loading="lazy">
-                    </div>
+    ${p.PRODUCTO.toUpperCase().includes('SELLADO') ? 
+        '<div class="absolute top-2 right-2 z-10 bg-green-600 text-white text-[10px] font-black px-2 py-1 rounded-lg shadow-md">SELLADO</div>' : ''}
+    ${p.PRODUCTO.toUpperCase().includes('ACTIVADO') ? 
+        '<div class="absolute top-2 right-2 z-10 bg-amber-500 text-white text-[10px] font-black px-2 py-1 rounded-lg shadow-md">ACTIVADO</div>' : ''}
+    <img src="${imgUrl}" onerror="handleImgError(this)" loading="lazy">
+</div>
 
                     <div class="info-container p-4">
                         <div class="product-details">
@@ -790,6 +806,10 @@ html += `
         
         <div class="flex-1 min-w-0">
             <h4 class="text-[11px] font-bold text-slate-800 dark:text-slate-200 truncate uppercase">${p.PRODUCTO}</h4>
+            <div class="flex gap-1 mt-0.5">
+    ${p.PRODUCTO.toUpperCase().includes('SELLADO') ? '<span class="text-[8px] bg-green-100 text-green-700 px-1 rounded font-black">SELLADO</span>' : ''}
+    ${p.PRODUCTO.toUpperCase().includes('ACTIVADO') ? '<span class="text-[8px] bg-amber-100 text-amber-700 px-1 rounded font-black">ACTIVADO</span>' : ''}
+</div>
             <div class="flex items-center gap-2 mt-1">
                 <span class="text-blue-600 font-black">$${p['Precio ( USD )']}</span>
                 ${boxTag}
