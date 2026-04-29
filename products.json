@@ -2141,16 +2141,6 @@
   },
   {
     "MARCA": "XIAOMI",
-    "TIPO": "Vacuum",
-    "PRODUCTO": "Xiaomi Dust Mite Vacuum Cleaner 2 Pro",
-    "DESC_FULL": "Succión potente de 16 kPa para eliminar ácaros y polvo profundo.\nCepillo con vibración de alta frecuencia para desprender suciedad.\nLuz UV y ultrasonido para desinfección.\nAire caliente a 65 °C para secado y reducción de humedad.\nFiltro de 6 etapas con depósito de 0,8 L lavable.\nDetección inteligente que ajusta la potencia automáticamente.\nTres modos: Suave, Inteligente y Fuerte.",
-    "Precio ( USD )": 58.0,
-    "Imagen_Path": "",
-    "VIENE_LA_CAJA": "",
-    "qcy-yf": "YF"
-  },
-  {
-    "MARCA": "XIAOMI",
     "TIPO": "Robot Vacuum",
     "PRODUCTO": "Xiaomi Robot Vacuum S20 Mop Pad",
     "DESC_FULL": "",
