@@ -1,17 +1,1 @@
-[
-  {
-    "key": "products",
-    "label": "LISTA ACTUAL",
-    "file": "products.json"
-  },
-  {
-    "key": "lista de precios - stock local bolivia",
-    "label": "LISTA DE PRECIOS - STOCK LOCAL BOLIVIA",
-    "file": "lista de precios - stock local bolivia.json"
-  },
-  {
-    "key": "llegará en la segunda semana de mayo products",
-    "label": "LLEGARÁ EN LA SEGUNDA SEMANA DE MAYO PRODUCTS",
-    "file": "llegará en la segunda semana de mayo products.json"
-  }
-]
+[]
