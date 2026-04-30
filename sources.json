@@ -4,5 +4,11 @@
     "label": "LISTA ACTUAL",
     "desc": "Lista actual",
     "file": "products.json"
+  },
+  {
+    "key": "llegará en la segunda semana de mayo products",
+    "label": "LLEGARÁ EN LA SEGUNDA SEMANA DE MAYO PRODUCTS",
+    "desc": "Llegará en la segunda semana de mayo products",
+    "file": "Llegará en la segunda semana de mayo products.json"
   }
 ]
