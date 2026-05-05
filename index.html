@@ -270,6 +270,18 @@
                 </svg>
                 <span>Descargar PDF (Sin Precios)</span>
             </button>
+            <!-- 原有的按钮 (第267-272行) -->
+<button onclick="downloadProductCatalogPDF()" class="w-full mb-4 bg-indigo-600 ...">
+    ... 内部图标和文字 ...
+</button>
+
+<!-- 在这里粘贴新按钮 -->
+<button onclick="downloadDetailedCatalogPDF()" class="w-full mb-4 bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-2xl font-black uppercase text-[10px] flex items-center justify-center gap-2 shadow-lg transition-all active:scale-95">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+    </svg>
+    <span>Descargar PDF (Con Precios y Detalles)</span>
+</button>
             <div class="space-y-4">
                 <div class="flex items-center justify-between">
                     <span class="text-xs font-bold text-slate-600 dark:text-slate-300">Modo Oscuro</span>
@@ -1057,6 +1069,88 @@ html += `
         customPdf.addImage(imgData, 'JPEG', 0, 0, pdfWidth, pdfDynamicHeight);
         
         customPdf.save(`Starphone_Full_${new Date().getTime()}.pdf`);
+        async function downloadDetailedCatalogPDF() {
+    if (typeof vibrate === 'function') vibrate();
+    const { jsPDF } = window.jspdf;
+    
+    // 1. 获取当前筛选后的产品列表
+    const filteredProducts = products.filter(p => {
+        const { keyword, MARCA, CATEGORIA, TIPO } = activeFilters;
+        const matchKeyword = !keyword || (p.PRODUCTO + (p.MARCA||"") + (p.CATEGORIA||"") + (p.TIPO||"")).toUpperCase().includes(keyword.toUpperCase());
+        return matchKeyword && (!MARCA || p.MARCA === MARCA) && (!CATEGORIA || p.CATEGORIA === CATEGORIA) && (!TIPO || p.TIPO === TIPO);
+    });
+
+    if (filteredProducts.length === 0) return alert("No hay productos");
+
+    // 2. 创建一个临时容器（列表布局，适合展示长文本描述）
+    const printContainer = document.createElement('div');
+    printContainer.style.cssText = "position:absolute; top:0; left:-3000px; width:850px; background:white; padding:40px; display:block;";
+    
+    let htmlContent = `
+        <div style="border-bottom:4px solid #0f172a; padding-bottom:20px; margin-bottom:30px; display:flex; justify-content:space-between; align-items:center;">
+            <div>
+                <h1 style="font-size:38px; font-weight:900; color:#0f172a; margin:0;">STARPHONE</h1>
+                <p style="font-size:14px; font-weight:800; color:#ef4444; margin:5px 0 0 0; text-transform:uppercase; letter-spacing:2px;">Catálogo Detallado con Precios</p>
+            </div>
+            <div style="text-align:right;">
+                <div style="font-size:12px; color:#64748b; font-weight:700;">${new Date().toLocaleDateString()}</div>
+                <div style="font-size:14px; color:#0f172a; font-weight:900;">Total: ${filteredProducts.length} Items</div>
+            </div>
+        </div>
+    `;
+
+    filteredProducts.forEach(p => {
+        const imgUrl = p.Imagen_Path ? encodeURI(p.Imagen_Path.replace(/\\/g, '/')) : '';
+        htmlContent += `
+            <div style="display: flex; gap: 25px; padding: 25px 0; border-bottom: 1px solid #f1f5f9; page-break-inside: avoid;">
+                <!-- 左侧图片 -->
+                <div style="width: 180px; height: 180px; flex-shrink: 0; background: #f8fafc; border-radius: 15px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                    <img src="${imgUrl}" style="max-width: 90%; max-height: 90%; object-fit: contain;">
+                </div>
+                
+                <!-- 右侧详情 -->
+                <div style="flex: 1;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                        <span style="font-size: 11px; font-weight: 800; color: #6366f1; text-transform: uppercase;">${p.MARCA || 'GENERAL'}</span>
+                        <span style="font-size: 20px; font-weight: 900; color: #10b981;">$${p['Precio ( USD )'] || '0.00'}</span>
+                    </div>
+                    <h3 style="font-size: 18px; font-weight: 800; color: #0f172a; margin: 8px 0;">${p.PRODUCTO}</h3>
+                    <div style="font-size: 12px; color: #475569; line-height: 1.6; white-space: pre-line; background: #f8fafc; padding: 12px; border-radius: 10px; border-left: 4px solid #e2e8f0;">
+                        ${p.DESC_FULL || 'Sin descripción detallada disponible.'}
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+
+    printContainer.innerHTML = htmlContent;
+    document.body.appendChild(printContainer);
+
+    // 等待图片加载
+    await new Promise(resolve => setTimeout(resolve, 2000));
+
+    try {
+        const canvas = await html2canvas(printContainer, { 
+            scale: 2, 
+            useCORS: true,
+            height: printContainer.scrollHeight,
+            windowHeight: printContainer.scrollHeight
+        });
+        
+        const imgData = canvas.toDataURL('image/jpeg', 0.85);
+        const pdfWidth = 210; // A4 宽度 mm
+        const pdfDynamicHeight = (canvas.height * pdfWidth) / canvas.width;
+        
+        const pdf = new jspdf.jsPDF('p', 'mm', [pdfWidth, pdfDynamicHeight]);
+        pdf.addImage(imgData, 'JPEG', 0, 0, pdfWidth, pdfDynamicHeight);
+        pdf.save(`Catalogo_Detallado_Starphone_${new Date().getTime()}.pdf`);
+    } catch (err) {
+        console.error(err);
+        alert("Error al generar PDF");
+    } finally {
+        document.body.removeChild(printContainer);
+    }
+}
     } catch (err) {
         console.error(err);
         alert("Error al generar PDF");
