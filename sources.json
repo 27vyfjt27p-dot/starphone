@@ -4,11 +4,5 @@
     "label": "LISTA ACTUAL",
     "desc": "Lista actual",
     "file": "products.json"
-  },
-  {
-    "key": "disponible para 8 de mayo products",
-    "label": "DISPONIBLE PARA 8 DE MAYO PRODUCTS",
-    "desc": "disponible para 8 de mayo products",
-    "file": "disponible para 8 de mayo products.json"
   }
 ]
