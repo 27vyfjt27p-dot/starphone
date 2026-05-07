@@ -1,0 +1,47 @@
+[
+  {
+    "MARCA": "XIAOMI",
+    "PRODUCTO": "Xiaomi Hair Clipper 2",
+    "DESC_FULL": "Cuchillas de alta calidad: Cuchilla cerámica y fija con revestimiento de grafeno y DLC, duradera y suave con la piel.\n19 ajustes de longitud: Microajuste de 0.5 a 1.7 mm y peines ajustables de 2 a 28 mm.\nPotente y ajustable: Motor de dos velocidades para cabello fino o grueso.\nPantalla inteligente: Muestra el nivel de batería y alertas de mantenimiento.\nResistente al agua: Certificación IPX7 (lavable bajo el grifo) y batería de hasta 180 minutos.",
+    "Precio ( USD )": 23,
+    "Imagen_Path": "disponible para 8 de mayo products_images/disponible para 8 de mayo products_001.png",
+    "VIENE_LA_CAJA": 12,
+    "qcy-yf": "yf"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "PRODUCTO": "Xiaomi Bluetooth Speaker Essential BLACK VERDE",
+    "DESC_FULL": "Compacto y Ligero: Pesa solo 200g, ideal para llevar con una mano a cualquier lugar.\nSonido de 5W: Con radiador pasivo para bajos potentes y voces claras.\nBluetooth 6.0: Conexión más rápida y estable; compatible con modo manos libres.\nBatería de 10 Horas: 1000 mAh de capacidad para música durante todo el día.\nResistencia IP66: Protección contra polvo y lluvia ligera, perfecto para exteriores.\nModo TWS: Permite emparejar hasta 10 altavoces para un sonido envolvente.",
+    "Precio ( USD )": 11,
+    "Imagen_Path": "disponible para 8 de mayo products_images/disponible para 8 de mayo products_002.png",
+    "VIENE_LA_CAJA": 40,
+    "qcy-yf": "yf"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "PRODUCTO": "Xiaomi Smart Camera C201",
+    "DESC_FULL": "Graba en 1080p (2 MP) Full HD.\nLente con mecanismo de ocultación física para garantizar la privacidad cuando no esté en uso.\nAlgoritmo de detección de personas mediante IA y seguimiento automático de movimiento incorporado, sin depender totalmente de la nube.\nSeguimiento automático de mascotas (gat@s y perr@s).\nRotación motorizada de doble eje: horizontal + vertical, para una cobertura amplia del espacio.\nVisión nocturna avanzada: modo todo-color + infrarrojo para imágenes nítidas incluso en la oscuridad.\nConectividad WiFi 6 para streaming más fluido y estable.\nFunción de audio bidireccional: puedes escuchar y hablar a través de la cámara desde tu móvil.\nCifrado de datos de tipo “nivel financiero” (como AES 128) para proteger tus grabaciones y transmisión.",
+    "Precio ( USD )": 19,
+    "Imagen_Path": "disponible para 8 de mayo products_images/disponible para 8 de mayo products_003.png",
+    "VIENE_LA_CAJA": 20,
+    "qcy-yf": "yf"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "PRODUCTO": "Xiaomi Smart Camera C301",
+    "DESC_FULL": "Calidad 2K (3MP): Imágenes nítidas con resolución de 2304x1296 y visión nocturna infrarroja.\nVista Panorámica de 360°: Movimiento horizontal completo y vertical de 107° para vigilancia total.\nDetección de Humanos con IA: Filtra falsas alarmas y envía notificaciones inteligentes al móvil.\nAudio Bidireccional: Permite hablar y escuchar en tiempo real a través de la cámara.\nPrivacidad y Seguridad: Chip de seguridad integrado y cifrado de datos para proteger tu hogar.\nAlmacenamiento Flexible: Compatible con tarjetas microSD, NAS y almacenamiento en la nube.",
+    "Precio ( USD )": 24,
+    "Imagen_Path": "disponible para 8 de mayo products_images/disponible para 8 de mayo products_004.png",
+    "VIENE_LA_CAJA": 20,
+    "qcy-yf": "yf"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "PRODUCTO": "Xiaomi Smart Camera C400",
+    "DESC_FULL": "Calidad Ultra Clara 2.5K (4MP): Resolución mejorada de 2560x1440 para detalles superiores.\nVisión Panorámica de 360°: Movimiento horizontal completo y vertical de 106° para eliminar puntos ciegos.\nWi-Fi de Doble Banda: Soporta redes de 2.4GHz y 5GHz para una conexión más estable y rápida.\nIA con Seguimiento Humano: Detecta personas y sigue automáticamente sus movimientos.\nAudio de Alta Calidad: Altavoz de gran diámetro para llamadas de voz bidireccionales más claras.\nVisión Nocturna Mejorada: Sin luz roja visible (940nm) para un sueño reparador mientras vigila.",
+    "Precio ( USD )": 29,
+    "Imagen_Path": "disponible para 8 de mayo products_images/disponible para 8 de mayo products_005.png",
+    "VIENE_LA_CAJA": 16,
+    "qcy-yf": "yf"
+  }
+]
