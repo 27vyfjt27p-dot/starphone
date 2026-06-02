@@ -269,6 +269,56 @@ html, body {
     from { opacity: 0; transform: translateY(-5px); }
     to { opacity: 1; transform: translateY(0); }
 }
+/* 活跃筛选药丸样式 */
+.active-filters-row {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 8px 0;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+.filter-pill {
+    background: #f1f5f9;
+    border-radius: 24px;
+    padding: 6px 12px;
+    font-size: 11px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+body.dark .filter-pill {
+    background: #334155;
+    color: #f8fafc;
+}
+.filter-pill-remove {
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: #94a3b8;
+    padding: 0 2px;
+}
+.filter-pill-remove:hover {
+    color: #ef4444;
+}
+/* 收藏模式提示条样式 */
+.favorite-mode-banner {
+    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+    border-radius: 16px;
+    padding: 10px 16px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #fecaca;
+}
+body.dark .favorite-mode-banner {
+    background: linear-gradient(135deg, #450a0a 0%, #7f1d1d 100%);
+    border-color: #991b1b;
+}
     </style>
 </head>
 <body class="pb-40">
@@ -308,6 +358,7 @@ html, body {
 
     <main class="max-w-7xl mx-auto p-4 lg:p-10">
         <div id="source-tabs" class="flex flex-nowrap gap-2 mb-4 no-scrollbar overflow-x-auto pb-2"></div>
+        <div id="active-filters-row" class="active-filters-row" style="display: none;"></div>
         <div id="grid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 product-grid"></div>
     </main>
     <footer class="site-footer-new">
@@ -487,6 +538,77 @@ function vibrate() {
     }
 }
 
+function escapeHtml(str) {
+    if (!str) return '';
+    return str.replace(/[&<>]/g, function(m) {
+        if (m === '&') return '&amp;';
+        if (m === '<') return '&lt;';
+        if (m === '>') return '&gt;';
+        return m;
+    });
+}
+
+function updateActiveFiltersPills() {
+    const container = document.getElementById('active-filters-row');
+    if (!container) return;
+    
+    const pills = [];
+    
+    if (activeFilters.keyword && activeFilters.keyword.trim() !== "") {
+        pills.push(`<span class="filter-pill">🔍 ${escapeHtml(activeFilters.keyword)} <button class="filter-pill-remove" onclick="removeFilter('keyword')">✕</button></span>`);
+    }
+    if (activeFilters.MARCA) {
+        pills.push(`<span class="filter-pill">🏷️ ${escapeHtml(activeFilters.MARCA)} <button class="filter-pill-remove" onclick="removeFilter('MARCA')">✕</button></span>`);
+    }
+    if (activeFilters.CATEGORIA) {
+        pills.push(`<span class="filter-pill">📁 ${escapeHtml(activeFilters.CATEGORIA)} <button class="filter-pill-remove" onclick="removeFilter('CATEGORIA')">✕</button></span>`);
+    }
+    if (activeFilters.TIPO) {
+        pills.push(`<span class="filter-pill">📌 ${escapeHtml(activeFilters.TIPO)} <button class="filter-pill-remove" onclick="removeFilter('TIPO')">✕</button></span>`);
+    }
+    if (activeFilters.priceRange) {
+        let priceLabel = "";
+        if (activeFilters.priceRange === 'under50') priceLabel = "Bajo $50";
+        else if (activeFilters.priceRange === '50to200') priceLabel = "$50 - $200";
+        else if (activeFilters.priceRange === 'over200') priceLabel = "Sobre $200";
+        pills.push(`<span class="filter-pill">💰 ${priceLabel} <button class="filter-pill-remove" onclick="removeFilter('priceRange')">✕</button></span>`);
+    }
+    
+    if (pills.length === 0) {
+        container.style.display = 'none';
+    } else {
+        container.style.display = 'flex';
+        container.innerHTML = pills.join('');
+    }
+}
+
+function removeFilter(filterType) {
+    vibrate();
+    if (filterType === 'keyword') {
+        activeFilters[filterType] = "";
+        document.getElementById('search').value = "";
+    } else if (filterType === 'priceRange') {
+        activeFilters[filterType] = null;
+    } else {
+        activeFilters[filterType] = null;
+    }
+    renderFilters();
+    render();
+    updateActiveFiltersPills();
+    updateFilterIconStatus();
+    if (typeof updateFavoriteModeBanner === 'function') updateFavoriteModeBanner();
+}
+
+function escapeHtml(str) {
+    if (!str) return '';
+    return str.replace(/[&<>]/g, function(m) {
+        if (m === '&') return '&amp;';
+        if (m === '<') return '&lt;';
+        if (m === '>') return '&gt;';
+        return m;
+    });
+}
+
 function toggleVibration() {
     isVibrationEnabled = document.getElementById('vibration-toggle').checked;
     localStorage.setItem('vibration_enabled', isVibrationEnabled);
@@ -662,17 +784,23 @@ async function loadProducts() {
         }
 
         function getBoxTagHtml(boxValue) {
-            let val = String(boxValue || '').trim();
-            if (val === '' || val.toUpperCase() === 'D') return '';
-            
-            if (val.toUpperCase().includes('POR CAJA')) {
-                return `<span class="text-blue-700 text-[10px] font-black flex items-center gap-1 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-100 italic">📦 1 CAJA: ${val.replace(/POR CAJA/gi, '').trim()}</span>`;
-            } else if (/^\d+$/.test(val)) {
-                return `<span class="text-blue-600 text-[11px] font-bold flex items-center gap-1">📦 ${val}</span>`;
-            } else {
-                return `<span class="text-red-600 text-[10px] font-black uppercase tracking-tighter">${val}</span>`;
-            }
-        }
+    let val = String(boxValue || '').trim();
+    if (val === '' || val.toUpperCase() === 'D') return '';
+    
+    if (val.toLowerCase().includes('ultimo') || val.toLowerCase().includes('último')) {
+        return `<span style="background:#fee2e2; color:#dc2626; border-radius:20px; padding:4px 10px; font-size:10px; font-weight:700; display:inline-flex; align-items:center; gap:4px;">⚠️ ${val}</span>`;
+    }
+    
+    if (val.toUpperCase().includes('POR CAJA')) {
+        return `<span class="text-blue-700 text-[10px] font-black flex items-center gap-1 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-100 italic">📦 1 CAJA: ${val.replace(/POR CAJA/gi, '').trim()}</span>`;
+    } 
+    else if (/^\d+$/.test(val)) {
+        return `<span class="text-blue-600 text-[11px] font-bold flex items-center gap-1">📦 ${val} unid/caja</span>`;
+    } 
+    else {
+        return `<span class="text-red-600 text-[10px] font-black uppercase tracking-tighter">${val}</span>`;
+    }
+}
 
         function render() {
             const { keyword, MARCA, CATEGORIA, TIPO, priceRange } = activeFilters;
@@ -690,13 +818,25 @@ async function loadProducts() {
 
                 return matchKeyword && matchPrice && (!MARCA || p.MARCA === MARCA) && (!CATEGORIA || p.CATEGORIA === CATEGORIA) && (!TIPO || p.TIPO === TIPO);
             });
+
+    // ========== 收藏模式提示条（新增代码） ==========
+    let favBanner = '';
+    if (isFavoriteMode) {
+        const favCount = Object.keys(favorites).length;
+        favBanner = `<div class="favorite-mode-banner">
+            <span>❤️ <strong>MODO FAVORITOS</strong> · ${favCount} productos guardados</span>
+            <button onclick="isFavoriteMode=false; renderSourceTabs(); render();" class="text-xs font-bold text-red-600" style="background:none; border:none; cursor:pointer;">Salir ✕</button>
+        </div>`;
+    }
+    // ================================================
+
             const grid = document.getElementById('grid');
             if (filtered.length === 0) {
-                grid.innerHTML = `<div class="col-span-full py-20 text-center"><h3 class="text-lg font-black text-slate-900 uppercase">Sin resultados</h3><button onclick="resetFilters()" class="mt-6 px-8 py-3 bg-slate-900 text-white rounded-2xl font-bold text-xs uppercase shadow-lg">Limpiar filtros</button></div>`;
+                grid.innerHTML = favBanner + `<div class="col-span-full py-20 text-center"><h3 class="text-lg font-black text-slate-900 uppercase">Sin resultados</h3><button onclick="resetFilters()" class="mt-6 px-8 py-3 bg-slate-900 text-white rounded-2xl font-bold text-xs uppercase shadow-lg">Limpiar filtros</button></div>`;
                 updateCartBar();
                 return;
             }
-            grid.innerHTML = filtered.map(p => {
+            grid.innerHTML = favBanner + filtered.map(p => {
                 const q = cart[p.id] || 0;
                 const imgUrl = p.Imagen_Path ? encodeURI(p.Imagen_Path.replace(/\\/g, '/')) : '';
                 const boxTag = getBoxTagHtml(p['VIENE_LA_CAJA']);
@@ -750,6 +890,7 @@ async function loadProducts() {
                 </div>`;
             }).join('');
             updateCartBar();
+            updateActiveFiltersPills();
         }
 
         function toggleDetail(id, isHoverAction) {
@@ -853,6 +994,7 @@ function saveToLocal() {
                 render();
                 renderFilters();
                 updateFilterIconStatus();
+                updateActiveFiltersPills(); 
             }, 300);
         }
 
@@ -864,6 +1006,7 @@ function saveToLocal() {
             render(); 
             updateFilterIconStatus(); 
             window.scrollTo({ top: 0, behavior: 'smooth' });
+            updateActiveFiltersPills(); 
         }
 
         function resetFilters(shouldRender = true) { 
@@ -871,6 +1014,7 @@ function saveToLocal() {
             document.getElementById('search').value = ""; 
             if(shouldRender) { renderFilters(); render(); } 
             updateFilterIconStatus(); 
+            
         }
         
         function openLightbox(src) { 
@@ -939,7 +1083,7 @@ html += `
         <img src="${p.Imagen_Path ? encodeURI(p.Imagen_Path.replace(/\\/g, '/')) : ''}" class="w-14 h-14 rounded-lg object-contain bg-slate-50 dark:bg-slate-900">
         
         <div class="flex-1 min-w-0">
-            <h4 class="text-[11px] font-bold text-slate-800 dark:text-slate-200 truncate uppercase">${p.PRODUCTO}</h4>
+            <h4 class="text-[11px] font-bold text-slate-800 dark:text-slate-200 break-words uppercase" style="word-break: break-word; white-space: normal;">${p.PRODUCTO}</h4>
             <div class="flex gap-1 mt-0.5">
     ${p.PRODUCTO.toUpperCase().includes('SELLADO') ? '<span class="text-[8px] bg-green-100 text-green-700 px-1 rounded font-black">SELLADO</span>' : ''}
     ${p.PRODUCTO.toUpperCase().includes('ACTIVADO') ? '<span class="text-[8px] bg-amber-100 text-amber-700 px-1 rounded font-black">ACTIVADO</span>' : ''}
@@ -949,12 +1093,10 @@ html += `
                 ${boxTag}
             </div>
             
-            <input type="text" 
-                   placeholder="Color (indicar en nota)" 
-                   value="${currentNote}"
-                   oninput="updateProductNote('${id}', this.value)"
-                   class="w-full mt-2 px-3 py-1.5 bg-slate-100 dark:bg-slate-900 border-none rounded-lg text-[10px] text-slate-600 dark:text-slate-400 outline-none focus:ring-1 focus:ring-blue-400 transition-all"
-            >
+            <textarea rows="2" 
+    placeholder="Color, almacenamiento, observaciones..."
+    oninput="updateProductNote('${id}', this.value)"
+    class="w-full mt-2 px-3 py-1.5 bg-slate-100 dark:bg-slate-900 border-none rounded-lg text-[10px] text-slate-600 dark:text-slate-400 outline-none focus:ring-1 focus:ring-blue-400 transition-all resize-vertical">${escapeHtml(currentNote)}</textarea>
         </div>
 
         <div class="flex items-center gap-2">
