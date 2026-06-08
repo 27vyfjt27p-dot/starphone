@@ -10,5 +10,11 @@
     "label": "DISPONIBLE NUEVO PRODUCTS",
     "desc": "disponible nuevo products",
     "file": "disponible nuevo products.json"
+  },
+  {
+    "key": "oferta",
+    "label": "OFERTA",
+    "desc": "OFERTA",
+    "file": "OFERTA.json"
   }
 ]
