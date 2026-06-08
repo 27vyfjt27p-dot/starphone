@@ -484,7 +484,7 @@
     "TIPO": "Estabilizadores de Smartphone",
     "PRODUCTO": "DJI 6941565997517 Osmo Mobile 7P (ACTIVADO)",
     "DESC_FULL": "Módulo con luz de relleno LED integrada (3 niveles de brillo).\nControl por gestos: inicia grabación o foto sin tocar el móvil.\nCompatible con DJI Mic: mejor audio para entrevistas o vlogs.\nActiveTrack 7.0 mejorado: mejor detección y seguimiento.\nHasta 5 horas de batería cuando se usa el módulo.\nPeso ligeramente mayor (~368g con módulo).",
-    "Precio ( USD )": 125.0,
+    "Precio ( USD )": 120.0,
     "Imagen_Path": "products_images/products_049.png",
     "VIENE_LA_CAJA": "D",
     "qcy-yf": "qcy"
@@ -494,7 +494,7 @@
     "TIPO": "Estabilizadores de Smartphone",
     "PRODUCTO": "DJI Osmo Mobile 8 Kit Básico",
     "DESC_FULL": "(ACTIVADO)",
-    "Precio ( USD )": 125.0,
+    "Precio ( USD )": 120.0,
     "Imagen_Path": "products_images/products_050.png",
     "VIENE_LA_CAJA": "D",
     "qcy-yf": "qcy"
@@ -503,8 +503,8 @@
     "MARCA": "DJI",
     "TIPO": "Estabilizadores de Smartphone",
     "PRODUCTO": "DJI  OSMO MOBILE 8",
-    "DESC_FULL": "(ACTIVADO)",
-    "Precio ( USD )": 160.0,
+    "DESC_FULL": "(ACTIVADO)\nSeguimiento inteligente — Sigue personas, perros y gatos. Mantiene el objetivo aunque se mueva rápido o sea bloqueado\nEstabilización de 3 ejes — Tecnología antideslizante de 7ª generación. Admite tomas a baja altura y rodeos\nMódulo multifunción — Integra seguimiento, luz de relleno y audio inalámbrico\nControl cómodo — Barra extensible + trípode integrados, cambio rápido de cámara, control por gestos\nRotación 360° — Giro continuo del eje panorámico para tomas envolventes\nBatería duradera — Alrededor de 10 horas\nEcosistema de App — Seguimiento inteligente 8.0, guía de grabación, edición con un toque",
+    "Precio ( USD )": 155.0,
     "Imagen_Path": "products_images/products_051.png",
     "VIENE_LA_CAJA": "D",
     "qcy-yf": "qcy"
@@ -2490,7 +2490,7 @@
     "qcy-yf": "qcy"
   },
   {
-    "MARCA": "BOMIDI",
+    "MARCA": "BOMIDI\n1ano garantia",
     "TIPO": "fan",
     "PRODUCTO": "BOMIDI Portable Cooling Handheld Fan MF01 —   Purple  BLACK White",
     "DESC_FULL": "Diseño portátil y ligero, fácil de llevar a cualquier lugar.\n100 niveles de velocidad ajustable para controlar el flujo de aire según la necesidad.\nMotor potente que proporciona ventilación eficiente y rápida.\nDoble modo de enfriamiento: aire normal y efecto hielo para mayor frescura.\nPantalla LED para mostrar velocidad y nivel de batería.\nBatería recargable con carga USB-C y larga duración.",
