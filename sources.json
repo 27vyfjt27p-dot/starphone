@@ -1,5 +1,17 @@
 [
   {
+    "key": "lista_actual",
+    "label": "LISTA ACTUAL",
+    "desc": "Lista actual",
+    "file": "products.json"
+  },
+  {
+    "key": "disponible nuevo products",
+    "label": "DISPONIBLE NUEVO PRODUCTS",
+    "desc": "disponible nuevo products",
+    "file": "disponible nuevo products.json"
+  },
+  {
     "key": "oferta",
     "label": "OFERTA",
     "desc": "OFERTA",
