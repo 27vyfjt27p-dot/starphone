@@ -1374,10 +1374,13 @@ html += `
             
             <div id="videoContainer" style="width:100%; height: 60vh; position:relative; background:black; display:flex; align-items:center; justify-content:center;">
                 <iframe id="videoFrame" 
+                        src="" 
                         style="width:100%; height:100%; border:none;" 
                         frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                        allowfullscreen="true"
+                        webkitallowfullscreen="true"
+                        mozallowfullscreen="true">
                 </iframe>
             </div>
     
@@ -1412,28 +1415,34 @@ html += `
 
     <script>
     function openVideoModal(url) {
-        if (!url || url.trim() === '') return;
-        
-        const modal = document.getElementById('videoModal');
-        const frame = document.getElementById('videoFrame');
-        const container = document.getElementById('videoContainer');
-        const waBtn = document.getElementById('waShareBtn');
-        
-        const iframeSrc = getEmbedUrl(url);
-        frame.src = iframeSrc.url;
-        
-        // 动态适配：TikTok/Shorts 竖屏用 80vh 高度，横屏视频用 60vh，避免裁剪
-        if (url.includes('tiktok.com') || url.includes('shorts')) {
-            container.style.height = '80vh';
-        } else {
-            container.style.height = '60vh';
-        }
-        
-        waBtn.href = `https://wa.me/?text=Mira este video: ${encodeURIComponent(url)}`;
-        
-        modal.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
+    if (!url || url.trim() === '') return;
+    
+    const modal = document.getElementById('videoModal');
+    const frame = document.getElementById('videoFrame');
+    const container = document.getElementById('videoContainer');
+    const waBtn = document.getElementById('waShareBtn');
+    
+    // 获取嵌入地址
+    const iframeSrc = getEmbedUrl(url);
+    frame.src = iframeSrc.url;
+    
+    // 优化：确保容器宽度重置为 100% (防止某些 CSS 干扰)
+    container.style.width = '100%';
+    
+    // 动态适配：使用更精准的判断
+    // 增加对 instagram.com 的判断，它通常也需要竖屏比例
+    if (url.includes('tiktok.com') || url.includes('shorts') || url.includes('instagram.com')) {
+        container.style.height = '75vh'; // 稍微调小一点，确保在超长手机上也能看到关闭按钮
+    } else {
+        container.style.height = '50vh'; // 增加一点空间给底部的分享按钮
     }
+    
+    waBtn.href = `https://wa.me/?text=Mira este video: ${encodeURIComponent(url)}`;
+    
+    // 确保弹窗显示且容器可见
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
 
     function closeVideoModal() {
         document.getElementById('videoModal').style.display = 'none';
