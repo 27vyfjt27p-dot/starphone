@@ -879,6 +879,10 @@ async function loadProducts() {
                     </div>
 
                     <div class="controls-container p-4 pt-0">
+    ${p.video_url && p.video_url.trim() !== "" ? 
+        `<button onclick="openVideoModal('${p.video_url}')" style="width:100%; background:#ff6600; color:#fff; border:none; padding:6px; border-radius:8px; cursor:pointer; font-size:12px; font-weight:bold; margin-bottom:8px;">▶️ Ver Video</button>` 
+        : ''}
+    
     <div class="flex items-center bg-slate-900 rounded-xl p-1">
         <button onclick="vibrate(); updateQty('${p.id}',-1)" class="w-9 h-9 text-white">-</button>
         
@@ -1293,24 +1297,13 @@ html += `
 
     filteredProducts.forEach(p => {
         const imgUrl = p.Imagen_Path ? encodeURI(p.Imagen_Path.replace(/\\/g, '/')) : '';
-        
-        // --- 这里是按钮的生成逻辑 ---
-        let videoBtn = '';
-        if (p.video_url && p.video_url.trim() !== "") {
-            videoBtn = `<button onclick="openVideoModal('${p.video_url}')" style="margin-top:6px; background:#ff6600; color:#fff; border:none; padding:4px 10px; border-radius:5px; cursor:pointer; font-size:10px; font-weight:bold; width: 100%;">▶️ Ver Video</button>`;
-        }
-
-        // --- 这里是拼接 HTML，已经包含了 ${videoBtn} ---
         htmlContent += `
             <div style="border: 1px solid #f1f5f9; border-radius: 15px; padding: 15px; display: flex; align-items: center; gap: 15px; background:white; page-break-inside: avoid;">
                 <img src="${imgUrl}" style="width:90px; height:90px; object-fit:contain; border-radius:10px;">
                 <div style="flex:1;">
                     <p style="font-size:10px; font-weight:800; color:#6366f1; margin:0; text-transform:uppercase;">${p.MARCA || ''}</p>
                     <h4 style="font-size:12px; font-weight:800; color:#0f172a; margin:4px 0; line-height:1.2;">${p.PRODUCTO}</h4>
-                    
-                    ${videoBtn}
-                    
-                    <p style="font-size:10px; color:#64748b; margin:4px 0;">${p.CATEGORIA || ''}</p>
+                    <p style="font-size:10px; color:#64748b; margin:0;">${p.CATEGORIA || ''}</p>
                 </div>
             </div>
         `;
@@ -1373,20 +1366,119 @@ html += `
             });
         }
     </script>
-    <div id="videoModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); z-index:9999; text-align:center;" onclick="this.style.display='none'">
-        <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:90%; max-width:700px;" onclick="event.stopPropagation()">
-            <iframe id="videoFrame" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
-            <p style="color:white; margin-top:10px; cursor:pointer;">点击此处关闭视频</p>
+    <!-- 通用视频模态框 -->
+    <div id="videoModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:9999; align-items:center; justify-content:center;" onclick="closeVideoModal()">
+        <div style="position:relative; width:90%; max-width:800px; background:black; border-radius:12px; overflow:hidden;" onclick="event.stopPropagation()">
+            
+            <button onclick="closeVideoModal()" style="position:absolute; top:10px; right:10px; z-index:10; background:rgba(0,0,0,0.7); color:white; border:none; width:30px; height:30px; border-radius:50%; cursor:pointer; font-size:18px;">✕</button>
+            
+            <div id="videoContainer" style="width:100%; height: 60vh; position:relative; background:black; display:flex; align-items:center; justify-content:center;">
+                <iframe id="videoFrame" 
+                        style="width:100%; height:100%; border:none;" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+    
+            <a id="waShareBtn" href="#" target="_blank" 
+               style="display:block; margin:15px auto; padding:12px; background:#25D366; color:white; border-radius:5px; text-decoration:none; width:80%; font-weight:bold; text-align:center; font-size:16px;">
+               📱 Compartir por WhatsApp
+            </a>
+    
         </div>
     </div>
+    <div id="videoModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); z-index:9999; align-items:center; justify-content:center;" onclick="closeVideoModal()">
+        <div style="position:relative; width:95%; max-width:800px; background:black; border-radius:12px; overflow:hidden;" onclick="event.stopPropagation()">
+            
+            <button onclick="closeVideoModal()" style="position:absolute; top:10px; right:10px; z-index:10; background:rgba(0,0,0,0.7); color:white; border:none; width:35px; height:35px; border-radius:50%; cursor:pointer; font-size:20px;">✕</button>
+            
+            <div id="videoContainer" style="width:100%; height:65vh; position:relative; background:black; display:flex; align-items:center; justify-content:center;">
+                <iframe id="videoFrame" 
+                        style="width:100%; height:100%; border:none;" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
     
+            <a id="waShareBtn" href="#" target="_blank" 
+               style="display:block; margin:15px auto; padding:12px; background:#25D366; color:white; border-radius:8px; text-decoration:none; width:85%; font-weight:bold; text-align:center; font-size:16px;">
+               📱 Compartir por WhatsApp
+            </a>
+    
+        </div>
+    </div>
+
     <script>
-    // 播放视频的通用函数
     function openVideoModal(url) {
+        if (!url || url.trim() === '') return;
+        
+        const modal = document.getElementById('videoModal');
         const frame = document.getElementById('videoFrame');
-        frame.src = url;
-        document.getElementById('videoModal').style.display = 'block';
+        const container = document.getElementById('videoContainer');
+        const waBtn = document.getElementById('waShareBtn');
+        
+        const iframeSrc = getEmbedUrl(url);
+        frame.src = iframeSrc.url;
+        
+        // 动态适配：TikTok/Shorts 竖屏用 80vh 高度，横屏视频用 60vh，避免裁剪
+        if (url.includes('tiktok.com') || url.includes('shorts')) {
+            container.style.height = '80vh';
+        } else {
+            container.style.height = '60vh';
+        }
+        
+        waBtn.href = `https://wa.me/?text=Mira este video: ${encodeURIComponent(url)}`;
+        
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
     }
+
+    function closeVideoModal() {
+        document.getElementById('videoModal').style.display = 'none';
+        document.getElementById('videoFrame').src = '';
+        document.body.style.overflow = '';
+    }
+
+    function getEmbedUrl(url) {
+        const trimUrl = url.trim();
+        if (trimUrl.includes('youtube.com') || trimUrl.includes('youtu.be')) {
+            const youtubeId = extractYoutubeId(trimUrl);
+            return { type: 'iframe', url: `https://www.youtube.com/embed/${youtubeId}?autoplay=1` };
+        }
+        if (trimUrl.includes('vimeo.com')) {
+            const vimeoId = trimUrl.match(/vimeo\.com\/(\d+)/)?.[1];
+            if (vimeoId) return { type: 'iframe', url: `https://player.vimeo.com/video/${vimeoId}?autoplay=1` };
+        }
+        if (trimUrl.includes('facebook.com') || trimUrl.includes('fb.com')) {
+            return { type: 'iframe', url: `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(trimUrl)}&show_text=0&width=500` };
+        }
+        if (trimUrl.includes('instagram.com')) {
+            const base = trimUrl.split('?')[0].replace(/\/$/, "");
+            return { type: 'iframe', url: `${base}/embed/` };
+        }
+        if (trimUrl.includes('tiktok.com')) {
+            const videoId = trimUrl.split('/').pop().split('?')[0];
+            return { type: 'iframe', url: `https://www.tiktok.com/embed/${videoId}` };
+        }
+        if (trimUrl.match(/\.(mp4|webm|ogv|mov)$/i)) {
+            return { type: 'iframe', url: `data:text/html,<body style="margin:0; background:black;"><video width="100%" height="100%" controls autoplay style="object-fit:contain;"><source src="${trimUrl}" type="video/mp4"></video></body>` };
+        }
+        return { type: 'iframe', url: trimUrl };
+    }
+
+    function extractYoutubeId(url) {
+        const patterns = [/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/, /youtube\.com\/watch\?.*v=([^&\n?#]+)/, /youtu\.be\/([^?]+)/];
+        for (let pattern of patterns) {
+            const match = url.match(pattern);
+            if (match && match[1]) return match[1];
+        }
+        return '';
+    }
+
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeVideoModal(); });
     </script>
+</script>
 </body>
 </html>
