@@ -7,6 +7,7 @@
     "Precio ( USD )": 0.7,
     "Imagen_Path": "products_images/products_001.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -17,6 +18,7 @@
     "Precio ( USD )": 0.7,
     "Imagen_Path": "products_images/products_002.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -27,6 +29,7 @@
     "Precio ( USD )": 0.7,
     "Imagen_Path": "products_images/products_003.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -37,6 +40,7 @@
     "Precio ( USD )": 0.7,
     "Imagen_Path": "products_images/products_004.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -47,6 +51,7 @@
     "Precio ( USD )": 1.2,
     "Imagen_Path": "products_images/products_005.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -57,6 +62,7 @@
     "Precio ( USD )": 1.2,
     "Imagen_Path": "products_images/products_006.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -67,6 +73,7 @@
     "Precio ( USD )": 1.6,
     "Imagen_Path": "products_images/products_007.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -77,6 +84,7 @@
     "Precio ( USD )": 2.3,
     "Imagen_Path": "products_images/products_008.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -87,6 +95,7 @@
     "Precio ( USD )": 2.8,
     "Imagen_Path": "products_images/products_009.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -97,6 +106,7 @@
     "Precio ( USD )": 3.3,
     "Imagen_Path": "products_images/products_010.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -107,6 +117,7 @@
     "Precio ( USD )": 2.0,
     "Imagen_Path": "products_images/products_011.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -117,6 +128,7 @@
     "Precio ( USD )": 2.0,
     "Imagen_Path": "products_images/products_012.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -127,6 +139,7 @@
     "Precio ( USD )": 2.0,
     "Imagen_Path": "products_images/products_013.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -137,6 +150,7 @@
     "Precio ( USD )": 3.0,
     "Imagen_Path": "products_images/products_014.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -147,6 +161,7 @@
     "Precio ( USD )": 3.3,
     "Imagen_Path": "products_images/products_015.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -157,6 +172,7 @@
     "Precio ( USD )": 3.5,
     "Imagen_Path": "products_images/products_016.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -167,6 +183,7 @@
     "Precio ( USD )": 3.5,
     "Imagen_Path": "products_images/products_017.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -177,6 +194,7 @@
     "Precio ( USD )": 4.0,
     "Imagen_Path": "products_images/products_018.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -187,6 +205,7 @@
     "Precio ( USD )": 4.0,
     "Imagen_Path": "products_images/products_019.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -197,6 +216,7 @@
     "Precio ( USD )": 6.0,
     "Imagen_Path": "products_images/products_020.png",
     "VIENE_LA_CAJA": 200,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -207,6 +227,7 @@
     "Precio ( USD )": 9.5,
     "Imagen_Path": "products_images/products_021.png",
     "VIENE_LA_CAJA": 200,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -217,6 +238,7 @@
     "Precio ( USD )": 1.7,
     "Imagen_Path": "products_images/products_022.png",
     "VIENE_LA_CAJA": 100,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -227,6 +249,7 @@
     "Precio ( USD )": 4.5,
     "Imagen_Path": "products_images/products_023.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -237,6 +260,7 @@
     "Precio ( USD )": 5.5,
     "Imagen_Path": "products_images/products_024.png",
     "VIENE_LA_CAJA": 100,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -247,6 +271,7 @@
     "Precio ( USD )": 6.0,
     "Imagen_Path": "products_images/products_025.png",
     "VIENE_LA_CAJA": 100,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -257,6 +282,7 @@
     "Precio ( USD )": 6.5,
     "Imagen_Path": "products_images/products_026.png",
     "VIENE_LA_CAJA": 100,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -267,6 +293,7 @@
     "Precio ( USD )": 7.0,
     "Imagen_Path": "products_images/products_027.png",
     "VIENE_LA_CAJA": 100,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -277,6 +304,7 @@
     "Precio ( USD )": 9.0,
     "Imagen_Path": "products_images/products_028.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -287,6 +315,7 @@
     "Precio ( USD )": 14.0,
     "Imagen_Path": "products_images/products_029.png",
     "VIENE_LA_CAJA": 40,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -297,6 +326,7 @@
     "Precio ( USD )": 500.0,
     "Imagen_Path": "products_images/products_030.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -307,6 +337,7 @@
     "Precio ( USD )": 15.0,
     "Imagen_Path": "products_images/products_031.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -317,6 +348,7 @@
     "Precio ( USD )": 19.0,
     "Imagen_Path": "products_images/products_032.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -327,6 +359,7 @@
     "Precio ( USD )": 36.0,
     "Imagen_Path": "products_images/products_033.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -337,6 +370,7 @@
     "Precio ( USD )": 105.0,
     "Imagen_Path": "products_images/products_034.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -347,6 +381,7 @@
     "Precio ( USD )": 12.0,
     "Imagen_Path": "products_images/products_035.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -357,6 +392,7 @@
     "Precio ( USD )": 85.0,
     "Imagen_Path": "products_images/products_036.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -367,6 +403,7 @@
     "Precio ( USD )": 52.0,
     "Imagen_Path": "products_images/products_037.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -377,6 +414,7 @@
     "Precio ( USD )": 108.0,
     "Imagen_Path": "products_images/products_038.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -387,6 +425,7 @@
     "Precio ( USD )": 118.0,
     "Imagen_Path": "products_images/products_039.png",
     "VIENE_LA_CAJA": 15,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -397,6 +436,7 @@
     "Precio ( USD )": 400.0,
     "Imagen_Path": "products_images/products_040.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -407,6 +447,7 @@
     "Precio ( USD )": 425.0,
     "Imagen_Path": "products_images/products_041.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -417,6 +458,7 @@
     "Precio ( USD )": 400.0,
     "Imagen_Path": "products_images/products_042.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -427,6 +469,7 @@
     "Precio ( USD )": 333.0,
     "Imagen_Path": "products_images/products_043.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -437,6 +480,7 @@
     "Precio ( USD )": 620.0,
     "Imagen_Path": "products_images/products_044.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -447,6 +491,7 @@
     "Precio ( USD )": 840.0,
     "Imagen_Path": "products_images/products_045.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -457,6 +502,7 @@
     "Precio ( USD )": 1000.0,
     "Imagen_Path": "products_images/products_046.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -467,6 +513,7 @@
     "Precio ( USD )": 430.0,
     "Imagen_Path": "products_images/products_047.png",
     "VIENE_LA_CAJA": "OFERTA!!!",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -477,6 +524,7 @@
     "Precio ( USD )": 85.0,
     "Imagen_Path": "products_images/products_048.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -487,6 +535,7 @@
     "Precio ( USD )": 120.0,
     "Imagen_Path": "products_images/products_049.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -497,6 +546,7 @@
     "Precio ( USD )": 120.0,
     "Imagen_Path": "products_images/products_050.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -507,6 +557,7 @@
     "Precio ( USD )": 155.0,
     "Imagen_Path": "products_images/products_051.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -517,6 +568,7 @@
     "Precio ( USD )": 430.0,
     "Imagen_Path": "products_images/products_052.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -527,6 +579,7 @@
     "Precio ( USD )": 580.0,
     "Imagen_Path": "products_images/products_053.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -537,6 +590,7 @@
     "Precio ( USD )": 560.0,
     "Imagen_Path": "products_images/products_054.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -547,6 +601,7 @@
     "Precio ( USD )": 730.0,
     "Imagen_Path": "products_images/products_055.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "https://www.facebook.com/DJIAmericaLatina/videos/dji-osmo-pocket-4-ya-est%C3%A1-aqu%C3%AD-redefiniendo-lo-que-una-c%C3%A1mara-de-bolsillo-puede-/1307916321278931/",
     "qcy-yf": "qcy"
   },
   {
@@ -557,6 +612,7 @@
     "Precio ( USD )": 260.0,
     "Imagen_Path": "products_images/products_056.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -567,6 +623,7 @@
     "Precio ( USD )": 360.0,
     "Imagen_Path": "products_images/products_057.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -577,6 +634,7 @@
     "Precio ( USD )": 528.0,
     "Imagen_Path": "products_images/products_058.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -587,6 +645,7 @@
     "Precio ( USD )": 615.0,
     "Imagen_Path": "products_images/products_059.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -597,6 +656,7 @@
     "Precio ( USD )": 260.0,
     "Imagen_Path": "products_images/products_060.png",
     "VIENE_LA_CAJA": "ultimo \n2 uni",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -607,6 +667,7 @@
     "Precio ( USD )": 290.0,
     "Imagen_Path": "products_images/products_061.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -617,6 +678,7 @@
     "Precio ( USD )": 335.0,
     "Imagen_Path": "products_images/products_062.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -627,6 +689,7 @@
     "Precio ( USD )": 330.0,
     "Imagen_Path": "products_images/products_063.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -637,6 +700,7 @@
     "Precio ( USD )": 375.0,
     "Imagen_Path": "products_images/products_064.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -647,6 +711,7 @@
     "Precio ( USD )": 530.0,
     "Imagen_Path": "products_images/products_065.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -657,6 +722,7 @@
     "Precio ( USD )": 85.0,
     "Imagen_Path": "products_images/products_066.png",
     "VIENE_LA_CAJA": "OFERTA!!!",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -667,6 +733,7 @@
     "Precio ( USD )": 10.0,
     "Imagen_Path": "products_images/products_067.png",
     "VIENE_LA_CAJA": "OFERTA!!!",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -677,6 +744,7 @@
     "Precio ( USD )": 11.0,
     "Imagen_Path": "products_images/products_068.png",
     "VIENE_LA_CAJA": "OFERTA!!!",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -687,6 +755,7 @@
     "Precio ( USD )": 18.0,
     "Imagen_Path": "products_images/products_069.png",
     "VIENE_LA_CAJA": "OFERTA!!!",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -697,6 +766,7 @@
     "Precio ( USD )": 25.0,
     "Imagen_Path": "products_images/products_070.png",
     "VIENE_LA_CAJA": "OFERTA!!!",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -707,6 +777,7 @@
     "Precio ( USD )": 56.0,
     "Imagen_Path": "products_images/products_071.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -717,6 +788,7 @@
     "Precio ( USD )": 42.0,
     "Imagen_Path": "products_images/products_072.png",
     "VIENE_LA_CAJA": 50,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -727,6 +799,7 @@
     "Precio ( USD )": 67.0,
     "Imagen_Path": "products_images/products_073.png",
     "VIENE_LA_CAJA": 50,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -737,6 +810,7 @@
     "Precio ( USD )": 27.0,
     "Imagen_Path": "products_images/products_074.png",
     "VIENE_LA_CAJA": 50,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -747,6 +821,7 @@
     "Precio ( USD )": 16.0,
     "Imagen_Path": "products_images/products_075.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -757,6 +832,7 @@
     "Precio ( USD )": 15.0,
     "Imagen_Path": "products_images/products_076.png",
     "VIENE_LA_CAJA": 50,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -767,6 +843,7 @@
     "Precio ( USD )": 14.0,
     "Imagen_Path": "products_images/products_077.png",
     "VIENE_LA_CAJA": 40,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -777,6 +854,7 @@
     "Precio ( USD )": 10.0,
     "Imagen_Path": "products_images/products_078.png",
     "VIENE_LA_CAJA": 50,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -787,6 +865,7 @@
     "Precio ( USD )": 33.0,
     "Imagen_Path": "products_images/products_079.png",
     "VIENE_LA_CAJA": 50,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -797,6 +876,7 @@
     "Precio ( USD )": 33.0,
     "Imagen_Path": "products_images/products_080.png",
     "VIENE_LA_CAJA": 20,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -807,6 +887,7 @@
     "Precio ( USD )": 41.0,
     "Imagen_Path": "products_images/products_081.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -817,6 +898,7 @@
     "Precio ( USD )": 50.0,
     "Imagen_Path": "products_images/products_082.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -827,6 +909,7 @@
     "Precio ( USD )": 23.0,
     "Imagen_Path": "products_images/products_083.png",
     "VIENE_LA_CAJA": "ultimo \n10 uni",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -837,6 +920,7 @@
     "Precio ( USD )": 17.0,
     "Imagen_Path": "products_images/products_084.png",
     "VIENE_LA_CAJA": 100,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -847,6 +931,7 @@
     "Precio ( USD )": 23.0,
     "Imagen_Path": "products_images/products_085.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -857,6 +942,7 @@
     "Precio ( USD )": 3.0,
     "Imagen_Path": "products_images/products_086.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -867,6 +953,7 @@
     "Precio ( USD )": 14.0,
     "Imagen_Path": "products_images/products_087.png",
     "VIENE_LA_CAJA": 80,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -877,6 +964,7 @@
     "Precio ( USD )": 25.0,
     "Imagen_Path": "products_images/products_088.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -887,6 +975,7 @@
     "Precio ( USD )": 25.0,
     "Imagen_Path": "products_images/products_089.png",
     "VIENE_LA_CAJA": 24,
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -897,6 +986,7 @@
     "Precio ( USD )": 25.0,
     "Imagen_Path": "products_images/products_090.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -907,6 +997,7 @@
     "Precio ( USD )": 36.0,
     "Imagen_Path": "products_images/products_091.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -917,6 +1008,7 @@
     "Precio ( USD )": 25.0,
     "Imagen_Path": "products_images/products_092.png",
     "VIENE_LA_CAJA": 60,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -927,6 +1019,7 @@
     "Precio ( USD )": 35.0,
     "Imagen_Path": "products_images/products_093.png",
     "VIENE_LA_CAJA": 60,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -937,6 +1030,7 @@
     "Precio ( USD )": 18.0,
     "Imagen_Path": "products_images/products_094.png",
     "VIENE_LA_CAJA": 60,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -947,6 +1041,7 @@
     "Precio ( USD )": 30.0,
     "Imagen_Path": "products_images/products_095.png",
     "VIENE_LA_CAJA": 40,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -957,6 +1052,7 @@
     "Precio ( USD )": 34.0,
     "Imagen_Path": "products_images/products_096.png",
     "VIENE_LA_CAJA": 30,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -967,6 +1063,7 @@
     "Precio ( USD )": 44.0,
     "Imagen_Path": "products_images/products_097.png",
     "VIENE_LA_CAJA": 30,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -977,6 +1074,7 @@
     "Precio ( USD )": 55.0,
     "Imagen_Path": "products_images/products_098.png",
     "VIENE_LA_CAJA": 48,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -987,6 +1085,7 @@
     "Precio ( USD )": 25.0,
     "Imagen_Path": "products_images/products_099.png",
     "VIENE_LA_CAJA": 40,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -997,6 +1096,7 @@
     "Precio ( USD )": 35.0,
     "Imagen_Path": "products_images/products_100.png",
     "VIENE_LA_CAJA": 40,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1007,6 +1107,7 @@
     "Precio ( USD )": 75.0,
     "Imagen_Path": "products_images/products_101.png",
     "VIENE_LA_CAJA": 20,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1017,6 +1118,7 @@
     "Precio ( USD )": 128.0,
     "Imagen_Path": "products_images/products_102.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1027,6 +1129,7 @@
     "Precio ( USD )": 32.0,
     "Imagen_Path": "products_images/products_103.png",
     "VIENE_LA_CAJA": 40,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1037,6 +1140,7 @@
     "Precio ( USD )": 44.0,
     "Imagen_Path": "products_images/products_104.png",
     "VIENE_LA_CAJA": 40,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1047,6 +1151,7 @@
     "Precio ( USD )": 60.0,
     "Imagen_Path": "products_images/products_105.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1057,6 +1162,7 @@
     "Precio ( USD )": 18.0,
     "Imagen_Path": "products_images/products_106.png",
     "VIENE_LA_CAJA": 72,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1067,6 +1173,7 @@
     "Precio ( USD )": 9.0,
     "Imagen_Path": "products_images/products_107.png",
     "VIENE_LA_CAJA": "108\nPOR CAJA  8.5",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1077,6 +1184,7 @@
     "Precio ( USD )": 11.5,
     "Imagen_Path": "products_images/products_108.png",
     "VIENE_LA_CAJA": 84,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1087,6 +1195,7 @@
     "Precio ( USD )": 18.0,
     "Imagen_Path": "products_images/products_109.png",
     "VIENE_LA_CAJA": 40,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1097,6 +1206,7 @@
     "Precio ( USD )": 15.0,
     "Imagen_Path": "products_images/products_110.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1107,6 +1217,7 @@
     "Precio ( USD )": 48.0,
     "Imagen_Path": "products_images/products_111.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1117,6 +1228,7 @@
     "Precio ( USD )": 63.0,
     "Imagen_Path": "products_images/products_112.png",
     "VIENE_LA_CAJA": 40,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1127,6 +1239,7 @@
     "Precio ( USD )": 75.0,
     "Imagen_Path": "products_images/products_113.png",
     "VIENE_LA_CAJA": 40,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1137,6 +1250,7 @@
     "Precio ( USD )": 125.0,
     "Imagen_Path": "products_images/products_114.png",
     "VIENE_LA_CAJA": "nuevo",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1147,6 +1261,7 @@
     "Precio ( USD )": 54.0,
     "Imagen_Path": "products_images/products_115.png",
     "VIENE_LA_CAJA": "ultimo \n12 uni",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1157,6 +1272,7 @@
     "Precio ( USD )": 30.0,
     "Imagen_Path": "products_images/products_116.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1167,6 +1283,7 @@
     "Precio ( USD )": 95.0,
     "Imagen_Path": "products_images/products_117.png",
     "VIENE_LA_CAJA": "ultimo \n13 uni",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1177,6 +1294,7 @@
     "Precio ( USD )": 60.0,
     "Imagen_Path": "products_images/products_118.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1187,6 +1305,7 @@
     "Precio ( USD )": 110.0,
     "Imagen_Path": "products_images/products_119.png",
     "VIENE_LA_CAJA": "ultimo \n6 uni",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1197,6 +1316,7 @@
     "Precio ( USD )": 135.0,
     "Imagen_Path": "products_images/products_120.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1207,6 +1327,7 @@
     "Precio ( USD )": 130.0,
     "Imagen_Path": "products_images/products_121.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1217,6 +1338,7 @@
     "Precio ( USD )": 36.0,
     "Imagen_Path": "products_images/products_122.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1227,6 +1349,7 @@
     "Precio ( USD )": 40.0,
     "Imagen_Path": "products_images/products_123.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1237,6 +1360,7 @@
     "Precio ( USD )": 48.0,
     "Imagen_Path": "products_images/products_124.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1247,6 +1371,7 @@
     "Precio ( USD )": 108.0,
     "Imagen_Path": "products_images/products_125.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1257,6 +1382,7 @@
     "Precio ( USD )": 80.0,
     "Imagen_Path": "products_images/products_126.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1267,6 +1393,7 @@
     "Precio ( USD )": 96.0,
     "Imagen_Path": "products_images/products_127.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1277,6 +1404,7 @@
     "Precio ( USD )": 138.0,
     "Imagen_Path": "products_images/products_128.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1287,6 +1415,7 @@
     "Precio ( USD )": 148.0,
     "Imagen_Path": "products_images/products_129.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1297,6 +1426,7 @@
     "Precio ( USD )": 290.0,
     "Imagen_Path": "products_images/products_130.png",
     "VIENE_LA_CAJA": "ultimo \n3 uni",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1307,6 +1437,7 @@
     "Precio ( USD )": 320.0,
     "Imagen_Path": "products_images/products_131.png",
     "VIENE_LA_CAJA": "ultimo \n13 uni",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1317,6 +1448,7 @@
     "Precio ( USD )": 270.0,
     "Imagen_Path": "products_images/products_132.png",
     "VIENE_LA_CAJA": "ultimo \n2 uni",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1327,6 +1459,7 @@
     "Precio ( USD )": 155.0,
     "Imagen_Path": "products_images/products_133.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1337,6 +1470,7 @@
     "Precio ( USD )": 165.0,
     "Imagen_Path": "products_images/products_134.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1347,6 +1481,7 @@
     "Precio ( USD )": 155.0,
     "Imagen_Path": "products_images/products_135.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1357,16 +1492,18 @@
     "Precio ( USD )": 185.0,
     "Imagen_Path": "products_images/products_136.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
     "MARCA": "HUAWEI",
     "TIPO": "WATCH",
-    "PRODUCTO": "HUAWEI WATCH GT 6 Pro 46mm Black Brown",
+    "PRODUCTO": "HUAWEI WATCH GT 6 Pro 46mm Brown",
     "DESC_FULL": "Diseño Premium y Robusto: Caja de 46mm fabricada con materiales de alta gama y opciones de correa en Black (estilo deportivo/tecnológico) y Brown (cuero clásico y elegante).\nBatería de Hasta 21 Días: Autonomía ultra larga excepcional de hasta 3 semanas con una sola carga, ideal para viajes y uso intensivo.\nGPS de Banda Dual Avanzado: Máxima precisión en el seguimiento de rutas al aire libre y navegación en tiempo real.\nMonitoreo de Salud Completo (con ECG): Seguimiento continuo de frecuencia cardíaca, SpO2, análisis de sueño y electrocardiograma (ECG) para un control de salud avanzado.\nLlamadas por Bluetooth: Permite responder y realizar llamadas directamente desde el reloj con total claridad cuando está conectado al teléfono.",
     "Precio ( USD )": 220.0,
     "Imagen_Path": "products_images/products_137.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1377,6 +1514,7 @@
     "Precio ( USD )": 330.0,
     "Imagen_Path": "products_images/products_138.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1387,6 +1525,7 @@
     "Precio ( USD )": 16.0,
     "Imagen_Path": "products_images/products_139.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1397,6 +1536,7 @@
     "Precio ( USD )": 15.0,
     "Imagen_Path": "products_images/products_140.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1407,6 +1547,7 @@
     "Precio ( USD )": 23.0,
     "Imagen_Path": "products_images/products_141.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1417,6 +1558,7 @@
     "Precio ( USD )": 22.0,
     "Imagen_Path": "products_images/products_142.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -1427,6 +1569,7 @@
     "Precio ( USD )": 33.0,
     "Imagen_Path": "products_images/products_143.png",
     "VIENE_LA_CAJA": 90,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1437,6 +1580,7 @@
     "Precio ( USD )": 13.0,
     "Imagen_Path": "products_images/products_144.png",
     "VIENE_LA_CAJA": "ultimo \n24 uni",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1447,6 +1591,7 @@
     "Precio ( USD )": 13.0,
     "Imagen_Path": "products_images/products_145.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1457,6 +1602,7 @@
     "Precio ( USD )": 16.0,
     "Imagen_Path": "products_images/products_146.png",
     "VIENE_LA_CAJA": 30,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1467,6 +1613,7 @@
     "Precio ( USD )": 23.0,
     "Imagen_Path": "products_images/products_147.png",
     "VIENE_LA_CAJA": 30,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1477,6 +1624,7 @@
     "Precio ( USD )": 30.0,
     "Imagen_Path": "products_images/products_148.png",
     "VIENE_LA_CAJA": 30,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1487,6 +1635,7 @@
     "Precio ( USD )": 32.0,
     "Imagen_Path": "products_images/products_149.png",
     "VIENE_LA_CAJA": 30,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1497,6 +1646,7 @@
     "Precio ( USD )": 26.0,
     "Imagen_Path": "products_images/products_150.png",
     "VIENE_LA_CAJA": 30,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1507,6 +1657,7 @@
     "Precio ( USD )": 27.0,
     "Imagen_Path": "products_images/products_151.png",
     "VIENE_LA_CAJA": 20,
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -1517,6 +1668,7 @@
     "Precio ( USD )": 18.0,
     "Imagen_Path": "products_images/products_152.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1527,6 +1679,7 @@
     "Precio ( USD )": 20.0,
     "Imagen_Path": "products_images/products_153.png",
     "VIENE_LA_CAJA": 30,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1537,6 +1690,7 @@
     "Precio ( USD )": 24.0,
     "Imagen_Path": "products_images/products_154.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1547,6 +1701,7 @@
     "Precio ( USD )": 30.0,
     "Imagen_Path": "products_images/products_155.png",
     "VIENE_LA_CAJA": 20,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1557,6 +1712,7 @@
     "Precio ( USD )": 33.0,
     "Imagen_Path": "products_images/products_156.png",
     "VIENE_LA_CAJA": 20,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1567,6 +1723,7 @@
     "Precio ( USD )": 8.0,
     "Imagen_Path": "products_images/products_157.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -1577,6 +1734,7 @@
     "Precio ( USD )": 13.0,
     "Imagen_Path": "products_images/products_158.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -1587,6 +1745,7 @@
     "Precio ( USD )": 14.0,
     "Imagen_Path": "products_images/products_159.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -1597,6 +1756,7 @@
     "Precio ( USD )": 18.0,
     "Imagen_Path": "products_images/products_160.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -1607,6 +1767,7 @@
     "Precio ( USD )": 18.0,
     "Imagen_Path": "products_images/products_161.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1617,6 +1778,7 @@
     "Precio ( USD )": 20.0,
     "Imagen_Path": "products_images/products_162.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -1627,6 +1789,7 @@
     "Precio ( USD )": 28.0,
     "Imagen_Path": "products_images/products_163.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1637,6 +1800,7 @@
     "Precio ( USD )": 120.0,
     "Imagen_Path": "products_images/products_164.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1647,6 +1811,7 @@
     "Precio ( USD )": 128.0,
     "Imagen_Path": "products_images/products_165.png",
     "VIENE_LA_CAJA": "Ultimo\n8 uni",
+    "video_url": "",
     "qcy-yf": "YF"
   },
   {
@@ -1657,6 +1822,7 @@
     "Precio ( USD )": 148.0,
     "Imagen_Path": "products_images/products_166.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1667,6 +1833,7 @@
     "Precio ( USD )": 258.0,
     "Imagen_Path": "products_images/products_167.png",
     "VIENE_LA_CAJA": "ultimo \n6 uni",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1677,6 +1844,7 @@
     "Precio ( USD )": 11.0,
     "Imagen_Path": "products_images/products_168.png",
     "VIENE_LA_CAJA": 40,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1687,6 +1855,7 @@
     "Precio ( USD )": 12.0,
     "Imagen_Path": "products_images/products_169.png",
     "VIENE_LA_CAJA": 30,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1697,6 +1866,7 @@
     "Precio ( USD )": 31.0,
     "Imagen_Path": "products_images/products_170.png",
     "VIENE_LA_CAJA": 12,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1707,6 +1877,7 @@
     "Precio ( USD )": 47.0,
     "Imagen_Path": "products_images/products_171.png",
     "VIENE_LA_CAJA": 10,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1717,6 +1888,7 @@
     "Precio ( USD )": 70.0,
     "Imagen_Path": "products_images/products_172.png",
     "VIENE_LA_CAJA": 9,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1727,6 +1899,7 @@
     "Precio ( USD )": 9.0,
     "Imagen_Path": "products_images/products_173.png",
     "VIENE_LA_CAJA": 60,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1737,6 +1910,7 @@
     "Precio ( USD )": 24.0,
     "Imagen_Path": "products_images/products_174.png",
     "VIENE_LA_CAJA": 15,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1747,6 +1921,7 @@
     "Precio ( USD )": 130.0,
     "Imagen_Path": "products_images/products_175.png",
     "VIENE_LA_CAJA": 1,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1757,6 +1932,7 @@
     "Precio ( USD )": 60.0,
     "Imagen_Path": "products_images/products_176.png",
     "VIENE_LA_CAJA": 15,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1767,6 +1943,7 @@
     "Precio ( USD )": 14.0,
     "Imagen_Path": "products_images/products_177.png",
     "VIENE_LA_CAJA": 20,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1777,6 +1954,7 @@
     "Precio ( USD )": 16.0,
     "Imagen_Path": "products_images/products_178.png",
     "VIENE_LA_CAJA": 30,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1787,6 +1965,7 @@
     "Precio ( USD )": 22.0,
     "Imagen_Path": "products_images/products_179.png",
     "VIENE_LA_CAJA": 60,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1797,6 +1976,7 @@
     "Precio ( USD )": 26.0,
     "Imagen_Path": "products_images/products_180.png",
     "VIENE_LA_CAJA": 30,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1807,6 +1987,7 @@
     "Precio ( USD )": 28.0,
     "Imagen_Path": "products_images/products_181.png",
     "VIENE_LA_CAJA": "20\nnuevo",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1817,6 +1998,7 @@
     "Precio ( USD )": 12.5,
     "Imagen_Path": "products_images/products_182.png",
     "VIENE_LA_CAJA": 40,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1827,6 +2009,7 @@
     "Precio ( USD )": 15.0,
     "Imagen_Path": "products_images/products_183.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1837,6 +2020,7 @@
     "Precio ( USD )": 17.0,
     "Imagen_Path": "products_images/products_184.png",
     "VIENE_LA_CAJA": 50,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1847,6 +2031,7 @@
     "Precio ( USD )": 19.0,
     "Imagen_Path": "products_images/products_185.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1857,6 +2042,7 @@
     "Precio ( USD )": 28.0,
     "Imagen_Path": "products_images/products_186.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1867,6 +2053,7 @@
     "Precio ( USD )": 32.0,
     "Imagen_Path": "products_images/products_187.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1877,6 +2064,7 @@
     "Precio ( USD )": 15.0,
     "Imagen_Path": "products_images/products_188.png",
     "VIENE_LA_CAJA": 90,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1887,6 +2075,7 @@
     "Precio ( USD )": 10.0,
     "Imagen_Path": "products_images/products_189.png",
     "VIENE_LA_CAJA": 40,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1897,6 +2086,7 @@
     "Precio ( USD )": 40.0,
     "Imagen_Path": "products_images/products_190.png",
     "VIENE_LA_CAJA": 40,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1907,6 +2097,7 @@
     "Precio ( USD )": 66.0,
     "Imagen_Path": "products_images/products_191.png",
     "VIENE_LA_CAJA": 16,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1917,6 +2108,7 @@
     "Precio ( USD )": 15.0,
     "Imagen_Path": "products_images/products_192.png",
     "VIENE_LA_CAJA": "super oferta",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1927,6 +2119,7 @@
     "Precio ( USD )": 15.0,
     "Imagen_Path": "products_images/products_193.png",
     "VIENE_LA_CAJA": "super oferta",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1937,6 +2130,7 @@
     "Precio ( USD )": 20.0,
     "Imagen_Path": "products_images/products_194.png",
     "VIENE_LA_CAJA": "super oferta",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1947,6 +2141,7 @@
     "Precio ( USD )": 20.0,
     "Imagen_Path": "products_images/products_195.png",
     "VIENE_LA_CAJA": "super oferta",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1957,6 +2152,7 @@
     "Precio ( USD )": 3.0,
     "Imagen_Path": "products_images/products_196.png",
     "VIENE_LA_CAJA": "OFERTA!!!",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -1967,6 +2163,7 @@
     "Precio ( USD )": 10.0,
     "Imagen_Path": "products_images/products_197.png",
     "VIENE_LA_CAJA": 80,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1977,6 +2174,7 @@
     "Precio ( USD )": 18.0,
     "Imagen_Path": "products_images/products_198.png",
     "VIENE_LA_CAJA": 72,
+    "video_url": "",
     "qcy-yf": "YF"
   },
   {
@@ -1987,6 +2185,7 @@
     "Precio ( USD )": 15.0,
     "Imagen_Path": "products_images/products_199.png",
     "VIENE_LA_CAJA": 20,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -1997,6 +2196,7 @@
     "Precio ( USD )": 10.0,
     "Imagen_Path": "products_images/products_200.png",
     "VIENE_LA_CAJA": 72,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2007,6 +2207,7 @@
     "Precio ( USD )": 13.0,
     "Imagen_Path": "products_images/products_201.png",
     "VIENE_LA_CAJA": 40,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2017,6 +2218,7 @@
     "Precio ( USD )": 16.0,
     "Imagen_Path": "products_images/products_202.png",
     "VIENE_LA_CAJA": 40,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2027,6 +2229,7 @@
     "Precio ( USD )": 18.0,
     "Imagen_Path": "products_images/products_203.png",
     "VIENE_LA_CAJA": 32,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2037,6 +2240,7 @@
     "Precio ( USD )": 16.0,
     "Imagen_Path": "products_images/products_204.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2047,6 +2251,7 @@
     "Precio ( USD )": 10.0,
     "Imagen_Path": "products_images/products_205.png",
     "VIENE_LA_CAJA": 108,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2057,6 +2262,7 @@
     "Precio ( USD )": 35.0,
     "Imagen_Path": "products_images/products_206.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2067,6 +2273,7 @@
     "Precio ( USD )": 45.0,
     "Imagen_Path": "products_images/products_207.png",
     "VIENE_LA_CAJA": 36,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2077,6 +2284,7 @@
     "Precio ( USD )": 6.0,
     "Imagen_Path": "products_images/products_208.png",
     "VIENE_LA_CAJA": 130,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2087,6 +2295,7 @@
     "Precio ( USD )": 5.5,
     "Imagen_Path": "products_images/products_209.png",
     "VIENE_LA_CAJA": 60,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2097,6 +2306,7 @@
     "Precio ( USD )": 8.5,
     "Imagen_Path": "products_images/products_210.png",
     "VIENE_LA_CAJA": 50,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2107,6 +2317,7 @@
     "Precio ( USD )": 35.0,
     "Imagen_Path": "products_images/products_211.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2117,6 +2328,7 @@
     "Precio ( USD )": 90.0,
     "Imagen_Path": "products_images/products_212.png",
     "VIENE_LA_CAJA": 16,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2127,6 +2339,7 @@
     "Precio ( USD )": 20.0,
     "Imagen_Path": "products_images/products_213.png",
     "VIENE_LA_CAJA": 16,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -2137,6 +2350,7 @@
     "Precio ( USD )": 24.0,
     "Imagen_Path": "products_images/products_214.png",
     "VIENE_LA_CAJA": 16,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -2147,6 +2361,7 @@
     "Precio ( USD )": 19.0,
     "Imagen_Path": "products_images/products_215.png",
     "VIENE_LA_CAJA": 20,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2157,6 +2372,7 @@
     "Precio ( USD )": 20.0,
     "Imagen_Path": "products_images/products_216.png",
     "VIENE_LA_CAJA": 30,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2167,6 +2383,7 @@
     "Precio ( USD )": 24.0,
     "Imagen_Path": "products_images/products_217.png",
     "VIENE_LA_CAJA": 20,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2177,6 +2394,7 @@
     "Precio ( USD )": 23.0,
     "Imagen_Path": "products_images/products_218.png",
     "VIENE_LA_CAJA": 20,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2187,6 +2405,7 @@
     "Precio ( USD )": 29.0,
     "Imagen_Path": "products_images/products_219.png",
     "VIENE_LA_CAJA": 16,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2197,6 +2416,7 @@
     "Precio ( USD )": 38.0,
     "Imagen_Path": "products_images/products_220.png",
     "VIENE_LA_CAJA": 16,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2207,6 +2427,7 @@
     "Precio ( USD )": 30.0,
     "Imagen_Path": "products_images/products_221.png",
     "VIENE_LA_CAJA": 36,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2217,6 +2438,7 @@
     "Precio ( USD )": 30.0,
     "Imagen_Path": "products_images/products_222.png",
     "VIENE_LA_CAJA": 12,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2227,6 +2449,7 @@
     "Precio ( USD )": 42.0,
     "Imagen_Path": "products_images/products_223.png",
     "VIENE_LA_CAJA": 16,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2237,6 +2460,7 @@
     "Precio ( USD )": 88.0,
     "Imagen_Path": "products_images/products_224.png",
     "VIENE_LA_CAJA": 8,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2247,6 +2471,7 @@
     "Precio ( USD )": 28.0,
     "Imagen_Path": "products_images/products_225.png",
     "VIENE_LA_CAJA": 14,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2257,6 +2482,7 @@
     "Precio ( USD )": 26.0,
     "Imagen_Path": "products_images/products_226.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2267,6 +2493,7 @@
     "Precio ( USD )": 30.0,
     "Imagen_Path": "products_images/products_227.png",
     "VIENE_LA_CAJA": 18,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2277,6 +2504,7 @@
     "Precio ( USD )": 26.0,
     "Imagen_Path": "products_images/products_228.png",
     "VIENE_LA_CAJA": 24,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2287,6 +2515,7 @@
     "Precio ( USD )": 32.0,
     "Imagen_Path": "products_images/products_229.png",
     "VIENE_LA_CAJA": "super oferta",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -2297,6 +2526,7 @@
     "Precio ( USD )": 14.0,
     "Imagen_Path": "products_images/products_230.png",
     "VIENE_LA_CAJA": 36,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2307,6 +2537,7 @@
     "Precio ( USD )": 6.0,
     "Imagen_Path": "products_images/products_231.png",
     "VIENE_LA_CAJA": "nuevo",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2317,6 +2548,7 @@
     "Precio ( USD )": 14.0,
     "Imagen_Path": "products_images/products_232.png",
     "VIENE_LA_CAJA": 20,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2327,6 +2559,7 @@
     "Precio ( USD )": 9.0,
     "Imagen_Path": "products_images/products_233.png",
     "VIENE_LA_CAJA": 120,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2337,6 +2570,7 @@
     "Precio ( USD )": 14.0,
     "Imagen_Path": "products_images/products_234.png",
     "VIENE_LA_CAJA": 20,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -2347,6 +2581,7 @@
     "Precio ( USD )": 15.0,
     "Imagen_Path": "products_images/products_235.png",
     "VIENE_LA_CAJA": 20,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2357,6 +2592,7 @@
     "Precio ( USD )": 27.0,
     "Imagen_Path": "products_images/products_236.png",
     "VIENE_LA_CAJA": 24,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -2367,6 +2603,7 @@
     "Precio ( USD )": 47.0,
     "Imagen_Path": "products_images/products_237.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -2377,6 +2614,7 @@
     "Precio ( USD )": 10.0,
     "Imagen_Path": "products_images/products_238.png",
     "VIENE_LA_CAJA": 32,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -2387,6 +2625,7 @@
     "Precio ( USD )": 10.0,
     "Imagen_Path": "products_images/products_239.png",
     "VIENE_LA_CAJA": 40,
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -2397,6 +2636,7 @@
     "Precio ( USD )": 23.0,
     "Imagen_Path": "products_images/products_240.png",
     "VIENE_LA_CAJA": 12,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2407,6 +2647,7 @@
     "Precio ( USD )": 35.0,
     "Imagen_Path": "products_images/products_241.png",
     "VIENE_LA_CAJA": 32,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2417,6 +2658,7 @@
     "Precio ( USD )": 36.0,
     "Imagen_Path": "products_images/products_242.png",
     "VIENE_LA_CAJA": 12,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2427,6 +2669,7 @@
     "Precio ( USD )": 14.0,
     "Imagen_Path": "products_images/products_243.png",
     "VIENE_LA_CAJA": 24,
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -2437,6 +2680,7 @@
     "Precio ( USD )": 12.0,
     "Imagen_Path": "products_images/products_244.png",
     "VIENE_LA_CAJA": 10,
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -2447,6 +2691,7 @@
     "Precio ( USD )": 16.0,
     "Imagen_Path": "products_images/products_245.png",
     "VIENE_LA_CAJA": 10,
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -2457,6 +2702,7 @@
     "Precio ( USD )": 11.0,
     "Imagen_Path": "products_images/products_246.png",
     "VIENE_LA_CAJA": 10,
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -2467,6 +2713,7 @@
     "Precio ( USD )": 10.0,
     "Imagen_Path": "products_images/products_247.png",
     "VIENE_LA_CAJA": "nuevo",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -2477,6 +2724,7 @@
     "Precio ( USD )": 20.0,
     "Imagen_Path": "products_images/products_248.png",
     "VIENE_LA_CAJA": 1,
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -2487,6 +2735,7 @@
     "Precio ( USD )": 20.0,
     "Imagen_Path": "products_images/products_249.png",
     "VIENE_LA_CAJA": 8,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -2497,6 +2746,7 @@
     "Precio ( USD )": 8.0,
     "Imagen_Path": "products_images/products_250.png",
     "VIENE_LA_CAJA": 40,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -2507,6 +2757,7 @@
     "Precio ( USD )": 28.0,
     "Imagen_Path": "products_images/products_251.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -2517,6 +2768,7 @@
     "Precio ( USD )": 16.0,
     "Imagen_Path": "products_images/products_252.png",
     "VIENE_LA_CAJA": 16,
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -2527,6 +2779,7 @@
     "Precio ( USD )": 38.0,
     "Imagen_Path": "products_images/products_253.png",
     "VIENE_LA_CAJA": 6,
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -2537,6 +2790,7 @@
     "Precio ( USD )": 8.0,
     "Imagen_Path": "products_images/products_254.png",
     "VIENE_LA_CAJA": 40,
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -2547,6 +2801,7 @@
     "Precio ( USD )": 10.0,
     "Imagen_Path": "products_images/products_255.png",
     "VIENE_LA_CAJA": 10,
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -2557,6 +2812,7 @@
     "Precio ( USD )": 15.0,
     "Imagen_Path": "products_images/products_256.png",
     "VIENE_LA_CAJA": 48,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2567,6 +2823,7 @@
     "Precio ( USD )": 5.0,
     "Imagen_Path": "products_images/products_257.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2577,6 +2834,7 @@
     "Precio ( USD )": 35.0,
     "Imagen_Path": "products_images/products_258.png",
     "VIENE_LA_CAJA": 4,
+    "video_url": "",
     "qcy-yf": "YF"
   },
   {
@@ -2587,6 +2845,7 @@
     "Precio ( USD )": 4.0,
     "Imagen_Path": "products_images/products_259.png",
     "VIENE_LA_CAJA": 1,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2597,6 +2856,7 @@
     "Precio ( USD )": 5.0,
     "Imagen_Path": "products_images/products_260.png",
     "VIENE_LA_CAJA": 1,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2607,6 +2867,7 @@
     "Precio ( USD )": 55.0,
     "Imagen_Path": "products_images/products_261.png",
     "VIENE_LA_CAJA": 1,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2617,6 +2878,7 @@
     "Precio ( USD )": 388.0,
     "Imagen_Path": "products_images/products_262.png",
     "VIENE_LA_CAJA": 1,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2627,6 +2889,7 @@
     "Precio ( USD )": 62.0,
     "Imagen_Path": "products_images/products_263.png",
     "VIENE_LA_CAJA": 1,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2637,6 +2900,7 @@
     "Precio ( USD )": 19.0,
     "Imagen_Path": "products_images/products_264.png",
     "VIENE_LA_CAJA": "12\nnuevo",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2647,6 +2911,7 @@
     "Precio ( USD )": 15.0,
     "Imagen_Path": "products_images/products_265.png",
     "VIENE_LA_CAJA": 4,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -2657,6 +2922,7 @@
     "Precio ( USD )": 33.0,
     "Imagen_Path": "products_images/products_266.png",
     "VIENE_LA_CAJA": 4,
+    "video_url": "",
     "qcy-yf": "YF"
   },
   {
@@ -2667,6 +2933,7 @@
     "Precio ( USD )": 35.0,
     "Imagen_Path": "products_images/products_267.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2677,6 +2944,7 @@
     "Precio ( USD )": 13.0,
     "Imagen_Path": "products_images/products_268.png",
     "VIENE_LA_CAJA": "OFERTA ultimo 7 uni",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2687,6 +2955,7 @@
     "Precio ( USD )": 42.0,
     "Imagen_Path": "products_images/products_269.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2697,6 +2966,7 @@
     "Precio ( USD )": 66.0,
     "Imagen_Path": "products_images/products_270.png",
     "VIENE_LA_CAJA": 1,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2707,6 +2977,7 @@
     "Precio ( USD )": 35.0,
     "Imagen_Path": "products_images/products_271.png",
     "VIENE_LA_CAJA": 1,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2717,6 +2988,7 @@
     "Precio ( USD )": 135.0,
     "Imagen_Path": "products_images/products_272.png",
     "VIENE_LA_CAJA": "ultimo \n2 uni",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2727,6 +2999,7 @@
     "Precio ( USD )": 30.0,
     "Imagen_Path": "products_images/products_273.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2737,6 +3010,7 @@
     "Precio ( USD )": 32.0,
     "Imagen_Path": "products_images/products_274.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2747,6 +3021,7 @@
     "Precio ( USD )": 7.0,
     "Imagen_Path": "products_images/products_275.png",
     "VIENE_LA_CAJA": 30,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2757,6 +3032,7 @@
     "Precio ( USD )": 7.0,
     "Imagen_Path": "products_images/products_276.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -2767,6 +3043,7 @@
     "Precio ( USD )": 11.0,
     "Imagen_Path": "products_images/products_277.png",
     "VIENE_LA_CAJA": 25,
+    "video_url": "",
     "qcy-yf": "YF"
   },
   {
@@ -2777,6 +3054,7 @@
     "Precio ( USD )": 26.0,
     "Imagen_Path": "products_images/products_278.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -2787,6 +3065,7 @@
     "Precio ( USD )": 18.0,
     "Imagen_Path": "products_images/products_279.png",
     "VIENE_LA_CAJA": 12,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2797,6 +3076,7 @@
     "Precio ( USD )": 21.0,
     "Imagen_Path": "products_images/products_280.png",
     "VIENE_LA_CAJA": 8,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -2807,6 +3087,7 @@
     "Precio ( USD )": 23.0,
     "Imagen_Path": "products_images/products_281.png",
     "VIENE_LA_CAJA": 4,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2817,6 +3098,7 @@
     "Precio ( USD )": 35.0,
     "Imagen_Path": "products_images/products_282.png",
     "VIENE_LA_CAJA": 8,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2827,6 +3109,7 @@
     "Precio ( USD )": 65.0,
     "Imagen_Path": "products_images/products_283.png",
     "VIENE_LA_CAJA": "ultimo \n9 uni",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2837,6 +3120,7 @@
     "Precio ( USD )": 95.0,
     "Imagen_Path": "products_images/products_284.png",
     "VIENE_LA_CAJA": 2,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -2847,6 +3131,7 @@
     "Precio ( USD )": 50.0,
     "Imagen_Path": "products_images/products_285.png",
     "VIENE_LA_CAJA": 2,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -2857,6 +3142,7 @@
     "Precio ( USD )": 55.0,
     "Imagen_Path": "products_images/products_286.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -2867,6 +3153,7 @@
     "Precio ( USD )": 40.0,
     "Imagen_Path": "products_images/products_287.png",
     "VIENE_LA_CAJA": "nuevo",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2877,6 +3164,7 @@
     "Precio ( USD )": 55.0,
     "Imagen_Path": "products_images/products_288.png",
     "VIENE_LA_CAJA": "nuevo",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2887,6 +3175,7 @@
     "Precio ( USD )": 24.0,
     "Imagen_Path": "products_images/products_289.png",
     "VIENE_LA_CAJA": 50,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2897,6 +3186,7 @@
     "Precio ( USD )": 6.5,
     "Imagen_Path": "products_images/products_290.png",
     "VIENE_LA_CAJA": "ultimo \n3 uni",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2907,6 +3197,7 @@
     "Precio ( USD )": 7.5,
     "Imagen_Path": "products_images/products_291.png",
     "VIENE_LA_CAJA": 50,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2917,6 +3208,7 @@
     "Precio ( USD )": 14.0,
     "Imagen_Path": "products_images/products_292.png",
     "VIENE_LA_CAJA": 40,
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -2927,6 +3219,7 @@
     "Precio ( USD )": 158.0,
     "Imagen_Path": "products_images/products_293.png",
     "VIENE_LA_CAJA": 8,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -2937,6 +3230,7 @@
     "Precio ( USD )": 158.0,
     "Imagen_Path": "products_images/products_294.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -2947,6 +3241,7 @@
     "Precio ( USD )": 25.0,
     "Imagen_Path": "products_images/products_295.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -2957,6 +3252,7 @@
     "Precio ( USD )": 47.0,
     "Imagen_Path": "products_images/products_296.png",
     "VIENE_LA_CAJA": 12,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -2967,6 +3263,7 @@
     "Precio ( USD )": 45.0,
     "Imagen_Path": "products_images/products_297.png",
     "VIENE_LA_CAJA": 6,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -2977,6 +3274,7 @@
     "Precio ( USD )": 56.0,
     "Imagen_Path": "products_images/products_298.png",
     "VIENE_LA_CAJA": 6,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -2987,6 +3285,7 @@
     "Precio ( USD )": 72.0,
     "Imagen_Path": "products_images/products_299.png",
     "VIENE_LA_CAJA": 6,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -2997,6 +3296,7 @@
     "Precio ( USD )": 83.0,
     "Imagen_Path": "products_images/products_300.png",
     "VIENE_LA_CAJA": 4,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -3007,6 +3307,7 @@
     "Precio ( USD )": 115.0,
     "Imagen_Path": "products_images/products_301.png",
     "VIENE_LA_CAJA": 1,
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -3017,6 +3318,7 @@
     "Precio ( USD )": 120.0,
     "Imagen_Path": "products_images/products_302.png",
     "VIENE_LA_CAJA": 2,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -3027,6 +3329,7 @@
     "Precio ( USD )": 220.0,
     "Imagen_Path": "products_images/products_303.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -3037,6 +3340,7 @@
     "Precio ( USD )": 14.0,
     "Imagen_Path": "products_images/products_304.png",
     "VIENE_LA_CAJA": 24,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -3047,6 +3351,7 @@
     "Precio ( USD )": 29.0,
     "Imagen_Path": "products_images/products_305.png",
     "VIENE_LA_CAJA": 16,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -3057,6 +3362,7 @@
     "Precio ( USD )": 36.0,
     "Imagen_Path": "products_images/products_306.png",
     "VIENE_LA_CAJA": 16,
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
@@ -3067,6 +3373,7 @@
     "Precio ( USD )": 63.0,
     "Imagen_Path": "products_images/products_307.png",
     "VIENE_LA_CAJA": 4,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -3077,6 +3384,7 @@
     "Precio ( USD )": 66.0,
     "Imagen_Path": "products_images/products_308.png",
     "VIENE_LA_CAJA": 4,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -3087,6 +3395,7 @@
     "Precio ( USD )": 130.0,
     "Imagen_Path": "products_images/products_309.png",
     "VIENE_LA_CAJA": 2,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -3097,6 +3406,7 @@
     "Precio ( USD )": 12.0,
     "Imagen_Path": "products_images/products_310.png",
     "VIENE_LA_CAJA": 40,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -3107,6 +3417,7 @@
     "Precio ( USD )": 20.0,
     "Imagen_Path": "products_images/products_311.png",
     "VIENE_LA_CAJA": 40,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -3117,6 +3428,7 @@
     "Precio ( USD )": 16.0,
     "Imagen_Path": "products_images/products_312.png",
     "VIENE_LA_CAJA": 40,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -3127,6 +3439,7 @@
     "Precio ( USD )": 22.0,
     "Imagen_Path": "products_images/products_313.png",
     "VIENE_LA_CAJA": 24,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -3137,6 +3450,7 @@
     "Precio ( USD )": 30.0,
     "Imagen_Path": "products_images/products_314.png",
     "VIENE_LA_CAJA": 24,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -3147,6 +3461,7 @@
     "Precio ( USD )": 95.0,
     "Imagen_Path": "products_images/products_315.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -3157,6 +3472,7 @@
     "Precio ( USD )": 115.0,
     "Imagen_Path": "products_images/products_316.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -3167,6 +3483,7 @@
     "Precio ( USD )": 95.0,
     "Imagen_Path": "products_images/products_317.png",
     "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -3177,6 +3494,7 @@
     "Precio ( USD )": 12.0,
     "Imagen_Path": "products_images/products_318.png",
     "VIENE_LA_CAJA": "ultimo 15 uni",
+    "video_url": "",
     "qcy-yf": "yf"
   },
   {
@@ -3187,6 +3505,7 @@
     "Precio ( USD )": 38.0,
     "Imagen_Path": "products_images/products_319.png",
     "VIENE_LA_CAJA": "ultimo 14 uni",
+    "video_url": "",
     "qcy-yf": "yf"
   }
 ]
