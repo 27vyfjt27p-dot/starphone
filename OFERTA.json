@@ -1,132 +1,242 @@
 [
   {
+    "MARCA": "NINTENDO",
+    "PRODUCTO": "NINTENDO SWITCH 2 Bundled Game Mario Kart World KR BEE-S-KB6NA(KOR)",
+    "DESC_FULL": "",
+    "Precio ( USD )": 500,
+    "Imagen_Path": "OFERTA_images/OFERTA_001.png",
+    "VIENE_LA_CAJA": "D",
+    "video_url": "",
+    "qcy-yf": "QCY"
+  },
+  {
+    "MARCA": "FUJIFILM",
+    "PRODUCTO": "FUJIFILM Instax mini Link 3",
+    "DESC_FULL": "green white pink\nImpresora portátil para smartphone con conexión Bluetooth.\nImpresión instantánea rápida en formato instax mini.\nFunciones creativas desde la app (filtros, marcos y efectos).\nBatería recargable para múltiples impresiones.\nDiseño compacto y ligero, fácil de transportar.",
+    "Precio ( USD )": 105,
+    "Imagen_Path": "OFERTA_images/OFERTA_002.png",
+    "VIENE_LA_CAJA": "D",
+    "video_url": "",
+    "qcy-yf": "QCY"
+  },
+  {
+    "MARCA": "FUJIFILM",
+    "PRODUCTO": "FUJIFILM Instax mini film  10PCS",
+    "DESC_FULL": "Black frame,Stone Gray,Soft lavender,Spray art,Pink lemonade，Photo slide",
+    "Precio ( USD )": 12,
+    "Imagen_Path": "OFERTA_images/OFERTA_003.png",
+    "VIENE_LA_CAJA": "D",
+    "video_url": "",
+    "qcy-yf": "QCY"
+  },
+  {
+    "MARCA": "FUJIFILM",
+    "PRODUCTO": "FUJIFILM  instax mini 12 white,Pink",
+    "DESC_FULL": "Cámara instantánea que imprime fotos al momento.\nExposición automática, ajusta la luz automáticamente.\nModo selfie y espejo frontal para tomarse fotos fácilmente.\nModo primer plano (close-up) para fotos cercanas.\nLas fotos se revelan en unos 90 segundos en formato pequeño tipo tarjeta",
+    "Precio ( USD )": 85,
+    "Imagen_Path": "OFERTA_images/OFERTA_004.png",
+    "VIENE_LA_CAJA": "D",
+    "video_url": "",
+    "qcy-yf": "QCY"
+  },
+  {
     "MARCA": "DJI",
-    "TIPO": "Gimbals para cámaras profesionales",
     "PRODUCTO": "DJI RS 4",
     "DESC_FULL": "Diseño liviano con carga útil de 3kg\nPantalla táctil OLED con bloqueo automático\nDisparo vertical nativo de segunda generación\nBloqueos de ejes automáticos\nCambio de modo mediante joystick o Bluetooth\nAdmite transmisor de imágenes inalámbrico\nEjes recubiertos de teflón\nTiempo de funcionamiento de 12 horas\nRevisa la compatibilidad de tu cámara aca",
     "Precio ( USD )": 430,
-    "Imagen_Path": "OFERTA_images/OFERTA_001.png",
+    "Imagen_Path": "OFERTA_images/OFERTA_005.png",
     "VIENE_LA_CAJA": "OFERTA!!!",
-    "qcy-yf": "qcy"
+    "video_url": "",
+    "qcy-yf": "QCY"
   },
   {
     "MARCA": "JBL",
-    "TIPO": "PARLANTE",
-    "PRODUCTO": "JBL FLIP 7   NEGRO AZUL",
+    "PRODUCTO": "JBL FLIP 7    SOLO NEGRO",
     "DESC_FULL": "VERSION VIETNAM",
     "Precio ( USD )": 85,
-    "Imagen_Path": "OFERTA_images/OFERTA_002.png",
+    "Imagen_Path": "OFERTA_images/OFERTA_006.png",
     "VIENE_LA_CAJA": "OFERTA!!!",
-    "qcy-yf": "qcy"
+    "video_url": "",
+    "qcy-yf": "QCY"
   },
   {
     "MARCA": "HiFuture",
-    "TIPO": "PARLANTE",
     "PRODUCTO": "HiFuture  MEGA S  black white grey",
     "DESC_FULL": "Potencia de 5W: Sonido claro y potente para espacios pequeños.\nTecnología Wireless 5.4: Conexión estable y sin interrupciones.\nCompatibilidad con MagSafe: Se adhiere magnéticamente a dispositivos compatibles.\nModo TWS (True Wireless Stereo): Conecta dos altavoces para un sonido estéreo envolvente.\nSoporte integrado para teléfono: Sujeta tu dispositivo mientras ves videos o juegas.\nBatería de larga duración: Hasta 10 horas de reproducción continua.\nCarga inalámbrica de 7.5W a 15W: Carga tus dispositivos sin cables.\nDiseño compacto y elegante: Disponible en colores como negro, beige, verde y gris.",
     "Precio ( USD )": 10,
-    "Imagen_Path": "OFERTA_images/OFERTA_003.png",
+    "Imagen_Path": "OFERTA_images/OFERTA_007.png",
     "VIENE_LA_CAJA": "OFERTA!!!",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
     "MARCA": "HiFuture",
-    "TIPO": "PARLANTE",
     "PRODUCTO": "HiFuture ALTUS ROJO",
     "DESC_FULL": "Potencia de salida de 10W: Proporciona un sonido nítido y bajos suaves, adecuados para diversos entornos.\nConectividad Bluetooth 5.3: Ofrece una conexión rápida y estable con tus dispositivos.\nResistencia al agua IPX5: Protege contra salpicaduras, ideal para uso en exteriores como piscinas o parques.  Digitec\nAutonomía de hasta 8 horas: Disfruta de música continua durante tus actividades sin preocuparte por la batería. \nModo TWS (True Wireless Stereo): Permite emparejar dos altavoces Altus para una experiencia de sonido estéreo envolvente.\nDiseño compacto y portátil: Con un peso de aproximadamente 155g y correa incorporada, es fácil de transportar y colgar en mochilas o bicicletas.\nCarga rápida mediante USB-C: Recarga completa en aproximadamente 2 horas.",
     "Precio ( USD )": 11,
-    "Imagen_Path": "OFERTA_images/OFERTA_004.png",
+    "Imagen_Path": "OFERTA_images/OFERTA_008.png",
     "VIENE_LA_CAJA": "OFERTA!!!",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
     "MARCA": "HiFuture",
-    "TIPO": "PARLANTE",
     "PRODUCTO": "HiFuture ASCENDO black green pink white",
     "DESC_FULL": "Potencia de sonido de 20W: Proporciona un audio claro y envolvente, ideal para interiores y exteriores. \nConectividad Bluetooth 5.3: Ofrece una conexión estable y rápida con tus dispositivos.\nResistencia al agua IPX7: Apto para uso en exteriores, resistente a salpicaduras y lluvia.\nBatería de larga duración: Hasta 15 horas de reproducción continua, ideal para acompañarte durante todo el día.\nModo TWS (True Wireless Stereo): Permite emparejar dos altavoces Ascendo para una experiencia de sonido estéreo más inmersiva.\nDiseño compacto y portátil: Fácil de transportar, perfecto para llevar tu música a cualquier lugar.",
     "Precio ( USD )": 18,
-    "Imagen_Path": "OFERTA_images/OFERTA_005.png",
+    "Imagen_Path": "OFERTA_images/OFERTA_009.png",
     "VIENE_LA_CAJA": "OFERTA!!!",
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
     "MARCA": "HiFuture",
-    "TIPO": "AUDIFONO",
     "PRODUCTO": "HiFuture FutureTour X black ,gold",
     "DESC_FULL": "Cancelación activa de ruido híbrida (Hybrid ANC)：Reduce eficazmente el ruido exterior para una experiencia inmersiva.\nSonido de alta fidelidad：Reproducción equilibrada, ideal para música, películas y juegos.\nDiseño cómodo y plegable：Almohadillas suaves con espuma de proteína para uso prolongado.\nMicrófonos con cancelación de ruido por IA：Llamadas claras incluso en entornos ruidosos.\nBluetooth 5.4 con baja latencia：Conexión estable, sin retrasos.\nAutonomía de hasta 35 horas：Con ANC activado；hasta 25 horas sin ANC.\nEntrada AUX disponible：Puedes seguir usándolos con cable si se agota la batería.",
     "Precio ( USD )": 25,
-    "Imagen_Path": "OFERTA_images/OFERTA_006.png",
+    "Imagen_Path": "OFERTA_images/OFERTA_010.png",
     "VIENE_LA_CAJA": "OFERTA!!!",
+    "video_url": "",
+    "qcy-yf": "QCY"
+  },
+  {
+    "MARCA": "HUAWEI",
+    "PRODUCTO": "HUAWEI FreeClip Rose Gold",
+    "DESC_FULL": "Diseño open-ear tipo clip, no se introduce en el oído y es más cómodo para usar por mucho tiempo.\nDriver dual de 10.8 mm, sonido claro con buen equilibrio.\nTecnología Direct Sound, reduce la fuga de sonido y protege la privacidad.\nHasta 8 horas de reproducción y 36 horas con el estuche de carga.\nResistencia al agua y sudor IP54, ideal para uso diario o deporte.\nConexión Bluetooth multipunto, permite conectar dos dispositivos al mismo tiempo.",
+    "Precio ( USD )": 110,
+    "Imagen_Path": "OFERTA_images/OFERTA_011.png",
+    "VIENE_LA_CAJA": "ultimo \n6 uni",
+    "video_url": "",
+    "qcy-yf": "yf"
+  },
+  {
+    "MARCA": "HUAWEI",
+    "PRODUCTO": "HUAWEI WATCH 5 Black",
+    "DESC_FULL": "",
+    "Precio ( USD )": 290,
+    "Imagen_Path": "OFERTA_images/OFERTA_012.png",
+    "VIENE_LA_CAJA": "ultimo \n4 uni",
+    "video_url": "",
+    "qcy-yf": "yf"
+  },
+  {
+    "MARCA": "HUAWEI",
+    "PRODUCTO": "HUAWEI WATCH 5 Purple,Beige",
+    "DESC_FULL": "",
+    "Precio ( USD )": 320,
+    "Imagen_Path": "OFERTA_images/OFERTA_013.png",
+    "VIENE_LA_CAJA": "ultimo \n14 uni",
+    "video_url": "",
+    "qcy-yf": "yf"
+  },
+  {
+    "MARCA": "HUAWEI",
+    "PRODUCTO": "WATCH GT 5 Pro 41mm White 55020DHR",
+    "DESC_FULL": "",
+    "Precio ( USD )": 270,
+    "Imagen_Path": "OFERTA_images/OFERTA_014.png",
+    "VIENE_LA_CAJA": "ultimo \n2 uni",
+    "video_url": "",
+    "qcy-yf": "yf"
+  },
+  {
+    "MARCA": "QCY",
+    "PRODUCTO": "QCY MeloBuds Neo black",
+    "DESC_FULL": "Estuche de carga transparente: Con pantalla digital que muestra la batería en tiempo real.\nDiafragma biológico de 10 mm: Sonido amplio y voces claras, con 9 efectos preestablecidos.\nCancelación de ruido en llamadas: Cuatro micrófonos para filtrar ruido ambiental y viento.\nAutonomía: 7 horas de uso continuo, hasta 24 horas con estuche.\nBaja latencia: Conexión dual con 68ms en modo juego.",
+    "Precio ( USD )": 13,
+    "Imagen_Path": "OFERTA_images/OFERTA_015.png",
+    "VIENE_LA_CAJA": "ultimo \n24 uni",
+    "video_url": "",
+    "qcy-yf": "QCY"
+  },
+  {
+    "MARCA": "QCY",
+    "PRODUCTO": "QCY HeroAD V200 black",
+    "DESC_FULL": "7.1 Surround Sound & 50mm Neodymium driver\n3 Ways to Connect: USB-C/Bluetooth 6.0/2.4Ghz(A+C)\nGame in Sync: 20ms Ultra-Low Lag\nWireless 240H Ultra-Long Battery Life\nDetachtable Noise Canceling Mic\nDesigned for Comfort: Lightweight & Glasses-Friendly\nGame audio customization\nDual Mode Connection",
+    "Precio ( USD )": 27,
+    "Imagen_Path": "OFERTA_images/OFERTA_016.png",
+    "VIENE_LA_CAJA": 20,
+    "video_url": "",
     "qcy-yf": "QCY"
   },
   {
     "MARCA": "BASEUS",
-    "TIPO": "CARGADOR",
     "PRODUCTO": "Baseus GaN5 Pro Gallium nitride fast charger 100W C+U",
     "DESC_FULL": "Tecnología GaN de 100W: Potente salida de 100W, carga rápida para dispositivos, puertos USB-C y USB-A para carga simultánea.\nTecnología BPS: Distribuye energía inteligentemente para carga eficiente, compatible con PD, QC y PPS.\nDiseño compacto y portátil: Carga hasta tres veces más rápido que cargadores convencionales, se mantiene fresco para evitar sobrecalentamiento y garantiza rendimiento seguro.",
     "Precio ( USD )": 15,
-    "Imagen_Path": "OFERTA_images/OFERTA_007.png",
+    "Imagen_Path": "OFERTA_images/OFERTA_017.png",
     "VIENE_LA_CAJA": "super oferta",
-    "qcy-yf": "qcy"
+    "video_url": "",
+    "qcy-yf": "QCY"
   },
   {
     "MARCA": "BASEUS",
-    "TIPO": "Regletas de Carga",
     "PRODUCTO": "Baseus  GaN3 Pro Gallium nitride desktop strip AC+2U+2C 65W SUPERVOOC edition",
     "DESC_FULL": "Conector USB\nVoltaje de entrada: 12/24V (Bivolt)\nVoltaje de salida: 65W\nIncluye cable\n4 puertos de carga\nProtección contra sobrecarga",
     "Precio ( USD )": 15,
-    "Imagen_Path": "OFERTA_images/OFERTA_008.png",
+    "Imagen_Path": "OFERTA_images/OFERTA_018.png",
     "VIENE_LA_CAJA": "super oferta",
-    "qcy-yf": "qcy"
+    "video_url": "",
+    "qcy-yf": "QCY"
   },
   {
     "MARCA": "BASEUS",
-    "TIPO": "Regletas de Carga",
     "PRODUCTO": "Baseus  Linrui series digital plugboard 3AC+1U+1C+ extended cable C 65W 1.5m power cable",
     "DESC_FULL": "",
     "Precio ( USD )": 20,
-    "Imagen_Path": "OFERTA_images/OFERTA_009.png",
+    "Imagen_Path": "OFERTA_images/OFERTA_019.png",
     "VIENE_LA_CAJA": "super oferta",
-    "qcy-yf": "qcy"
+    "video_url": "",
+    "qcy-yf": "QCY"
   },
   {
     "MARCA": "XIAOMI",
-    "TIPO": "Regletas de Carga",
     "PRODUCTO": "Mi 67W desktop fast charging socket Pro",
     "DESC_FULL": "Carga rápida + Expansión: Carga rápida de 67W y transmisión de datos, soporta múltiples dispositivos.\nSiete en uno: Incluye 1 puerto USB-A, 1 HDMI, 2 puertos USB-C, y 3 enchufes de corriente alterna.\nCable de carga rápida dedicado: Ideal para uso en escritorios de oficina.\nTransmisión de datos: Soporta discos duros y dispositivos de almacenamiento.\n4K @ 60Hz: Proyección ultra clara y fluida.\nCapacidad de carga: Carga rápida de 67W y hasta 2500W máximos en enchufes de corriente alterna.",
     "Precio ( USD )": 20,
-    "Imagen_Path": "OFERTA_images/OFERTA_010.png",
+    "Imagen_Path": "OFERTA_images/OFERTA_020.png",
     "VIENE_LA_CAJA": "super oferta",
-    "qcy-yf": "qcy"
+    "video_url": "",
+    "qcy-yf": "QCY"
   },
   {
     "MARCA": "XIAOMI",
-    "TIPO": "Regleta de enchufes",
     "PRODUCTO": "Xiaomi  jack board 4 position 4 control 3 meters",
     "DESC_FULL": "",
     "Precio ( USD )": 3,
-    "Imagen_Path": "OFERTA_images/OFERTA_011.png",
+    "Imagen_Path": "OFERTA_images/OFERTA_021.png",
     "VIENE_LA_CAJA": "OFERTA!!!",
-    "qcy-yf": "qcy"
+    "video_url": "",
+    "qcy-yf": "QCY"
   },
   {
-    "MARCA": "HOTO",
-    "TIPO": "HERRAMIENTA",
-    "PRODUCTO": "HOTO 3.6V Screwdriver Kit (Classic)",
-    "DESC_FULL": "Perfecto para regalo de casa nueva, cumpleaños de papá, amigo o novio.\nDiseño elegante y compacto\nCaja de ABS resistente, estilo minimalista, fácil de llevar.\nTodo en uno para el hogar\nDestornillador 3.6V con 3 niveles de torque y luz LED\nLlave ajustable de gran apertura\nMartillo con cap de goma y sistema magnético para clavos\n10 brocas de acero S2 resistentes\nAlicates multifunción + Cinta métrica 3m con autobloqueo",
-    "Precio ( USD )": 32,
-    "Imagen_Path": "OFERTA_images/OFERTA_012.png",
-    "VIENE_LA_CAJA": "super oferta",
-    "qcy-yf": "qcy"
+    "MARCA": "Tronsmart",
+    "PRODUCTO": "Tronsmart Trip",
+    "DESC_FULL": "Parlante Bluetooth 5.3: Manos libres, apto para exteriores, a prueba de agua.\nConectividad: Bluetooth.\nCaracterísticas: Potencia de 10W, batería recargable, micrófono interno y de accesorio, soporte incluido.\nTiempo de carga: 3 horas.\nTamaño del producto：16.8*3.8*7.8CM",
+    "Precio ( USD )": 12,
+    "Imagen_Path": "OFERTA_images/OFERTA_022.png",
+    "VIENE_LA_CAJA": 40,
+    "video_url": "",
+    "qcy-yf": "QCY"
   },
   {
-    "MARCA": "LYDSTO",
-    "TIPO": "Fan",
-    "PRODUCTO": "Intelligent Desktop Fan CL08",
-    "DESC_FULL": "CL08 Smart Desktop Air Conditioner Mini Air Cooler Fan Water Cooling Fan Spray Room Office Portable Air Conditioner",
-    "Precio ( USD )": 13,
-    "Imagen_Path": "OFERTA_images/OFERTA_013.png",
-    "VIENE_LA_CAJA": "OFERTA ultimo 7 uni",
-    "qcy-yf": "yf"
+    "MARCA": "Sounarc",
+    "PRODUCTO": "Sounarc K2 200W Karaoke Party Speaker black",
+    "DESC_FULL": "Sonido potente: 200W de sonido estéreo.\nMicrófonos incluidos: 2 micrófonos inalámbricos.\nBatería de larga duración: 24.000 mAh, hasta 24 horas de uso.\nLuces LED: Efectos de luz multicolor para animar el ambiente.\nCambio de voz: Efectos divertidos para karaoke.\nConectividad: Bluetooth, transmisión en vivo y entrada auxiliar.\nControl remoto: Para mayor comodidad.\nResistente al agua: Certificación IPX6.\nFunción power bank: Carga otros dispositivos.",
+    "Precio ( USD )": 95,
+    "Imagen_Path": "OFERTA_images/OFERTA_023.png",
+    "VIENE_LA_CAJA": "D",
+    "video_url": "",
+    "qcy-yf": "QCY"
+  },
+  {
+    "MARCA": "BOMIDI\n1ano garantia",
+    "PRODUCTO": "BOMIDI clipper L2 Gunmetal Gray",
+    "DESC_FULL": "Diseño recargable (puerto USB-C) con carga completa en aproximadamente 70 minutos\nIncluye 4 peines guía (3 mm, 6 mm, 9 mm y 12 mm) para diferentes estilos de corte\nCuchillas de alta calidad, precisas y sin tirones, adecuadas para todo tipo de cabello\nCabezal desmontable y lavable, fácil de limpiar\nDiseño ligero y ergonómico, ideal para uso doméstico o profesional ligero",
+    "Precio ( USD )": 5,
+    "Imagen_Path": "OFERTA_images/OFERTA_024.png",
+    "VIENE_LA_CAJA": 40,
+    "video_url": "",
+    "qcy-yf": "QCY"
   }
 ]
