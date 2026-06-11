@@ -3214,21 +3214,10 @@
   {
     "MARCA": "XIAOMI",
     "TIPO": "Mouse",
-    "PRODUCTO": "Xiaomi Wireless Mouse Lite 2 Negro",
-    "DESC_FULL": "",
-    "Precio ( USD )": 6.5,
-    "Imagen_Path": "products_images/products_293.png",
-    "VIENE_LA_CAJA": "ultimo \n2 uni",
-    "video_url": "",
-    "qcy-yf": "yf"
-  },
-  {
-    "MARCA": "XIAOMI",
-    "TIPO": "Mouse",
     "PRODUCTO": "Xiaomi Wireless Mouse Comfort Edition Negro blanco",
     "DESC_FULL": "",
     "Precio ( USD )": 7.5,
-    "Imagen_Path": "products_images/products_294.png",
+    "Imagen_Path": "products_images/products_293.png",
     "VIENE_LA_CAJA": 50,
     "video_url": "",
     "qcy-yf": "yf"
@@ -3239,7 +3228,7 @@
     "PRODUCTO": "Xiaomi Gaming Mouse Lite GL",
     "DESC_FULL": "Sensor de alto rendimiento: Seguimiento óptico preciso y respuesta rápida.\nDPI ajustable: Varios niveles de DPI para personalizar la experiencia de juego.\nRetroiluminación RGB: Personalizable para mejorar la atmósfera de juego.\nDiseño ligero y ergonómico: Cómodo para largas sesiones de juego.\nDiseño de seis botones: Control multifuncional para mayor funcionalidad en juegos.",
     "Precio ( USD )": 14.0,
-    "Imagen_Path": "products_images/products_295.png",
+    "Imagen_Path": "products_images/products_294.png",
     "VIENE_LA_CAJA": 40,
     "video_url": "",
     "qcy-yf": "yf"
@@ -3250,7 +3239,7 @@
     "PRODUCTO": "Xiaomi Smart Projector L1 EU",
     "DESC_FULL": "Resolución Full HD 1080p: Imágenes claras y detalladas.\nBrillo potente: Adecuado para diversos entornos.\nSistema inteligente: Android TV integrado con aplicaciones populares.\nAutoenfoque y corrección trapezoidal: Proyección precisa y sin distorsión.\nConectividad versátil: Compatible con Wi-Fi, Bluetooth y puertos como HDMI y USB.\nDiseño portátil: Ideal para el hogar, la oficina o viajes.",
     "Precio ( USD )": 158.0,
-    "Imagen_Path": "products_images/products_296.png",
+    "Imagen_Path": "products_images/products_295.png",
     "VIENE_LA_CAJA": 8,
     "video_url": "",
     "qcy-yf": "qcy"
@@ -3261,7 +3250,7 @@
     "PRODUCTO": "Lenovo XiaoXin 100S Smart Projector L-PJT100L White",
     "DESC_FULL": "Brillo: 650 ANSI lúmenes\nResolución: 1080P + soporte HDR10\nEnfoque y Corrección: Autofoco + corrección trapezoidal automática\nAudio: Altavoces integrados de 2x5W (HiFi)\nSistema Operativo: Android 9.0\nFunciones Destacadas: WiFi 6, Bluetooth 5.0, HDMI, USB, salida de 3.5mm, adecuado para cine en casa.",
     "Precio ( USD )": 158.0,
-    "Imagen_Path": "products_images/products_297.png",
+    "Imagen_Path": "products_images/products_296.png",
     "VIENE_LA_CAJA": "D",
     "video_url": "",
     "qcy-yf": "QCY"
@@ -3272,7 +3261,7 @@
     "PRODUCTO": "Tronsmart Element T2 Plus UPGRADED 20W Bluetooth Speaker",
     "DESC_FULL": "20W with passive radiator & 24 Hours Playtime\n*7.4V 2000mAh Battery",
     "Precio ( USD )": 25.0,
-    "Imagen_Path": "products_images/products_298.png",
+    "Imagen_Path": "products_images/products_297.png",
     "VIENE_LA_CAJA": "D",
     "video_url": "",
     "qcy-yf": "qcy"
@@ -3283,7 +3272,7 @@
     "PRODUCTO": "Tronsmart Mirtune S100  50W Portable Outdoor Speaker black Y Azul",
     "DESC_FULL": "Gran capacidad: Múltiples compartimentos para laptop, documentos y más.\nMaterial impermeable: Protege tus pertenencias de la lluvia.\nComodidad: Correas acolchonadas y espalda transpirable para mayor comodidad.\nPuerto USB: Conector externo para cargar dispositivos.\nDiseño moderno: Estilo simple y elegante para cualquier ocasión.\nTamaño del producto:23*8.8*10cm",
     "Precio ( USD )": 47.0,
-    "Imagen_Path": "products_images/products_299.png",
+    "Imagen_Path": "products_images/products_298.png",
     "VIENE_LA_CAJA": 12,
     "video_url": "https://www.youtube.com/watch?v=zR835WxPd2o",
     "qcy-yf": "qcy"
@@ -3294,7 +3283,7 @@
     "PRODUCTO": "Tronsmart Bang  SE 40W+ USB de 64G de regalo",
     "DESC_FULL": "Sonido de alta calidad: Potente y adecuado para todo tipo de música.\nResistencia al agua IPX7: Totalmente impermeable, ideal para exteriores.\nBatería de larga duración: Hasta 24 horas de reproducción con una sola carga.\nConexión Bluetooth 5.3: Rápida y estable.\nDiseño portátil: Con correa para facilitar el transporte.\nBajos profundos: Mejora la experiencia de sonido con bajos potentes.\nTamaño del producto:29.8*11.88*16.45cm",
     "Precio ( USD )": 45.0,
-    "Imagen_Path": "products_images/products_300.png",
+    "Imagen_Path": "products_images/products_299.png",
     "VIENE_LA_CAJA": 6,
     "video_url": "https://youtu.be/DAsI3GShT6s",
     "qcy-yf": "qcy"
@@ -3305,7 +3294,7 @@
     "PRODUCTO": "Tronsmart Bang Mini",
     "DESC_FULL": "Sonido detallado: 2 cavidades independientes; agudos claros (tweeters y radiador pasivo) y graves potentes (woofers).\nDuración de batería: 15 horas con batería de 4,000 mAh; también funciona como banco de carga (entrada USB).\nLuces LED: Estilo pulsante y circular para animar la fiesta.\nImpermeable IPX6: Resistente al sudor, salpicaduras y arena.\nTecnología SoundPulse™: Audio equilibrado y detallado con chip personalizado y cámara de poder.\nBluetooth 5.3: Transmisión rápida hasta 18 m; conecta hasta 2 dispositivos.\nAsistente personal: Acceso a Siri, Cortana y Asistente de Google con un toque.\nConectividad: Bluetooth y NFC para transmisión inalámbrica.\nApp Tronsmart: Personaliza modos LED y ecualizadores.\nPortátil: Con mango integrado para facilitar el transporte\nTamaño del producto:30.2*12.5*16.9CM",
     "Precio ( USD )": 56.0,
-    "Imagen_Path": "products_images/products_301.png",
+    "Imagen_Path": "products_images/products_300.png",
     "VIENE_LA_CAJA": 6,
     "video_url": "https://youtu.be/I_tuvvM5eoE",
     "qcy-yf": "qcy"
@@ -3316,7 +3305,7 @@
     "PRODUCTO": "Tronsmart Force Max",
     "DESC_FULL": "Resistencia al agua: IPX7, resistente a inmersión.\nPotencia y tecnología: 80 RMS, SoundPulse, 2.2 canales, 4 controladores con radiadores pasivos.\nDuración de batería: 15 horas con batería de 10,000 mAh.\nEstéreo inalámbrico: Conecta dos parlantes Force para sonido estéreo 3D.\nEfectos de audio: 3 modos de ecualización (estéreo 3D, bajos extra, estándar).\nConectividad: Bluetooth 5.0 (20 m), ranura para tarjeta microSD (64 GB), USB-A para unidades flash (64 GB), entrada auxiliar (3.5 mm).\nCompatibilidad: Asistentes de voz (Google, Siri, Cortana).\nTamaño del producto:25.8*15.3*8.8cm",
     "Precio ( USD )": 72.0,
-    "Imagen_Path": "products_images/products_302.png",
+    "Imagen_Path": "products_images/products_301.png",
     "VIENE_LA_CAJA": 6,
     "video_url": "https://youtu.be/gEkXXmTIyJc",
     "qcy-yf": "qcy"
@@ -3327,7 +3316,7 @@
     "PRODUCTO": "Tronsmart Bang 2 90W Black Blue",
     "DESC_FULL": "90W of Pure Boom: Upgraded to 90W of bigger sound, the Bang 2 delivers 105dB clear audio without distortion to rock any outdoor party with 10-25 people.\n2.1-Channel Clarity: A racetrack mid-woofer, dual passive radiators, and dual tweeters team up for clear stereo in rich details.\nPortable Party Anywhere: Grab it by the handle or sling it with the detachable strap to take your music on the move.\n26H Playtime Without Fear of Water: Rock all-day beats with IPX6 waterproof and charge your device via the Type-C port if needed.\nPair or Multiply: Pair two speakers for True Wireless Stereo, or connect multiple to throw an outdoor festival — your backyard just became main stage.\nCreate Your Vibe: Enter the APP to customize the EQ and sync the pulsating light show to every kickdrum.",
     "Precio ( USD )": 83.0,
-    "Imagen_Path": "products_images/products_303.png",
+    "Imagen_Path": "products_images/products_302.png",
     "VIENE_LA_CAJA": 4,
     "video_url": "https://youtu.be/J-4PZ0nLJzM",
     "qcy-yf": "qcy"
@@ -3338,7 +3327,7 @@
     "PRODUCTO": "Tronsmart FIITUNE X30 Grey",
     "DESC_FULL": "Potencia de sonido: 80W con audio de alta resolución (Hi-Res).\nResistencia al agua: certificado IPX6, ideal para uso interior y exterior.\nConectividad: Bluetooth versión 5.3 para conexión estable y rápida.\nEmparejamiento estéreo: permite conectar dos altavoces para sonido envolvente.\nPortabilidad: diseño compacto y fácil de transportar.\nBatería: duración prolongada para uso extendido sin recarga frecuente.",
     "Precio ( USD )": 115.0,
-    "Imagen_Path": "products_images/products_304.png",
+    "Imagen_Path": "products_images/products_303.png",
     "VIENE_LA_CAJA": 1,
     "video_url": "https://youtu.be/VX-cASrm50Y",
     "qcy-yf": "QCY"
@@ -3349,7 +3338,7 @@
     "PRODUCTO": "Tronsmart Bang max+ USB de 64G de regalo",
     "DESC_FULL": "Sonido potente: 50W de potencia para graves fuertes y agudos claros.\nSonido envolvente: Tecnología de sonido envolvente para una experiencia completa.\nResistencia al agua IPX6: Ideal para usar cerca del agua o en exteriores.\nBatería de larga duración: Hasta 15 horas de uso con una sola carga.\nConexión Bluetooth: Conexión rápida con dispositivos inteligentes.\nDiseño portátil: Con correa para facilitar el transporte.\nTamaño del producto:47*26.5*19.6cm",
     "Precio ( USD )": 120.0,
-    "Imagen_Path": "products_images/products_305.png",
+    "Imagen_Path": "products_images/products_304.png",
     "VIENE_LA_CAJA": 2,
     "video_url": "https://youtu.be/TOosyUwIep8",
     "qcy-yf": "qcy"
@@ -3360,7 +3349,7 @@
     "PRODUCTO": "Tronsmart  Halo 300 black+ USB de 64G de regalo",
     "DESC_FULL": "Potente sonido estéreo: Se puede emparejar con otro altavoz para un sonido envolvente.\nLuces LED dinámicas: Iluminación personalizable para crear ambiente de fiesta.\nModos de reproducción versátiles: Bluetooth, entrada auxiliar (3.5 mm), USB y modo de guitarra.\nFunción karaoke: Entrada para micrófono con control de volumen.\nBanco de energía USB: Puede cargar otros dispositivos mientras está encendido.\nAutonomía optimizada: Apagado automático tras 30 minutos de inactividad.\nControl mediante app: Personalización de ecualización y efectos de luces con la aplicación Tronsmart.",
     "Precio ( USD )": 220.0,
-    "Imagen_Path": "products_images/products_306.png",
+    "Imagen_Path": "products_images/products_305.png",
     "VIENE_LA_CAJA": "D",
     "video_url": "https://youtu.be/UK1R22nGUjw",
     "qcy-yf": "qcy"
@@ -3371,7 +3360,7 @@
     "PRODUCTO": "Tronsmart T7 Mini Negro,Gris,Violeta",
     "DESC_FULL": "Tipo de parlante: Woofer, manos libres.\nCaracterísticas: A prueba de agua, Bluetooth, luces LED, batería recargable de 15W.\nIncluye: Micrófono de accesorio.\nLugar de colocación: Interiores y exteriores.\nTiempo de carga: 3 horas.\nTamaño del producto:12.6*12,6*14.2CM",
     "Precio ( USD )": 14.0,
-    "Imagen_Path": "products_images/products_307.png",
+    "Imagen_Path": "products_images/products_306.png",
     "VIENE_LA_CAJA": 24,
     "video_url": "https://youtu.be/i5Oi6wOl7Oo",
     "qcy-yf": "qcy"
@@ -3382,7 +3371,7 @@
     "PRODUCTO": "Tronsmart T7  Green Pink",
     "DESC_FULL": "Tipo de parlante: Portátil.\nCaracterísticas: A prueba de agua, Bluetooth, luces LED, batería recargable de 30W.\nUbicación: Escritorio.\nTiempo de carga: 3h.\nTamaño del producto:7.7*7.7*21cm",
     "Precio ( USD )": 29.0,
-    "Imagen_Path": "products_images/products_308.png",
+    "Imagen_Path": "products_images/products_307.png",
     "VIENE_LA_CAJA": 16,
     "video_url": "https://youtu.be/qr2J21TEfrE",
     "qcy-yf": "qcy"
@@ -3393,7 +3382,7 @@
     "PRODUCTO": "Tronsmart T8 Black Grey Blue 40W",
     "DESC_FULL": "Potencia mejorada de 40W: Ofrece un sonido más potente y nítido de 40W, ideal para disfrutar al aire libre.\nSonido de 360°: Proporciona una inmersión sonora de 360°, envolviendo a todos en una experiencia auditiva completa.\nAudio de 2.1 canales: La tecnología SoundPulse se une a un chip DSP de alta gama, ofreciendo graves más potentes y un sonido envolvente incluso al aire libre.\nResistente a los elementos exteriores: Hasta 18 horas de reproducción y certificación IPX7 a prueba de agua, para que tu música no se detenga ante la lluvia, salpicaduras o aventuras extremas.\nControl de rueda suave: Gira la rueda intuitiva para ajustar el sonido al instante.\nPersonalizados audio y luces: Personaliza tu experiencia con ajustes de EQ y espectáculos de luces vibrantes mediante la aplicación.",
     "Precio ( USD )": 36.0,
-    "Imagen_Path": "products_images/products_309.png",
+    "Imagen_Path": "products_images/products_308.png",
     "VIENE_LA_CAJA": 16,
     "video_url": "https://youtu.be/XD7wGkQmMIs",
     "qcy-yf": "QCY"
@@ -3404,7 +3393,7 @@
     "PRODUCTO": "Tronsmart Halo 100",
     "DESC_FULL": "Sonido potente: Sistema de 3 vías de 60W.\nGran autonomía: Hasta 18 horas de reproducción.\nDiseño: Ultra portátil con asa integrada.\nResistencia: Clasificación IPX6 (resistente al agua).\nPersonalización: Control de EQ y 5 modos de luces mediante App.\nVersatilidad: Emparejamiento estéreo, modo de audio dual, función powerbank y múltiples modos de reproducción (BT, USB, TF, AUX).\nTamaño del producto:28.67*17.97*15CM",
     "Precio ( USD )": 63.0,
-    "Imagen_Path": "products_images/products_310.png",
+    "Imagen_Path": "products_images/products_309.png",
     "VIENE_LA_CAJA": 4,
     "video_url": "",
     "qcy-yf": "qcy"
@@ -3415,7 +3404,7 @@
     "PRODUCTO": "Tronsmart Halo 110 Viene un micrófono",
     "DESC_FULL": "Función Karaoke: Incluye un micrófono con cable y puerto dedicado para una experiencia de canto completa.\nSonido potente: 60W de potencia con sistema de 3 vías (graves profundos y agudos nítidos).\nEspectáculo de luces: 5 modos de iluminación que se sincronizan con el ritmo de la música.\nGran autonomía: Hasta 18 horas de reproducción continua.\nDiseño portátil y resistente: Clasificación IPX6 (resistente al agua) y asa integrada para llevarlo a cualquier lugar.\nConectividad versátil: Bluetooth 5.3, emparejamiento estéreo, App para ecualización personalizada y múltiples entradas (USB, tarjeta TF, AUX).\nFunción Powerbank: Capacidad para cargar tus dispositivos móviles en caso de emergencia.\nTamaño del producto:28.7*19.8*15CM",
     "Precio ( USD )": 66.0,
-    "Imagen_Path": "products_images/products_311.png",
+    "Imagen_Path": "products_images/products_310.png",
     "VIENE_LA_CAJA": 4,
     "video_url": "",
     "qcy-yf": "qcy"
@@ -3426,7 +3415,7 @@
     "PRODUCTO": "Tronsmart Halo 200 with 2 pcs microphone+ USB de 64G de regalo",
     "DESC_FULL": "Manos libres\nTipo de bocina: Medio\nA prueba de agua\nLuces LED\nFunción de karaoke incorporada\nEfectos de voz variados\nBatería recargable de 120W\nColocación: El piso\nIdeal para música\nDuración de batería variable\nTiempo de carga: 3.5 horas\nTamaño del producto: 38.6*26.6*28.2cm",
     "Precio ( USD )": 130.0,
-    "Imagen_Path": "products_images/products_312.png",
+    "Imagen_Path": "products_images/products_311.png",
     "VIENE_LA_CAJA": 2,
     "video_url": "",
     "qcy-yf": "qcy"
@@ -3437,7 +3426,7 @@
     "PRODUCTO": "Tronsmart Trip",
     "DESC_FULL": "Parlante Bluetooth 5.3: Manos libres, apto para exteriores, a prueba de agua.\nConectividad: Bluetooth.\nCaracterísticas: Potencia de 10W, batería recargable, micrófono interno y de accesorio, soporte incluido.\nTiempo de carga: 3 horas.\nTamaño del producto：16.8*3.8*7.8CM",
     "Precio ( USD )": 12.0,
-    "Imagen_Path": "products_images/products_313.png",
+    "Imagen_Path": "products_images/products_312.png",
     "VIENE_LA_CAJA": 40,
     "video_url": "https://youtu.be/FXKRzBcQWow",
     "qcy-yf": "qcy"
@@ -3448,7 +3437,7 @@
     "PRODUCTO": "Tronsmart Trip 2 Blue Grey Red BLACK",
     "DESC_FULL": "EDriver de 42 mm + radiadores duales: graves 20 % más profundos con tecnología SoundPulse.\nAutonomía de 20 h con certificación IPX7 resistente al agua.\nPortátil: asa y clip para mochila o bolsillo.\nAsistentes de voz y llamadas siempre a mano.",
     "Precio ( USD )": 20.0,
-    "Imagen_Path": "products_images/products_314.png",
+    "Imagen_Path": "products_images/products_313.png",
     "VIENE_LA_CAJA": 40,
     "video_url": "https://www.youtube.com/watch?v=TJ19U3UjdOU",
     "qcy-yf": "qcy"
@@ -3459,7 +3448,7 @@
     "PRODUCTO": "Tronsmart Mirtune H1  8W Portable Outdoor Speaker black",
     "DESC_FULL": "Diseño compacto: Fácil de llevar.\nSonido estéreo: Graves profundos y agudos claros.\nConexión Bluetooth: Compatible con móviles y tabletas.\nResistente al agua: Ideal para exteriores.\nBatería duradera: Horas de reproducción continua.\nTamaño del producto:13.8*8.1*4.6cm",
     "Precio ( USD )": 16.0,
-    "Imagen_Path": "products_images/products_315.png",
+    "Imagen_Path": "products_images/products_314.png",
     "VIENE_LA_CAJA": 40,
     "video_url": "https://www.youtube.com/watch?v=Mh58WxxN4Qs",
     "qcy-yf": "qcy"
@@ -3470,7 +3459,7 @@
     "PRODUCTO": "Tronsmart Mirtune C3 24W Portable Speaker",
     "DESC_FULL": "Negro Y Azul\nSonido Potente: Woofer en forma de pista + tweeter + radiadores pasivos para graves intensos y agudos claros.\nSúper Portátil: Diseño compacto con correa para llevar fácilmente.\nResistente al Agua IPX7: Ideal para la piscina, el parque o la playa.\nEmparejamiento Estéreo: Conecta 2 altavoces para un sonido estéreo envolvente.\nHasta 12 Horas de Reproducción: Disfruta más con una sola carga.\nModo Doble: Conecta 2 dispositivos a la vez y alterna la música fácilmente.",
     "Precio ( USD )": 22.0,
-    "Imagen_Path": "products_images/products_316.png",
+    "Imagen_Path": "products_images/products_315.png",
     "VIENE_LA_CAJA": 24,
     "video_url": "",
     "qcy-yf": "qcy"
@@ -3481,7 +3470,7 @@
     "PRODUCTO": "Tronsmart Mirtune C3 30W Plus Portable Speaker black Y azul",
     "DESC_FULL": "Sonido potente de 30W: Claro y con graves profundos para todo tipo de música.\nResistencia al agua IPX7: Impermeable, perfecto para exteriores y cerca del agua.\nBatería de larga duración: Hasta 24 horas de reproducción con una carga.\nFunción TWS: Empareja dos altavoces para un sonido estéreo.\nConexión Bluetooth: Rápida y estable para múltiples dispositivos\nTamaño del producto:18*7*7.2cm",
     "Precio ( USD )": 30.0,
-    "Imagen_Path": "products_images/products_317.png",
+    "Imagen_Path": "products_images/products_316.png",
     "VIENE_LA_CAJA": 24,
     "video_url": "",
     "qcy-yf": "qcy"
@@ -3492,7 +3481,7 @@
     "PRODUCTO": "Sounarc K2 200W Karaoke Party Speaker black",
     "DESC_FULL": "Sonido potente: 200W de sonido estéreo.\nMicrófonos incluidos: 2 micrófonos inalámbricos.\nBatería de larga duración: 24.000 mAh, hasta 24 horas de uso.\nLuces LED: Efectos de luz multicolor para animar el ambiente.\nCambio de voz: Efectos divertidos para karaoke.\nConectividad: Bluetooth, transmisión en vivo y entrada auxiliar.\nControl remoto: Para mayor comodidad.\nResistente al agua: Certificación IPX6.\nFunción power bank: Carga otros dispositivos.",
     "Precio ( USD )": 95.0,
-    "Imagen_Path": "products_images/products_318.png",
+    "Imagen_Path": "products_images/products_317.png",
     "VIENE_LA_CAJA": "D",
     "video_url": "",
     "qcy-yf": "qcy"
@@ -3503,7 +3492,7 @@
     "PRODUCTO": "Xiaomi 2K Monitor A27Qi EU",
     "DESC_FULL": "Pantalla de 27 pulgadas con resolución 2K QHD (2560 × 1440) para imágenes claras y detalladas.\nPanel IPS con ángulo de visión de 178° para colores consistentes desde diferentes posiciones.\nFrecuencia de actualización de 100 Hz para una visualización más fluida.\nAlta precisión de color (100% sRGB) ideal para trabajo, diseño y entretenimiento.\nModo de baja luz azul y tecnología DC Dimming para reducir la fatiga visual.\nDiseño de biseles delgados que mejora la experiencia visual y permite configuraciones de múltiples pantallas.",
     "Precio ( USD )": 115.0,
-    "Imagen_Path": "products_images/products_319.png",
+    "Imagen_Path": "products_images/products_318.png",
     "VIENE_LA_CAJA": "D",
     "video_url": "",
     "qcy-yf": "yf"
@@ -3514,7 +3503,7 @@
     "PRODUCTO": "Xiaomi Gaming Monitor G24i 2026 OM4FE-EU",
     "DESC_FULL": "Pantalla de 23.8 pulgadas Full HD (1920 × 1080) con imagen clara y nítida.\nFrecuencia de actualización de 180 Hz para una experiencia de juego extremadamente fluida.\nTiempo de respuesta de 1 ms que reduce el desenfoque en movimientos rápidos.\nPanel IPS con ángulo de visión de 178° para colores más precisos y consistentes.\nCompatible con tecnologías de sincronización adaptativa para evitar tearing y stuttering.\nModo de baja luz azul para proteger la vista durante largas sesiones de uso.",
     "Precio ( USD )": 95.0,
-    "Imagen_Path": "products_images/products_320.png",
+    "Imagen_Path": "products_images/products_319.png",
     "VIENE_LA_CAJA": "D",
     "video_url": "",
     "qcy-yf": "yf"
@@ -3525,7 +3514,7 @@
     "PRODUCTO": "Xiaomi Sports Fanny Pack",
     "DESC_FULL": "Ligero y resistente al agua: Diseño portátil y a prueba de agua.\nAlmacenamiento multifuncional: Varios bolsillos para organizar tus pertenencias.\nComodidad al llevarlo puesto: Con respaldo transpirable para un ajuste cómodo.\nCorrea ajustable: Se adapta a diferentes tamaños para una mejor experiencia de uso.",
     "Precio ( USD )": 12.0,
-    "Imagen_Path": "products_images/products_321.png",
+    "Imagen_Path": "products_images/products_320.png",
     "VIENE_LA_CAJA": "ultimo 15 uni",
     "video_url": "",
     "qcy-yf": "yf"
@@ -3536,7 +3525,7 @@
     "PRODUCTO": "Xiaomi Roll Top Casual Backpack GL 23L",
     "DESC_FULL": "Capacidad de aproximadamente 23 litros, con diseño enrollable para ajustar el espacio.\nDimensiones: 290 x 170 x 430 mm, apta para equipaje de mano.\nPeso ligero, alrededor de 840 gramos.\nMaterial resistente al agua (poliuretano y poliéster), fácil de limpiar.\nCompartimento principal con sección para laptop de hasta 15.6 pulgadas.\nBolsillos frontales y laterales para acceso rápido a objetos y botellas.\nEspalda acolchonada y ventilada para mayor comodidad al llevarla.",
     "Precio ( USD )": 38.0,
-    "Imagen_Path": "products_images/products_322.png",
+    "Imagen_Path": "products_images/products_321.png",
     "VIENE_LA_CAJA": "ultimo 14 uni",
     "video_url": "",
     "qcy-yf": "yf"
