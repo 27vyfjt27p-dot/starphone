@@ -970,7 +970,7 @@ async function loadProducts() {
                 // 补丁：收藏夹过滤
                 if (isFavoriteMode && !favorites[p.id]) return false;
 
-                const matchKeyword = !keyword || (p.PRODUCTO + (p.MARCA||"") + (p.CATEGORIA||"") + (p.TIPO||"")).toUpperCase().includes(keyword.toUpperCase());
+                const matchKeyword = !keyword || (p.PRODUCTO + (p.MARCA||"") + (p.CATEGORIA||"") + (p.TIPO||"") + (p['新到货']||"")).toUpperCase().includes(keyword.toUpperCase());
                 
                 let matchPrice = true;
                 const price = parseFloat(p['Precio ( USD )']) || 0;
