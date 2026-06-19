@@ -1439,6 +1439,296 @@ html += `
             document.getElementById('filter-content').innerHTML = html || "<p class='text-slate-400 text-xs font-bold uppercase'>No hay filtros disponibles</p>";
         }
         init(); // 网页初始化，这行保留
+        // ==========================================
+// 品牌轮播 - 拖拽 + 自动滚动（需求完整版）
+// ==========================================
+(function() {
+    function initBrandCarousel() {
+        const container = document.querySelector('.brand-marquee-container');
+        const content = document.querySelector('.brand-marquee-content');
+        const groups = document.querySelectorAll('.brand-marquee-group');
+        
+        if (!container || !content || groups.length === 0) {
+            setTimeout(initBrandCarousel, 100);
+            return;
+        }
+        
+        // --- 配置 ---
+        const CONFIG = {
+                duration: window.innerWidth <= 768 ? 40000 : 55000,  // 手机30秒，电脑55秒
+            sensitivity: 1.2,       // 拖拽灵敏度
+            momentum: 0.08,         // 惯性系数
+            minVelocity: 0.5,       // 最小惯性速度
+        };
+        
+        // --- 计算总宽度 ---
+        let totalWidth = 0;
+        groups.forEach(g => { totalWidth += g.scrollWidth; });
+        // 因为有两组，实际可滚动范围是一组宽度
+        const singleGroupWidth = totalWidth / 2;
+        
+        // --- 状态 ---
+        let currentPosition = 0;          // 当前位置（像素）
+        let isDragging = false;
+        let startX = 0;
+        let startPosition = 0;
+        let velocity = 0;
+        let lastX = 0;
+        let lastTime = 0;
+        let animationId = null;
+        let autoScrollPaused = false;
+        let lastTimestamp = 0;
+        let isAutoScrolling = true;
+        
+        // --- 核心：更新位置 ---
+        function setPosition(pos, withTransition = false) {
+            // 确保位置在合理范围内（无限循环）
+            // 位置范围：-singleGroupWidth 到 0
+            // 当超出范围时，无缝跳转到对应位置
+            if (pos > 0) {
+                pos = pos - singleGroupWidth;
+            } else if (pos < -singleGroupWidth) {
+                pos = pos + singleGroupWidth;
+            }
+            
+            currentPosition = pos;
+            
+            if (withTransition) {
+                content.style.transition = 'transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            } else {
+                content.style.transition = 'none';
+            }
+            
+            content.style.transform = `translateX(${pos}px)`;
+        }
+        
+        // --- 自动滚动（用 requestAnimationFrame） ---
+        function startAutoScroll() {
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+                animationId = null;
+            }
+            
+            isAutoScrolling = true;
+            autoScrollPaused = false;
+            lastTimestamp = 0;
+            
+            function step(timestamp) {
+                if (!lastTimestamp) lastTimestamp = timestamp;
+                const delta = timestamp - lastTimestamp;
+                lastTimestamp = timestamp;
+                
+                // 如果拖拽中或暂停，不更新位置
+                if (!isDragging && !autoScrollPaused) {
+                    // 向左移动：速度 = 总宽度 / 时长
+                    const speed = singleGroupWidth / CONFIG.duration;
+                    const moveDistance = speed * delta;
+                    const newPos = currentPosition - moveDistance;
+                    setPosition(newPos, false);
+                }
+                
+                animationId = requestAnimationFrame(step);
+            }
+            
+            animationId = requestAnimationFrame(step);
+        }
+        
+        // --- 停止自动滚动 ---
+        function stopAutoScroll() {
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+                animationId = null;
+            }
+            isAutoScrolling = false;
+        }
+        
+        // --- 暂停自动滚动（拖拽时用） ---
+        function pauseAutoScroll() {
+            autoScrollPaused = true;
+        }
+        
+        // --- 恢复自动滚动（拖拽结束后用） ---
+        function resumeAutoScroll() {
+            autoScrollPaused = false;
+            if (!isAutoScrolling) {
+                startAutoScroll();
+            }
+        }
+        
+        // --- 鼠标事件 ---
+        container.addEventListener('mousedown', function(e) {
+            if (e.button !== 0) return;
+            isDragging = true;
+            container.style.cursor = 'grabbing';
+            
+            // 暂停自动滚动
+            pauseAutoScroll();
+            
+            startX = e.pageX - container.offsetLeft;
+            startPosition = currentPosition;
+            lastX = startX;
+            lastTime = Date.now();
+            velocity = 0;
+            
+            content.style.transition = 'none';
+            e.preventDefault();
+        });
+        
+        document.addEventListener('mousemove', function(e) {
+            if (!isDragging) return;
+            
+            const x = e.pageX - container.offsetLeft;
+            const walk = (x - startX) * CONFIG.sensitivity;
+            let newPos = startPosition + walk;
+            
+            // 无限循环边界处理：允许超出，但会自动循环
+            setPosition(newPos, false);
+            
+            const now = Date.now();
+            const dt = now - lastTime;
+            if (dt > 0) {
+                velocity = (x - lastX) / dt;
+            }
+            lastX = x;
+            lastTime = now;
+        });
+        
+        document.addEventListener('mouseup', function() {
+            if (!isDragging) return;
+            isDragging = false;
+            container.style.cursor = 'grab';
+            
+            // 惯性滑动
+            if (Math.abs(velocity) > CONFIG.minVelocity) {
+                const momentumDistance = velocity * 200 * CONFIG.momentum;
+                let targetPos = currentPosition + momentumDistance;
+                
+                // 惯性滑动动画
+                const startPos = currentPosition;
+                const duration = 800;
+                const startTime = Date.now();
+                
+                function momentumStep() {
+                    const elapsed = Date.now() - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    // easeOutCubic
+                    const ease = 1 - Math.pow(1 - progress, 3);
+                    const currentPos = startPos + (targetPos - startPos) * ease;
+                    setPosition(currentPos, false);
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(momentumStep);
+                    } else {
+                        // 惯性结束，恢复自动滚动
+                        resumeAutoScroll();
+                    }
+                }
+                momentumStep();
+            } else {
+                // 没有惯性，直接恢复自动滚动
+                resumeAutoScroll();
+            }
+        });
+        
+        // --- 触摸事件 ---
+        let touchStartX = 0;
+        let touchStartPosition = 0;
+        
+        container.addEventListener('touchstart', function(e) {
+            isDragging = true;
+            pauseAutoScroll();
+            
+            const touch = e.touches[0];
+            touchStartX = touch.pageX - container.offsetLeft;
+            touchStartPosition = currentPosition;
+            lastX = touchStartX;
+            lastTime = Date.now();
+            velocity = 0;
+            
+            content.style.transition = 'none';
+        }, { passive: true });
+        
+        container.addEventListener('touchmove', function(e) {
+            if (!isDragging) return;
+            
+            const touch = e.touches[0];
+            const x = touch.pageX - container.offsetLeft;
+            const walk = (x - touchStartX) * CONFIG.sensitivity;
+            let newPos = touchStartPosition + walk;
+            
+            setPosition(newPos, false);
+            
+            const now = Date.now();
+            const dt = now - lastTime;
+            if (dt > 0) {
+                velocity = (x - lastX) / dt;
+            }
+            lastX = x;
+            lastTime = now;
+        }, { passive: true });
+        
+        document.addEventListener('touchend', function() {
+            if (!isDragging) return;
+            isDragging = false;
+            
+            // 惯性滑动
+            if (Math.abs(velocity) > CONFIG.minVelocity) {
+                const momentumDistance = velocity * 200 * CONFIG.momentum;
+                let targetPos = currentPosition + momentumDistance;
+                
+                const startPos = currentPosition;
+                const duration = 800;
+                const startTime = Date.now();
+                
+                function momentumStep() {
+                    const elapsed = Date.now() - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const ease = 1 - Math.pow(1 - progress, 3);
+                    const currentPos = startPos + (targetPos - startPos) * ease;
+                    setPosition(currentPos, false);
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(momentumStep);
+                    } else {
+                        resumeAutoScroll();
+                    }
+                }
+                momentumStep();
+            } else {
+                resumeAutoScroll();
+            }
+        });
+        
+        // --- 阻止拖拽选中 ---
+        content.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+        });
+        
+        // --- 窗口变化时重新计算 ---
+        let resizeTimer;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() {
+                // 重新计算宽度
+                let newTotalWidth = 0;
+                document.querySelectorAll('.brand-marquee-group').forEach(g => {
+                    newTotalWidth += g.scrollWidth;
+                });
+                singleGroupWidth = newTotalWidth / 2;
+            }, 300);
+        });
+        
+        // --- 启动自动滚动 ---
+        startAutoScroll();
+    }
+    
+    // 等待 DOM 加载
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initBrandCarousel);
+    } else {
+        initBrandCarousel();
+    }
+})();
         async function downloadProductCatalogPDF() {
     if (typeof vibrate === 'function') vibrate();
     const { jsPDF } = window.jspdf;
