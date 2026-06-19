@@ -1008,10 +1008,14 @@ async function loadProducts() {
                     <button onclick="event.stopPropagation(); toggleFav('${p.id}')" class="fav-btn">${favorites[p.id] ? '❤️' : '🤍'}</button>
                     
                     <div class="image-container" onclick="openLightbox('${imgUrl}')">
-    ${p.PRODUCTO.toUpperCase().includes('SELLADO') ? 
-        '<div class="absolute top-2 right-2 z-10 bg-green-600 text-white text-[10px] font-black px-2 py-1 rounded-lg shadow-md">SELLADO</div>' : ''}
-    ${p.PRODUCTO.toUpperCase().includes('ACTIVADO') ? 
-        '<div class="absolute top-2 right-2 z-10 bg-amber-500 text-white text-[10px] font-black px-2 py-1 rounded-lg shadow-md">ACTIVADO</div>' : ''}
+    <div class="absolute top-2 right-2 z-10 flex flex-col gap-1">
+        ${p['新到货'] && p['新到货'] === 'NUEVO' ? 
+            '<div class="bg-blue-500 text-white text-[10px] font-black px-2 py-1 rounded-lg shadow-md">NUEVO</div>' : ''}
+        ${p.PRODUCTO && p.PRODUCTO.toUpperCase().includes('SELLADO') ? 
+            '<div class="bg-green-600 text-white text-[10px] font-black px-2 py-1 rounded-lg shadow-md">SELLADO</div>' : ''}
+        ${p.PRODUCTO && p.PRODUCTO.toUpperCase().includes('ACTIVADO') ? 
+            '<div class="bg-amber-500 text-white text-[10px] font-black px-2 py-1 rounded-lg shadow-md">ACTIVADO</div>' : ''}
+    </div>
     <img src="${imgUrl}" onerror="handleImgError(this)" loading="lazy">
 </div>
 
@@ -1725,7 +1729,7 @@ html += `
     // 1. 获取当前筛选后的产品列表
     const filteredProducts = products.filter(p => {
         const { keyword, MARCA, CATEGORIA, TIPO } = activeFilters;
-        const matchKeyword = !keyword || (p.PRODUCTO + (p.MARCA||"") + (p.CATEGORIA||"") + (p.TIPO||"")).toUpperCase().includes(keyword.toUpperCase());
+        const matchKeyword = !keyword || (p.PRODUCTO + (p.MARCA||"") + (p.CATEGORIA||"") + (p.TIPO||"") + (p['新到货']||"")).toUpperCase().includes(keyword.toUpperCase());
         return matchKeyword && (!MARCA || p.MARCA === MARCA) && (!CATEGORIA || p.CATEGORIA === CATEGORIA) && (!TIPO || p.TIPO === TIPO);
     });
 
