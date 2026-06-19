@@ -3720,21 +3720,10 @@
   {
     "MARCA": "XIAOMI",
     "TIPO": "Monitor",
-    "PRODUCTO": "Xiaomi 2K Monitor A27Qi EU",
-    "DESC_FULL": "Pantalla de 27 pulgadas con resolución 2K QHD (2560 × 1440) para imágenes claras y detalladas.\nPanel IPS con ángulo de visión de 178° para colores consistentes desde diferentes posiciones.\nFrecuencia de actualización de 100 Hz para una visualización más fluida.\nAlta precisión de color (100% sRGB) ideal para trabajo, diseño y entretenimiento.\nModo de baja luz azul y tecnología DC Dimming para reducir la fatiga visual.\nDiseño de biseles delgados que mejora la experiencia visual y permite configuraciones de múltiples pantallas.",
-    "Precio ( USD )": 115.0,
-    "Imagen_Path": "products_images/products_339.png",
-    "VIENE_LA_CAJA": "D",
-    "video_url": "",
-    "qcy-yf": "yf"
-  },
-  {
-    "MARCA": "XIAOMI",
-    "TIPO": "Monitor",
     "PRODUCTO": "Xiaomi 2K Gaming Monitor G27Qi 2026",
     "DESC_FULL": "Calidad de imagen: Pantalla de 27 pulgadas, resolución 2K (2560 x 1440) con panel Fast IPS.\nFluidez: Tasa de refresco de 200Hz y tiempo de respuesta de 1ms (GTG) para evitar retrasos y desenfoque.\nColor y HDR: Soporta HDR 400 y cuenta con una amplia gama de colores (95% DCI-P3 y 100% sRGB).\nSin cortes: Tecnología FreeSync Premium para una experiencia de juego fluida.\nProtección ocular: Incluye tecnología de baja luz azul por hardware, certificada por TÜV.\nConectividad: Dispone de 2 puertos DP 1.4 y 2 puertos HDMI 2.0.",
     "Precio ( USD )": 158.0,
-    "Imagen_Path": "products_images/products_340.png",
+    "Imagen_Path": "products_images/products_339.png",
     "VIENE_LA_CAJA": "D",
     "video_url": "",
     "qcy-yf": "yf"
@@ -3745,7 +3734,7 @@
     "PRODUCTO": "Xiaomi Sports Fanny Pack",
     "DESC_FULL": "Ligero y resistente al agua: Diseño portátil y a prueba de agua.\nAlmacenamiento multifuncional: Varios bolsillos para organizar tus pertenencias.\nComodidad al llevarlo puesto: Con respaldo transpirable para un ajuste cómodo.\nCorrea ajustable: Se adapta a diferentes tamaños para una mejor experiencia de uso.",
     "Precio ( USD )": 12.0,
-    "Imagen_Path": "products_images/products_341.png",
+    "Imagen_Path": "products_images/products_340.png",
     "VIENE_LA_CAJA": "ultimo 15 uni",
     "video_url": "",
     "qcy-yf": "yf"
@@ -3756,7 +3745,7 @@
     "PRODUCTO": "Xiaomi Electric Scooter Storage Bag",
     "DESC_FULL": "Protección rígida: Fabricada con tres capas de material compuesto (PU, EVA y tela suave), ofrece resistencia contra impactos, golpes y deformaciones.\nAlmacenamiento organizado: Diseño con múltiples compartimentos que permite guardar cómodamente cargadores, baterías portátiles, teléfonos, llaves y otros objetos personales.\nMontaje versátil: Incluye 4 correas de velcro ajustables para una instalación rápida y fácil en diversos modelos de patinetes, bicicletas plegables o vehículos de autoequilibrio.\nAcceso práctico: Cuenta con una apertura amplia y cremalleras bidireccionales impermeables, facilitando el acceso rápido a tus pertenencias.\nDiseño compacto: Con medidas de 260 x 140 x 110 mm, combina un estilo moderno con resistencia a la lluvia, ideal para los desplazamientos diarios.",
     "Precio ( USD )": 14.0,
-    "Imagen_Path": "products_images/products_342.png",
+    "Imagen_Path": "products_images/products_341.png",
     "VIENE_LA_CAJA": "D",
     "video_url": "",
     "qcy-yf": "yf"
@@ -3767,7 +3756,7 @@
     "PRODUCTO": "Xiaomi Roll Top Casual Backpack GL 23L",
     "DESC_FULL": "Capacidad de aproximadamente 23 litros, con diseño enrollable para ajustar el espacio.\nDimensiones: 290 x 170 x 430 mm, apta para equipaje de mano.\nPeso ligero, alrededor de 840 gramos.\nMaterial resistente al agua (poliuretano y poliéster), fácil de limpiar.\nCompartimento principal con sección para laptop de hasta 15.6 pulgadas.\nBolsillos frontales y laterales para acceso rápido a objetos y botellas.\nEspalda acolchonada y ventilada para mayor comodidad al llevarla.",
     "Precio ( USD )": 38.0,
-    "Imagen_Path": "products_images/products_343.png",
+    "Imagen_Path": "products_images/products_342.png",
     "VIENE_LA_CAJA": "ultimo 14 uni",
     "video_url": "",
     "qcy-yf": "yf"
@@ -3778,7 +3767,7 @@
     "PRODUCTO": "Xiaomi Business Backpack GL",
     "DESC_FULL": "Almacenamiento compartimentado: Incluye un compartimento dedicado para laptop y varios bolsillos funcionales para organizar teléfonos, cuadernos y accesorios de oficina.\nDiseño ejecutivo minimalista: Un estilo sobrio y profesional, ideal para reuniones de negocios, traslados diarios y entornos de oficina.\nSistema de transporte cómodo: Diseño ergonómico con respaldo transpirable y correas acolchadas para reducir la carga durante el uso prolongado.\nMaterial duradero: Fabricado con tejidos resistentes al desgaste y repelentes al agua para proteger los dispositivos internos en diversas condiciones climáticas.",
     "Precio ( USD )": 55.0,
-    "Imagen_Path": "products_images/products_344.png",
+    "Imagen_Path": "products_images/products_343.png",
     "VIENE_LA_CAJA": 4,
     "video_url": "",
     "qcy-yf": "yf"
@@ -3789,7 +3778,7 @@
     "PRODUCTO": "Xiaomi Square Sunglasses",
     "DESC_FULL": "Polarización HD: Cuentan con lentes polarizadas TAC de alta definición que filtran eficazmente los reflejos y el deslumbramiento, reduciendo la fatiga ocular.\nResistencia a impactos: Las lentes son altamente resistentes a los impactos y cuentan con una función de autorreparación de pequeños arañazos.\nLigeras y cómodas: Diseñadas ergonómicamente con materiales livianos, lo que permite usarlas durante largos periodos sin molestias en la nariz o las orejas.\nProtección UV: Ofrecen protección UV400, bloqueando eficazmente los dañinos rayos ultravioleta del sol.\nDiseño versátil: Su forma cuadrada clásica ofrece un estilo minimalista que se adapta a diversos tipos de rostro, ideal tanto para ir al trabajo como para actividades al aire libre.",
     "Precio ( USD )": 25.0,
-    "Imagen_Path": "products_images/products_345.png",
+    "Imagen_Path": "products_images/products_344.png",
     "VIENE_LA_CAJA": "D",
     "video_url": "",
     "qcy-yf": "yf"
