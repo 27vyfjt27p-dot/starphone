@@ -2345,7 +2345,7 @@
   {
     "MARCA": "XIAOMI",
     "TIPO": "mouse",
-    "PRODUCTO": "Xiaomi Wireless Mouse 3 white pink blue black",
+    "PRODUCTO": "Xiaomi Wireless Mouse 3 solo azul",
     "DESC_FULL": "Diseño ligero: Diseño minimalista y ergonómico que ofrece un agarre cómodo para jornadas de trabajo largas.\nClic silencioso: Botones con tecnología de clic silencioso, ideal para entornos de oficina tranquilos sin molestar a los demás.\nConectividad multidispositivo: Compatible con modo dual (receptor inalámbrico de 2.4 GHz y Bluetooth), permitiendo alternar fácilmente entre dos dispositivos.\nSensor de alta precisión: Rendimiento de seguimiento óptico preciso para un movimiento suave y sensible.\nLarga duración de batería: Tecnología de ahorro de energía inteligente para prolongar la vida útil de la batería y reducir la frecuencia de reemplazo.",
     "Precio ( USD )": 11.0,
     "Imagen_Path": "products_images/products_214.png",
@@ -2598,10 +2598,21 @@
   {
     "MARCA": "XIAOMI",
     "TIPO": "Compresor de aire",
+    "PRODUCTO": "Mijia Compact Portable Electric Air Compressor",
+    "DESC_FULL": "Diseño compacto y portátil: pesa solo 240 g, fácil de llevar en mochila o coche.\nAlta presión hasta 150 PSI: adecuado para bicicletas, motos, scooters, balones y emergencias de coche.\nInflado rápido: puede inflar un neumático de bicicleta en aproximadamente 60 segundos.\nDetección precisa de presión: pantalla digital con precisión aproximada de ±1 PSI.\nParada automática: se detiene cuando alcanza la presión configurada.\nModos preestablecidos: bicicleta, motocicleta, scooter, balón y modo personalizado.\nBatería integrada 2000 mAh: permite inflar hasta 8 neumáticos de bicicleta con una carga.\nLuz LED integrada: útil para inflar neumáticos en la noche o en emergencias.",
+    "Precio ( USD )": 26.0,
+    "Imagen_Path": "products_images/products_237.png",
+    "VIENE_LA_CAJA": 24,
+    "video_url": "",
+    "qcy-yf": "yf"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "TIPO": "Compresor de aire",
     "PRODUCTO": "Xiaomi Portable Electric Air Compressor 2",
     "DESC_FULL": "Inflado rápido: 25% más rápido que la generación anterior.\nVersatilidad: 6 modos preestablecidos (coche, moto, bici, scooter, balón y manual).\nPrecisión digital: Detección de presión en tiempo real con parada automática al alcanzar el nivel deseado.\nPortátil y sin cables: Diseño ligero (490g) con batería integrada de 2000mAh.\nUso fácil: Incluye adaptador de conexión rápida y luz integrada para uso nocturno.\nCarga universal: Puerto de carga tipo C.",
     "Precio ( USD )": 30.0,
-    "Imagen_Path": "products_images/products_237.png",
+    "Imagen_Path": "products_images/products_238.png",
     "VIENE_LA_CAJA": 18,
     "video_url": "",
     "qcy-yf": "yf"
@@ -2612,19 +2623,8 @@
     "PRODUCTO": "Xiaomi Portable Electric Air Compressor 2 Pro",
     "DESC_FULL": "Inflado rápido: Cilindro de aleación de alta precisión que infla un neumático en 3,5 minutos.\nBatería de larga duración: Puede inflar hasta 16 neumáticos de coche con una sola carga.\nMúltiples modos preestablecidos: Ajustes para bicicletas, motos, coches, patinetes eléctricos y balones.\nMonitorización en tiempo real: Muestra la presión del neumático en todo momento para evitar sobreinflado.\nIluminación multifuncional: Luz blanca para iluminación general y modos de emergencia con luz roja intermitente.",
     "Precio ( USD )": 38.0,
-    "Imagen_Path": "products_images/products_238.png",
-    "VIENE_LA_CAJA": 12,
-    "video_url": "",
-    "qcy-yf": "yf"
-  },
-  {
-    "MARCA": "XIAOMI",
-    "TIPO": "Compresor de aire",
-    "PRODUCTO": "Mijia Compact Portable Electric Air Compressor",
-    "DESC_FULL": "Diseño compacto y portátil: pesa solo 240 g, fácil de llevar en mochila o coche.\nAlta presión hasta 150 PSI: adecuado para bicicletas, motos, scooters, balones y emergencias de coche.\nInflado rápido: puede inflar un neumático de bicicleta en aproximadamente 60 segundos.\nDetección precisa de presión: pantalla digital con precisión aproximada de ±1 PSI.\nParada automática: se detiene cuando alcanza la presión configurada.\nModos preestablecidos: bicicleta, motocicleta, scooter, balón y modo personalizado.\nBatería integrada 2000 mAh: permite inflar hasta 8 neumáticos de bicicleta con una carga.\nLuz LED integrada: útil para inflar neumáticos en la noche o en emergencias.",
-    "Precio ( USD )": 26.0,
     "Imagen_Path": "products_images/products_239.png",
-    "VIENE_LA_CAJA": 24,
+    "VIENE_LA_CAJA": 12,
     "video_url": "",
     "qcy-yf": "yf"
   },
