@@ -161,20 +161,10 @@
   },
   {
     "MARCA": "BASEUS",
-    "PRODUCTO": "Baseus GaN5 Pro Gallium nitride fast charger 100W C+U",
-    "DESC_FULL": "Tecnología GaN de 100W: Potente salida de 100W, carga rápida para dispositivos, puertos USB-C y USB-A para carga simultánea.\nTecnología BPS: Distribuye energía inteligentemente para carga eficiente, compatible con PD, QC y PPS.\nDiseño compacto y portátil: Carga hasta tres veces más rápido que cargadores convencionales, se mantiene fresco para evitar sobrecalentamiento y garantiza rendimiento seguro.",
-    "Precio ( USD )": 15,
-    "Imagen_Path": "OFERTA_images/OFERTA_017.png",
-    "VIENE_LA_CAJA": "super oferta",
-    "video_url": "",
-    "qcy-yf": "QCY"
-  },
-  {
-    "MARCA": "BASEUS",
     "PRODUCTO": "Baseus  GaN3 Pro Gallium nitride desktop strip AC+2U+2C 65W SUPERVOOC edition",
     "DESC_FULL": "Conector USB\nVoltaje de entrada: 12/24V (Bivolt)\nVoltaje de salida: 65W\nIncluye cable\n4 puertos de carga\nProtección contra sobrecarga",
     "Precio ( USD )": 15,
-    "Imagen_Path": "OFERTA_images/OFERTA_018.png",
+    "Imagen_Path": "OFERTA_images/OFERTA_017.png",
     "VIENE_LA_CAJA": "super oferta",
     "video_url": "",
     "qcy-yf": "QCY"
@@ -184,7 +174,7 @@
     "PRODUCTO": "Baseus  Linrui series digital plugboard 3AC+1U+1C+ extended cable C 65W 1.5m power cable",
     "DESC_FULL": "",
     "Precio ( USD )": 20,
-    "Imagen_Path": "OFERTA_images/OFERTA_019.png",
+    "Imagen_Path": "OFERTA_images/OFERTA_018.png",
     "VIENE_LA_CAJA": "super oferta",
     "video_url": "",
     "qcy-yf": "QCY"
@@ -194,7 +184,7 @@
     "PRODUCTO": "Mi 67W desktop fast charging socket Pro",
     "DESC_FULL": "Carga rápida + Expansión: Carga rápida de 67W y transmisión de datos, soporta múltiples dispositivos.\nSiete en uno: Incluye 1 puerto USB-A, 1 HDMI, 2 puertos USB-C, y 3 enchufes de corriente alterna.\nCable de carga rápida dedicado: Ideal para uso en escritorios de oficina.\nTransmisión de datos: Soporta discos duros y dispositivos de almacenamiento.\n4K @ 60Hz: Proyección ultra clara y fluida.\nCapacidad de carga: Carga rápida de 67W y hasta 2500W máximos en enchufes de corriente alterna.",
     "Precio ( USD )": 20,
-    "Imagen_Path": "OFERTA_images/OFERTA_020.png",
+    "Imagen_Path": "OFERTA_images/OFERTA_019.png",
     "VIENE_LA_CAJA": "super oferta",
     "video_url": "",
     "qcy-yf": "QCY"
@@ -204,7 +194,7 @@
     "PRODUCTO": "Xiaomi  jack board 4 position 4 control 3 meters",
     "DESC_FULL": "",
     "Precio ( USD )": 3,
-    "Imagen_Path": "OFERTA_images/OFERTA_021.png",
+    "Imagen_Path": "OFERTA_images/OFERTA_020.png",
     "VIENE_LA_CAJA": "OFERTA!!!",
     "video_url": "",
     "qcy-yf": "QCY"
@@ -214,7 +204,7 @@
     "PRODUCTO": "Tronsmart Trip",
     "DESC_FULL": "Parlante Bluetooth 5.3: Manos libres, apto para exteriores, a prueba de agua.\nConectividad: Bluetooth.\nCaracterísticas: Potencia de 10W, batería recargable, micrófono interno y de accesorio, soporte incluido.\nTiempo de carga: 3 horas.\nTamaño del producto：16.8*3.8*7.8CM",
     "Precio ( USD )": 12,
-    "Imagen_Path": "OFERTA_images/OFERTA_022.png",
+    "Imagen_Path": "OFERTA_images/OFERTA_021.png",
     "VIENE_LA_CAJA": 40,
     "video_url": "",
     "qcy-yf": "QCY"
@@ -224,7 +214,7 @@
     "PRODUCTO": "Sounarc K2 200W Karaoke Party Speaker black",
     "DESC_FULL": "Sonido potente: 200W de sonido estéreo.\nMicrófonos incluidos: 2 micrófonos inalámbricos.\nBatería de larga duración: 24.000 mAh, hasta 24 horas de uso.\nLuces LED: Efectos de luz multicolor para animar el ambiente.\nCambio de voz: Efectos divertidos para karaoke.\nConectividad: Bluetooth, transmisión en vivo y entrada auxiliar.\nControl remoto: Para mayor comodidad.\nResistente al agua: Certificación IPX6.\nFunción power bank: Carga otros dispositivos.",
     "Precio ( USD )": 95,
-    "Imagen_Path": "OFERTA_images/OFERTA_023.png",
+    "Imagen_Path": "OFERTA_images/OFERTA_022.png",
     "VIENE_LA_CAJA": "D",
     "video_url": "",
     "qcy-yf": "QCY"
@@ -234,9 +224,19 @@
     "PRODUCTO": "BOMIDI clipper L2 Gunmetal Gray",
     "DESC_FULL": "Diseño recargable (puerto USB-C) con carga completa en aproximadamente 70 minutos\nIncluye 4 peines guía (3 mm, 6 mm, 9 mm y 12 mm) para diferentes estilos de corte\nCuchillas de alta calidad, precisas y sin tirones, adecuadas para todo tipo de cabello\nCabezal desmontable y lavable, fácil de limpiar\nDiseño ligero y ergonómico, ideal para uso doméstico o profesional ligero",
     "Precio ( USD )": 5,
-    "Imagen_Path": "OFERTA_images/OFERTA_024.png",
+    "Imagen_Path": "OFERTA_images/OFERTA_023.png",
     "VIENE_LA_CAJA": 40,
     "video_url": "",
     "qcy-yf": "QCY"
+  },
+  {
+    "MARCA": "TRONSMART",
+    "PRODUCTO": "Tronsmart KH03 ANC",
+    "DESC_FULL": "Cancelación de Ruido Activa: Bloquea el ruido ambiental para mayor concentración.\nVolumen Seguro (93dB): Protección auditiva diseñada específicamente para niños.\nLuces LED: Modos de iluminación para un aprendizaje más divertido.\nDiseño Cómodo: Almohadillas transpirables ideales para uso prolongado.\nMicrófono HD: Audio claro para clases en línea.\nBatería de larga duración: Hasta 70 horas de reproducción.",
+    "Precio ( USD )": 18,
+    "Imagen_Path": "OFERTA_images/OFERTA_024.png",
+    "VIENE_LA_CAJA": "D",
+    "video_url": "",
+    "qcy-yf": ""
   }
 ]
