@@ -879,6 +879,7 @@ async function loadProducts() {
 
         function showAnnouncement(newDate) {
             const el = document.getElementById('update-announcement');
+            el.style.display = '';
             el.classList.remove('-translate-y-32', 'opacity-0', 'pointer-events-none');
             el.classList.add('translate-y-0', 'opacity-100');
             announcementTimer = setTimeout(() => { hideAnnouncement(newDate); }, 10000);
@@ -888,6 +889,7 @@ async function loadProducts() {
             const el = document.getElementById('update-announcement');
             el.classList.add('-translate-y-32', 'opacity-0', 'pointer-events-none');
             el.classList.remove('translate-y-0', 'opacity-100');
+            setTimeout(() => { el.style.display = 'none'; }, 700);
             clearTimeout(announcementTimer);
             if (dateToSave) localStorage.setItem('starphone_products_modified', dateToSave);
         }
@@ -1446,14 +1448,16 @@ fetch('notice.txt?v=' + new Date().getTime())
             if (textEl) {
                 textEl.innerHTML = text.replace(/\n/g, '<br>');
             }
-            
+            announcement.style.display = '';            
             announcement.classList.remove('-translate-y-32', 'opacity-0', 'pointer-events-none');
             announcement.classList.add('translate-y-0', 'opacity-100');
+            
             
             // ⭐ 8秒后自动关闭 - 放在这里！
             setTimeout(() => {
                 announcement.classList.remove('translate-y-0', 'opacity-100');
                 announcement.classList.add('-translate-y-32', 'opacity-0', 'pointer-events-none');
+                setTimeout(() => { announcement.style.display = 'none'; }, 700);
             }, 8000);
         }
     })
