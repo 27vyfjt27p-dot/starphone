@@ -53,6 +53,10 @@
     width: 100%;
     display: flex;
     padding: 5px 0;
+    touch-action: pan-x; 
+    -webkit-overflow-scrolling: touch; 
+    position: relative; 
+    z-index: 10;
 }
 
 .brand-marquee-content {
@@ -1432,38 +1436,40 @@ html += `
             document.getElementById('filter-content').innerHTML = html || "<p class='text-slate-400 text-xs font-bold uppercase'>No hay filtros disponibles</p>";
         }
         init(); // 网页初始化，这行保留
-// 读取 notice.txt
-fetch('notice.txt?v=' + new Date().getTime())
-    .then(response => {
-        if (!response.ok) throw new Error('没有通告');
-        return response.text();
-    })
-    .then(text => {
-        if (text && text.trim() !== "") {
-            const announcement = document.getElementById('update-announcement');
-            const textEl = document.getElementById('announcement-text');
-            
-            if (textEl) {
-                textEl.innerHTML = text.replace(/\n/g, '<br>');
+// 读取 notice.txt（等待 DOM 加载完成）
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('notice.txt?v=' + new Date().getTime())
+        .then(response => {
+            if (!response.ok) throw new Error('没有通告');
+            return response.text();
+        })
+        .then(text => {
+            if (text && text.trim() !== "") {
+                const announcement = document.getElementById('update-announcement');
+                const textEl = document.getElementById('announcement-text');
+                
+                if (textEl) {
+                    textEl.innerHTML = text.replace(/\n/g, '<br>');
+                }
+                
+                announcement.classList.remove('-translate-y-32', 'opacity-0', 'pointer-events-none');
+                announcement.classList.add('translate-y-0', 'opacity-100');
+                
+                setTimeout(() => {
+                    announcement.classList.remove('translate-y-0', 'opacity-100');
+                    announcement.classList.add('-translate-y-32', 'opacity-0', 'pointer-events-none');
+                    
+                    const container = document.querySelector('.brand-marquee-container');
+                    if (container) {
+                        container.style.touchAction = 'pan-x';
+                    }
+                }, 8000);
             }
-            
-            announcement.classList.remove('-translate-y-32', 'opacity-0', 'pointer-events-none');
-            announcement.classList.add('translate-y-0', 'opacity-100');
-            
-            // ⭐ 8秒后自动关闭 - 放在这里！
-            setTimeout(() => {
-                announcement.classList.remove('translate-y-0', 'opacity-100');
-                announcement.classList.add('-translate-y-32', 'opacity-0', 'pointer-events-none');
-            const container = document.querySelector('.brand-marquee-container');
-            if (container) {
-            container.style.touchAction = 'pan-x';  // 恢复触摸滑动
-              }
-            }, 8000);
-        }
-    })
-    .catch(() => {
-        console.log("📭 无通告");
-    });
+        })
+        .catch(() => {
+            console.log("📭 无通告");
+        });
+});
         // ==========================================
 // 品牌轮播 - 拖拽 + 自动滚动（需求完整版）
 // ==========================================
@@ -1660,6 +1666,7 @@ fetch('notice.txt?v=' + new Date().getTime())
         let touchStartPosition = 0;
         
         container.addEventListener('touchstart', function(e) {
+            e.preventDefault();
             isDragging = true;
             pauseAutoScroll();
             
@@ -1671,9 +1678,10 @@ fetch('notice.txt?v=' + new Date().getTime())
             velocity = 0;
             
             content.style.transition = 'none';
-        }, { passive: true });
+        },
         
         container.addEventListener('touchmove', function(e) {
+            e.preventDefault(); 
             if (!isDragging) return;
             
             const touch = e.touches[0];
@@ -1690,8 +1698,7 @@ fetch('notice.txt?v=' + new Date().getTime())
             }
             lastX = x;
             lastTime = now;
-        }, { passive: true });
-        
+        },         
         document.addEventListener('touchend', function() {
             if (!isDragging) return;
             isDragging = false;
