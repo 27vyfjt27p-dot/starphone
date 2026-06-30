@@ -1454,6 +1454,10 @@ fetch('notice.txt?v=' + new Date().getTime())
             setTimeout(() => {
                 announcement.classList.remove('translate-y-0', 'opacity-100');
                 announcement.classList.add('-translate-y-32', 'opacity-0', 'pointer-events-none');
+            const container = document.querySelector('.brand-marquee-container');
+            if (container) {
+            container.style.touchAction = 'pan-x';  // 恢复触摸滑动
+              }
             }, 8000);
         }
     })
