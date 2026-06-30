@@ -425,18 +425,18 @@ body.dark .favorite-mode-banner {
 </head>
 <body class="pb-40">
     <div id="update-announcement" class="fixed top-24 inset-x-4 z-[5000] transform -translate-y-32 opacity-0 transition-all duration-700 pointer-events-none">
-        <div class="max-w-md mx-auto bg-white/80 backdrop-blur-xl border border-white/20 p-4 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] flex items-center justify-between gap-4 pointer-events-auto">
-            <div class="flex items-center gap-3">
-                <div class="flex-shrink-0 w-10 h-10 bg-slate-900 rounded-2xl flex items-center justify-center text-blue-400">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-                    </svg>
-                </div>
-                <h4 class="text-[14px] font-black uppercase tracking-wider text-slate-900">CATALOGO ACTUALIZADO</h4>
+    <div class="max-w-md mx-auto backdrop-blur-xl border border-white/20 p-4 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] flex items-center justify-between gap-4 pointer-events-auto" style="background-color: rgba(255, 255, 255, 0.8);">
+        <div class="flex items-center gap-3">
+            <div class="flex-shrink-0 w-10 h-10 bg-slate-900 rounded-2xl flex items-center justify-center text-blue-400">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                </svg>
             </div>
-            <button onclick="hideAnnouncement()" class="w-8 h-8 flex items-center justify-center bg-slate-100 hover:bg-white rounded-full text-slate-400 hover:text-slate-900 transition-all">✕</button>
+            <h4 id="announcement-text" class="text-[14px] font-black uppercase tracking-wider">CATALOGO ACTUALIZADO</h4>
         </div>
+        <button id="announcement-close" onclick="hideAnnouncement()" class="w-8 h-8 flex items-center justify-center bg-slate-100/50 hover:bg-white rounded-full text-slate-400 hover:text-slate-900 transition-all">✕</button>
     </div>
+</div>
 
     <header class="glass-header sticky top-0 z-40 p-4 lg:px-10 border-b border-slate-100">
         <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
@@ -1962,6 +1962,59 @@ html += `
 
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeVideoModal(); });
     </script>
+window.addEventListener('DOMContentLoaded', () => {
+        // 自动读取由 Python 脚本生成的 notice.json 配置文件
+        fetch('notice.json')
+            .then(response => {
+                if (!response.ok) throw new Error('没有检测到新通告');
+                return response.json();
+            })
+            .then(data => {
+                // 只有当存在文本内容时才展示
+                if (data && data.text && data.text !== "None") {
+                    const announcement = document.getElementById('update-announcement');
+                    const textElement = document.getElementById('announcement-text');
+                    const bubbleElement = announcement ? announcement.querySelector('.max-w-md') : null;
+                    const closeBtn = document.getElementById('announcement-close');
+
+                    if (announcement && textElement && bubbleElement) {
+                        // 1. 将弹窗文字替换为 Excel M1 单元格的内容
+                        textElement.innerText = data.text;
+
+                        // 2. 颜色强制覆盖逻辑（如果是默认白色/黑色，则不强制更改）
+                        if (data.bg && data.bg !== '#ffffff') {
+                            bubbleElement.style.setProperty('background-color', data.bg, 'important');
+                            bubbleElement.style.setProperty('background', data.bg, 'important');
+                        }
+                        if (data.color && data.color !== '#000000') {
+                            textElement.style.setProperty('color', data.color, 'important');
+                            if (closeBtn) closeBtn.style.setProperty('color', data.color, 'important');
+                        }
+
+                        // 3. 动画：让弹窗顺滑地从顶部滑下来显示
+                        announcement.classList.remove('-translate-y-32', 'opacity-0', 'pointer-events-none');
+                        announcement.classList.add('translate-y-0', 'opacity-100');
+
+                        // 4. 设置 6 秒（6000毫秒）后自动收起隐藏
+                        setTimeout(() => {
+                            hideAnnouncement();
+                        }, 6000);
+                    }
+                }
+            })
+            .catch(err => {
+                console.log("未检测到有效自定义通告或留空，保持默认隐藏:", err.message);
+            });
+    });
+
+    // 点击 ✕ 按钮或定时器触发的关闭函数
+    function hideAnnouncement() {
+        const announcement = document.getElementById('update-announcement');
+        if (announcement) {
+            announcement.classList.remove('translate-y-0', 'opacity-100');
+            announcement.classList.add('-translate-y-32', 'opacity-0', 'pointer-events-none');
+        }
+    }
 </script>
 </body>
 </html>
