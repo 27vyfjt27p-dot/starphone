@@ -12,6 +12,12 @@
     "file": "llegara en Julio products.json"
   },
   {
+    "key": "notice",
+    "label": "NOTICE",
+    "desc": "notice",
+    "file": "notice.json"
+  },
+  {
     "key": "oferta",
     "label": "OFERTA",
     "desc": "OFERTA",
