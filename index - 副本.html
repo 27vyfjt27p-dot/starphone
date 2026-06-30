@@ -432,7 +432,7 @@ body.dark .favorite-mode-banner {
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
                     </svg>
                 </div>
-                <h4 id="announcement-text" class="text-[14px] font-black uppercase tracking-wider text-slate-900">CATALOGO ACTUALIZADO</h4>
+                <h4 class="text-[14px] font-black uppercase tracking-wider text-slate-900">CATALOGO ACTUALIZADO</h4>
             </div>
             <button onclick="hideAnnouncement()" class="w-8 h-8 flex items-center justify-center bg-slate-100 hover:bg-white rounded-full text-slate-400 hover:text-slate-900 transition-all">✕</button>
         </div>
@@ -1432,29 +1432,6 @@ html += `
             document.getElementById('filter-content').innerHTML = html || "<p class='text-slate-400 text-xs font-bold uppercase'>No hay filtros disponibles</p>";
         }
         init(); // 网页初始化，这行保留
-// 读取 notice.txt
-fetch('notice.txt?v=' + new Date().getTime())
-    .then(response => {
-        if (!response.ok) throw new Error('没有通告');
-        return response.text();  // 注意：用 .text() 而不是 .json()
-    })
-    .then(text => {
-        if (text && text.trim() !== "") {
-            const announcement = document.getElementById('update-announcement');
-            const textEl = document.getElementById('announcement-text');
-            
-            if (textEl) {
-                // 直接把文字内容放进去，换行自动识别
-                textEl.innerHTML = text.replace(/\n/g, '<br>');
-            }
-            
-            announcement.classList.remove('-translate-y-32', 'opacity-0', 'pointer-events-none');
-            announcement.classList.add('translate-y-0', 'opacity-100');
-        }
-    })
-    .catch(() => {
-        console.log("📭 无通告");
-    });
         // ==========================================
 // 品牌轮播 - 拖拽 + 自动滚动（需求完整版）
 // ==========================================
