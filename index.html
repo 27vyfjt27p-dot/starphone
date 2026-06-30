@@ -432,7 +432,7 @@ body.dark .favorite-mode-banner {
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
                     </svg>
                 </div>
-                <h4 class="text-[14px] font-black uppercase tracking-wider text-slate-900">CATALOGO ACTUALIZADO</h4>
+                <h4 id="announcement-text" class="text-[14px] font-black uppercase tracking-wider text-slate-900">CATALOGO ACTUALIZADO</h4>
             </div>
             <button onclick="hideAnnouncement()" class="w-8 h-8 flex items-center justify-center bg-slate-100 hover:bg-white rounded-full text-slate-400 hover:text-slate-900 transition-all">✕</button>
         </div>
@@ -1432,6 +1432,106 @@ html += `
             document.getElementById('filter-content').innerHTML = html || "<p class='text-slate-400 text-xs font-bold uppercase'>No hay filtros disponibles</p>";
         }
         init(); // 网页初始化，这行保留
+        // ========== 加载通告（优先使用 custom-notice.json） ==========
+        function loadAnnouncement() {
+            // 1. 先尝试加载 custom-notice.json（自定义样式）
+            fetch('custom-notice.json?v=' + new Date().getTime())
+                .then(response => {
+                    if (!response.ok) throw new Error('没有自定义通告');
+                    return response.json();
+                })
+                .then(data => {
+                    if (data && data.enabled !== false && data.html) {
+                        showCustomAnnouncement(data);
+                        console.log("✅ 使用自定义通告样式");
+                        return;
+                    }
+                    loadNormalAnnouncement();
+                })
+                .catch(() => {
+                    console.log("📭 没有自定义通告，尝试普通通告");
+                    loadNormalAnnouncement();
+                });
+        }
+
+        // 显示自定义通告
+        function showCustomAnnouncement(data) {
+            const announcement = document.getElementById('update-announcement');
+            const textEl = document.getElementById('announcement-text');
+            
+            if (!announcement || !textEl) return;
+            
+            textEl.innerHTML = data.html;
+            
+            const bubble = announcement.querySelector('.max-w-md');
+            if (bubble) {
+                if (data.bg) {
+                    bubble.style.backgroundColor = data.bg;
+                    bubble.style.backgroundImage = 'none';
+                }
+                if (data.border_color) {
+                    bubble.style.borderLeftColor = data.border_color;
+                    bubble.style.borderLeftWidth = '4px';
+                }
+                if (data.shadow) {
+                    bubble.style.boxShadow = data.shadow;
+                }
+            }
+            if (data.color) {
+                textEl.style.color = data.color;
+            }
+            
+            announcement.classList.remove('-translate-y-32', 'opacity-0', 'pointer-events-none');
+            announcement.classList.add('translate-y-0', 'opacity-100');
+            
+            const duration = data.duration || 6000;
+            setTimeout(() => {
+                hideAnnouncement();
+            }, duration);
+        }
+
+        // 加载普通通告（来自 main.py 生成的 notice.json）
+        function loadNormalAnnouncement() {
+            fetch('notice.json?v=' + new Date().getTime())
+                .then(response => {
+                    if (!response.ok) throw new Error('没有通告');
+                    return response.json();
+                })
+                .then(data => {
+                    if (data && data.text && data.text.trim() !== "") {
+                        const announcement = document.getElementById('update-announcement');
+                        const textEl = document.getElementById('announcement-text');
+                        
+                        if (textEl) {
+                            textEl.innerHTML = data.text.replace(/\n/g, '<br>');
+                        }
+                        
+                        const bubble = announcement.querySelector('.max-w-md');
+                        if (bubble && data.bg) {
+                            bubble.style.backgroundColor = data.bg;
+                            bubble.style.backgroundImage = 'none';
+                        }
+                        if (textEl && data.color) {
+                            textEl.style.color = data.color;
+                        }
+                        
+                        announcement.classList.remove('-translate-y-32', 'opacity-0', 'pointer-events-none');
+                        announcement.classList.add('translate-y-0', 'opacity-100');
+                        
+                        setTimeout(() => {
+                            hideAnnouncement();
+                        }, 6000);
+                    }
+                })
+                .catch(() => {
+                    console.log("📭 无通告");
+                });
+        }
+
+        // 页面加载完成后加载通告
+        document.addEventListener('DOMContentLoaded', function() {
+            loadAnnouncement();
+        });
         // ==========================================
 // 品牌轮播 - 拖拽 + 自动滚动（需求完整版）
 // ==========================================

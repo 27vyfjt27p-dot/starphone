@@ -6,6 +6,12 @@
     "file": "products.json"
   },
   {
+    "key": "custom-notice",
+    "label": "CUSTOM-NOTICE",
+    "desc": "custom-notice",
+    "file": "custom-notice.json"
+  },
+  {
     "key": "disponible para  2 de julio products.xlsxs",
     "label": "DISPONIBLE PARA  2 DE JULIO PRODUCTS.XLSXS",
     "desc": "disponible para  2 de julio products.xlsxs",
@@ -16,12 +22,6 @@
     "label": "LLEGARA EN JULIO PRODUCTS",
     "desc": "llegara en Julio products",
     "file": "llegara en Julio products.json"
-  },
-  {
-    "key": "notice",
-    "label": "NOTICE",
-    "desc": "notice",
-    "file": "notice.json"
   },
   {
     "key": "oferta",
