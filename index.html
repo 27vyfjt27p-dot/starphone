@@ -1719,7 +1719,11 @@ fetch('notice.txt?v=' + new Date().getTime())
                 resumeAutoScroll();
             }
         });
-        
+        // --- 触摸被系统中断时的兜底处理 ---
+        document.addEventListener('touchcancel', function() {
+        isDragging = false;
+        resumeAutoScroll();
+        });
         // --- 阻止拖拽选中 ---
         content.addEventListener('dragstart', function(e) {
             e.preventDefault();
