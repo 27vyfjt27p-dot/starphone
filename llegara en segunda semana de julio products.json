@@ -56,12 +56,12 @@
   },
   {
     "MARCA": "XIAOMI",
-    "PRODUCTO": "Xiaomi Electric Scooter 6 Max GL",
-    "DESC_FULL": "Autonomía: Hasta 70 km por carga.\nPotencia: Motor de 1100W (sube pendientes de hasta 24%).\nComodidad: Llantas de 12 pulgadas y doble suspensión (delantera y trasera).\nSeguridad: Frenos de disco dobles con E-ABS y control de tracción antideslizante (TCS).\nTecnología: Compatible con Apple Find My (rastreo), pantalla TFT a color y conexión a la app Xiaomi Home.\nResistencia: Soporta hasta 130 kg y tiene certificación impermeable IPX6.",
-    "Precio ( USD )": 585,
+    "PRODUCTO": "Xiaomi Electric Scooter 6 Pro GL",
+    "DESC_FULL": "Motor potente: Mayor aceleración y capacidad para subir pendientes sin esfuerzo.\nGran autonomía: Batería de alta capacidad para desplazamientos de larga distancia.\nFrenado seguro: Sistema de doble freno que garantiza una detención rápida y estable.\nConectividad inteligente: Panel integrado y control total mediante App para bloqueo y estadísticas.\nConducción cómoda: Neumáticos sin cámara resistentes a pinchazos con mejor absorción de impactos.",
+    "Precio ( USD )": 490,
     "Imagen_Path": "llegara en segunda semana de julio products_images/llegara en segunda semana de julio products_006.png",
-    "VIENE_LA_CAJA": 1,
-    "video_url": "",
+    "VIENE_LA_CAJA": "D",
+    "video_url": "https://youtu.be/24Irnpv6RMc",
     "qcy-yf": "yf",
     "新到货": "NUEVO"
   },
