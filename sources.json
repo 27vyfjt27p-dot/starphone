@@ -16,5 +16,11 @@
     "label": "LLEGARA EN SEGUNDA SEMANA DE JULIO PRODUCTS",
     "desc": "llegara en segunda semana de julio products",
     "file": "llegara en segunda semana de julio products.json"
+  },
+  {
+    "key": "oferta",
+    "label": "OFERTA",
+    "desc": "OFERTA",
+    "file": "OFERTA.json"
   }
 ]
