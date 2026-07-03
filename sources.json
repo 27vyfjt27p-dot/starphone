@@ -1,27 +1,9 @@
 [
   {
-    "key": "lista_actual",
-    "label": "LISTA ACTUAL",
-    "desc": "Lista actual",
-    "file": "products.json"
-  },
-  {
-    "key": "disponible 6 de julio products",
-    "label": "DISPONIBLE 6 DE JULIO PRODUCTS",
-    "desc": "disponible 6 de julio products",
-    "file": "disponible 6 de julio products.json"
-  },
-  {
-    "key": "llegara en 2 segunda semana de julio products",
-    "label": "LLEGARA EN 2 SEGUNDA SEMANA DE JULIO PRODUCTS",
-    "desc": "llegara en 2 segunda semana de julio products",
-    "file": "llegara en 2 segunda semana de julio products.json"
-  },
-  {
-    "key": "llegara en segunda semana de julio products",
-    "label": "LLEGARA EN SEGUNDA SEMANA DE JULIO PRODUCTS",
-    "desc": "llegara en segunda semana de julio products",
-    "file": "llegara en segunda semana de julio products.json"
+    "key": "bomidi,solohour",
+    "label": "BOMIDI,SOLOHOUR",
+    "desc": "BOMIDI,SOLOHOUR",
+    "file": "BOMIDI,SOLOHOUR.json"
   },
   {
     "key": "oferta",
