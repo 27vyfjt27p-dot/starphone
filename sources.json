@@ -10,11 +10,5 @@
     "label": "OFERTA",
     "desc": "OFERTA",
     "file": "OFERTA.json"
-  },
-  {
-    "key": "productos",
-    "label": "PRODUCTOS",
-    "desc": "Productos",
-    "file": "Productos.json"
   }
 ]
