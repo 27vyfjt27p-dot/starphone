@@ -1,14 +1,14 @@
 [
   {
-    "key": "lista_actual",
-    "label": "LISTA ACTUAL",
-    "desc": "Lista actual",
-    "file": "products.json"
-  },
-  {
     "key": "oferta",
     "label": "OFERTA",
     "desc": "OFERTA",
     "file": "OFERTA.json"
+  },
+  {
+    "key": "productos",
+    "label": "PRODUCTOS",
+    "desc": "Productos",
+    "file": "Productos.json"
   }
 ]
