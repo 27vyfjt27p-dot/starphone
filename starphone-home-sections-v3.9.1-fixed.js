@@ -3,7 +3,7 @@
   'use strict';
 
   /* =========================================================
-     STARPHONE HOME SECTIONS V3.6-SYNC
+     STARPHONE HOME SECTIONS V3.9.1-FIXED
      - Inserta Novedades + Pabellón de Marcas
      - Se coloca antes de #source-tabs
      - No modifica tarjetas de producto, carrito, favoritos ni WhatsApp
@@ -124,6 +124,7 @@
       box-shadow: 0 18px 42px rgba(15, 27, 53, .14);
       transition: transform .25s ease, box-shadow .25s ease;
       isolation: isolate;
+      touch-action: pan-y;
     }
 
     .spv3-new::after {
@@ -206,7 +207,7 @@
 
     .spv3-dots {
       position: absolute;
-      z-index: 4;
+      z-index: 6;
       left: 42px;
       bottom: 18px;
       display: flex;
@@ -214,19 +215,70 @@
     }
 
     .spv3-dot {
-      width: 7px;
-      height: 7px;
+      width: 8px;
+      height: 8px;
       border: 0;
       border-radius: 999px;
       padding: 0;
-      background: rgba(255,255,255,.35);
-      pointer-events: none;
-      transition: width .25s ease, background .25s ease;
+      background: rgba(255,255,255,.38);
+      cursor: pointer;
+      pointer-events: auto;
+      transition: width .25s ease, background .25s ease, transform .2s ease;
+    }
+
+    .spv3-dot:hover {
+      transform: scale(1.16);
+      background: rgba(255,255,255,.78);
     }
 
     .spv3-dot.is-active {
       width: 22px;
       background: #fff;
+    }
+
+
+    .spv3-carousel-arrow {
+      position: absolute;
+      z-index: 7;
+      top: 50%;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      color: #fff;
+      background: rgba(15,23,42,.36);
+      box-shadow: 0 8px 22px rgba(0,0,0,.18);
+      backdrop-filter: blur(10px);
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(-50%) scale(.94);
+      transition:
+        opacity .22s ease,
+        transform .22s ease,
+        background .22s ease;
+    }
+
+    .spv3-new:hover .spv3-carousel-arrow,
+    .spv3-carousel-arrow:focus-visible {
+      opacity: 1;
+      transform: translateY(-50%) scale(1);
+    }
+
+    .spv3-carousel-arrow:hover {
+      background: rgba(37,99,235,.88);
+    }
+
+    .spv3-carousel-prev { left: 14px; }
+    .spv3-carousel-next { right: 14px; }
+
+    .spv3-carousel-arrow svg {
+      width: 20px;
+      height: 20px;
+      pointer-events: none;
     }
 
     .spv3-new:hover {
@@ -510,6 +562,16 @@
         bottom: 12px;
       }
 
+      .spv3-carousel-arrow {
+        width: 34px;
+        height: 34px;
+        opacity: .86;
+        transform: translateY(-50%) scale(1);
+      }
+
+      .spv3-carousel-prev { left: 8px; }
+      .spv3-carousel-next { right: 8px; }
+
       .spv3-kicker {
         font-size: 10px;
       }
@@ -590,7 +652,7 @@
       fn(...args);
       return true;
     } catch (error) {
-      console.warn(`[Starphone Home V3.6] ${name} falló:`, error);
+      console.warn(`[Starphone Home V3.9.1] ${name} falló:`, error);
       return false;
     }
   }
@@ -625,7 +687,7 @@
       activeFilters.priceRange = null;
       isFavoriteMode = false;
     } catch (error) {
-      console.warn('[Starphone Home V3.6] Error limpiando filtros:', error);
+      console.warn('[Starphone Home V3.9.1] Error limpiando filtros:', error);
     }
 
     clearNativeInputs();
@@ -697,35 +759,133 @@
     document.getElementById(IDS.status)?.classList.remove('is-visible');
   }
 
-  function applyNewFilter() {
+  async function applyNewFilter() {
+    let defaultSourceKey = null;
+
+    try {
+      if (Array.isArray(sources) && sources.length > 0) {
+        defaultSourceKey = sources[0].key;
+      }
+    } catch (_) {}
+
+    /*
+     * 点击新品横幅：
+     * 1. 退出 FAVORITOS
+     * 2. 回到第一个数据源（LISTA ACTUAL）
+     * 3. 等产品加载完成
+     * 4. 筛选 NUEVO 并滚动到商品区
+     */
+    try {
+      isFavoriteMode = false;
+    } catch (_) {}
+
+    if (defaultSourceKey) {
+      let needSwitch = false;
+
+      try {
+        needSwitch = currentSourceKey !== defaultSourceKey;
+      } catch (_) {}
+
+      if (needSwitch) {
+        safeCall('setSource', defaultSourceKey);
+
+        const startedAt = Date.now();
+        await new Promise((resolve) => {
+          const timer = window.setInterval(() => {
+            let ready = false;
+
+            try {
+              ready =
+                currentSourceKey === defaultSourceKey &&
+                Array.isArray(products) &&
+                products.length > 0;
+            } catch (_) {}
+
+            if (ready || Date.now() - startedAt > 5000) {
+              window.clearInterval(timer);
+              resolve();
+            }
+          }, 80);
+        });
+      }
+    }
+
     resetFilters();
 
     try {
       activeFilters.keyword = CONFIG.newKeyword;
+      isFavoriteMode = false;
     } catch (error) {
-      console.warn('[Starphone Home V3.6] No se pudo aplicar Nuevo:', error);
+      console.warn('[Starphone Home V3.9.1] No se pudo aplicar Nuevo:', error);
     }
 
     rerender();
     showStatus('Filtro activo: Novedades');
 
-    window.setTimeout(scrollToProducts, 80);
+    window.setTimeout(scrollToProducts, 100);
   }
 
-  function applyBrandFilter(name) {
+  async function applyBrandFilter(name) {
+    let defaultSourceKey = null;
+
+    try {
+      if (Array.isArray(sources) && sources.length > 0) {
+        defaultSourceKey = sources[0].key;
+      }
+    } catch (_) {}
+
+    // 先退出 FAVORITOS，再回到第一个数据源 LISTA ACTUAL
+    try {
+      isFavoriteMode = false;
+    } catch (_) {}
+
+    if (defaultSourceKey) {
+      let needSwitch = false;
+
+      try {
+        needSwitch = currentSourceKey !== defaultSourceKey;
+      } catch (_) {}
+
+      if (needSwitch) {
+        safeCall('setSource', defaultSourceKey);
+
+        const startedAt = Date.now();
+
+        await new Promise((resolve) => {
+          const timer = window.setInterval(() => {
+            let ready = false;
+
+            try {
+              ready =
+                currentSourceKey === defaultSourceKey &&
+                Array.isArray(products) &&
+                products.length > 0;
+            } catch (_) {}
+
+            if (ready || Date.now() - startedAt > 5000) {
+              window.clearInterval(timer);
+              resolve();
+            }
+          }, 80);
+        });
+      }
+    }
+
     resetFilters();
 
     const normalized = normalizeBrandName(name);
+
     try {
       activeFilters.MARCA = normalized;
+      isFavoriteMode = false;
     } catch (error) {
-      console.warn('[Starphone Home V3.6] No se pudo aplicar la marca:', error);
+      console.warn('[Starphone Home V3.9.1] No se pudo aplicar la marca:', error);
     }
 
     rerender();
     showStatus(`Marca seleccionada: ${normalized}`);
 
-    window.setTimeout(scrollToProducts, 80);
+    window.setTimeout(scrollToProducts, 100);
   }
 
   function clearHomeFilter() {
@@ -819,27 +979,126 @@
     items: [],
     index: 0,
     timer: null,
-    signature: ''
+    signature: '',
+    poolLoaded: false,
+    loadingPool: false,
+    sourceSignature: '',
+    touchStartX: 0,
+    touchStartY: 0,
+    touchMoved: false,
+    suppressClickUntil: 0
   };
 
-  function getNewProducts() {
+  function isOfferSource(source) {
+    const label = String(source?.label || '').trim().toUpperCase();
+    const key = String(source?.key || '').trim().toUpperCase();
+
+    return label.includes('OFERTA') || key.includes('OFERTA');
+  }
+
+  function isNewProduct(product) {
+    const newFlag = String(product?.['新到货'] || '').trim().toUpperCase();
+    const type = String(product?.TIPO || '').trim().toUpperCase();
+    const name = String(product?.PRODUCTO || '').trim().toUpperCase();
+
+    return (
+      newFlag === 'NUEVO' ||
+      type === 'NUEVO' ||
+      name.includes('NUEVO')
+    );
+  }
+
+  function dedupeProducts(list) {
+    const map = new Map();
+
+    list.forEach((product) => {
+      const key = String(
+        product?.id ||
+        product?.PRODUCTO ||
+        `${product?.MARCA || ''}-${product?.Imagen_Path || ''}`
+      ).trim().toUpperCase();
+
+      if (key && !map.has(key)) map.set(key, product);
+    });
+
+    return [...map.values()];
+  }
+
+  async function loadStableNewProductPool(force = false) {
+    if (carouselState.loadingPool) return;
+
+    let sourceList = [];
     try {
-      const list = Array.isArray(products) ? products : [];
-
-      return list.filter((product) => {
-        const newFlag = String(product?.['新到货'] || '').trim().toUpperCase();
-        const type = String(product?.TIPO || '').trim().toUpperCase();
-        const name = String(product?.PRODUCTO || '').trim().toUpperCase();
-
-        return (
-          newFlag === 'NUEVO' ||
-          type === 'NUEVO' ||
-          name.includes('NUEVO')
-        );
-      }).slice(0, CONFIG.carouselLimit);
+      sourceList = Array.isArray(sources) ? sources : [];
     } catch (_) {
-      return [];
+      sourceList = [];
     }
+
+    if (!sourceList.length) return;
+
+    const eligibleSources = sourceList.filter((source) => !isOfferSource(source));
+    const signature = eligibleSources
+      .map((source) => `${source?.key || ''}|${source?.file || ''}`)
+      .join('::');
+
+    if (
+      !force &&
+      carouselState.poolLoaded &&
+      carouselState.sourceSignature === signature
+    ) {
+      return;
+    }
+
+    carouselState.loadingPool = true;
+
+    try {
+      const results = await Promise.all(
+        eligibleSources.map(async (source) => {
+          try {
+            const response = await fetch(
+              `${source.file}${String(source.file).includes('?') ? '&' : '?'}v=${Date.now()}`
+            );
+
+            if (!response.ok) return [];
+
+            const raw = await response.json();
+            if (!Array.isArray(raw)) return [];
+
+            return raw
+              .map((product) => ({
+                ...product,
+                id: product?.id || product?.PRODUCTO
+              }))
+              .filter(isNewProduct);
+          } catch (error) {
+            console.warn(
+              `[Starphone Home V3.9.1] No se pudo cargar novedades de ${source?.label || source?.key || 'fuente'}:`,
+              error
+            );
+            return [];
+          }
+        })
+      );
+
+      const merged = dedupeProducts(results.flat()).slice(0, CONFIG.carouselLimit);
+
+      if (merged.length) {
+        carouselState.items = merged;
+        carouselState.signature = carouselSignature(merged);
+        carouselState.index = 0;
+        carouselState.poolLoaded = true;
+        carouselState.sourceSignature = signature;
+
+        renderCarouselSlide(true);
+        restartCarousel();
+      }
+    } finally {
+      carouselState.loadingPool = false;
+    }
+  }
+
+  function getNewProducts() {
+    return carouselState.items;
   }
 
   function productImage(product) {
@@ -865,20 +1124,21 @@
   }
 
   function updateCarouselContent(force = false) {
+    loadStableNewProductPool(force);
+  }
+
+  function updateCarouselControls() {
     const root = document.getElementById(IDS.root);
     if (!root) return;
 
-    const items = getNewProducts();
-    const signature = carouselSignature(items);
+    const hasMultiple = carouselState.items.length > 1;
 
-    if (!force && signature === carouselState.signature) return;
+    root.querySelectorAll('.spv3-carousel-arrow').forEach((button) => {
+      button.hidden = !hasMultiple;
+    });
 
-    carouselState.items = items;
-    carouselState.signature = signature;
-    carouselState.index = 0;
-
-    renderCarouselSlide(true);
-    restartCarousel();
+    const dots = root.querySelector('[data-spv3-dots]');
+    if (dots) dots.hidden = !hasMultiple;
   }
 
   function renderCarouselSlide(immediate = false) {
@@ -903,6 +1163,7 @@
       imageEl.alt = '';
       imageEl.classList.remove('is-visible');
       dotsEl.innerHTML = '';
+      updateCarouselControls();
       return;
     }
 
@@ -923,8 +1184,15 @@
       }
 
       dotsEl.innerHTML = carouselState.items.map((_, index) =>
-        `<span class="spv3-dot ${index === carouselState.index ? 'is-active' : ''}"></span>`
+        `<button
+          class="spv3-dot ${index === carouselState.index ? 'is-active' : ''}"
+          type="button"
+          data-carousel-index="${index}"
+          aria-label="Ver novedad ${index + 1}"
+        ></button>`
       ).join('');
+
+      updateCarouselControls();
     };
 
     if (immediate) {
@@ -946,6 +1214,37 @@
     renderCarouselSlide(false);
   }
 
+  function previousCarouselSlide() {
+    if (carouselState.items.length <= 1) return;
+
+    carouselState.index =
+      (carouselState.index - 1 + carouselState.items.length) %
+      carouselState.items.length;
+
+    renderCarouselSlide(false);
+  }
+
+  function goToCarouselSlide(index) {
+    if (!carouselState.items.length) return;
+
+    const targetIndex = Math.max(
+      0,
+      Math.min(Number(index) || 0, carouselState.items.length - 1)
+    );
+
+    carouselState.index = targetIndex;
+    renderCarouselSlide(false);
+    restartCarousel();
+  }
+
+  function manualCarouselMove(direction) {
+    if (direction === 'prev') previousCarouselSlide();
+    else nextCarouselSlide();
+
+    restartCarousel();
+  }
+
+
   function restartCarousel() {
     if (carouselState.timer) {
       window.clearInterval(carouselState.timer);
@@ -966,6 +1265,10 @@
     const banner = root.querySelector('.spv3-new');
     if (!banner) return;
 
+    const previousButton = root.querySelector('[data-spv3-carousel-prev]');
+    const nextButton = root.querySelector('[data-spv3-carousel-next]');
+    const dots = root.querySelector('[data-spv3-dots]');
+
     banner.addEventListener('mouseenter', () => {
       if (carouselState.timer) {
         window.clearInterval(carouselState.timer);
@@ -975,37 +1278,112 @@
 
     banner.addEventListener('mouseleave', restartCarousel);
 
-    updateCarouselContent(true);
+    previousButton?.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      manualCarouselMove('prev');
+    });
+
+    nextButton?.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      manualCarouselMove('next');
+    });
+
+    dots?.addEventListener('click', (event) => {
+      const dot = event.target.closest('[data-carousel-index]');
+      if (!dot) return;
+
+      event.preventDefault();
+      event.stopPropagation();
+      goToCarouselSlide(dot.dataset.carouselIndex);
+    });
+
+    banner.addEventListener('touchstart', (event) => {
+      const touch = event.touches[0];
+      if (!touch) return;
+
+      carouselState.touchStartX = touch.clientX;
+      carouselState.touchStartY = touch.clientY;
+      carouselState.touchMoved = false;
+
+      if (carouselState.timer) {
+        window.clearInterval(carouselState.timer);
+        carouselState.timer = null;
+      }
+    }, { passive: true });
+
+    banner.addEventListener('touchmove', (event) => {
+      const touch = event.touches[0];
+      if (!touch) return;
+
+      const deltaX = touch.clientX - carouselState.touchStartX;
+      const deltaY = touch.clientY - carouselState.touchStartY;
+
+      if (Math.abs(deltaX) > 12 && Math.abs(deltaX) > Math.abs(deltaY)) {
+        carouselState.touchMoved = true;
+      }
+    }, { passive: true });
+
+    banner.addEventListener('touchend', (event) => {
+      const touch = event.changedTouches[0];
+
+      if (!touch) {
+        restartCarousel();
+        return;
+      }
+
+      const deltaX = touch.clientX - carouselState.touchStartX;
+      const deltaY = touch.clientY - carouselState.touchStartY;
+
+      const isHorizontalSwipe =
+        Math.abs(deltaX) >= 42 &&
+        Math.abs(deltaX) > Math.abs(deltaY) * 1.15;
+
+      if (isHorizontalSwipe) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        if (deltaX > 0) manualCarouselMove('prev');
+        else manualCarouselMove('next');
+
+        carouselState.touchMoved = true;
+        carouselState.suppressClickUntil = Date.now() + 700;
+      } else {
+        restartCarousel();
+      }
+    }, { passive: false });
+
+    // 手机滑动后拦截紧接着发生的 click，避免误触发 NUEVO 筛选
+    banner.addEventListener('click', (event) => {
+      if (Date.now() > carouselState.suppressClickUntil) return;
+
+      event.preventDefault();
+      event.stopImmediatePropagation();
+    }, true);
 
     /*
-     * Products are loaded asynchronously and also change when switching tabs.
-     * Watch the product grid so the banner automatically rebuilds itself.
+     * 新品池独立读取所有常规列表：
+     * - 包含 LISTA ACTUAL、LISTA ACTUAL 2 等
+     * - 排除 OFERTA
+     * - FAVORITOS 只是显示模式，不会影响新品池
      */
-    const grid = document.getElementById(CONFIG.productsGridId);
-    if (grid && grid.dataset.spv3CarouselObserved !== '1') {
-      grid.dataset.spv3CarouselObserved = '1';
-
-      let refreshTimer = 0;
-      const observer = new MutationObserver(() => {
-        window.clearTimeout(refreshTimer);
-        refreshTimer = window.setTimeout(updateCarouselContent, 80);
-      });
-
-      observer.observe(grid, {
-        childList: true,
-        subtree: false
-      });
-    }
-
     let tries = 0;
-    const waitForProducts = window.setInterval(() => {
+    const waitForSources = window.setInterval(() => {
       tries += 1;
-      updateCarouselContent();
 
-      if (getNewProducts().length || tries >= 30) {
-        window.clearInterval(waitForProducts);
+      let hasSources = false;
+      try {
+        hasSources = Array.isArray(sources) && sources.length > 0;
+      } catch (_) {}
+
+      if (hasSources) {
+        window.clearInterval(waitForSources);
+        loadStableNewProductPool(true);
+      } else if (tries >= 40) {
+        window.clearInterval(waitForSources);
       }
-    }, 400);
+    }, 300);
   }
 
   function setupPointerGlow(root) {
@@ -1057,9 +1435,10 @@
     `).join('');
 
     root.innerHTML = `
-      <button
+      <div
         class="spv3-new"
-        type="button"
+        role="button"
+        tabindex="0"
         aria-label="${CONFIG.newArrivals.button}"
         style="--spv3-new-image: url('${CONFIG.newArrivals.image}')"
       >
@@ -1074,12 +1453,34 @@
           </span>
         </span>
 
+        <button
+          class="spv3-carousel-arrow spv3-carousel-prev"
+          type="button"
+          data-spv3-carousel-prev
+          aria-label="Novedad anterior"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M15 18l-6-6 6-6"/>
+          </svg>
+        </button>
+
+        <button
+          class="spv3-carousel-arrow spv3-carousel-next"
+          type="button"
+          data-spv3-carousel-next
+          aria-label="Siguiente novedad"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M9 18l6-6-6-6"/>
+          </svg>
+        </button>
+
         <span class="spv3-new-product" aria-hidden="true">
           <img data-spv3-new-image alt="">
         </span>
 
-        <span class="spv3-dots" data-spv3-dots aria-hidden="true"></span>
-      </button>
+        <span class="spv3-dots" data-spv3-dots></span>
+      </div>
 
       <header class="spv3-heading">
         <h2>Pabellón de Marcas</h2>
@@ -1091,7 +1492,21 @@
       </div>
     `;
 
-    root.querySelector('.spv3-new').addEventListener('click', applyNewFilter);
+    const newBanner = root.querySelector('.spv3-new');
+
+    newBanner.addEventListener('click', (event) => {
+      if (event.target.closest('.spv3-carousel-arrow, .spv3-dot')) return;
+      applyNewFilter();
+    });
+
+    newBanner.addEventListener('keydown', (event) => {
+      if (event.target.closest('.spv3-carousel-arrow, .spv3-dot')) return;
+
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        applyNewFilter();
+      }
+    });
 
     root.querySelectorAll('.spv3-brand-card').forEach((card) => {
       card.addEventListener('click', () => {
