@@ -975,11 +975,21 @@ function renderOrderHistory() {
             const note =
                 item.note || '';
 
-            const productName =
-                item.name ||
-                item.id ||
-                'Producto';
+                        // 使用历史订单中的产品ID，到最新产品库查找对应产品
+                        const currentProduct = products.find(product =>
+                String(product.id) === String(item.id)
+            );
 
+            // 产品还存在：优先使用最新名称
+            // 产品已删除：退回使用历史保存的名称
+            const productName =
+                currentProduct && currentProduct.PRODUCTO
+                    ? String(currentProduct.PRODUCTO)
+                    : item.name ||
+                      item.id ||
+                      'Producto';
+
+            // 历史价格始终保持下单时的价格
             const price =
                 Number(item.price) || 0;
 
@@ -1008,33 +1018,51 @@ function renderOrderHistory() {
                     })}`
                     : '—';
 
-            const imagePath =
-                item.image
-                    ? encodeURI(
-                        String(item.image).replace(/\\/g, '/')
-                    )
-                    : '';
+            // 产品还存在：优先使用最新图片
+            // 产品已删除：显示下架占位图，不再读取历史图片
+            let imageHtml = '';
 
-            const imageHtml = imagePath
-                ? `
-                    <img
-                        src="${imagePath}"
-                        alt="${escapeHtml(productName)}"
-                        onerror="handleHistoryImgError(this)"
-                        class="w-16 h-16 object-contain rounded-xl
-                               bg-slate-50 dark:bg-slate-950
-                               border border-slate-100
-                               dark:border-slate-700 shrink-0"
-                    >
-                `
-                : `
-                    <div class="w-16 h-16 rounded-xl
-                                bg-slate-100 dark:bg-slate-800
-                                flex items-center justify-center
-                                text-2xl shrink-0">
-                        📦
-                    </div>
-                `;
+if (currentProduct && currentProduct.Imagen_Path) {
+
+    const imagePath = encodeURI(
+        String(currentProduct.Imagen_Path)
+            .replace(/\\/g, '/')
+    );
+
+    imageHtml = `
+        <img
+            src="${imagePath}"
+            alt="${escapeHtml(productName)}"
+            loading="lazy"
+            decoding="async"
+            onerror="handleHistoryImgError(this)"
+            class="w-16 h-16 object-contain rounded-xl
+                   bg-slate-50 dark:bg-slate-950
+                   border border-slate-100
+                   dark:border-slate-700 shrink-0"
+        >
+    `;
+
+} else {
+
+    imageHtml = `
+        <div class="w-16 h-16 rounded-xl
+                    bg-slate-100 dark:bg-slate-800
+                    border border-dashed border-slate-300
+                    dark:border-slate-700
+                    flex flex-col items-center justify-center
+                    text-center shrink-0">
+
+            <div class="text-xl">📦</div>
+
+            <div class="text-[7px] font-black
+                        text-slate-400 mt-1">
+                Fuera del catálogo
+            </div>
+
+        </div>
+    `;
+}
 
             return `
                 <div
@@ -1882,9 +1910,14 @@ async function addHistoryItemsToCart(orderId) {
     updateCartBar();
     showCartPage();
 
-    alert(
-        `${addedProducts} productos, ${addedQty} unidades agregadas al pedido.`
-    );
+    showGlobalConfirm({
+    title: 'Productos agregados',
+    message: `${addedProducts} productos, ${addedQty} unidades agregadas al pedido.`,
+    confirmText: 'Aceptar',
+    confirmColor: 'blue',
+    hideCancel: true,
+    onConfirm: () => {}
+});
 }
 function showCartPage() {
     const cartPage = document.getElementById('cart-page');
@@ -3380,7 +3413,7 @@ function getEmbedUrl(url) {
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeVideoModal(); });
     
 </script>
-<script src="starphone-home-sections-v3.9.1-fixed.js?v=12"></script>
+<<script src="starphone-home-sections-v4-official.js"></script>
 
 </body>
 </html>

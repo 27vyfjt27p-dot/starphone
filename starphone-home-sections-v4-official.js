@@ -3,8 +3,8 @@
   'use strict';
 
   /* =========================================================
-     STARPHONE HOME SECTIONS V3.9.1-FIXED
-     - Inserta Novedades + Pabellón de Marcas
+     STARPHONE HOME SECTIONS V4.0-OFFICIAL
+     - Inserta recomendaciones personalizadas + Pabellón de Marcas
      - Se coloca antes de #source-tabs
      - No modifica tarjetas de producto, carrito, favoritos ni WhatsApp
      ========================================================= */
@@ -15,16 +15,16 @@
     activeFiltersRowId: 'active-filters-row',
     newKeyword: 'nuevo',
     sectionMaxWidth: '80rem',
-    carouselInterval: 4200,
-    carouselLimit: 10,
+    recommendationLimit: 12,
+    recommendationBrandWeight: 100,
+    recommendationCategoryWeight: 35,
+    recommendationTypeWeight: 15,
 
-    newArrivals: {
-      kicker: 'Recién llegados',
-      title: '🔥 Novedades de la Semana',
-      subtitle: 'Nuevos productos disponibles.',
-      button: 'Ver novedades',
-      image:
-        'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1800&q=90'
+    recommendations: {
+      title: 'Productos nuevos para ti',
+      personalizedSubtitle: 'Basado en tus compras anteriores',
+      genericSubtitle: 'Descubre las novedades de nuestro catálogo',
+      button: 'Ver todos'
     },
 
     brands: [
@@ -286,7 +286,8 @@
       box-shadow: 0 22px 48px rgba(15, 27, 53, .18);
     }
 
-    .spv3-new:focus-visible,
+    .spv4-product-card:focus-visible,
+    .spv4-view-all:focus-visible,
     .spv3-brand-card:focus-visible {
       outline: 3px solid #60a5fa;
       outline-offset: 3px;
@@ -326,6 +327,335 @@
       color: #fff;
       font-size: 16px;
       font-weight: 900;
+    }
+
+    /* =========================================================
+       V4 · PRODUCTOS NUEVOS PARA TI
+       ========================================================= */
+    .spv4-recommendations {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      border: 1px solid rgba(226,232,240,.92);
+      border-radius: 28px;
+      padding: 24px 24px 20px;
+      background:
+        radial-gradient(circle at 8% 0%, rgba(37,99,235,.08), transparent 30%),
+        #fff;
+      box-shadow: 0 16px 42px rgba(15,23,42,.08);
+    }
+
+    .spv4-recommendations-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 18px;
+    }
+
+    .spv4-recommendations-copy {
+      min-width: 0;
+    }
+
+    .spv4-recommendations-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+      color: #0f172a;
+      font-size: clamp(24px, 2.6vw, 36px);
+      line-height: 1.08;
+      font-weight: 950;
+      letter-spacing: -.035em;
+    }
+
+    .spv4-recommendations-star {
+      width: 38px;
+      height: 38px;
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 13px;
+      background: linear-gradient(145deg, #eff6ff, #dbeafe);
+      box-shadow: inset 0 0 0 1px rgba(37,99,235,.10);
+      font-size: 19px;
+    }
+
+    .spv4-recommendations-subtitle {
+      margin: 7px 0 0 48px;
+      color: #94a3b8;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .spv4-profile-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin: 12px 0 0 48px;
+    }
+
+    .spv4-profile-tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      border: 1px solid #dbeafe;
+      border-radius: 999px;
+      padding: 5px 10px;
+      background: #eff6ff;
+      color: #2563eb;
+      font-size: 10px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .spv4-view-all {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 0;
+      border-radius: 999px;
+      padding: 10px 13px;
+      background: transparent;
+      color: #2563eb;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 950;
+      text-transform: uppercase;
+      transition: background .2s ease, transform .2s ease;
+    }
+
+    .spv4-view-all:hover {
+      background: #eff6ff;
+      transform: translateX(2px);
+    }
+
+    .spv4-recommendations-viewport {
+      position: relative;
+    }
+
+    .spv4-recommendations-list {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(155px, 1fr);
+      grid-template-rows: 1fr;
+      gap: 14px;
+      overflow-x: auto;
+      overscroll-behavior-inline: contain;
+      scroll-snap-type: x proximity;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      padding: 3px 2px 8px;
+    }
+
+    .spv4-recommendations-list::-webkit-scrollbar {
+      display: none;
+    }
+
+    .spv4-product-card {
+      position: relative;
+      min-width: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      scroll-snap-align: start;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 10px;
+      background: rgba(255,255,255,.96);
+      color: #0f172a;
+      cursor: pointer;
+      text-align: left;
+      box-shadow: 0 8px 22px rgba(15,23,42,.055);
+      transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+    }
+
+    .spv4-product-card:hover {
+      transform: translateY(-3px);
+      border-color: #bfdbfe;
+      box-shadow: 0 14px 30px rgba(15,23,42,.11);
+    }
+
+    .spv4-product-image-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 15px;
+      background: linear-gradient(145deg, #f8fafc, #f1f5f9);
+    }
+
+    .spv4-product-image-wrap img {
+      width: 88%;
+      height: 88%;
+      object-fit: contain;
+      transition: transform .28s ease;
+    }
+
+    .spv4-product-card:hover .spv4-product-image-wrap img {
+      transform: scale(1.045);
+    }
+
+    .spv4-new-badge {
+      position: absolute;
+      z-index: 2;
+      top: 8px;
+      left: 8px;
+      border-radius: 999px;
+      padding: 5px 8px;
+      background: #16a34a;
+      color: #fff;
+      box-shadow: 0 5px 12px rgba(22,163,74,.24);
+      font-size: 8px;
+      line-height: 1;
+      font-weight: 950;
+      letter-spacing: .08em;
+    }
+
+    .spv4-product-brand {
+      margin-top: 11px;
+      color: #94a3b8;
+      font-size: 9px;
+      line-height: 1.2;
+      font-weight: 950;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .spv4-product-name {
+      display: -webkit-box;
+      min-height: 34px;
+      overflow: hidden;
+      margin-top: 4px;
+      color: #0f172a;
+      font-size: 12px;
+      line-height: 1.35;
+      font-weight: 900;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    .spv4-product-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: auto;
+      padding-top: 11px;
+    }
+
+    .spv4-product-price {
+      color: #2563eb;
+      font-size: 14px;
+      line-height: 1;
+      font-weight: 950;
+    }
+
+    .spv4-product-open {
+      width: 28px;
+      height: 28px;
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #2563eb;
+      font-size: 17px;
+      font-weight: 900;
+    }
+
+    .spv4-scroll-arrow {
+      position: absolute;
+      z-index: 6;
+      top: 50%;
+      width: 38px;
+      height: 38px;
+      border: 1px solid #e2e8f0;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      background: rgba(255,255,255,.96);
+      color: #0f172a;
+      box-shadow: 0 8px 22px rgba(15,23,42,.13);
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(-50%) scale(.94);
+      transition: opacity .2s ease, transform .2s ease, background .2s ease;
+    }
+
+    .spv4-recommendations:hover .spv4-scroll-arrow,
+    .spv4-scroll-arrow:focus-visible {
+      opacity: 1;
+      transform: translateY(-50%) scale(1);
+    }
+
+    .spv4-scroll-arrow:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .spv4-scroll-prev { left: -8px; }
+    .spv4-scroll-next { right: -8px; }
+
+    .spv4-empty {
+      min-height: 190px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px dashed #cbd5e1;
+      border-radius: 20px;
+      color: #94a3b8;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .dark .spv4-recommendations,
+    [data-theme="dark"] .spv4-recommendations {
+      border-color: #334155;
+      background:
+        radial-gradient(circle at 8% 0%, rgba(59,130,246,.13), transparent 30%),
+        #1e293b;
+    }
+
+    .dark .spv4-recommendations-title,
+    [data-theme="dark"] .spv4-recommendations-title,
+    .dark .spv4-product-name,
+    [data-theme="dark"] .spv4-product-name {
+      color: #f8fafc;
+    }
+
+    .dark .spv4-product-card,
+    [data-theme="dark"] .spv4-product-card {
+      border-color: #334155;
+      background: #0f172a;
+    }
+
+    .dark .spv4-product-image-wrap,
+    [data-theme="dark"] .spv4-product-image-wrap {
+      background: linear-gradient(145deg, #1e293b, #111827);
+    }
+
+    @media (min-width: 1180px) {
+      .spv4-recommendations-list {
+        grid-auto-columns: calc((100% - 84px) / 7);
+      }
+    }
+
+    @media (min-width: 900px) and (max-width: 1179px) {
+      .spv4-recommendations-list {
+        grid-auto-columns: calc((100% - 56px) / 5);
+      }
     }
 
     .spv3-heading {
@@ -591,6 +921,78 @@
         font-size: 14px;
       }
 
+      .spv4-recommendations {
+        border-radius: 22px;
+        padding: 18px 14px 14px;
+      }
+
+      .spv4-recommendations-head {
+        gap: 8px;
+        margin-bottom: 14px;
+      }
+
+      .spv4-recommendations-title {
+        gap: 8px;
+        font-size: 21px;
+      }
+
+      .spv4-recommendations-star {
+        width: 32px;
+        height: 32px;
+        border-radius: 11px;
+        font-size: 16px;
+      }
+
+      .spv4-recommendations-subtitle {
+        margin: 6px 0 0 40px;
+        font-size: 11px;
+      }
+
+      .spv4-profile-tags {
+        margin: 9px 0 0 40px;
+        gap: 5px;
+      }
+
+      .spv4-profile-tag {
+        min-height: 23px;
+        padding: 4px 8px;
+        font-size: 8px;
+      }
+
+      .spv4-view-all {
+        padding: 7px 5px;
+        font-size: 9px;
+      }
+
+      .spv4-recommendations-list {
+        grid-auto-columns: calc((100% - 12px) / 2.22);
+        gap: 12px;
+        margin-right: -14px;
+        padding-right: 14px;
+      }
+
+      .spv4-product-card {
+        border-radius: 17px;
+        padding: 8px;
+      }
+
+      .spv4-product-image-wrap {
+        border-radius: 13px;
+      }
+
+      .spv4-product-name {
+        min-height: 32px;
+        font-size: 11px;
+      }
+
+      .spv4-product-price {
+        font-size: 13px;
+      }
+
+      .spv4-scroll-arrow {
+        display: none;
+      }
+
       .spv3-heading {
         margin: 31px 2px 16px;
       }
@@ -652,7 +1054,7 @@
       fn(...args);
       return true;
     } catch (error) {
-      console.warn(`[Starphone Home V3.9.1] ${name} falló:`, error);
+      console.warn(`[Starphone Home V4.0] ${name} falló:`, error);
       return false;
     }
   }
@@ -687,7 +1089,7 @@
       activeFilters.priceRange = null;
       isFavoriteMode = false;
     } catch (error) {
-      console.warn('[Starphone Home V3.9.1] Error limpiando filtros:', error);
+      console.warn('[Starphone Home V4.0] Error limpiando filtros:', error);
     }
 
     clearNativeInputs();
@@ -816,7 +1218,7 @@
       activeFilters.keyword = CONFIG.newKeyword;
       isFavoriteMode = false;
     } catch (error) {
-      console.warn('[Starphone Home V3.9.1] No se pudo aplicar Nuevo:', error);
+      console.warn('[Starphone Home V4.0] No se pudo aplicar Nuevo:', error);
     }
 
     rerender();
@@ -879,7 +1281,7 @@
       activeFilters.MARCA = normalized;
       isFavoriteMode = false;
     } catch (error) {
-      console.warn('[Starphone Home V3.9.1] No se pudo aplicar la marca:', error);
+      console.warn('[Starphone Home V4.0] No se pudo aplicar la marca:', error);
     }
 
     rerender();
@@ -975,31 +1377,45 @@
 
 
 
-  const carouselState = {
-    items: [],
-    index: 0,
-    timer: null,
-    signature: '',
-    poolLoaded: false,
-    loadingPool: false,
-    sourceSignature: '',
-    touchStartX: 0,
-    touchStartY: 0,
-    touchMoved: false,
-    suppressClickUntil: 0
+  const recommendationState = {
+    allProducts: [],
+    newProducts: [],
+    recommendedProducts: [],
+    preferredBrands: [],
+    preferredCategories: [],
+    personalized: false,
+    loaded: false,
+    loading: false,
+    sourceSignature: ''
   };
 
   function isOfferSource(source) {
     const label = String(source?.label || '').trim().toUpperCase();
     const key = String(source?.key || '').trim().toUpperCase();
-
     return label.includes('OFERTA') || key.includes('OFERTA');
   }
 
+  function normalizeKey(value) {
+    return String(value || '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toUpperCase()
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  function productIdentity(product) {
+    return normalizeKey(
+      product?.id ||
+      product?.PRODUCTO ||
+      `${product?.MARCA || ''}|${product?.Imagen_Path || ''}`
+    );
+  }
+
   function isNewProduct(product) {
-    const newFlag = String(product?.['新到货'] || '').trim().toUpperCase();
-    const type = String(product?.TIPO || '').trim().toUpperCase();
-    const name = String(product?.PRODUCTO || '').trim().toUpperCase();
+    const newFlag = normalizeKey(product?.['新到货']);
+    const type = normalizeKey(product?.TIPO);
+    const name = normalizeKey(product?.PRODUCTO);
 
     return (
       newFlag === 'NUEVO' ||
@@ -1012,20 +1428,186 @@
     const map = new Map();
 
     list.forEach((product) => {
-      const key = String(
-        product?.id ||
-        product?.PRODUCTO ||
-        `${product?.MARCA || ''}-${product?.Imagen_Path || ''}`
-      ).trim().toUpperCase();
-
+      const key = productIdentity(product);
       if (key && !map.has(key)) map.set(key, product);
     });
 
     return [...map.values()];
   }
 
-  async function loadStableNewProductPool(force = false) {
-    if (carouselState.loadingPool) return;
+  function productImage(product) {
+    const raw = String(
+      product?.Imagen_Path ||
+      product?.IMAGEN ||
+      product?.image ||
+      ''
+    ).trim();
+
+    return raw ? encodeURI(raw.replace(/\\/g, '/')) : '';
+  }
+
+  function productPrice(product) {
+    const raw =
+      product?.['Precio ( USD )'] ??
+      product?.['Precio USD'] ??
+      product?.PRECIO ??
+      '';
+
+    const value = parseFloat(raw);
+
+    return Number.isFinite(value)
+      ? `$${value.toLocaleString('en-US', {
+          minimumFractionDigits: value % 1 ? 2 : 0,
+          maximumFractionDigits: 2
+        })}`
+      : '';
+  }
+
+  function readOrderHistory() {
+    try {
+      const history = JSON.parse(
+        window.localStorage.getItem('order_history') || '[]'
+      );
+      return Array.isArray(history) ? history : [];
+    } catch (error) {
+      console.warn('[Starphone Home V4.0] No se pudo leer el historial:', error);
+      return [];
+    }
+  }
+
+  function findHistoricalProduct(item, allProducts) {
+    const wantedId = normalizeKey(item?.id);
+    const wantedName = normalizeKey(item?.name);
+
+    return allProducts.find((product) => {
+      const productId = normalizeKey(product?.id);
+      const productName = normalizeKey(product?.PRODUCTO);
+
+      return (
+        (wantedId && (productId === wantedId || productName === wantedId)) ||
+        (wantedName && productName === wantedName)
+      );
+    }) || null;
+  }
+
+  function incrementScore(map, key, amount) {
+    const normalized = normalizeKey(key);
+    if (!normalized) return;
+    map.set(normalized, (map.get(normalized) || 0) + amount);
+  }
+
+  function rankMap(map) {
+    return [...map.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .map(([name, score]) => ({ name, score }));
+  }
+
+  function getFallbackPopularity(product) {
+    const possibleValues = [
+      product?.HOT,
+      product?.POPULAR,
+      product?.['热门'],
+      product?.['销量'],
+      product?.VENTAS,
+      product?.SALES
+    ];
+
+    for (const value of possibleValues) {
+      const numeric = Number(value);
+      if (Number.isFinite(numeric)) return numeric;
+
+      const text = normalizeKey(value);
+      if (['HOT', 'SI', 'YES', 'POPULAR', 'MAS VENDIDO'].includes(text)) {
+        return 1;
+      }
+    }
+
+    return 0;
+  }
+
+  function buildPersonalizedRecommendations(allProducts, newProducts) {
+    const history = readOrderHistory();
+    const brandScores = new Map();
+    const categoryScores = new Map();
+    const typeScores = new Map();
+
+    history.forEach((order) => {
+      const items = Array.isArray(order?.items) ? order.items : [];
+
+      items.forEach((item) => {
+        const product = findHistoricalProduct(item, allProducts);
+        if (!product) return;
+
+        const quantity = Math.max(1, Number(item?.qty) || 1);
+        incrementScore(brandScores, product?.MARCA, quantity);
+        incrementScore(categoryScores, product?.CATEGORIA, quantity);
+        incrementScore(typeScores, product?.TIPO, quantity);
+      });
+    });
+
+    const rankedBrands = rankMap(brandScores);
+    const rankedCategories = rankMap(categoryScores);
+    const rankedTypes = rankMap(typeScores);
+
+    const scoreProduct = (product, originalIndex) => {
+      const brand = normalizeKey(product?.MARCA);
+      const category = normalizeKey(product?.CATEGORIA);
+      const type = normalizeKey(product?.TIPO);
+
+      const brandRank = rankedBrands.findIndex((entry) => entry.name === brand);
+      const categoryRank = rankedCategories.findIndex((entry) => entry.name === category);
+      const typeRank = rankedTypes.findIndex((entry) => entry.name === type);
+
+      let score = 0;
+      let tier = 3;
+
+      if (brandRank >= 0) {
+        tier = 1;
+        score +=
+          CONFIG.recommendationBrandWeight * rankedBrands[brandRank].score -
+          brandRank;
+      } else if (categoryRank >= 0) {
+        tier = 2;
+        score +=
+          CONFIG.recommendationCategoryWeight * rankedCategories[categoryRank].score -
+          categoryRank;
+      } else if (typeRank >= 0) {
+        tier = 2;
+        score +=
+          CONFIG.recommendationTypeWeight * rankedTypes[typeRank].score -
+          typeRank;
+      }
+
+      score += getFallbackPopularity(product) * 5;
+
+      return {
+        product,
+        tier,
+        score,
+        originalIndex
+      };
+    };
+
+    const rankedProducts = newProducts
+      .map(scoreProduct)
+      .sort((a, b) =>
+        a.tier - b.tier ||
+        b.score - a.score ||
+        a.originalIndex - b.originalIndex
+      )
+      .slice(0, CONFIG.recommendationLimit)
+      .map((entry) => entry.product);
+
+    return {
+      products: rankedProducts,
+      personalized: rankedBrands.length > 0 || rankedCategories.length > 0,
+      preferredBrands: rankedBrands.slice(0, 3).map((entry) => entry.name),
+      preferredCategories: rankedCategories.slice(0, 2).map((entry) => entry.name)
+    };
+  }
+
+  async function loadRecommendationPool(force = false) {
+    if (recommendationState.loading) return;
 
     let sourceList = [];
     try {
@@ -1037,19 +1619,20 @@
     if (!sourceList.length) return;
 
     const eligibleSources = sourceList.filter((source) => !isOfferSource(source));
-    const signature = eligibleSources
+    const sourceSignature = eligibleSources
       .map((source) => `${source?.key || ''}|${source?.file || ''}`)
       .join('::');
 
     if (
       !force &&
-      carouselState.poolLoaded &&
-      carouselState.sourceSignature === signature
+      recommendationState.loaded &&
+      recommendationState.sourceSignature === sourceSignature
     ) {
+      renderRecommendations();
       return;
     }
 
-    carouselState.loadingPool = true;
+    recommendationState.loading = true;
 
     try {
       const results = await Promise.all(
@@ -1064,15 +1647,15 @@
             const raw = await response.json();
             if (!Array.isArray(raw)) return [];
 
-            return raw
-              .map((product) => ({
-                ...product,
-                id: product?.id || product?.PRODUCTO
-              }))
-              .filter(isNewProduct);
+            return raw.map((product) => ({
+              ...product,
+              id: product?.id || product?.PRODUCTO,
+              __sourceKey: source?.key || '',
+              __sourceLabel: source?.label || ''
+            }));
           } catch (error) {
             console.warn(
-              `[Starphone Home V3.9.1] No se pudo cargar novedades de ${source?.label || source?.key || 'fuente'}:`,
+              `[Starphone Home V4.0] No se pudo cargar ${source?.label || source?.key || 'fuente'}:`,
               error
             );
             return [];
@@ -1080,294 +1663,190 @@
         })
       );
 
-      const merged = dedupeProducts(results.flat()).slice(0, CONFIG.carouselLimit);
-
-      if (merged.length) {
-        carouselState.items = merged;
-        carouselState.signature = carouselSignature(merged);
-        carouselState.index = 0;
-        carouselState.poolLoaded = true;
-        carouselState.sourceSignature = signature;
-
-        renderCarouselSlide(true);
-        restartCarousel();
-      }
-    } finally {
-      carouselState.loadingPool = false;
-    }
-  }
-
-  function getNewProducts() {
-    return carouselState.items;
-  }
-
-  function productImage(product) {
-    const raw = String(product?.Imagen_Path || product?.IMAGEN || product?.image || '').trim();
-    return raw ? encodeURI(raw.replace(/\\/g, '/')) : '';
-  }
-
-  function productPrice(product) {
-    const raw =
-      product?.['Precio ( USD )'] ??
-      product?.['Precio USD'] ??
-      product?.PRECIO ??
-      '';
-
-    const value = parseFloat(raw);
-    return Number.isFinite(value) ? `$${value.toFixed(value % 1 ? 2 : 0)} USD` : '';
-  }
-
-  function carouselSignature(items) {
-    return items.map((item) =>
-      `${item?.PRODUCTO || ''}|${item?.MARCA || ''}|${productImage(item)}`
-    ).join('::');
-  }
-
-  function updateCarouselContent(force = false) {
-    loadStableNewProductPool(force);
-  }
-
-  function updateCarouselControls() {
-    const root = document.getElementById(IDS.root);
-    if (!root) return;
-
-    const hasMultiple = carouselState.items.length > 1;
-
-    root.querySelectorAll('.spv3-carousel-arrow').forEach((button) => {
-      button.hidden = !hasMultiple;
-    });
-
-    const dots = root.querySelector('[data-spv3-dots]');
-    if (dots) dots.hidden = !hasMultiple;
-  }
-
-  function renderCarouselSlide(immediate = false) {
-    const root = document.getElementById(IDS.root);
-    if (!root) return;
-
-    const brandEl = root.querySelector('[data-spv3-new-brand]');
-    const nameEl = root.querySelector('[data-spv3-new-name]');
-    const metaEl = root.querySelector('[data-spv3-new-meta]');
-    const imageEl = root.querySelector('[data-spv3-new-image]');
-    const dotsEl = root.querySelector('[data-spv3-dots]');
-
-    if (!brandEl || !nameEl || !metaEl || !imageEl || !dotsEl) return;
-
-    const item = carouselState.items[carouselState.index];
-
-    if (!item) {
-      brandEl.textContent = CONFIG.newArrivals.kicker;
-      nameEl.textContent = CONFIG.newArrivals.title.replace(/^🔥\s*/, '');
-      metaEl.textContent = CONFIG.newArrivals.subtitle;
-      imageEl.removeAttribute('src');
-      imageEl.alt = '';
-      imageEl.classList.remove('is-visible');
-      dotsEl.innerHTML = '';
-      updateCarouselControls();
-      return;
-    }
-
-    const apply = () => {
-      brandEl.textContent = item.MARCA || 'NUEVO';
-      nameEl.textContent = item.PRODUCTO || CONFIG.newArrivals.title;
-      metaEl.textContent = productPrice(item) || CONFIG.newArrivals.subtitle;
-
-      const image = productImage(item);
-      if (image) {
-        imageEl.src = image;
-        imageEl.alt = item.PRODUCTO || '';
-        imageEl.onload = () => imageEl.classList.add('is-visible');
-        imageEl.onerror = () => imageEl.classList.remove('is-visible');
-      } else {
-        imageEl.removeAttribute('src');
-        imageEl.alt = '';
-      }
-
-      dotsEl.innerHTML = carouselState.items.map((_, index) =>
-        `<button
-          class="spv3-dot ${index === carouselState.index ? 'is-active' : ''}"
-          type="button"
-          data-carousel-index="${index}"
-          aria-label="Ver novedad ${index + 1}"
-        ></button>`
-      ).join('');
-
-      updateCarouselControls();
-    };
-
-    if (immediate) {
-      imageEl.classList.remove('is-visible');
-      apply();
-      return;
-    }
-
-    imageEl.classList.remove('is-visible');
-    window.setTimeout(apply, 180);
-  }
-
-  function nextCarouselSlide() {
-    if (carouselState.items.length <= 1) return;
-
-    carouselState.index =
-      (carouselState.index + 1) % carouselState.items.length;
-
-    renderCarouselSlide(false);
-  }
-
-  function previousCarouselSlide() {
-    if (carouselState.items.length <= 1) return;
-
-    carouselState.index =
-      (carouselState.index - 1 + carouselState.items.length) %
-      carouselState.items.length;
-
-    renderCarouselSlide(false);
-  }
-
-  function goToCarouselSlide(index) {
-    if (!carouselState.items.length) return;
-
-    const targetIndex = Math.max(
-      0,
-      Math.min(Number(index) || 0, carouselState.items.length - 1)
-    );
-
-    carouselState.index = targetIndex;
-    renderCarouselSlide(false);
-    restartCarousel();
-  }
-
-  function manualCarouselMove(direction) {
-    if (direction === 'prev') previousCarouselSlide();
-    else nextCarouselSlide();
-
-    restartCarousel();
-  }
-
-
-  function restartCarousel() {
-    if (carouselState.timer) {
-      window.clearInterval(carouselState.timer);
-      carouselState.timer = null;
-    }
-
-    if (carouselState.items.length > 1) {
-      carouselState.timer = window.setInterval(
-        nextCarouselSlide,
-        CONFIG.carouselInterval
+      const allProducts = dedupeProducts(results.flat());
+      const newProducts = allProducts.filter(isNewProduct);
+      const recommendation = buildPersonalizedRecommendations(
+        allProducts,
+        newProducts
       );
+
+      recommendationState.allProducts = allProducts;
+      recommendationState.newProducts = newProducts;
+      recommendationState.recommendedProducts = recommendation.products;
+      recommendationState.personalized = recommendation.personalized;
+      recommendationState.preferredBrands = recommendation.preferredBrands;
+      recommendationState.preferredCategories = recommendation.preferredCategories;
+      recommendationState.sourceSignature = sourceSignature;
+      recommendationState.loaded = true;
+
+      renderRecommendations();
+    } finally {
+      recommendationState.loading = false;
     }
   }
 
-  function setupCarousel(root) {
+  function recommendationCardHtml(product, index) {
+    const image = productImage(product);
+    const name = String(product?.PRODUCTO || 'Producto nuevo');
+    const brand = String(product?.MARCA || 'NUEVO');
+    const price = productPrice(product);
+
+    return `
+      <button
+        class="spv4-product-card"
+        type="button"
+        data-spv4-product-index="${index}"
+        aria-label="Ver ${name.replace(/"/g, '&quot;')}"
+      >
+        <span class="spv4-product-image-wrap">
+          <span class="spv4-new-badge">NUEVO</span>
+          ${image
+            ? `<img src="${image}" alt="" loading="lazy" decoding="async">`
+            : `<span aria-hidden="true" style="font-size:34px">📦</span>`
+          }
+        </span>
+
+        <span class="spv4-product-brand">${brand}</span>
+        <strong class="spv4-product-name">${name}</strong>
+
+        <span class="spv4-product-footer">
+          <span class="spv4-product-price">${price || 'Consultar'}</span>
+          <span class="spv4-product-open" aria-hidden="true">→</span>
+        </span>
+      </button>
+    `;
+  }
+
+  function renderRecommendations() {
+    const root = document.getElementById(IDS.root);
     if (!root) return;
 
-    const banner = root.querySelector('.spv3-new');
-    if (!banner) return;
+    const list = root.querySelector('[data-spv4-recommendations-list]');
+    const subtitle = root.querySelector('[data-spv4-recommendations-subtitle]');
+    const tags = root.querySelector('[data-spv4-profile-tags]');
 
-    const previousButton = root.querySelector('[data-spv3-carousel-prev]');
-    const nextButton = root.querySelector('[data-spv3-carousel-next]');
-    const dots = root.querySelector('[data-spv3-dots]');
+    if (!list || !subtitle || !tags) return;
 
-    banner.addEventListener('mouseenter', () => {
-      if (carouselState.timer) {
-        window.clearInterval(carouselState.timer);
-        carouselState.timer = null;
+    const products = recommendationState.recommendedProducts;
+
+    subtitle.textContent = recommendationState.personalized
+      ? CONFIG.recommendations.personalizedSubtitle
+      : CONFIG.recommendations.genericSubtitle;
+
+    const tagNames = recommendationState.preferredBrands.length
+      ? recommendationState.preferredBrands
+      : recommendationState.preferredCategories;
+
+    tags.innerHTML = tagNames
+      .map((name) => `<span class="spv4-profile-tag">${name}</span>`)
+      .join('');
+    tags.hidden = tagNames.length === 0;
+
+    if (!products.length) {
+      list.innerHTML = `
+        <div class="spv4-empty">
+          No hay novedades disponibles en este momento.
+        </div>
+      `;
+      return;
+    }
+
+    list.innerHTML = products
+      .map(recommendationCardHtml)
+      .join('');
+  }
+
+  async function openRecommendedProduct(product) {
+    if (!product) return;
+
+    const sourceKey = product.__sourceKey;
+
+    try {
+      isFavoriteMode = false;
+    } catch (_) {}
+
+    if (sourceKey) {
+      let shouldSwitch = false;
+
+      try {
+        shouldSwitch = currentSourceKey !== sourceKey;
+      } catch (_) {}
+
+      if (shouldSwitch) {
+        safeCall('setSource', sourceKey);
+
+        const startedAt = Date.now();
+        await new Promise((resolve) => {
+          const timer = window.setInterval(() => {
+            let ready = false;
+
+            try {
+              ready =
+                currentSourceKey === sourceKey &&
+                Array.isArray(products) &&
+                products.length > 0;
+            } catch (_) {}
+
+            if (ready || Date.now() - startedAt > 5000) {
+              window.clearInterval(timer);
+              resolve();
+            }
+          }, 80);
+        });
       }
+    }
+
+    resetFilters();
+
+    const productName = String(product?.PRODUCTO || '').trim();
+
+    try {
+      activeFilters.keyword = productName;
+      isFavoriteMode = false;
+    } catch (error) {
+      console.warn('[Starphone Home V4.0] No se pudo abrir el producto:', error);
+    }
+
+    const searchInput = document.getElementById('search');
+    if (searchInput) searchInput.value = productName;
+
+    rerender();
+    showStatus(`Producto seleccionado: ${productName}`);
+    window.setTimeout(scrollToProducts, 100);
+  }
+
+  function scrollRecommendationList(direction) {
+    const root = document.getElementById(IDS.root);
+    const list = root?.querySelector('[data-spv4-recommendations-list]');
+    if (!list) return;
+
+    const amount = Math.max(260, list.clientWidth * .82);
+    list.scrollBy({
+      left: direction === 'prev' ? -amount : amount,
+      behavior: 'smooth'
+    });
+  }
+
+  function setupRecommendations(root) {
+    if (!root) return;
+
+    const list = root.querySelector('[data-spv4-recommendations-list]');
+    const viewAll = root.querySelector('[data-spv4-view-all]');
+    const previous = root.querySelector('[data-spv4-scroll-prev]');
+    const next = root.querySelector('[data-spv4-scroll-next]');
+
+    viewAll?.addEventListener('click', applyNewFilter);
+    previous?.addEventListener('click', () => scrollRecommendationList('prev'));
+    next?.addEventListener('click', () => scrollRecommendationList('next'));
+
+    list?.addEventListener('click', (event) => {
+      const card = event.target.closest('[data-spv4-product-index]');
+      if (!card) return;
+
+      const index = Number(card.dataset.spv4ProductIndex);
+      openRecommendedProduct(recommendationState.recommendedProducts[index]);
     });
 
-    banner.addEventListener('mouseleave', restartCarousel);
-
-    previousButton?.addEventListener('click', (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-      manualCarouselMove('prev');
-    });
-
-    nextButton?.addEventListener('click', (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-      manualCarouselMove('next');
-    });
-
-    dots?.addEventListener('click', (event) => {
-      const dot = event.target.closest('[data-carousel-index]');
-      if (!dot) return;
-
-      event.preventDefault();
-      event.stopPropagation();
-      goToCarouselSlide(dot.dataset.carouselIndex);
-    });
-
-    banner.addEventListener('touchstart', (event) => {
-      const touch = event.touches[0];
-      if (!touch) return;
-
-      carouselState.touchStartX = touch.clientX;
-      carouselState.touchStartY = touch.clientY;
-      carouselState.touchMoved = false;
-
-      if (carouselState.timer) {
-        window.clearInterval(carouselState.timer);
-        carouselState.timer = null;
-      }
-    }, { passive: true });
-
-    banner.addEventListener('touchmove', (event) => {
-      const touch = event.touches[0];
-      if (!touch) return;
-
-      const deltaX = touch.clientX - carouselState.touchStartX;
-      const deltaY = touch.clientY - carouselState.touchStartY;
-
-      if (Math.abs(deltaX) > 12 && Math.abs(deltaX) > Math.abs(deltaY)) {
-        carouselState.touchMoved = true;
-      }
-    }, { passive: true });
-
-    banner.addEventListener('touchend', (event) => {
-      const touch = event.changedTouches[0];
-
-      if (!touch) {
-        restartCarousel();
-        return;
-      }
-
-      const deltaX = touch.clientX - carouselState.touchStartX;
-      const deltaY = touch.clientY - carouselState.touchStartY;
-
-      const isHorizontalSwipe =
-        Math.abs(deltaX) >= 42 &&
-        Math.abs(deltaX) > Math.abs(deltaY) * 1.15;
-
-      if (isHorizontalSwipe) {
-        event.preventDefault();
-        event.stopPropagation();
-
-        if (deltaX > 0) manualCarouselMove('prev');
-        else manualCarouselMove('next');
-
-        carouselState.touchMoved = true;
-        carouselState.suppressClickUntil = Date.now() + 700;
-      } else {
-        restartCarousel();
-      }
-    }, { passive: false });
-
-    // 手机滑动后拦截紧接着发生的 click，避免误触发 NUEVO 筛选
-    banner.addEventListener('click', (event) => {
-      if (Date.now() > carouselState.suppressClickUntil) return;
-
-      event.preventDefault();
-      event.stopImmediatePropagation();
-    }, true);
-
-    /*
-     * 新品池独立读取所有常规列表：
-     * - 包含 LISTA ACTUAL、LISTA ACTUAL 2 等
-     * - 排除 OFERTA
-     * - FAVORITOS 只是显示模式，不会影响新品池
-     */
     let tries = 0;
     const waitForSources = window.setInterval(() => {
       tries += 1;
@@ -1379,11 +1858,17 @@
 
       if (hasSources) {
         window.clearInterval(waitForSources);
-        loadStableNewProductPool(true);
+        loadRecommendationPool(true);
       } else if (tries >= 40) {
         window.clearInterval(waitForSources);
       }
     }, 300);
+
+    window.addEventListener('storage', (event) => {
+      if (event.key === 'order_history') {
+        loadRecommendationPool(true);
+      }
+    });
   }
 
   function setupPointerGlow(root) {
@@ -1408,7 +1893,7 @@
   function createSection() {
     const root = document.createElement('section');
     root.id = IDS.root;
-    root.setAttribute('aria-label', 'Novedades y pabellón de marcas');
+    root.setAttribute('aria-label', 'Recomendaciones y pabellón de marcas');
 
     const brandsHtml = CONFIG.brands.map((brand) => `
       <button
@@ -1435,52 +1920,65 @@
     `).join('');
 
     root.innerHTML = `
-      <div
-        class="spv3-new"
-        role="button"
-        tabindex="0"
-        aria-label="${CONFIG.newArrivals.button}"
-        style="--spv3-new-image: url('${CONFIG.newArrivals.image}')"
-      >
-        <span class="spv3-new-copy">
-          <span class="spv3-kicker">${CONFIG.newArrivals.kicker}</span>
-          <span class="spv3-new-brand" data-spv3-new-brand>${CONFIG.newArrivals.kicker}</span>
-          <span class="spv3-new-name" data-spv3-new-name>Novedades de la Semana</span>
-          <span class="spv3-new-meta" data-spv3-new-meta>${CONFIG.newArrivals.subtitle}</span>
-          <span class="spv3-link">
-            ${CONFIG.newArrivals.button}
+      <section class="spv4-recommendations" aria-labelledby="spv4-recommendations-title">
+        <div class="spv4-recommendations-head">
+          <div class="spv4-recommendations-copy">
+            <h2 class="spv4-recommendations-title" id="spv4-recommendations-title">
+              <span class="spv4-recommendations-star" aria-hidden="true">⭐</span>
+              <span>${CONFIG.recommendations.title}</span>
+            </h2>
+
+            <p
+              class="spv4-recommendations-subtitle"
+              data-spv4-recommendations-subtitle
+            >
+              ${CONFIG.recommendations.genericSubtitle}
+            </p>
+
+            <div
+              class="spv4-profile-tags"
+              data-spv4-profile-tags
+              hidden
+            ></div>
+          </div>
+
+          <button
+            class="spv4-view-all"
+            type="button"
+            data-spv4-view-all
+          >
+            ${CONFIG.recommendations.button}
             <span aria-hidden="true">→</span>
-          </span>
-        </span>
+          </button>
+        </div>
 
-        <button
-          class="spv3-carousel-arrow spv3-carousel-prev"
-          type="button"
-          data-spv3-carousel-prev
-          aria-label="Novedad anterior"
-        >
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M15 18l-6-6 6-6"/>
-          </svg>
-        </button>
+        <div class="spv4-recommendations-viewport">
+          <button
+            class="spv4-scroll-arrow spv4-scroll-prev"
+            type="button"
+            data-spv4-scroll-prev
+            aria-label="Ver productos anteriores"
+          >
+            ‹
+          </button>
 
-        <button
-          class="spv3-carousel-arrow spv3-carousel-next"
-          type="button"
-          data-spv3-carousel-next
-          aria-label="Siguiente novedad"
-        >
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M9 18l6-6-6-6"/>
-          </svg>
-        </button>
+          <div
+            class="spv4-recommendations-list"
+            data-spv4-recommendations-list
+          >
+            <div class="spv4-empty">Cargando novedades...</div>
+          </div>
 
-        <span class="spv3-new-product" aria-hidden="true">
-          <img data-spv3-new-image alt="">
-        </span>
-
-        <span class="spv3-dots" data-spv3-dots></span>
-      </div>
+          <button
+            class="spv4-scroll-arrow spv4-scroll-next"
+            type="button"
+            data-spv4-scroll-next
+            aria-label="Ver más productos"
+          >
+            ›
+          </button>
+        </div>
+      </section>
 
       <header class="spv3-heading">
         <h2>Pabellón de Marcas</h2>
@@ -1492,22 +1990,6 @@
       </div>
     `;
 
-    const newBanner = root.querySelector('.spv3-new');
-
-    newBanner.addEventListener('click', (event) => {
-      if (event.target.closest('.spv3-carousel-arrow, .spv3-dot')) return;
-      applyNewFilter();
-    });
-
-    newBanner.addEventListener('keydown', (event) => {
-      if (event.target.closest('.spv3-carousel-arrow, .spv3-dot')) return;
-
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        applyNewFilter();
-      }
-    });
-
     root.querySelectorAll('.spv3-brand-card').forEach((card) => {
       card.addEventListener('click', () => {
         applyBrandFilter(card.dataset.brand);
@@ -1515,7 +1997,7 @@
     });
 
     setupPointerGlow(root);
-    setupCarousel(root);
+    setupRecommendations(root);
 
     return root;
   }
