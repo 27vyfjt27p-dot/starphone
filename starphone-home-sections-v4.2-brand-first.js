@@ -21,7 +21,7 @@
     recommendationTypeWeight: 15,
 
     recommendations: {
-      title: 'Productos nuevos para ti',
+      title: 'Recomendados para ti',
       personalizedSubtitle: 'Basado en tus compras anteriores',
       genericSubtitle: 'Descubre las novedades de nuestro catálogo',
       button: 'Ver todos'
@@ -922,71 +922,122 @@
       }
 
       .spv4-recommendations {
-        border-radius: 22px;
-        padding: 18px 14px 14px;
+        border-radius: 20px;
+        padding: 14px 12px 12px;
       }
 
       .spv4-recommendations-head {
-        gap: 8px;
-        margin-bottom: 14px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: start;
+        gap: 8px 6px;
+        margin-bottom: 12px;
+      }
+
+      .spv4-recommendations-copy {
+        min-width: 0;
       }
 
       .spv4-recommendations-title {
-        gap: 8px;
-        font-size: 21px;
+        gap: 7px;
+        max-width: 100%;
+        font-size: 18px;
+        line-height: 1.12;
+        letter-spacing: -.025em;
       }
 
       .spv4-recommendations-star {
-        width: 32px;
-        height: 32px;
-        border-radius: 11px;
-        font-size: 16px;
+        width: 29px;
+        height: 29px;
+        border-radius: 10px;
+        font-size: 15px;
       }
 
       .spv4-recommendations-subtitle {
-        margin: 6px 0 0 40px;
-        font-size: 11px;
+        margin: 6px 0 0 36px;
+        font-size: 10.5px;
+        line-height: 1.35;
       }
 
       .spv4-profile-tags {
-        margin: 9px 0 0 40px;
+        max-width: calc(100vw - 82px);
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        margin: 8px 0 0 36px;
         gap: 5px;
+        padding-bottom: 2px;
+        scrollbar-width: none;
+      }
+
+      .spv4-profile-tags::-webkit-scrollbar {
+        display: none;
       }
 
       .spv4-profile-tag {
-        min-height: 23px;
+        min-height: 22px;
+        flex: 0 0 auto;
         padding: 4px 8px;
         font-size: 8px;
       }
 
       .spv4-view-all {
-        padding: 7px 5px;
-        font-size: 9px;
+        align-self: start;
+        margin-top: 1px;
+        padding: 6px 2px;
+        font-size: 8.5px;
+        white-space: nowrap;
       }
 
       .spv4-recommendations-list {
-        grid-auto-columns: calc((100% - 12px) / 2.22);
-        gap: 12px;
-        margin-right: -14px;
-        padding-right: 14px;
+        grid-auto-columns: calc((100% - 10px) / 2.28);
+        gap: 10px;
+        margin-right: -12px;
+        padding: 2px 12px 6px 0;
+        scroll-padding-left: 0;
       }
 
       .spv4-product-card {
-        border-radius: 17px;
-        padding: 8px;
+        min-height: 0;
+        border-radius: 16px;
+        padding: 7px;
       }
 
       .spv4-product-image-wrap {
-        border-radius: 13px;
+        aspect-ratio: 1 / .86;
+        border-radius: 12px;
+      }
+
+      .spv4-new-badge {
+        top: 6px;
+        left: 6px;
+        padding: 4px 7px;
+        font-size: 7px;
+      }
+
+      .spv4-product-brand {
+        margin-top: 8px;
+        font-size: 8px;
       }
 
       .spv4-product-name {
-        min-height: 32px;
-        font-size: 11px;
+        min-height: 29px;
+        margin-top: 3px;
+        font-size: 10.5px;
+        line-height: 1.3;
+      }
+
+      .spv4-product-footer {
+        padding-top: 8px;
       }
 
       .spv4-product-price {
-        font-size: 13px;
+        font-size: 12.5px;
+      }
+
+      .spv4-product-open {
+        width: 25px;
+        height: 25px;
+        font-size: 15px;
       }
 
       .spv4-scroll-arrow {
@@ -994,15 +1045,17 @@
       }
 
       .spv3-heading {
-        margin: 31px 2px 16px;
+        margin: 26px 2px 13px;
       }
 
       .spv3-heading h2 {
-        font-size: 30px;
+        font-size: 26px;
+        line-height: 1.08;
       }
 
       .spv3-heading p {
-        font-size: 15px;
+        font-size: 13px;
+        line-height: 1.4;
       }
 
       .spv3-grid {
@@ -1920,6 +1973,15 @@
     `).join('');
 
     root.innerHTML = `
+      <header class="spv3-heading">
+        <h2>Pabellón de Marcas</h2>
+        <p>Explora nuestras marcas destacadas</p>
+      </header>
+
+      <div class="spv3-grid">
+        ${brandsHtml}
+      </div>
+
       <section class="spv4-recommendations" aria-labelledby="spv4-recommendations-title">
         <div class="spv4-recommendations-head">
           <div class="spv4-recommendations-copy">
@@ -1980,16 +2042,7 @@
         </div>
       </section>
 
-      <header class="spv3-heading">
-        <h2>Pabellón de Marcas</h2>
-        <p>Explora nuestras marcas destacadas</p>
-      </header>
-
-      <div class="spv3-grid">
-        ${brandsHtml}
-      </div>
     `;
-
     root.querySelectorAll('.spv3-brand-card').forEach((card) => {
       card.addEventListener('click', () => {
         applyBrandFilter(card.dataset.brand);
