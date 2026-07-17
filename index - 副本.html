@@ -15,7 +15,6 @@
         
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
@@ -569,13 +568,25 @@ body.dark .favorite-mode-banner {
     /* 💻 PC端：右侧侧边栏 */
     md:top-0 md:right-0 md:bottom-0 md:left-auto md:inset-x-auto
     md:w-[420px] md:h-screen md:max-h-none md:rounded-l-[2.5rem] md:rounded-t-none">
-
+    <div id="cart-page" class="contents">
     <div class="p-6 border-b border-slate-100 flex justify-between items-center shrink-0">
-        <div class="flex items-center gap-4">
-            <h2 class="text-xl font-black text-slate-900 dark:text-white uppercase">Mi Pedido</h2>
-            <button onclick="clearCart()" class="text-[10px] font-bold text-red-500 border border-red-100 px-2 py-1 rounded-lg uppercase hover:bg-red-50 transition-all">
+        <div class="flex items-center gap-2 min-w-0">
+            <h2 class="text-xl font-black text-slate-900 dark:text-white uppercase whitespace-nowrap">Mi Pedido</h2>       
+            <button
+                type="button"
+                onclick="openSentLists()"
+                class="text-[9px] md:text-[10px] font-black text-blue-600
+                       border border-blue-200 px-2 py-1 rounded-lg uppercase
+                       hover:bg-blue-50 transition-all whitespace-nowrap">
+                🕘 Historial
+            </button>        
+            <button
+                onclick="clearCart()"
+                class="text-[9px] md:text-[10px] font-bold text-red-500
+                       border border-red-100 px-2 py-1 rounded-lg uppercase
+                       hover:bg-red-50 transition-all whitespace-nowrap">
                 Vaciar 🗑️
-            </button>
+            </button>       
         </div>
         <button onclick="closeAllModals()" class="w-10 h-10 flex items-center justify-center bg-slate-100 dark:bg-slate-800 rounded-full text-slate-400">✕</button>
     </div>
@@ -608,7 +619,92 @@ body.dark .favorite-mode-banner {
         </div>
     </div>
 </div>
+<div id="history-page"
+    class="hidden flex-col flex-1 min-h-0 w-full bg-white dark:bg-slate-900">
 
+   <!-- 顶部 -->
+   <div class="p-6 border-b border-slate-100 dark:border-slate-800
+               flex items-center justify-between shrink-0">
+
+       <button
+           type="button"
+           onclick="showCartPage()"
+           class="w-10 h-10 flex items-center justify-center
+                  bg-slate-100 dark:bg-slate-800 rounded-full
+                  text-slate-600 dark:text-slate-300">
+           ←
+       </button>
+       <div class="text-center">
+           <h2 class="text-lg font-black text-slate-900 dark:text-white uppercase">Historial </h2>
+           <p class="text-[10px] font-bold text-slate-400 mt-1">Últimos 180 días</p>
+       </div>
+       <button
+           type="button"
+           onclick="closeAllModals()"
+           class="w-10 h-10 flex items-center justify-center
+                  bg-slate-100 dark:bg-slate-800 rounded-full
+                  text-slate-400">
+           ✕
+       </button>
+   </div> 
+<!-- 历史记录内容 -->
+
+<!-- 搜索框：固定在顶部，不参与滚动 -->
+<div class="px-4 pt-4 pb-2
+            bg-slate-50 dark:bg-slate-950
+            shrink-0">
+
+    <div class="relative">
+        <input
+            type="text"
+            id="history-search"
+            placeholder="Buscar por producto, vendedor o fecha..."
+            oninput="filterOrderHistory()"
+            class="w-full
+                   bg-white dark:bg-slate-800
+                   border border-slate-200 dark:border-slate-700
+                   rounded-2xl
+                   py-3 pl-11 pr-4
+                   text-sm text-slate-900 dark:text-white
+                   outline-none
+                   focus:border-blue-500" >
+        <span class="absolute
+                     left-4 top-1/2
+                     -translate-y-1/2
+                     text-slate-400
+                     pointer-events-none">🔍
+        </span>
+    </div>
+</div>
+<!-- 历史订单列表：只有这里上下滚动 -->
+<div
+    id="history-list"
+    class="flex-1 min-h-0
+           overflow-y-auto
+           overscroll-contain
+           p-4
+           bg-slate-50 dark:bg-slate-950"
+    style="-webkit-overflow-scrolling: touch;">
+    <div class="min-h-[300px]
+                flex flex-col
+                items-center justify-center
+                text-center px-6">
+
+        <div class="text-5xl mb-4">
+            🕘
+        </div>
+        <h3 class="text-base font-black
+                   text-slate-800 dark:text-white
+                   uppercase">Sin historial</h3>
+        <p class="text-sm text-slate-400 mt-2">
+            Las listas enviadas por WhatsApp aparecerán aquí.
+         </p>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
     <div id="filter-menu" class="fixed inset-y-0 right-0 w-80 bg-white dark:bg-slate-900 shadow-2xl z-[3000] transform translate-x-full p-6 transition-transform duration-300 flex flex-col">
         
         <div class="mb-6 p-5 bg-slate-50 dark:bg-slate-800/50 rounded-[2rem] border border-slate-100 dark:border-slate-800 shadow-sm">
@@ -649,35 +745,1189 @@ body.dark .favorite-mode-banner {
 
         <button onclick="closeAllModals()" class="mt-4 w-full bg-slate-900 dark:bg-blue-600 text-white py-4 rounded-xl font-bold uppercase text-sm active:scale-95 transition-all">Ver Resultados</button>
     </div>
+    <!-- 全站通用确认弹窗 -->
+<div
+id="global-confirm-modal"
+class="fixed inset-0 z-[6000] hidden
+       items-center justify-center
+       bg-black/50 backdrop-blur-sm
+       px-5"
+role="dialog"
+aria-modal="true"
+aria-labelledby="global-confirm-title"
+aria-describedby="global-confirm-message"
+onclick="closeGlobalConfirm()"
+>
+<div
+    id="global-confirm-panel"
+    class="w-full max-w-[340px]
+           bg-white dark:bg-slate-900
+           rounded-[2rem]
+           shadow-2xl
+           border border-white/20
+           dark:border-slate-700
+           overflow-hidden
+           opacity-0 scale-95
+           transition-all duration-200"
+    onclick="event.stopPropagation()"
+>
+    <!-- 内容区域 -->
+    <div class="px-7 pt-8 pb-6 text-center">
 
+        <!-- 动态图标 -->
+        <div
+            id="global-confirm-icon-box"
+            class="w-14 h-14 mx-auto
+                   rounded-full
+                   bg-red-50 dark:bg-red-950/40
+                   text-red-500
+                   flex items-center justify-center"
+        >
+            <!-- Lucide Trash2 -->
+            <svg
+                id="global-confirm-icon-trash"
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="26"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+            >
+                <path d="M3 6h18"/>
+                <path d="M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2"/>
+                <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/>
+                <path d="M10 11v6"/>
+                <path d="M14 11v6"/>
+            </svg>
+        </div>
+
+        <!-- 动态标题 -->
+        <h3
+            id="global-confirm-title"
+            class="mt-5 text-lg font-black
+                   text-slate-900 dark:text-white"
+        >
+            Confirmar acción
+        </h3>
+
+        <!-- 动态说明 -->
+        <p
+            id="global-confirm-message"
+            class="mt-2 text-sm leading-6
+                   text-slate-500 dark:text-slate-400"
+        >
+            ¿Deseas continuar?
+        </p>
+
+    </div>
+
+    <!-- 按钮区域 -->
+    <div
+        class="grid grid-cols-2
+               border-t border-slate-100
+               dark:border-slate-800"
+    >
+        <button
+            type="button"
+            id="global-confirm-cancel-btn"
+            onclick="closeGlobalConfirm()"
+            class="py-4
+                   text-sm font-black
+                   text-slate-600 dark:text-slate-300
+                   hover:bg-slate-50
+                   dark:hover:bg-slate-800
+                   transition-all
+                   active:scale-95"
+        >
+            Cancelar
+        </button>
+
+        <button
+            type="button"
+            id="global-confirm-action-btn"
+            class="py-4
+                   border-l border-slate-100
+                   dark:border-slate-800
+                   text-sm font-black
+                   text-red-500
+                   hover:bg-red-50
+                   dark:hover:bg-red-950/30
+                   transition-all
+                   active:scale-95"
+        >
+            Confirmar
+        </button>
+    </div>
+</div>
+</div>
     <div id="modal-overlay" class="fixed inset-0 bg-black/70 z-[1500] hidden backdrop-blur-sm flex items-center justify-center" onclick="closeAllModals()">
         <button id="lightbox-close-btn" class="close-lightbox-btn hidden" onclick="event.stopPropagation(); closeAllModals()">✕</button>
         <img id="lightbox-img" src="" class="hidden" onclick="event.stopPropagation(); this.classList.toggle('zoom-active')">
     </div>
 
     <script>
-        function clearCart() {
-    // 1. 弹出确认框防止误删
-    if (!confirm("¿Estás seguro de que deseas vaciar todo el pedido?")) return;
-    
-    vibrate(); // 震动反馈
-    
-    // 2. 清空当前数据源的对象
-    cart = {};
-    productNotes = {};
-    
-    // 3. 同步到本地存储 (LocalStorage)
-    saveToLocal();
-    
-    // 4. 刷新界面
-    render();             // 刷新主页列表（按钮变回加号或数量清零）
-    refreshCartModal();   // 刷新购物车弹窗显示
-    updateCartBar();      // 更新底部的蓝色总数条（会自动隐藏，因为数量为0）
-    
-    // 5. 如果购物车空了，自动关闭弹窗（可选）
+function openSentLists() {
+    const cartPage = document.getElementById('cart-page');
+    const historyPage = document.getElementById('history-page');
+
+    if (!cartPage || !historyPage) return;
+
+    renderOrderHistory();
+
+    cartPage.classList.add('hidden');
+    cartPage.classList.remove('contents');
+
+    historyPage.classList.remove('hidden');
+    historyPage.classList.add('flex');
+}
+
+function renderOrderHistory() {
+    const historyList = document.getElementById('history-list');
+
+    if (!historyList) return;
+
+    let history = [];
+
+    try {
+        history = JSON.parse(
+            localStorage.getItem('order_history') || '[]'
+        );
+
+        if (!Array.isArray(history)) {
+            history = [];
+        }
+    } catch (error) {
+        console.error('读取历史订单失败：', error);
+        history = [];
+    }
+
+    // 打开历史页面时，再清理一次180天以前的数据
+    const oneHundredEightyDaysAgo =
+        Date.now() - 180 * 24 * 60 * 60 * 1000;
+
+    const filteredHistory = history.filter(order => {
+        const orderTime =
+            Number(order.createdAt) ||
+            Number(order.id) ||
+            0;
+
+        return orderTime >= oneHundredEightyDaysAgo;
+    });
+
+    if (filteredHistory.length !== history.length) {
+        history = filteredHistory;
+
+        localStorage.setItem(
+            'order_history',
+            JSON.stringify(history)
+        );
+    }
+
+    if (history.length === 0) {
+        historyList.innerHTML = `
+            <div class="min-h-[300px] flex flex-col
+                        items-center justify-center text-center px-6">
+
+                <div class="text-5xl mb-4">🕘</div>
+
+                <h3 class="text-base font-black
+                           text-slate-800 dark:text-white uppercase">
+                    Sin historial
+                </h3>
+
+                <p class="text-sm text-slate-400 mt-2">
+                    Las listas enviadas por WhatsApp aparecerán aquí.
+                </p>
+            </div>
+        `;
+
+        return;
+    }
+
+    historyList.innerHTML = history.map(order => {
+        const items = Array.isArray(order.items)
+            ? order.items
+            : [];
+
+        const itemCount =
+            Number(order.itemCount) ||
+            items.reduce((sum, item) => {
+                return sum + (Number(item.qty) || 0);
+            }, 0);
+
+        const contact =
+            order.contact || 'Sin contacto';
+
+        const date =
+            order.date || '';
+
+        const total =
+            order.total || '$0.00';
+
+        const itemsHtml = items.map((item, index) => {
+            const qty =
+                Math.max(1, Number(item.qty) || 1);
+
+            const note =
+                item.note || '';
+
+            const productName =
+                item.name ||
+                item.id ||
+                'Producto';
+
+            const price =
+                Number(item.price) || 0;
+
+            const subtotal =
+                item.subtotal !== undefined
+                    ? Number(item.subtotal) || 0
+                    : price * qty;
+
+            const hasHistoricalPrice =
+                item.price !== undefined &&
+                item.price !== null;
+
+            const priceText =
+                hasHistoricalPrice
+                    ? `$${price.toLocaleString('en-US', {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2
+                    })}`
+                    : 'Sin precio histórico';
+
+            const subtotalText =
+                hasHistoricalPrice
+                    ? `$${subtotal.toLocaleString('en-US', {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2
+                    })}`
+                    : '—';
+
+            const imagePath =
+                item.image
+                    ? encodeURI(
+                        String(item.image).replace(/\\/g, '/')
+                    )
+                    : '';
+
+            const imageHtml = imagePath
+                ? `
+                    <img
+                        src="${imagePath}"
+                        alt="${escapeHtml(productName)}"
+                        onerror="handleHistoryImgError(this)"
+                        class="w-16 h-16 object-contain rounded-xl
+                               bg-slate-50 dark:bg-slate-950
+                               border border-slate-100
+                               dark:border-slate-700 shrink-0"
+                    >
+                `
+                : `
+                    <div class="w-16 h-16 rounded-xl
+                                bg-slate-100 dark:bg-slate-800
+                                flex items-center justify-center
+                                text-2xl shrink-0">
+                        📦
+                    </div>
+                `;
+
+            return `
+                <div
+                    class="history-product bg-white dark:bg-slate-800
+                           border border-slate-200 dark:border-slate-700
+                           rounded-2xl p-3 mt-3"
+                    data-order-id="${order.id}"
+                    data-item-index="${index}"
+                >
+                    <div class="flex items-start gap-3">
+
+                        <input
+                            type="checkbox"
+                            class="history-select w-4 h-4 mt-1 shrink-0"
+                            checked
+                        >
+
+                        ${imageHtml}
+
+                        <div class="flex-1 min-w-0">
+
+                            <div class="text-[11px] font-black
+                                        text-slate-800 dark:text-white
+                                        uppercase break-words">
+                                ${escapeHtml(productName)}
+                            </div>
+
+                            <div class="flex items-center
+                                        justify-between gap-2 mt-2">
+
+                                <div>
+                                    <div class="text-[9px] font-bold
+                                                text-slate-400 uppercase">
+                                        Precio histórico
+                                    </div>
+
+                                    <div class="text-sm font-black
+                                                text-blue-600">
+                                        ${priceText}
+                                    </div>
+                                </div>
+
+                                <div class="text-right">
+                                    <div class="text-[9px] font-bold
+                                                text-slate-400 uppercase">
+                                        Subtotal
+                                    </div>
+
+                                    <div
+                                        id="history-subtotal-${order.id}-${index}"
+                                        class="text-sm font-black
+                                               text-slate-900 dark:text-white"
+                                    >
+                                        ${subtotalText}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center
+                                        justify-between gap-2 mt-3">
+
+                                <span class="text-[9px] font-bold
+                                             text-slate-400 uppercase">
+                                    Cantidad
+                                </span>
+
+                                <div class="flex items-center
+                                            bg-slate-100 dark:bg-slate-900
+                                            rounded-xl p-1">
+
+                                    <button
+                                        type="button"
+                                        onclick="changeHistoryQty(
+                                            ${order.id},
+                                            ${index},
+                                            -1,
+                                            ${price}
+                                        )"
+                                        class="w-8 h-8 rounded-lg
+                                               bg-white dark:bg-slate-700
+                                               font-black">
+                                        −
+                                    </button>
+
+                                    <input
+                                        id="history-qty-${order.id}-${index}"
+                                        type="number"
+                                        min="1"
+                                        value="${qty}"
+                                        onchange="updateHistorySubtotal(
+                                            ${order.id},
+                                            ${index},
+                                            ${price}
+                                        )"
+                                        class="w-12 text-center
+                                               bg-transparent font-black
+                                               outline-none"
+                                    >
+
+                                    <button
+                                        type="button"
+                                        onclick="changeHistoryQty(
+                                            ${order.id},
+                                            ${index},
+                                            1,
+                                            ${price}
+                                        )"
+                                        class="w-8 h-8 rounded-lg
+                                               bg-white dark:bg-slate-700
+                                               font-black">
+                                        +
+                                    </button>
+
+                                </div>
+                            </div>
+
+                            <textarea
+                                id="history-note-${order.id}-${index}"
+                                rows="2"
+                                placeholder="Color, almacenamiento, observaciones."
+                                class="w-full mt-3 px-3 py-2 rounded-xl
+                                       border border-slate-200
+                                       dark:border-slate-700
+                                       bg-white dark:bg-slate-900
+                                       text-[11px] outline-none"
+                            >${escapeHtml(note)}</textarea>
+
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        return `
+            <div class="bg-white dark:bg-slate-900
+                        rounded-2xl border border-slate-200
+                        dark:border-slate-800 p-4 mb-3 shadow-sm">
+
+<div class="flex justify-between items-start gap-4">
+    <!-- 左边 -->
+    <div class="flex-1 min-w-0">
+        <div class="text-[11px] font-bold text-slate-400">
+            ${escapeHtml(date)}
+        </div>
+        <div class="text-sm font-black
+                    text-slate-900 dark:text-white mt-2">
+            ${escapeHtml(contact)}
+        </div>
+    </div>
+    <!-- 右边 -->
+    <div class="flex flex-col items-end shrink-0">
+        <button
+            type="button"
+            onclick="deleteHistoryOrder(${order.id})"
+            title="Eliminar pedido"
+            class="w-8 h-8
+                   rounded-full
+                   flex items-center justify-center
+                   text-slate-400
+                   hover:bg-red-500
+                   hover:text-white
+                   transition-all
+                   active:scale-95">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="w-5 h-5"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor"
+                 stroke-width="2">
+                <path stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19 7L18.133 19.142
+                         A2 2 0 0116.138 21
+                         H7.862
+                         A2 2 0 015.867 19.142
+                         L5 7" />
+                <path stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M10 11V17" />
+                <path stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M14 11V17" />
+                <path stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4 7H20" />
+                <path stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M9 7V4
+                         A1 1 0 0110 3H14
+                         A1 1 0 0115 4V7" />
+            </svg>
+        </button>
+        <div class="mt-2 text-right">
+            <div class="text-lg font-black text-blue-600">
+                ${escapeHtml(total)}
+            </div>
+            <div class="text-[10px] font-bold text-slate-400">
+                ${itemCount} unidades
+            </div>
+        </div>
+    </div>
+</div>
+                <button
+                    type="button"
+                    onclick="toggleHistoryOrder(${order.id})"
+                    class="w-full mt-4 py-2 rounded-xl
+                           bg-slate-100 dark:bg-slate-800
+                           text-[10px] font-black uppercase">
+                    Ver Lista
+                </button>
+
+                <div
+                    id="history-detail-${order.id}"
+                    class="hidden"
+                >
+                    ${itemsHtml}
+
+                    <button
+                        type="button"
+                        onclick="addHistoryItemsToCart(${order.id})"
+                        class="w-full mt-4 bg-blue-600 text-white
+                               py-3 rounded-xl font-black uppercase
+                               text-[11px]">
+                        Agregar seleccionados al pedido
+                    </button>
+                </div>
+
+            </div>
+        `;
+    }).join('');
+}
+function filterOrderHistory() {
+    const searchInput =
+        document.getElementById('history-search');
+
+    if (!searchInput) return;
+
+    const normalizeText = value => {
+        return String(value || '')
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .toLowerCase()
+            .replace(/\s+/g, ' ')
+            .trim();
+    };
+
+    const keyword =
+        normalizeText(searchInput.value);
+
+    let history = [];
+
+    try {
+        history = JSON.parse(
+            localStorage.getItem('order_history') || '[]'
+        );
+
+        if (!Array.isArray(history)) {
+            history = [];
+        }
+    } catch (error) {
+        console.error('读取历史订单失败：', error);
+        history = [];
+    }
+
+    if (!keyword) {
+        renderOrderHistory();
+        return;
+    }
+
+    const searchWords =
+        keyword.split(' ').filter(Boolean);
+
+    const filteredHistory = history.filter(order => {
+        const orderItems =
+            Array.isArray(order.items)
+                ? order.items
+                : [];
+
+        const searchableValues = [
+            order.date,
+            order.contact,
+            order.total,
+            ...orderItems.flatMap(item => [
+                item.name,
+                item.id,
+                item.note
+            ])
+        ];
+
+        const orderText =
+            normalizeText(
+                searchableValues
+                    .filter(Boolean)
+                    .join(' ')
+            );
+
+        return searchWords.every(word =>
+            orderText.includes(word)
+        );
+    });
+
+    renderFilteredOrderHistory(filteredHistory);
+}
+function renderFilteredOrderHistory(history) {
+    const historyList =
+        document.getElementById('history-list');
+
+    if (!historyList) return;
+
+    if (!Array.isArray(history) || history.length === 0) {
+        historyList.innerHTML = `
+            <div class="min-h-[300px] flex flex-col
+                        items-center justify-center text-center px-6">
+
+                <div class="text-5xl mb-4">🔍</div>
+
+                <h3 class="text-base font-black
+                           text-slate-800 dark:text-white uppercase">
+                    Sin resultados
+                </h3>
+
+                <p class="text-sm text-slate-400 mt-2">
+                    No se encontraron pedidos relacionados.
+                </p>
+            </div>
+        `;
+
+        return;
+    }
+
+    const originalHistory =
+        localStorage.getItem('order_history');
+
+    localStorage.setItem(
+        'order_history',
+        JSON.stringify(history)
+    );
+
+    renderOrderHistory();
+
+    if (originalHistory !== null) {
+        localStorage.setItem(
+            'order_history',
+            originalHistory
+        );
+    } else {
+        localStorage.removeItem('order_history');
+    }
+}
+function handleHistoryImgError(img) {
+    img.onerror = null;
+    img.style.display = 'none';
+
+    const placeholder =
+        document.createElement('div');
+
+    placeholder.className =
+        'w-16 h-16 rounded-xl bg-slate-100 ' +
+        'dark:bg-slate-800 flex items-center ' +
+        'justify-center text-2xl shrink-0';
+
+    placeholder.innerText = '📦';
+
+    img.parentNode.insertBefore(
+        placeholder,
+        img
+    );
+}
+let globalConfirmCallback = null;
+let globalConfirmIsProcessing = false;
+let globalConfirmCloseTimer = null;
+
+function showGlobalConfirm(options = {}) {
+    const modal =
+        document.getElementById('global-confirm-modal');
+
+    const panel =
+        document.getElementById('global-confirm-panel');
+
+    const titleElement =
+        document.getElementById('global-confirm-title');
+
+    const messageElement =
+        document.getElementById('global-confirm-message');
+
+    const actionBtn =
+        document.getElementById('global-confirm-action-btn');
+
+    const cancelBtn =
+        document.getElementById('global-confirm-cancel-btn');
+
+    if (
+        !modal ||
+        !panel ||
+        !titleElement ||
+        !messageElement ||
+        !actionBtn ||
+        !cancelBtn
+    ) {
+        console.error('No se encontró el modal de confirmación.');
+        return;
+    }
+
+    // 防止上一次关闭动画影响这一次打开
+    if (globalConfirmCloseTimer) {
+        clearTimeout(globalConfirmCloseTimer);
+        globalConfirmCloseTimer = null;
+    }
+
+    globalConfirmIsProcessing = false;
+
+    globalConfirmCallback =
+        typeof options.onConfirm === 'function'
+            ? options.onConfirm
+            : null;
+
+    titleElement.textContent =
+        options.title || 'Confirmar acción';
+
+    messageElement.textContent =
+        options.message || '¿Deseas continuar?';
+
+    actionBtn.textContent =
+        options.confirmText || 'Confirmar';
+
+    cancelBtn.textContent =
+        options.cancelText || 'Cancelar';
+
+    actionBtn.disabled = false;
+    cancelBtn.disabled = false;
+
+    actionBtn.className =
+        `py-4
+         border-l border-slate-100
+         dark:border-slate-800
+         text-sm font-black
+         transition-all
+         active:scale-95
+         disabled:opacity-50
+         disabled:cursor-not-allowed
+         ${
+            options.confirmColor === 'blue'
+                ? `text-blue-600
+                   hover:bg-blue-50
+                   dark:hover:bg-blue-950/30`
+                : `text-red-500
+                   hover:bg-red-50
+                   dark:hover:bg-red-950/30`
+         }`;
+
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+
+    // 防止弹窗打开时背景页面继续滚动
+    document.body.style.overflow = 'hidden';
+
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            panel.classList.remove(
+                'opacity-0',
+                'scale-95'
+            );
+
+            panel.classList.add(
+                'opacity-100',
+                'scale-100'
+            );
+        });
+    });
+}
+
+function closeGlobalConfirm(options = {}) {
+    const modal =
+        document.getElementById('global-confirm-modal');
+
+    const panel =
+        document.getElementById('global-confirm-panel');
+
+    const actionBtn =
+        document.getElementById('global-confirm-action-btn');
+
+    const cancelBtn =
+        document.getElementById('global-confirm-cancel-btn');
+
+    if (!modal || !panel) return;
+
+    const preserveCallback =
+        options.preserveCallback === true;
+
+    if (!preserveCallback) {
+        globalConfirmCallback = null;
+    }
+
+    globalConfirmIsProcessing = false;
+
+    if (actionBtn) {
+        actionBtn.disabled = true;
+    }
+
+    if (cancelBtn) {
+        cancelBtn.disabled = true;
+    }
+
+    panel.classList.remove(
+        'opacity-100',
+        'scale-100'
+    );
+
+    panel.classList.add(
+        'opacity-0',
+        'scale-95'
+    );
+
+    if (globalConfirmCloseTimer) {
+        clearTimeout(globalConfirmCloseTimer);
+    }
+
+    globalConfirmCloseTimer = setTimeout(() => {
+        modal.classList.remove('flex');
+        modal.classList.add('hidden');
+
+        document.body.style.overflow = '';
+
+        globalConfirmCloseTimer = null;
+    }, 180);
+}
+
+function handleGlobalConfirmAction() {
+    if (globalConfirmIsProcessing) return;
+
+    const actionBtn =
+        document.getElementById('global-confirm-action-btn');
+
+    const cancelBtn =
+        document.getElementById('global-confirm-cancel-btn');
+
+    const callback = globalConfirmCallback;
+
+    if (typeof callback !== 'function') {
+        closeGlobalConfirm();
+        return;
+    }
+
+    globalConfirmIsProcessing = true;
+    globalConfirmCallback = null;
+
+    if (actionBtn) {
+        actionBtn.disabled = true;
+    }
+
+    if (cancelBtn) {
+        cancelBtn.disabled = true;
+    }
+
+    closeGlobalConfirm({
+        preserveCallback: true
+    });
+
     setTimeout(() => {
-        closeAllModals();
-    }, 500);
+        try {
+            callback();
+        } catch (error) {
+            console.error(
+                'Error al ejecutar la acción confirmada:',
+                error
+            );
+        }
+    }, 180);
+}
+
+const globalConfirmActionBtn =
+    document.getElementById('global-confirm-action-btn');
+
+if (globalConfirmActionBtn) {
+    globalConfirmActionBtn.addEventListener(
+        'click',
+        handleGlobalConfirmAction
+    );
+}
+
+function updateHistorySubtotal(
+    orderId,
+    itemIndex,
+    price
+) {
+    const input =
+        document.getElementById(
+            `history-qty-${orderId}-${itemIndex}`
+        );
+
+    const subtotalElement =
+        document.getElementById(
+            `history-subtotal-${orderId}-${itemIndex}`
+        );
+
+    if (!input || !subtotalElement) return;
+
+    let qty =
+        parseInt(input.value) || 1;
+
+    if (qty < 1) qty = 1;
+
+    input.value = qty;
+
+    const subtotal =
+        (Number(price) || 0) * qty;
+
+    subtotalElement.innerText =
+        `$${subtotal.toLocaleString('en-US', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        })}`;
+}
+
+function toggleHistoryOrder(orderId) {
+    vibrate();
+
+    const detail =
+        document.getElementById(`history-detail-${orderId}`);
+
+    if (!detail) return;
+
+    detail.classList.toggle('hidden');
+}
+
+function deleteHistoryOrder(orderId) {
+    vibrate();
+
+    showGlobalConfirm({
+        title: 'Eliminar pedido',
+        message: 'Este pedido se eliminará permanentemente.',
+        confirmText: 'Eliminar',
+        confirmColor: 'red',
+
+        onConfirm: () => {
+            let history = [];
+
+            try {
+                history = JSON.parse(
+                    localStorage.getItem('order_history') || '[]'
+                );
+
+                if (!Array.isArray(history)) {
+                    history = [];
+                }
+            } catch (error) {
+                console.error(
+                    '读取历史订单失败：',
+                    error
+                );
+
+                alert('No se pudo eliminar el pedido.');
+                return;
+            }
+
+            const updatedHistory = history.filter(order => {
+                return String(order.id) !== String(orderId);
+            });
+
+            if (updatedHistory.length === history.length) {
+                alert('No se encontró el pedido.');
+                return;
+            }
+
+            localStorage.setItem(
+                'order_history',
+                JSON.stringify(updatedHistory)
+            );
+
+            const searchInput =
+                document.getElementById('history-search');
+
+            if (
+                searchInput &&
+                searchInput.value.trim()
+            ) {
+                filterOrderHistory();
+            } else {
+                renderOrderHistory();
+            }
+        }
+    });
+}
+
+function changeHistoryQty(
+    orderId,
+    itemIndex,
+    change,
+    price
+) {
+    vibrate();
+
+    const input =
+        document.getElementById(
+            `history-qty-${orderId}-${itemIndex}`
+        );
+
+    if (!input) return;
+
+    let qty =
+        parseInt(input.value) || 1;
+
+    qty += change;
+
+    if (qty < 1) qty = 1;
+
+    input.value = qty;
+
+    updateHistorySubtotal(
+        orderId,
+        itemIndex,
+        price
+    );
+}
+
+async function addHistoryItemsToCart(orderId) {
+    vibrate();
+
+    let history = [];
+
+    try {
+        history = JSON.parse(
+            localStorage.getItem('order_history') || '[]'
+        );
+    } catch (error) {
+        console.error('读取历史订单失败：', error);
+        return;
+    }
+
+    const order = history.find(
+        item => Number(item.id) === Number(orderId)
+    );
+
+    if (!order) {
+        alert('No se encontró el pedido.');
+        return;
+    }
+
+    const orderItems =
+        Array.isArray(order.items) ? order.items : [];
+
+    const targetSourceKey =
+        order.sourceKey || currentSourceKey;
+
+    const allCarts = JSON.parse(
+        localStorage.getItem('starphone_carts_v2') || '{}'
+    );
+
+    const allNotes = JSON.parse(
+        localStorage.getItem('starphone_notes_v2') || '{}'
+    );
+
+    const targetCart =
+        allCarts[targetSourceKey] || {};
+
+    const targetNotes =
+        allNotes[targetSourceKey] || {};
+
+    let addedProducts = 0;
+    let addedQty = 0;
+
+    orderItems.forEach((item, index) => {
+        const productBox = document.querySelector(
+            `.history-product[data-order-id="${orderId}"][data-item-index="${index}"]`
+        );
+
+        if (!productBox) return;
+
+        const checkbox =
+            productBox.querySelector('.history-select');
+
+        if (!checkbox || !checkbox.checked) return;
+
+        const qtyInput =
+            document.getElementById(
+                `history-qty-${orderId}-${index}`
+            );
+
+        const noteInput =
+            document.getElementById(
+                `history-note-${orderId}-${index}`
+            );
+
+        const qty =
+            Math.max(1, parseInt(qtyInput?.value) || 1);
+
+        const newNote =
+            noteInput ? noteInput.value.trim() : '';
+
+        const productId = item.id;
+
+        targetCart[productId] =
+            (Number(targetCart[productId]) || 0) + qty;
+
+        if (newNote) {
+            if (targetNotes[productId]) {
+                if (!targetNotes[productId].includes(newNote)) {
+                    targetNotes[productId] += ' / ' + newNote;
+                }
+            } else {
+                targetNotes[productId] = newNote;
+            }
+        }
+
+        addedProducts++;
+        addedQty += qty;
+    });
+
+    if (addedProducts === 0) {
+        alert('Selecciona al menos un producto.');
+        return;
+    }
+
+    allCarts[targetSourceKey] = targetCart;
+    allNotes[targetSourceKey] = targetNotes;
+
+    localStorage.setItem(
+        'starphone_carts_v2',
+        JSON.stringify(allCarts)
+    );
+
+    localStorage.setItem(
+        'starphone_notes_v2',
+        JSON.stringify(allNotes)
+    );
+
+    if (currentSourceKey !== targetSourceKey) {
+        currentSourceKey = targetSourceKey;
+
+        cart = targetCart;
+        productNotes = targetNotes;
+
+        isFavoriteMode = false;
+
+        await loadProducts();
+        renderSourceTabs();
+    } else {
+        cart = targetCart;
+        productNotes = targetNotes;
+
+        render();
+    }
+
+    refreshCartModal();
+    updateCartBar();
+    showCartPage();
+
+    alert(
+        `${addedProducts} productos, ${addedQty} unidades agregadas al pedido.`
+    );
+}
+function showCartPage() {
+    const cartPage = document.getElementById('cart-page');
+    const historyPage = document.getElementById('history-page');
+
+    if (!cartPage || !historyPage) return;
+
+    // 隐藏 Historial
+    historyPage.classList.add('hidden');
+    historyPage.classList.remove('flex');
+
+    // 显示 Mi Pedido
+    cartPage.classList.remove('hidden');
+    cartPage.classList.add('contents');
+}
+function clearCart() {
+    vibrate();
+
+    showGlobalConfirm({
+        title: 'Vaciar pedido',
+        message: 'Se eliminarán todos los productos del pedido.',
+        confirmText: 'Vaciar',
+        confirmColor: 'red',
+
+        onConfirm: () => {
+            // 1. 清空当前数据源
+            cart = {};
+            productNotes = {};
+
+            // 2. 同步到本地存储
+            saveToLocal();
+
+            // 3. 刷新界面
+            render();
+            refreshCartModal();
+            updateCartBar();
+
+            // 4. 购物车清空后关闭弹窗
+            setTimeout(() => {
+                closeAllModals();
+            }, 500);
+        }
+    });
 }
         let products = [], cart = {}, productNotes = {}, favorites = {}, sources = [], currentSourceKey = null;
        
@@ -760,16 +2010,6 @@ function removeFilter(filterType) {
     updateActiveFiltersPills();
     updateFilterIconStatus();
     if (typeof updateFavoriteModeBanner === 'function') updateFavoriteModeBanner();
-}
-
-function escapeHtml(str) {
-    if (!str) return '';
-    return str.replace(/[&<>]/g, function(m) {
-        if (m === '&') return '&amp;';
-        if (m === '<') return '&lt;';
-        if (m === '>') return '&gt;';
-        return m;
-    });
 }
 
 function toggleVibration() {
@@ -1106,7 +2346,18 @@ async function loadProducts() {
     saveToLocal(); // 调用你原有的函数保存到 LocalStorage
 }
         function setQty(id, val) { let n = parseInt(val); if (isNaN(n) || n <= 0) { delete cart[id]; delete productNotes[id]; } else { cart[id] = n; } saveToLocal(); render(); if(document.getElementById('cart-modal').classList.contains('active')) refreshCartModal(); }
-        function toggleCartModal() { const isActive = document.getElementById('cart-modal').classList.toggle('active'); document.getElementById('modal-overlay').classList.toggle('hidden', !isActive); if(isActive) refreshCartModal(); }
+        function toggleCartModal() {
+    const cartModal = document.getElementById('cart-modal');
+    const isActive = cartModal.classList.toggle('active');
+
+    document.getElementById('modal-overlay')
+        .classList.toggle('hidden', !isActive);
+
+    if (isActive) {
+        showCartPage();
+        refreshCartModal();
+    }
+}
         
         function closeAllModals() { 
             document.querySelectorAll('.detail-content').forEach(d => d.classList.remove('active')); 
@@ -1117,6 +2368,7 @@ async function loadProducts() {
             document.getElementById('lightbox-img').classList.add('hidden'); 
             document.getElementById('lightbox-close-btn').classList.add('hidden'); 
             document.body.style.overflow = ''; 
+            showCartPage();
         }
 
         // --- 4. 保存数据：按 Key 分类存储购物车 ---
@@ -1348,7 +2600,8 @@ html += `
     });
 
     m += `💰 *TOTAL PEDIDO: $${grandTotal.toFixed(2)}*`;
-
+    // 保存历史订单
+    saveOrderHistory();
     window.open(`https://wa.me/${contact.phone}?text=${encodeURIComponent(m)}`); 
 }
         async function generateOrderPoster(event) {
@@ -1960,8 +3213,135 @@ fetch('notice.txt?v=' + new Date().getTime())
             window.open(url, '_blank');
         }
     }
+    function saveOrderHistory() {
+    // 购物车为空时不保存
+    if (!cart || Object.keys(cart).length === 0) return;
 
-    function getEmbedUrl(url) {
+    let history = [];
+
+    try {
+        history = JSON.parse(
+            localStorage.getItem('order_history') || '[]'
+        );
+
+        if (!Array.isArray(history)) {
+            history = [];
+        }
+    } catch (error) {
+        console.error('读取历史订单失败：', error);
+        history = [];
+    }
+
+    const now = new Date();
+    const createdAt = now.getTime();
+
+    const date =
+        now.getFullYear() + '-' +
+        String(now.getMonth() + 1).padStart(2, '0') + '-' +
+        String(now.getDate()).padStart(2, '0') + ' ' +
+        String(now.getHours()).padStart(2, '0') + ':' +
+        String(now.getMinutes()).padStart(2, '0');
+
+    const items = [];
+
+    let totalQty = 0;
+    let orderTotal = 0;
+
+    Object.keys(cart).forEach(id => {
+        const qty = Number(cart[id]) || 0;
+
+        if (qty <= 0) return;
+
+        const product = products.find(
+            item => String(item.id) === String(id)
+        );
+
+        const price = product
+            ? parseFloat(product['Precio ( USD )']) || 0
+            : 0;
+
+        const subtotal = price * qty;
+
+        const image =
+            product && product.Imagen_Path
+                ? String(product.Imagen_Path)
+                : '';
+
+        const productName =
+            product && product.PRODUCTO
+                ? String(product.PRODUCTO)
+                : String(id);
+
+        items.push({
+            id: String(id),
+            name: productName,
+            qty: qty,
+            note: productNotes[id] || '',
+            price: price,
+            subtotal: subtotal,
+            image: image
+        });
+
+        totalQty += qty;
+        orderTotal += subtotal;
+    });
+
+    if (items.length === 0) return;
+
+    const contact =
+        CONTACTS &&
+        CONTACTS[activeContactIndex]
+            ? CONTACTS[activeContactIndex].name
+            : '';
+
+    const order = {
+        id: createdAt,
+        createdAt: createdAt,
+        date: date,
+        contact: contact,
+        totalValue: orderTotal,
+        total: `$${orderTotal.toLocaleString('en-US', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        })}`,
+        itemCount: totalQty,
+        sourceKey: currentSourceKey || '',
+        items: items
+    };
+
+    history.unshift(order);
+
+    // 自动保留最近180天
+    const oneHundredEightyDaysAgo =
+        Date.now() - 180 * 24 * 60 * 60 * 1000;
+
+    history = history
+        .filter(item => {
+            const orderTime =
+                Number(item.createdAt) ||
+                Number(item.id) ||
+                0;
+
+            return orderTime >= oneHundredEightyDaysAgo;
+        })
+        .slice(0, 500);
+
+    try {
+        localStorage.setItem(
+            'order_history',
+            JSON.stringify(history)
+        );
+
+        console.log('订单历史保存成功：', order);
+    } catch (error) {
+        console.error('保存历史订单失败：', error);
+
+        alert(
+            'No se pudo guardar el historial. El almacenamiento del navegador puede estar lleno.'
+        );
+    }
+}
+function getEmbedUrl(url) {
         const trimUrl = url.trim();
         if (trimUrl.includes('youtube.com') || trimUrl.includes('youtu.be')) {
             const youtubeId = extractYoutubeId(trimUrl);
