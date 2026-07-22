@@ -1041,7 +1041,7 @@
     "VIENE_LA_CAJA": "D",
     "video_url": "",
     "qcy-yf": "qcy",
-    "新到货": "nuevo"
+    "新到货": ""
   },
   {
     "MARCA": "Black Shark",
@@ -1130,7 +1130,7 @@
   {
     "MARCA": "XIAOMI",
     "TIPO": "Band",
-    "PRODUCTO": "Xiaomi Smart Band 10 Negro blanco  rosado",
+    "PRODUCTO": "Xiaomi Smart Band 10 Negro blanco",
     "DESC_FULL": "",
     "Precio ( USD )": 32.0,
     "Imagen_Path": "products_images/products_095.png",
@@ -1995,7 +1995,7 @@
     "MARCA": "XIAOMI",
     "TIPO": "parlante",
     "PRODUCTO": "Xiaomi Bluetooth Speaker 40W",
-    "DESC_FULL": "Sonido potente de 40W con calidad envolvente de 360°.\nAjuste profesional HARMAN AudioEFX para un sonido más equilibrado.\nBatería de 17 horas con carga completa (4800mAh).\nResistencia IP67 al agua y al polvo, ideal para exteriores.\nLuces RGB personalizables para ambientar cualquier ocasión.\nConexión rápida NFC y Bluetooth 5.3 para audio de alta fidelidad.",
+    "DESC_FULL": "Sonido envolvente: Ofrece una salida de audio de alta fidelidad con graves profundos y agudos claros para una experiencia auditiva equilibrada.\nConectividad avanzada: Utiliza tecnología Bluetooth para una conexión inalámbrica estable y rápida con diversos dispositivos.\nDiseño portátil y resistente: Cuenta con un diseño compacto y duradero, ideal para llevar a cualquier lugar, incluyendo resistencia contra elementos externos.\nAutonomía prolongada: Incluye una batería de larga duración que permite disfrutar de música durante horas sin necesidad de recargas frecuentes.\nUso intuitivo: Incorpora botones de control sencillos para ajustar el volumen, gestionar la reproducción y manejar llamadas manos libres.",
     "Precio ( USD )": 47.0,
     "Imagen_Path": "products_images/products_167.png",
     "VIENE_LA_CAJA": 10,
@@ -2085,7 +2085,7 @@
     "VIENE_LA_CAJA": 30,
     "video_url": "",
     "qcy-yf": "qcy",
-    "新到货": "nuevo"
+    "新到货": ""
   },
   {
     "MARCA": "XIAOMI",
@@ -2433,7 +2433,7 @@
     "VIENE_LA_CAJA": 30,
     "video_url": "",
     "qcy-yf": "yf",
-    "新到货": "NUEVO"
+    "新到货": ""
   },
   {
     "MARCA": "XIAOMI",
@@ -2445,7 +2445,7 @@
     "VIENE_LA_CAJA": "20\nnuevo",
     "video_url": "",
     "qcy-yf": "yf",
-    "新到货": "NUEVO"
+    "新到货": ""
   },
   {
     "MARCA": "XIAOMI",
@@ -2457,7 +2457,7 @@
     "VIENE_LA_CAJA": 10,
     "video_url": "",
     "qcy-yf": "yf",
-    "新到货": "NUEVO"
+    "新到货": ""
   },
   {
     "MARCA": "HUAWEI",
@@ -2697,7 +2697,7 @@
     "VIENE_LA_CAJA": 12,
     "video_url": "https://youtu.be/QOnhKnfCQVI",
     "qcy-yf": "yf",
-    "新到货": "NUEVO"
+    "新到货": ""
   },
   {
     "MARCA": "HOTO",
@@ -3033,7 +3033,7 @@
     "VIENE_LA_CAJA": 5,
     "video_url": "",
     "qcy-yf": "yf",
-    "新到货": "NUEVO"
+    "新到货": ""
   },
   {
     "MARCA": "XIAOMI",
@@ -3369,13 +3369,13 @@
     "VIENE_LA_CAJA": 5,
     "video_url": "",
     "qcy-yf": "yf",
-    "新到货": "NUEVO"
+    "新到货": ""
   },
   {
     "MARCA": "XIAOMI",
     "TIPO": "Batidora",
     "PRODUCTO": "Xiaomi Blender EU",
-    "DESC_FULL": "Potencia eficiente: Motor de 600W con 21,000 RPM que permite triturar hielo y mezclar ingredientes duros rápidamente.\nCuchillas de alto rendimiento: Cuenta con 6 cuchillas de acero inoxidable (4 en forma de ala y 2 planas) para un mezclado preciso desde todos los ángulos.\nCapacidad familiar: Jarra de vidrio sodocálcico reforzado con una capacidad de 1.75L, ideal para preparar múltiples porciones a la vez.\nVersatilidad de control: Ofrece 5 velocidades ajustables y una función de pulso para adaptarse a diferentes texturas y necesidades culinarias.\nSeguridad: Incluye un sistema de bloqueo en la tapa que asegura que el dispositivo solo funcione cuando esté correctamente cerrado.\nFácil mantenimiento: Diseñada con una función de autolimpieza rápida y cuchillas desmontables para mayor comodidad.\nDiseño inteligente: Boquilla en forma de U para un vertido limpio y base con cable retráctil para un almacenamiento ordenado.",
+    "DESC_FULL": "Multifuncionalidad: Permite preparar bebidas tanto calientes como frías, ofreciendo versatilidad para hacer desde batidos y jugos hasta sopas y purés.\nAlta potencia: Cuenta con un motor de alta potencia para una mezcla eficiente y cuchillas de acero inoxidable que trituran los alimentos con facilidad.\nControl inteligente: Es compatible con la aplicación Mi Home/Xiaomi Home, lo que permite programar horarios de inicio, controlar la cocción de forma remota y acceder a recetas integradas.\nLimpieza automática: Incluye un modo de limpieza dedicado que facilita el mantenimiento del vaso después de su uso.\nDiseño seguro: Dispone de funciones de protección de seguridad, como la pausa automática al abrir la tapa, para garantizar un uso seguro en el hogar.",
     "Precio ( USD )": 50.0,
     "Imagen_Path": "products_images/products_282.png",
     "VIENE_LA_CAJA": 1,
@@ -3417,7 +3417,7 @@
     "VIENE_LA_CAJA": "D",
     "video_url": "https://youtu.be/1DIVYHkyFgw",
     "qcy-yf": "yf",
-    "新到货": "NUEVO"
+    "新到货": ""
   },
   {
     "MARCA": "BOMIDI\n1ano garantia",
@@ -3447,7 +3447,7 @@
     "MARCA": "XIAOMI",
     "TIPO": "Espresso Machine",
     "PRODUCTO": "Xiaomi Semi-automatic Espresso Machine EU",
-    "DESC_FULL": "Extracción de alta presión (20 bar)\nPreinfusión para mejor sabor\nVaporizador para hacer espuma de leche\nControl preciso de temperatura\nDiseño compacto ideal para el hogar",
+    "DESC_FULL": "Extracción profesional: Cuenta con un sistema de bomba italiana de alto rendimiento que garantiza una presión constante para lograr un espresso rico con una crema perfecta.\nControl térmico avanzado: Utiliza tecnología de calentamiento rápido (sistema Thermoblock) para asegurar una temperatura del agua óptima y estable durante todo el proceso de extracción.\nEspumado de leche potente: Incluye una varilla de vapor profesional que permite texturizar la leche para crear espuma densa y cremosa, ideal para preparar lattes o capuchinos.\nDiseño intuitivo: Dispone de una interfaz sencilla con controles claros para gestionar fácilmente las funciones de café y vapor, además de un diseño compacto que se adapta a cualquier cocina.\nAccesorios incluidos: Suele venir con portafiltros de grado profesional y herramientas de compactación para asegurar una preparación consistente en cada uso.",
     "Precio ( USD )": 78.0,
     "Imagen_Path": "products_images/products_288.png",
     "VIENE_LA_CAJA": 1,
@@ -3513,7 +3513,7 @@
     "VIENE_LA_CAJA": 4,
     "video_url": "",
     "qcy-yf": "yf",
-    "新到货": "NUEVO"
+    "新到货": ""
   },
   {
     "MARCA": "Lenovo",
@@ -3945,6 +3945,6 @@
     "VIENE_LA_CAJA": 4,
     "video_url": "",
     "qcy-yf": "yf",
-    "新到货": "NUEVO"
+    "新到货": ""
   }
 ]
