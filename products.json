@@ -1106,7 +1106,7 @@
   {
     "MARCA": "XIAOMI",
     "TIPO": "Band",
-    "PRODUCTO": "Xiaomi Smart Band 10 Negro blanco",
+    "PRODUCTO": "Xiaomi Smart Band 10 Negro",
     "DESC_FULL": "",
     "Precio ( USD )": 32.0,
     "Imagen_Path": "products_images/products_093.png",
@@ -3476,7 +3476,7 @@
     "Imagen_Path": "products_images/products_290.png",
     "VIENE_LA_CAJA": 4,
     "video_url": "",
-    "qcy-yf": "yf",
+    "qcy-yf": "qcy",
     "新到货": "NUEVO"
   },
   {
