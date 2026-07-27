@@ -40,13 +40,13 @@
     "qcy-yf": "qcy"
   },
   {
-    "MARCA": "JBL",
-    "PRODUCTO": "JBL FLIP 7   NEGRO AZUL",
-    "DESC_FULL": "VERSION VIETNAM",
-    "Precio ( USD )": 85,
+    "MARCA": "Insta360",
+    "PRODUCTO": "Insta360 GO 3S 128GB Global version",
+    "DESC_FULL": "Calidad de imagen: Grabación 4K, con opciones de 2.7K/30fps y 1080p/120fps.\nDiseño: Ligera y ultra portátil, ideal para tomas POV 4K manos libres.\nVersatilidad: Sistema de montaje magnético para instalar en cualquier lugar.\nControl: Action Pod con pantalla táctil abatible para carga, control remoto y previsualización en directo.\nResistencia: Cámara sumergible hasta 10m; Action Pod resistente a salpicaduras (IPX4).",
+    "Precio ( USD )": 310,
     "Imagen_Path": "OFERTA_images/OFERTA_005.png",
-    "VIENE_LA_CAJA": "OFERTA!!!",
-    "video_url": "",
+    "VIENE_LA_CAJA": "D",
+    "video_url": "https://youtu.be/4Z8D7ZAyPwE",
     "qcy-yf": "qcy"
   },
   {
@@ -82,7 +82,7 @@
   {
     "MARCA": "HiFuture",
     "PRODUCTO": "HiFuture FutureTour X black ,gold",
-    "DESC_FULL": "Cancelación activa de ruido híbrida (Hybrid ANC)：Reduce eficazmente el ruido exterior para una experiencia inmersiva.\nSonido de alta fidelidad：Reproducción equilibrada, ideal para música, películas y juegos.\nDiseño cómodo y plegable：Almohadillas suaves con espuma de proteína para uso prolongado.\nMicrófonos con cancelación de ruido por IA：Llamadas claras incluso en entornos ruidosos.\nBluetooth 5.4 con baja latencia：Conexión estable, sin retrasos.\nAutonomía de hasta 35 horas：Con ANC activado；hasta 25 horas sin ANC.\nEntrada AUX disponible：Puedes seguir usándolos con cable si se agota la batería.",
+    "DESC_FULL": "Cancelación activa de ruido híbrida (Hybrid ANC): Reduce eficazmente el ruido exterior para una experiencia inmersiva.\nSonido de alta fidelidad: Reproducción equilibrada, ideal para música, películas y juegos.\nDiseño cómodo y plegable: Almohadillas suaves con espuma de proteína para uso prolongado.\nMicrófonos con cancelación de ruido por IA: Llamadas claras incluso en entornos ruidosos.\nBluetooth 5.4 con baja latencia: Conexión estable y eficiente.\nAutonomía de hasta 35 horas: Disfruta de música durante días con una sola carga.\nEntrada AUX disponible: Puedes seguir usándolos con cable si se agota la batería.",
     "Precio ( USD )": 25,
     "Imagen_Path": "OFERTA_images/OFERTA_009.png",
     "VIENE_LA_CAJA": "OFERTA!!!",
@@ -150,7 +150,7 @@
     "qcy-yf": "qcy"
   },
   {
-    "MARCA": "tronsmart",
+    "MARCA": "TRONSMART",
     "PRODUCTO": "Tronsmart Sounfii Q20S Hybrid Active Noise Cancellation Headphones black Y blanco",
     "DESC_FULL": "Cancelación híbrida de ruido: Micrófonos avanzados cancelan hasta 40dB de ruido ambiental, ideal para ambientes ruidosos como aeropuertos y calles.\nAudio sin distorsión: Controladores dinámicos de 40mm para un sonido equilibrado y sin distorsión.\nIncreíble audio Hi-Res: Sonido detallado y enriquecido tres veces más con audio de alta resolución.\nOrejeras rotativas de 90°: Almohadillas de espuma viscoelástica que se ajustan cómodamente, y la diadema se adapta automáticamente a tu cabeza.\nLlamadas claras: Llamadas manos libres con calidad cristalina.\nSonido personalizado: Ajusta el ecualizador y personaliza el estilo de música a tu gusto. Tamaño del producto:18.6*18.2*8.3cm",
     "Precio ( USD )": 20,
@@ -160,13 +160,43 @@
     "qcy-yf": "qcy"
   },
   {
-    "MARCA": "BASEUS",
-    "PRODUCTO": "Baseus  GaN3 Pro Gallium nitride desktop strip AC+2U+2C 65W SUPERVOOC edition",
-    "DESC_FULL": "Conector USB\nVoltaje de entrada: 12/24V (Bivolt)\nVoltaje de salida: 65W\nIncluye cable\n4 puertos de carga\nProtección contra sobrecarga",
-    "Precio ( USD )": 15,
+    "MARCA": "HAYLOU",
+    "PRODUCTO": "HAYLOU-auriculares inalámbricos S35 ANC",
+    "DESC_FULL": "Cancelación de Ruido (ANC): Sistema híbrido de hasta -42 dB.\nAutonomía: Hasta 60 horas de reproducción (sin ANC).\nAudio: Sonido estéreo de alta resolución (Hi-Res).\nConectividad: Bluetooth 5.2 con conexión multipunto.\nDiseño: Ergonómico, plegable y con almohadillas suaves.",
+    "Precio ( USD )": 30,
     "Imagen_Path": "OFERTA_images/OFERTA_017.png",
-    "VIENE_LA_CAJA": "super oferta",
-    "video_url": "https://youtu.be/9KvqbMFPisg",
+    "VIENE_LA_CAJA": 20,
+    "video_url": "",
+    "qcy-yf": "qcy"
+  },
+  {
+    "MARCA": "HAYLOU",
+    "PRODUCTO": "Haylou Airfree OW03 BLACK BLANCO purple",
+    "DESC_FULL": "360° Spatial Audio\nDual-mic Al Noise Reduction\nDirectional Audio 9.0\nSmart LED Display\nDual-device Connection\nMetal Plating Process\nCustomized APP",
+    "Precio ( USD )": 13,
+    "Imagen_Path": "OFERTA_images/OFERTA_018.png",
+    "VIENE_LA_CAJA": "D",
+    "video_url": "https://youtu.be/22PnLtThVQ8",
+    "qcy-yf": "QCY"
+  },
+  {
+    "MARCA": "HAYLOU",
+    "PRODUCTO": "Haylou Watch S6 black silver",
+    "DESC_FULL": "Pantalla HD de 2.01” con visualización clara y cómoda.\nLlamadas Bluetooth para hacer y recibir llamadas desde el reloj.\nMonitoreo de salud 24/7: ritmo cardíaco, SpO₂, sueño y estrés.\n127 modos deportivos para registrar diferentes actividades físicas.\nMás de 150 esferas de reloj personalizables.\nBatería de larga duración: hasta 7 días de uso normal y 20 días en modo ahorro.\nBluetooth 5.3 para conexión rápida y estable.\nResistencia al agua IP68 para uso diario.",
+    "Precio ( USD )": 14,
+    "Imagen_Path": "OFERTA_images/OFERTA_019.png",
+    "VIENE_LA_CAJA": "D",
+    "video_url": "",
+    "qcy-yf": "QCY"
+  },
+  {
+    "MARCA": "HAYLOU",
+    "PRODUCTO": "Haylou Vibe LS30 black",
+    "DESC_FULL": "Pantalla AMOLED 1.43”: pantalla HD con resolución 466×466, clara incluso al sol\nLlamadas Bluetooth: permite hacer y recibir llamadas directamente desde el reloj\nMonitoreo de salud: seguimiento de frecuencia cardíaca, oxígeno en sangre (SpO₂) y sueño\nDeporte: más de 100 modos deportivos para registrar actividad física\nBatería: batería de 300 mAh con varios días de uso normal\nResistencia al agua: IP68, resistente a sudor y lluvia\nNotificaciones inteligentes: mensajes, llamadas y apps del teléfono",
+    "Precio ( USD )": 28,
+    "Imagen_Path": "OFERTA_images/OFERTA_020.png",
+    "VIENE_LA_CAJA": "D",
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -174,29 +204,39 @@
     "PRODUCTO": "Baseus  Linrui series digital plugboard 3AC+1U+1C+ extended cable C 65W 1.5m power cable",
     "DESC_FULL": "",
     "Precio ( USD )": 20,
-    "Imagen_Path": "OFERTA_images/OFERTA_018.png",
+    "Imagen_Path": "OFERTA_images/OFERTA_021.png",
     "VIENE_LA_CAJA": "super oferta",
     "video_url": "",
     "qcy-yf": "qcy"
   },
   {
-    "MARCA": "XIAOMI",
-    "PRODUCTO": "Mi 67W desktop fast charging socket Pro",
-    "DESC_FULL": "Carga rápida + Expansión: Carga rápida de 67W y transmisión de datos, soporta múltiples dispositivos.\nSiete en uno: Incluye 1 puerto USB-A, 1 HDMI, 2 puertos USB-C, y 3 enchufes de corriente alterna.\nCable de carga rápida dedicado: Ideal para uso en escritorios de oficina.\nTransmisión de datos: Soporta discos duros y dispositivos de almacenamiento.\n4K @ 60Hz: Proyección ultra clara y fluida.\nCapacidad de carga: Carga rápida de 67W y hasta 2500W máximos en enchufes de corriente alterna.",
-    "Precio ( USD )": 20,
-    "Imagen_Path": "OFERTA_images/OFERTA_019.png",
-    "VIENE_LA_CAJA": "super oferta",
-    "video_url": "",
+    "MARCA": "IMILAB",
+    "PRODUCTO": "IMILAB C21 2.5K WiFi Plug-in Indoor Camera",
+    "DESC_FULL": "Cobertura 360° + zoom 6X: rotación horizontal 360° y vertical 90° para vigilar toda la habitación sin puntos ciegos.\nResolución 2.5K QHD: imagen clara y detallada para monitorear mascotas, bebés o el hogar.\nVisión nocturna 24/7: vigilancia continua incluso en la oscuridad.\nDetección inteligente AI: alertas de movimiento, personas y sonido con seguimiento automático.\nAudio bidireccional: escucha y habla con tu mascota o familia desde la app.\nCompatible con Alexa + doble almacenamiento: soporte para control por voz, tarjeta MicroSD (hasta 256GB) o nube.",
+    "Precio ( USD )": 18,
+    "Imagen_Path": "OFERTA_images/OFERTA_022.png",
+    "VIENE_LA_CAJA": 16,
+    "video_url": "https://youtu.be/J8E0C1KPk1k",
     "qcy-yf": "qcy"
   },
   {
-    "MARCA": "XIAOMI",
-    "PRODUCTO": "Xiaomi  jack board 4 position 4 control 3 meters",
-    "DESC_FULL": "",
-    "Precio ( USD )": 3,
-    "Imagen_Path": "OFERTA_images/OFERTA_020.png",
-    "VIENE_LA_CAJA": "OFERTA!!!",
-    "video_url": "",
+    "MARCA": "IMILAB",
+    "PRODUCTO": "IMILAB C22 White BLACK",
+    "DESC_FULL": "Resolución 3K (5MP): imagen muy clara con más detalle que cámaras 1080p.\nCobertura 360° + inclinación 115°: permite vigilar toda la habitación sin puntos ciegos.\nZoom digital 6X: acerca detalles importantes en la grabación.\nAudio bidireccional: escucha y habla con familiares o mascotas desde el móvil.\nVisión nocturna a color: grabación clara incluso en ambientes con poca luz.\nDetección inteligente AI: alertas de movimiento, personas o sonidos.\nWi-Fi 6: conexión más rápida y estable para transmisión en tiempo real.\nCompatible con Alexa y Google Assistant: control por voz y visualización rápida.",
+    "Precio ( USD )": 22,
+    "Imagen_Path": "OFERTA_images/OFERTA_023.png",
+    "VIENE_LA_CAJA": 16,
+    "video_url": "https://youtu.be/vI8ZI7HbemY",
+    "qcy-yf": "qcy"
+  },
+  {
+    "MARCA": "HOTO",
+    "PRODUCTO": "HOTO 3.6V Screwdriver Kit (Classic)",
+    "DESC_FULL": "Perfecto para regalo de casa nueva, cumpleaños de papá, amigo o novio.\nDiseño elegante y compacto\nCaja de ABS resistente, estilo minimalista, fácil de llevar.\nTodo en uno para el hogar\nDestornillador 3.6V con 3 niveles de torque y luz LED\nLlave ajustable de gran apertura\nMartillo con cap de goma y sistema magnético para clavos\n10 brocas de acero S2 resistentes\nAlicates multifunción + Cinta métrica 3m con autobloqueo",
+    "Precio ( USD )": 32,
+    "Imagen_Path": "OFERTA_images/OFERTA_024.png",
+    "VIENE_LA_CAJA": "super oferta",
+    "video_url": "https://youtu.be/z5SQ2SbBWqg",
     "qcy-yf": "qcy"
   },
   {
@@ -204,19 +244,189 @@
     "PRODUCTO": "BOMIDI clipper L2 Gunmetal Gray",
     "DESC_FULL": "Diseño recargable (puerto USB-C) con carga completa en aproximadamente 70 minutos\nIncluye 4 peines guía (3 mm, 6 mm, 9 mm y 12 mm) para diferentes estilos de corte\nCuchillas de alta calidad, precisas y sin tirones, adecuadas para todo tipo de cabello\nCabezal desmontable y lavable, fácil de limpiar\nDiseño ligero y ergonómico, ideal para uso doméstico o profesional ligero",
     "Precio ( USD )": 5,
-    "Imagen_Path": "OFERTA_images/OFERTA_021.png",
+    "Imagen_Path": "OFERTA_images/OFERTA_025.png",
     "VIENE_LA_CAJA": 40,
     "video_url": "",
     "qcy-yf": "QCY"
   },
   {
-    "MARCA": "Tronsmart",
+    "MARCA": "BOMIDI\n1ano garantia",
+    "PRODUCTO": "BOMIDI Heater H6 white",
+    "DESC_FULL": "Calentamiento de doble velocidad: Ofrece dos modos de calor para adaptarse a diferentes necesidades.\nTermostato incorporado: Permite ajustar la temperatura para mantener un ambiente cómodo.\nTemporizador de 6 a 12 horas: Programable para apagarse automáticamente, ideal para uso nocturno.\nPantalla LED: Muestra claramente la configuración actual para un manejo sencillo.\nProtección contra sobrecalentamiento: Garantiza un uso seguro evitando el sobrecalentamiento.\nApagado automático por vuelco: El equipo se apaga automáticamente si se inclina o cae, previniendo accidentes.\nDiseño compacto y portátil: Dimensiones de 12 x 12 x 27 cm (aprox.) y peso ligero de 0.75 kg, fácil de transportar y almacenar.",
+    "Precio ( USD )": 14,
+    "Imagen_Path": "OFERTA_images/OFERTA_026.png",
+    "VIENE_LA_CAJA": 16,
+    "video_url": "",
+    "qcy-yf": "QCY"
+  },
+  {
+    "MARCA": "BOMIDI\n1ano garantia",
+    "PRODUCTO": "BOMIDI Heater H1 Black brown",
+    "DESC_FULL": "Potencia de 1500W：Proporciona un calentamiento rápido y eficiente del ambiente.\nTecnología de calefacción cerámica PTC：Calor uniforme y seguro para un uso prolongado.\nControl remoto incluido：Permite ajustar la configuración cómodamente desde una distancia.\nTermostato incorporado：Mantiene una temperatura constante según la configuración deseada.\nOscilación de 55° vertical y 120° horizontal：Distribución amplia del aire caliente en el entorno.\nTemporizador de 2 a 8 horas：Apagado automático programable para mayor comodidad.\nProtección contra sobrecalentamiento：Sistema de seguridad que previene el sobrecalentamiento del dispositivo.\nDiseño compacto y portátil：Fácil de mover y almacenar, ideal para el hogar o la oficina.",
+    "Precio ( USD )": 36,
+    "Imagen_Path": "OFERTA_images/OFERTA_027.png",
+    "VIENE_LA_CAJA": 6,
+    "video_url": "",
+    "qcy-yf": "QCY"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "PRODUCTO": "Mi home thermos Cup Ti 2 grey 480ML",
+    "DESC_FULL": "La Taza Termo Xiaomi Mijia Ti 2 está fabricada con titanio puro TA1, un material seguro, saludable y resistente a la corrosión.\npuede mantener la temperatura de las bebidas hasta 6 horas.\nSu diseño ligero y duradero es ideal para quienes buscan una opción saludable y práctica para conservar sus bebidas calientes o frías.",
+    "Precio ( USD )": 26,
+    "Imagen_Path": "OFERTA_images/OFERTA_028.png",
+    "VIENE_LA_CAJA": "D",
+    "video_url": "",
+    "qcy-yf": "QCY"
+  },
+  {
+    "MARCA": "Lenovo",
+    "PRODUCTO": "Lenovo XiaoXin 100S Smart Projector L-PJT100L White",
+    "DESC_FULL": "Brillo: 650 ANSI lúmenes\nResolución: 1080P + soporte HDR10\nEnfoque y Corrección: Autofoco + corrección trapezoidal automática\nAudio: Altavoces integrados de 2x5W (HiFi)\nSistema Operativo: Android 9.0\nFunciones Destacadas: WiFi 6, Bluetooth 5.0, HDMI, USB, salida de 3.5mm, adecuado para cine en casa.",
+    "Precio ( USD )": 158,
+    "Imagen_Path": "OFERTA_images/OFERTA_029.png",
+    "VIENE_LA_CAJA": "D",
+    "video_url": "",
+    "qcy-yf": "QCY"
+  },
+  {
+    "MARCA": "TRONSMART",
+    "PRODUCTO": "Tronsmart Element T2 Plus UPGRADED 20W Bluetooth Speaker",
+    "DESC_FULL": "20W with passive radiator & 24 Hours Playtime\n*7.4V 2000mAh Battery",
+    "Precio ( USD )": 25,
+    "Imagen_Path": "OFERTA_images/OFERTA_030.png",
+    "VIENE_LA_CAJA": "D",
+    "video_url": "",
+    "qcy-yf": "qcy"
+  },
+  {
+    "MARCA": "TRONSMART",
+    "PRODUCTO": "Tronsmart Bang  SE 40W+ USB de 64G de regalo",
+    "DESC_FULL": "Sonido de alta calidad: Potente y adecuado para todo tipo de música.\nResistencia al agua IPX7: Totalmente impermeable, ideal para exteriores.\nBatería de larga duración: Hasta 24 horas de reproducción con una sola carga.\nConexión Bluetooth 5.3: Rápida y estable.\nDiseño portátil: Con correa para facilitar el transporte.\nBajos profundos: Mejora la experiencia de sonido con bajos potentes.\nTamaño del producto:29.8*11.88*16.45cm",
+    "Precio ( USD )": 45,
+    "Imagen_Path": "OFERTA_images/OFERTA_031.png",
+    "VIENE_LA_CAJA": 6,
+    "video_url": "https://youtu.be/DAsI3GShT6s",
+    "qcy-yf": "qcy"
+  },
+  {
+    "MARCA": "TRONSMART",
+    "PRODUCTO": "Tronsmart Bang Mini",
+    "DESC_FULL": "Sonido detallado: 2 cavidades independientes; agudos claros (tweeters y radiador pasivo) y graves potentes (woofers).\nDuración de batería: 15 horas con batería de 4,000 mAh; también funciona como banco de carga (entrada USB).\nLuces LED: Estilo pulsante y circular para animar la fiesta.\nImpermeable IPX6: Resistente al sudor, salpicaduras y arena.\nTecnología SoundPulse™: Audio equilibrado y detallado con chip personalizado y cámara de poder.\nBluetooth 5.3: Transmisión rápida hasta 18 m; conecta hasta 2 dispositivos.\nAsistente personal: Acceso a Siri, Cortana y Asistente de Google con un toque.\nConectividad: Bluetooth y NFC para transmisión inalámbrica.\nApp Tronsmart: Personaliza modos LED y ecualizadores.\nPortátil: Con mango integrado para facilitar el transporte\nTamaño del producto:30.2*12.5*16.9CM",
+    "Precio ( USD )": 56,
+    "Imagen_Path": "OFERTA_images/OFERTA_032.png",
+    "VIENE_LA_CAJA": 6,
+    "video_url": "https://youtu.be/I_tuvvM5eoE",
+    "qcy-yf": "qcy"
+  },
+  {
+    "MARCA": "TRONSMART",
+    "PRODUCTO": "Tronsmart Force Max",
+    "DESC_FULL": "Resistencia al agua: IPX7, resistente a inmersión.\nPotencia y tecnología: 80 RMS, SoundPulse, 2.2 canales, 4 controladores con radiadores pasivos.\nDuración de batería: 15 horas con batería de 10,000 mAh.\nEstéreo inalámbrico: Conecta dos parlantes Force para sonido estéreo 3D.\nEfectos de audio: 3 modos de ecualización (estéreo 3D, bajos extra, estándar).\nConectividad: Bluetooth 5.0 (20 m), ranura para tarjeta microSD (64 GB), USB-A para unidades flash (64 GB), entrada auxiliar (3.5 mm).\nCompatibilidad: Asistentes de voz (Google, Siri, Cortana).\nTamaño del producto:25.8*15.3*8.8cm",
+    "Precio ( USD )": 72,
+    "Imagen_Path": "OFERTA_images/OFERTA_033.png",
+    "VIENE_LA_CAJA": 6,
+    "video_url": "https://youtu.be/gEkXXmTIyJc",
+    "qcy-yf": "qcy"
+  },
+  {
+    "MARCA": "TRONSMART",
+    "PRODUCTO": "Tronsmart FIITUNE X30 Grey",
+    "DESC_FULL": "Potencia de sonido: 80W con audio de alta resolución (Hi-Res).\nResistencia al agua: certificado IPX6, ideal para uso interior y exterior.\nConectividad: Bluetooth versión 5.3 para conexión estable y rápida.\nEmparejamiento estéreo: permite conectar dos altavoces para sonido envolvente.\nPortabilidad: diseño compacto y fácil de transportar.\nBatería: duración prolongada para uso extendido sin recarga frecuente.",
+    "Precio ( USD )": 112,
+    "Imagen_Path": "OFERTA_images/OFERTA_034.png",
+    "VIENE_LA_CAJA": 1,
+    "video_url": "https://youtu.be/VX-cASrm50Y",
+    "qcy-yf": "QCY"
+  },
+  {
+    "MARCA": "TRONSMART",
+    "PRODUCTO": "Tronsmart T7 Mini Negro,Gris,Violeta",
+    "DESC_FULL": "Tipo de parlante: Woofer, manos libres.\nCaracterísticas: A prueba de agua, Bluetooth, luces LED, batería recargable de 15W.\nIncluye: Micrófono de accesorio.\nLugar de colocación: Interiores y exteriores.\nTiempo de carga: 3 horas.\nTamaño del producto:12.6*12,6*14.2CM",
+    "Precio ( USD )": 14,
+    "Imagen_Path": "OFERTA_images/OFERTA_035.png",
+    "VIENE_LA_CAJA": 24,
+    "video_url": "https://youtu.be/i5Oi6wOl7Oo",
+    "qcy-yf": "qcy"
+  },
+  {
+    "MARCA": "TRONSMART",
+    "PRODUCTO": "Tronsmart T7  Green Pink",
+    "DESC_FULL": "Tipo de parlante: Portátil.\nCaracterísticas: A prueba de agua, Bluetooth, luces LED, batería recargable de 30W.\nUbicación: Escritorio.\nTiempo de carga: 3h.\nTamaño del producto:7.7*7.7*21cm",
+    "Precio ( USD )": 29,
+    "Imagen_Path": "OFERTA_images/OFERTA_036.png",
+    "VIENE_LA_CAJA": 16,
+    "video_url": "https://youtu.be/qr2J21TEfrE",
+    "qcy-yf": "qcy"
+  },
+  {
+    "MARCA": "TRONSMART",
+    "PRODUCTO": "Tronsmart Halo 100",
+    "DESC_FULL": "Sonido potente: Sistema de 3 vías de 60W.\nGran autonomía: Hasta 18 horas de reproducción.\nDiseño: Ultra portátil con asa integrada.\nResistencia: Clasificación IPX6 (resistente al agua).\nPersonalización: Control de EQ y 5 modos de luces mediante App.\nVersatilidad: Emparejamiento estéreo, modo de audio dual, función powerbank y múltiples modos de reproducción (BT, USB, TF, AUX).\nTamaño del producto:28.67*17.97*15CM",
+    "Precio ( USD )": 63,
+    "Imagen_Path": "OFERTA_images/OFERTA_037.png",
+    "VIENE_LA_CAJA": 4,
+    "video_url": "",
+    "qcy-yf": "qcy"
+  },
+  {
+    "MARCA": "TRONSMART",
+    "PRODUCTO": "Tronsmart Halo 110 Viene un micrófono",
+    "DESC_FULL": "Función Karaoke: Incluye un micrófono con cable y puerto dedicado para una experiencia de canto completa.\nSonido potente: 60W de potencia con sistema de 3 vías (graves profundos y agudos nítidos).\nEspectáculo de luces: 5 modos de iluminación que se sincronizan con el ritmo de la música.\nGran autonomía: Hasta 18 horas de reproducción continua.\nDiseño portátil y resistente: Clasificación IPX6 (resistente al agua) y asa integrada para llevarlo a cualquier lugar.\nConectividad versátil: Bluetooth 5.3, emparejamiento estéreo, App para ecualización personalizada y múltiples entradas (USB, tarjeta TF, AUX).\nFunción Powerbank: Capacidad para cargar tus dispositivos móviles en caso de emergencia.\nTamaño del producto:28.7*19.8*15CM",
+    "Precio ( USD )": 66,
+    "Imagen_Path": "OFERTA_images/OFERTA_038.png",
+    "VIENE_LA_CAJA": 4,
+    "video_url": "",
+    "qcy-yf": "qcy"
+  },
+  {
+    "MARCA": "TRONSMART",
     "PRODUCTO": "Tronsmart Trip",
     "DESC_FULL": "Parlante Bluetooth 5.3: Manos libres, apto para exteriores, a prueba de agua.\nConectividad: Bluetooth.\nCaracterísticas: Potencia de 10W, batería recargable, micrófono interno y de accesorio, soporte incluido.\nTiempo de carga: 3 horas.\nTamaño del producto：16.8*3.8*7.8CM",
     "Precio ( USD )": 12,
-    "Imagen_Path": "OFERTA_images/OFERTA_022.png",
+    "Imagen_Path": "OFERTA_images/OFERTA_039.png",
     "VIENE_LA_CAJA": 40,
     "video_url": "https://youtu.be/FXKRzBcQWow",
+    "qcy-yf": "qcy"
+  },
+  {
+    "MARCA": "TRONSMART",
+    "PRODUCTO": "Tronsmart Trip 2 Blue Grey Red BLACK",
+    "DESC_FULL": "EDriver de 42 mm + radiadores duales: graves 20 % más profundos con tecnología SoundPulse.\nAutonomía de 20 h con certificación IPX7 resistente al agua.\nPortátil: asa y clip para mochila o bolsillo.\nAsistentes de voz y llamadas siempre a mano.",
+    "Precio ( USD )": 20,
+    "Imagen_Path": "OFERTA_images/OFERTA_040.png",
+    "VIENE_LA_CAJA": 40,
+    "video_url": "https://www.youtube.com/watch?v=TJ19U3UjdOU",
+    "qcy-yf": "qcy"
+  },
+  {
+    "MARCA": "TRONSMART",
+    "PRODUCTO": "Tronsmart Mirtune H1  8W Portable Outdoor Speaker black",
+    "DESC_FULL": "Diseño compacto: Fácil de llevar.\nSonido estéreo: Graves profundos y agudos claros.\nConexión Bluetooth: Compatible con móviles y tabletas.\nResistente al agua: Ideal para exteriores.\nBatería duradera: Horas de reproducción continua.\nTamaño del producto:13.8*8.1*4.6cm",
+    "Precio ( USD )": 16,
+    "Imagen_Path": "OFERTA_images/OFERTA_041.png",
+    "VIENE_LA_CAJA": 40,
+    "video_url": "https://www.youtube.com/watch?v=Mh58WxxN4Qs",
+    "qcy-yf": "qcy"
+  },
+  {
+    "MARCA": "TRONSMART",
+    "PRODUCTO": "Tronsmart Mirtune C3 24W Portable Speaker",
+    "DESC_FULL": "Negro Y Azul\nSonido Potente: Woofer en forma de pista + tweeter + radiadores pasivos para graves intensos y agudos claros.\nSúper Portátil: Diseño compacto con correa para llevar fácilmente.\nResistente al Agua IPX7: Ideal para la piscina, el parque o la playa.\nEmparejamiento Estéreo: Conecta 2 altavoces para un sonido estéreo envolvente.\nHasta 12 Horas de Reproducción: Disfruta más con una sola carga.\nModo Doble: Conecta 2 dispositivos a la vez y alterna la música fácilmente.",
+    "Precio ( USD )": 22,
+    "Imagen_Path": "OFERTA_images/OFERTA_042.png",
+    "VIENE_LA_CAJA": 24,
+    "video_url": "",
+    "qcy-yf": "qcy"
+  },
+  {
+    "MARCA": "TRONSMART",
+    "PRODUCTO": "Tronsmart Mirtune C3 30W Plus Portable Speaker black Y azul",
+    "DESC_FULL": "Sonido potente de 30W: Claro y con graves profundos para todo tipo de música.\nResistencia al agua IPX7: Impermeable, perfecto para exteriores y cerca del agua.\nBatería de larga duración: Hasta 24 horas de reproducción con una carga.\nFunción TWS: Empareja dos altavoces para un sonido estéreo.\nConexión Bluetooth: Rápida y estable para múltiples dispositivos\nTamaño del producto:18*7*7.2cm",
+    "Precio ( USD )": 30,
+    "Imagen_Path": "OFERTA_images/OFERTA_043.png",
+    "VIENE_LA_CAJA": 24,
+    "video_url": "",
     "qcy-yf": "qcy"
   },
   {
@@ -224,7 +434,7 @@
     "PRODUCTO": "Sounarc K2 200W Karaoke Party Speaker black",
     "DESC_FULL": "Sonido potente: 200W de sonido estéreo.\nMicrófonos incluidos: 2 micrófonos inalámbricos.\nBatería de larga duración: 24.000 mAh, hasta 24 horas de uso.\nLuces LED: Efectos de luz multicolor para animar el ambiente.\nCambio de voz: Efectos divertidos para karaoke.\nConectividad: Bluetooth, transmisión en vivo y entrada auxiliar.\nControl remoto: Para mayor comodidad.\nResistente al agua: Certificación IPX6.\nFunción power bank: Carga otros dispositivos.",
     "Precio ( USD )": 95,
-    "Imagen_Path": "OFERTA_images/OFERTA_023.png",
+    "Imagen_Path": "OFERTA_images/OFERTA_044.png",
     "VIENE_LA_CAJA": "D",
     "video_url": "",
     "qcy-yf": "qcy"
