@@ -2077,23 +2077,42 @@
   }
 
 
-  function enableProtection() {
+function enableProtection() {
     if (document.documentElement.dataset.spProtectionEnabled === '1') return;
     document.documentElement.dataset.spProtectionEnabled = '1';
 
-    // 全站禁止右键菜单
+    // 默认：全站禁止右键
+    // 例外：
+    // 1. #grid 里的商品图片允许右键
+    // 2. 放大后的 #lightbox-img 允许右键
     document.addEventListener('contextmenu', (event) => {
+
+      const isGridProductImage =
+        event.target instanceof HTMLImageElement &&
+        event.target.closest('#grid');
+
+      const isLightboxImage =
+        event.target instanceof HTMLImageElement &&
+        event.target.id === 'lightbox-img';
+
+      // 这两种图片放行右键
+      if (isGridProductImage || isLightboxImage) {
+        return;
+      }
+
+      // 其它地方继续禁止右键
       event.preventDefault();
+
     }, { capture: true });
 
-    // 禁止所有图片拖拽
+    // 图片仍然禁止拖拽
     document.addEventListener('dragstart', (event) => {
       if (event.target instanceof HTMLImageElement) {
         event.preventDefault();
       }
     }, { capture: true });
 
-    // 处理当前页面以及后续动态生成的图片
+    // 当前页面和后续动态生成图片继续禁止拖拽/选中
     const protectImages = (root = document) => {
       root.querySelectorAll?.('img').forEach((img) => {
         img.draggable = false;
@@ -2126,7 +2145,7 @@
       childList: true,
       subtree: true
     });
-  }
+}
 
   function init() {
     enableProtection();
