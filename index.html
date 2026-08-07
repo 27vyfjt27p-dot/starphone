@@ -712,11 +712,11 @@ body.dark .favorite-mode-banner {
         
         <div class="mb-6 p-5 bg-slate-50 dark:bg-slate-800/50 rounded-[2rem] border border-slate-100 dark:border-slate-800 shadow-sm">
             <h3 class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4 pl-1">Configuración</h3>
-            <button onclick="downloadProductCatalogPDF()" class="w-full mb-4 bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-2xl font-black uppercase text-[10px] flex items-center justify-center gap-2 shadow-lg transition-all active:scale-95">
+            <button onclick="openPDFExportModal()" class="w-full mb-4 bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-2xl font-black uppercase text-[10px] flex items-center justify-center gap-2 shadow-lg transition-all active:scale-95">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
                 </svg>
-                <span>Descargar PDF (Sin Precios)</span>
+                <span>Descargar PDF</span>
             </button>
             <div class="space-y-4">
                 <div class="flex items-center justify-between">
@@ -748,6 +748,34 @@ body.dark .favorite-mode-banner {
 
         <button onclick="closeAllModals()" class="mt-4 w-full bg-slate-900 dark:bg-blue-600 text-white py-4 rounded-xl font-bold uppercase text-sm active:scale-95 transition-all">Ver Resultados</button>
     </div>
+    <!-- PDF 导出选择弹窗 -->
+<div id="pdf-export-modal" class="fixed inset-0 z-[7000] hidden items-center justify-center bg-black/50 backdrop-blur-sm px-5" onclick="closePDFExportModal()">
+    <div onclick="event.stopPropagation()" class="w-full max-w-[340px] bg-white dark:bg-slate-900 rounded-[2rem] shadow-2xl border border-white/20 dark:border-slate-700 overflow-hidden">
+        <div class="px-7 pt-8 pb-6 text-center">
+            <div class="w-14 h-14 mx-auto rounded-full bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                </svg>
+            </div>
+            <h3 class="mt-5 text-lg font-black text-slate-900 dark:text-white">Exportar catálogo</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-500 dark:text-slate-400">Selecciona el tipo de PDF.</p>
+        </div>
+
+        <div class="grid grid-cols-2 border-t border-slate-100 dark:border-slate-800">
+            <button onclick="downloadProductCatalogPDF(false)" class="py-4 text-sm font-black text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all active:scale-95">
+                SIN PRECIOS
+            </button>
+            <button onclick="downloadProductCatalogPDF(true)" class="py-4 border-l border-slate-100 dark:border-slate-800 text-sm font-black text-indigo-600 hover:bg-indigo-50 dark:hover:bg-indigo-950/30 transition-all active:scale-95">
+                CON PRECIOS
+            </button>
+        </div>
+
+        <button onclick="closePDFExportModal()" class="w-full py-3.5 border-t border-slate-100 dark:border-slate-800 text-xs font-black text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
+            Cancelar
+        </button>
+    </div>
+</div>
     <!-- 全站通用确认弹窗 -->
 <div
 id="global-confirm-modal"
@@ -3049,83 +3077,505 @@ fetch('notice.txt?v=' + new Date().getTime())
         initBrandCarousel();
     }
 })();
-        async function downloadProductCatalogPDF() {
-    if (typeof vibrate === 'function') vibrate();
-    const { jsPDF } = window.jspdf;
-    
-    // 1. 获取当前筛选后的产品列表
-    const filteredProducts = products.filter(p => {
-        const { keyword, MARCA, CATEGORIA, TIPO } = activeFilters;
-        const matchKeyword = !keyword || (p.PRODUCTO + (p.MARCA||"") + (p.CATEGORIA||"") + (p.TIPO||"") + (p['新到货']||"")).toUpperCase().includes(keyword.toUpperCase());
-        return matchKeyword && (!MARCA || p.MARCA === MARCA) && (!CATEGORIA || p.CATEGORIA === CATEGORIA) && (!TIPO || p.TIPO === TIPO);
-    });
+function openPDFExportModal(){
+    if(typeof vibrate==='function') vibrate();
+    const modal=document.getElementById('pdf-export-modal');
+    if(!modal) return;
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+}
 
-    if (filteredProducts.length === 0) return alert("No hay productos");
+function closePDFExportModal(){
+    const modal=document.getElementById('pdf-export-modal');
+    if(!modal) return;
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+}
+function hidePDFProgress(){
+    const loading=document.getElementById('pdf-loading');
+    if(loading){
+        loading.style.display='none';
+    }
 
-    // 2. 创建一个足够长的临时容器
-    const printContainer = document.createElement('div');
-    // 注意：去掉了 fixed 定位，改用 absolute 并确保宽度固定
-    printContainer.style.cssText = "position:absolute; top:0; left:-2000px; width:800px; background:white; padding:30px; display:block;";
-    
-    let htmlContent = `
-        <div style="border-bottom:5px solid #0f172a; padding-bottom:20px; margin-bottom:30px; display:flex; justify-content:space-between; align-items:flex-end;">
-            <div>
-                <h1 style="font-size:42px; font-weight:900; color:#0f172a; margin:0;">STARPHONE</h1>
-                <p style="font-size:14px; font-weight:800; color:#2563eb; margin:5px 0 0 0; text-transform:uppercase; letter-spacing:3px;">Catálogo Completo</p>
+    let mini=document.getElementById('pdf-mini-progress');
+
+    if(!mini){
+        mini=document.createElement('div');
+        mini.id='pdf-mini-progress';
+        mini.style.cssText=`
+            position:fixed;
+            left:18px;
+            bottom:18px;
+            z-index:9998;
+            background:#ffffff;
+            border:1px solid #e5e7eb;
+            border-radius:16px;
+            padding:12px 16px;
+            box-shadow:0 10px 30px rgba(0,0,0,.16);
+            min-width:170px;
+            font-family:'Plus Jakarta Sans',Arial,sans-serif;
+        `;
+
+        mini.innerHTML=`
+            <div style="font-size:13px;font-weight:900;color:#0f172a;">
+                Generando PDF...
             </div>
-            <div style="text-align:right; font-size:12px; color:#64748b; font-weight:700;">Total: ${filteredProducts.length} items</div>
-        </div>
-        <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
-    `;
-
-    filteredProducts.forEach(p => {
-        const imgUrl = p.Imagen_Path ? encodeURI(p.Imagen_Path.replace(/\\/g, '/')) : '';
-        htmlContent += `
-            <div style="border: 1px solid #f1f5f9; border-radius: 15px; padding: 15px; display: flex; align-items: center; gap: 15px; background:white; page-break-inside: avoid;">
-                <img src="${imgUrl}" style="width:90px; height:90px; object-fit:contain; border-radius:10px;">
-                <div style="flex:1;">
-                    <p style="font-size:10px; font-weight:800; color:#6366f1; margin:0; text-transform:uppercase;">${p.MARCA || ''}</p>
-                    <h4 style="font-size:12px; font-weight:800; color:#0f172a; margin:4px 0; line-height:1.2;">${p.PRODUCTO}</h4>
-                    <p style="font-size:10px; color:#64748b; margin:0;">${p.CATEGORIA || ''}</p>
-                </div>
+            <div id="pdf-mini-progress-text"
+                 style="margin-top:3px;font-size:11px;font-weight:700;color:#64748b;">
+                Preparando...
             </div>
         `;
-    });
 
-    htmlContent += `</div>`;
-    printContainer.innerHTML = htmlContent;
-    document.body.appendChild(printContainer);
-
-    // 等待图片加载完成，防止 PDF 里图片空白
-    await new Promise(resolve => setTimeout(resolve, 1500));
-
-    try {
-        const canvas = await html2canvas(printContainer, { 
-            scale: 2, 
-            useCORS: true,
-            allowTaint: true,
-            height: printContainer.scrollHeight, // 强制截取完整高度
-            windowHeight: printContainer.scrollHeight
-        });
-        
-        const imgData = canvas.toDataURL('image/jpeg', 0.8);
-        const pdf = new jsPDF('p', 'mm', 'a4');
-        const pdfWidth = pdf.internal.pageSize.getWidth();
-        const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
-        
-        // 如果高度超过 A4 纸一页，jsPDF 会自动缩放图表
-        // 为了保持清晰度，这里我们让 PDF 高度自适应内容
-        const pdfDynamicHeight = (canvas.height * pdfWidth) / canvas.width;
-        const customPdf = new jsPDF('p', 'mm', [pdfWidth, pdfDynamicHeight]);
-        customPdf.addImage(imgData, 'JPEG', 0, 0, pdfWidth, pdfDynamicHeight);
-        
-        customPdf.save(`Starphone_Full_${new Date().getTime()}.pdf`);
-    } catch (err) {
-        console.error(err);
-        alert("Error al generar PDF");
-    } finally {
-        document.body.removeChild(printContainer);
+        document.body.appendChild(mini);
     }
+
+    mini.style.display='block';
+}
+function showPDFBusyNotice(){
+    const modal=document.getElementById('pdf-export-modal');
+    if(!modal) return;
+
+    let notice=document.getElementById('pdf-busy-notice');
+
+    if(!notice){
+        notice=document.createElement('div');
+        notice.id='pdf-busy-notice';
+        notice.style.cssText='position:absolute;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;padding:24px;background:rgba(0,0,0,.18);border-radius:2rem;';
+
+        notice.innerHTML=`
+            <div onclick="event.stopPropagation()"
+                 style="width:100%;max-width:290px;background:white;border-radius:24px;overflow:hidden;box-shadow:0 20px 45px rgba(0,0,0,.28);text-align:center;">
+                
+                <div style="padding:26px 22px 22px;">
+                    <div style="width:50px;height:50px;margin:0 auto;border-radius:50%;background:#eef2ff;color:#4f46e5;display:flex;align-items:center;justify-content:center;font-size:22px;">
+                        📄
+                    </div>
+
+                    <div style="margin-top:16px;font-size:17px;font-weight:900;color:#0f172a;">
+                        PDF en proceso
+                    </div>
+
+                    <div style="margin-top:9px;font-size:12px;line-height:1.55;color:#64748b;">
+                        Ya se está generando un PDF. Espera a que finalice la descarga antes de iniciar otro.
+                    </div>
+                </div>
+
+                <button type="button"
+                        onclick="closePDFBusyNotice()"
+                        style="width:100%;border:0;border-top:1px solid #e5e7eb;background:white;padding:14px;font-size:13px;font-weight:900;color:#4f46e5;cursor:pointer;">
+                    ENTENDIDO
+                </button>
+            </div>
+        `;
+
+        modal.appendChild(notice);
+    }
+
+    notice.style.display='flex';
+}
+
+function closePDFBusyNotice(){
+    const notice=document.getElementById('pdf-busy-notice');
+    if(notice){
+        notice.style.display='none';
+    }
+}
+/* ===== STARPHONE PDF EXPORT V2 ===== */
+let pdfGenerating=false;
+const PDF_LOGO_URL='https://starphone.cl/wp-content/uploads/2025/02/cropped-cropped-3-e1767369334585.jpg';
+async function imageUrlToBase64(url){
+    try{
+        const response=await fetch(url,{mode:'cors'});
+        if(!response.ok) throw new Error('Logo fetch failed');
+
+        const blob=await response.blob();
+
+        return await new Promise((resolve,reject)=>{
+            const reader=new FileReader();
+            reader.onloadend=()=>resolve(reader.result);
+            reader.onerror=reject;
+            reader.readAsDataURL(blob);
+        });
+    }catch(error){
+        console.warn('No se pudo convertir el logo:',error);
+        return '';
+    }
+}
+
+function getPDFBoxText(boxValue){
+    let val=String(boxValue||'').trim();
+    if(val===''||val.toUpperCase()==='D') return '';
+    if(val.toLowerCase().includes('ultimo')||val.toLowerCase().includes('último')) return `⚠️ ${val}`;
+    if(val.toUpperCase().includes('POR CAJA')) return `CAJA: ${val.replace(/POR CAJA/gi,'').trim()}`;
+    if(/^\d+$/.test(val)) return `${val} unid/caja`;
+    return val;
+}
+
+function getPDFFilteredProducts(){
+    const {keyword,MARCA,CATEGORIA,TIPO,priceRange}=activeFilters;
+    return products.filter(p=>{
+        if(typeof isFavoriteMode!=='undefined'&&isFavoriteMode&&typeof favorites!=='undefined'&&!favorites[p.id]) return false;
+        const searchText=((p.PRODUCTO||'')+(p.MARCA||'')+(p.CATEGORIA||'')+(p.TIPO||'')+(p['新到货']||'')).toUpperCase();
+        const matchKeyword=!keyword||searchText.includes(String(keyword).toUpperCase());
+        const price=parseFloat(p['Precio ( USD )'])||0;
+        let matchPrice=true;
+        if(priceRange==='under50') matchPrice=price<50;
+        else if(priceRange==='50to200') matchPrice=price>=50&&price<=200;
+        else if(priceRange==='over200') matchPrice=price>200;
+        return matchKeyword&&matchPrice&&(!MARCA||p.MARCA===MARCA)&&(!CATEGORIA||p.CATEGORIA===CATEGORIA)&&(!TIPO||p.TIPO===TIPO);
+    });
+}
+
+function waitForPDFImages(container){
+    const images=Array.from(container.querySelectorAll('img'));
+    return Promise.all(images.map(img=>{
+        if(img.complete&&img.naturalWidth>0) return Promise.resolve();
+        return new Promise(resolve=>{
+            const timer=setTimeout(resolve,2000);
+            img.onload=()=>{clearTimeout(timer);resolve();};
+            img.onerror=()=>{clearTimeout(timer);resolve();};
+        });
+    }));
+}
+
+function getPDFBadges(p){
+    const badges=[];
+    if(String(p['新到货']||'').toUpperCase()==='NUEVO') badges.push('<span style="background:#eff6ff;color:#2563eb;padding:3px 7px;border-radius:10px;font-size:8px;font-weight:800;">NUEVO</span>');
+    const name=String(p.PRODUCTO||'').toUpperCase();
+    if(name.includes('SELLADO')) badges.push('<span style="background:#ecfdf5;color:#059669;padding:3px 7px;border-radius:10px;font-size:8px;font-weight:800;">SELLADO</span>');
+    if(name.includes('ACTIVADO')) badges.push('<span style="background:#fffbeb;color:#d97706;padding:3px 7px;border-radius:10px;font-size:8px;font-weight:800;">ACTIVADO</span>');
+    return badges.join('');
+}
+
+function escapePDFHtml(value){
+    return String(value??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;');
+}
+
+function createPDFProductCard(p,includePrices){
+    const imgUrl=p.Imagen_Path?encodeURI(String(p.Imagen_Path).replace(/\\/g,'/')):'';
+    const boxText=getPDFBoxText(p['VIENE_LA_CAJA']);
+    const rawPrice=String(p['Precio ( USD )']||'').trim();
+
+    const productName=String(p.PRODUCTO||'');
+    const productNameLength=productName.length;
+
+    let productNameFontSize='10px';
+    let productNameLineHeight='1.22';
+
+    if(productNameLength>=70){
+        productNameFontSize='7.2px';
+        productNameLineHeight='1.12';
+    }else if(productNameLength>=50){
+        productNameFontSize='8px';
+        productNameLineHeight='1.16';
+    }else if(productNameLength>=35){
+        productNameFontSize='8.8px';
+        productNameLineHeight='1.18';
+    }
+
+    const features=String(p.DESC_FULL||'')
+    .split('\n')
+    .map(x=>x.trim())
+    .filter(Boolean);
+
+if(features.length===0){
+    productNameFontSize='11px';
+    productNameLineHeight='1.28';
+}
+
+const featureCount=features.length;
+
+    let featureFontSize='7px';
+    let featureLineHeight='1.22';
+
+if(featureCount>=7){
+    featureFontSize='5.8px';
+    featureLineHeight='1.12';
+}else if(featureCount>=5){
+    featureFontSize='6.3px';
+    featureLineHeight='1.16';
+}
+    
+    const featuresHtml=features.length
+    ? features.map(x=>`<div style="margin-top:1.5px;">• ${escapePDFHtml(x)}</div>`).join('')
+    : '';
+
+    const priceHtml=includePrices&&rawPrice
+        ? `<div style="font-size:15px;font-weight:900;color:#111827;">$${escapePDFHtml(rawPrice)}</div>`
+        : '';
+
+    const boxHtml=boxText
+        ? `<div style="margin-top:5px;font-size:9px;font-weight:800;color:#2563eb;">${escapePDFHtml(boxText)}</div>`
+        : '';
+
+    return `
+    <div style="
+        height:100%;
+        background:#fff;
+        border:1px solid #e5e7eb;
+        border-radius:12px;
+        overflow:hidden;
+        display:grid;
+        grid-template-columns:105px 1fr 72px;
+        box-sizing:border-box;
+    ">
+        <div style="
+            background:#f8fafc;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding:8px;
+            position:relative;
+        ">
+            <img src="${imgUrl}" crossorigin="anonymous"
+                 style="max-width:90px;max-height:90px;width:auto;height:auto;object-fit:contain;">
+            <div style="position:absolute;top:6px;left:6px;display:flex;gap:3px;">
+                ${getPDFBadges(p)}
+            </div>
+        </div>
+
+        <div style="
+            padding:9px 10px;
+            display:flex;
+            flex-direction:column;
+            min-width:0;
+        ">
+            <div style="
+                color:#4f46e5;
+                font-size:8px;
+                font-weight:900;
+                letter-spacing:.5px;
+                text-transform:uppercase;
+            ">
+                ${escapePDFHtml(p.MARCA||'')} · ${escapePDFHtml(p.TIPO||'')}
+            </div>
+
+            <div style="
+                color:#111827;
+                font-size:${productNameFontSize};
+                font-weight:900;
+                line-height:${productNameLineHeight};
+                margin-top:4px;
+                overflow:visible;
+            ">
+                ${escapePDFHtml(productName)}
+            </div>
+
+            <div style="
+                color:#64748b;
+                font-size:${featureFontSize};
+                line-height:${featureLineHeight};
+                margin-top:3px;
+                overflow:hidden;
+                flex:1;
+            ">
+                ${featuresHtml}
+            </div>
+        </div>
+
+        <div style="
+            border-left:1px solid #f1f5f9;
+            padding:8px 7px;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            background:#fcfcfd;
+        ">
+            ${priceHtml}
+            ${boxHtml}
+        </div>
+    </div>`;
+}
+
+async function downloadProductCatalogPDF(includePrices){
+
+    if(pdfGenerating){
+    showPDFBusyNotice();
+    return;
+}
+
+pdfGenerating=true;
+
+closePDFExportModal();
+if(typeof vibrate==='function') vibrate();
+
+    const loading=document.createElement('div');
+loading.id='pdf-loading';
+loading.style.cssText='position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;padding:20px;';
+loading.innerHTML=`
+    <div style="background:white;border-radius:28px;width:100%;max-width:340px;text-align:center;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.25);">
+        <div style="padding:30px 26px 24px;">
+            <div style="width:54px;height:54px;margin:0 auto;border-radius:50%;background:#eef2ff;color:#4f46e5;display:flex;align-items:center;justify-content:center;font-size:24px;">📄</div>
+
+            <div style="margin-top:18px;font-size:18px;font-weight:900;color:#0f172a;">
+                Generando PDF...
+            </div>
+
+            <div id="pdf-loading-progress" style="margin-top:8px;font-size:13px;font-weight:800;color:#64748b;">
+                Preparando productos
+            </div>
+
+            <div style="margin-top:14px;font-size:12px;line-height:1.6;color:#94a3b8;">
+                Puedes ocultar esta ventana. El PDF continuará generándose en segundo plano y se descargará automáticamente cuando esté listo.
+            </div>
+        </div>
+
+        <button type="button"
+                onclick="hidePDFProgress()"
+                style="width:100%;border:0;border-top:1px solid #e5e7eb;background:white;padding:15px;font-size:13px;font-weight:900;color:#4f46e5;cursor:pointer;">
+            OCULTAR
+        </button>
+    </div>
+`;
+document.body.appendChild(loading);
+
+await new Promise(resolve=>setTimeout(resolve,100));
+    if(!window.jspdf||!window.html2canvas){
+        alert('No se pudieron cargar los componentes PDF.');
+        return;
+    }
+
+    const filteredProducts=getPDFFilteredProducts();
+
+    if(!filteredProducts.length){
+        alert('No hay productos para exportar.');
+        return;
+    }
+    const pdfLogoBase64=await imageUrlToBase64(PDF_LOGO_URL);
+    const {jsPDF}=window.jspdf;
+    const PRODUCTS_PER_PAGE=10;
+    const totalPages=Math.ceil(filteredProducts.length/PRODUCTS_PER_PAGE);
+    const pdf=new jsPDF('l','mm','a4');
+
+    const pageContainer=document.createElement('div');
+    pageContainer.style.cssText="position:fixed;left:-10000px;top:0;width:1123px;height:794px;background:#fff;font-family:'Plus Jakarta Sans',Arial,sans-serif;overflow:hidden;";
+    document.body.appendChild(pageContainer);
+
+    try{
+        for(let pageIndex=0;pageIndex<totalPages;pageIndex++){
+            const progress=document.getElementById('pdf-loading-progress');
+            if(progress){
+            progress.textContent=`Página ${pageIndex+1} / ${totalPages}`;
+            }
+            const miniProgress=document.getElementById('pdf-mini-progress-text');
+            if(miniProgress){
+            miniProgress.textContent=`Página ${pageIndex+1} / ${totalPages}`;
+            }
+        await new Promise(resolve=>setTimeout(resolve,20));
+            const start=pageIndex*PRODUCTS_PER_PAGE;
+            const pageProducts=filteredProducts.slice(start,start+PRODUCTS_PER_PAGE);
+            const productsHtml=pageProducts.map(p=>createPDFProductCard(p,includePrices)).join('');
+            const today=new Date().toLocaleDateString('es-CL');
+
+pageContainer.innerHTML=`
+<div style="
+    width:1123px;
+    height:794px;
+    background:#fff;
+    padding:22px 28px 16px;
+    display:flex;
+    flex-direction:column;
+    box-sizing:border-box;
+    overflow:hidden;
+">
+
+    <div style="
+    height:60px;
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid #e5e7eb;
+    padding-bottom:10px;
+    margin-bottom:10px;
+    box-sizing:border-box;
+">
+
+    <div style="text-align:right;">
+        <div style="color:#0f172a;font-size:22px;font-weight:900;line-height:1;">
+            CATÁLOGO DE PRODUCTOS
+        </div>
+
+        <div style="margin-top:6px;color:#64748b;font-size:9px;font-weight:700;">
+            Actualizado: ${today} · Total: ${filteredProducts.length}
+        </div>
+    </div>
+
+</div>
+
+    <div style="
+        flex:1;
+        min-height:0;
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        grid-template-rows:repeat(5,minmax(0,1fr));
+        gap:7px 9px;
+        overflow:hidden;
+    ">
+        ${productsHtml}
+    </div>
+
+    <div style="
+        height:20px;
+        flex-shrink:0;
+        margin-top:7px;
+        padding-top:5px;
+        border-top:1px solid #f1f5f9;
+        display:flex;
+        align-items:center;
+        justify-content:flex-end;
+        color:#94a3b8;
+        font-size:8px;
+        font-weight:700;
+        box-sizing:border-box;
+    ">
+        <span>Página ${pageIndex+1} / ${totalPages}</span>
+    </div>
+
+</div>`;
+
+            await waitForPDFImages(pageContainer);
+
+            const canvas=await html2canvas(pageContainer,{
+                scale:2.5,
+                useCORS:true,
+                allowTaint:false,
+                backgroundColor:'#ffffff',
+                logging:false
+            });
+
+            const imgData=canvas.toDataURL('image/jpeg',0.92);
+
+            if(pageIndex>0) pdf.addPage();
+
+            pdf.addImage(imgData,'JPEG',0,0,297,210,undefined,'FAST');
+
+            await new Promise(resolve=>setTimeout(resolve,80));
+        }
+
+        const now=new Date();
+        const dateName=[now.getFullYear(),String(now.getMonth()+1).padStart(2,'0'),String(now.getDate()).padStart(2,'0')].join('-');
+        pdf.save(`Starphone_Catalogo_${dateName}.pdf`);
+    }catch(error){
+        console.error('PDF export error:',error);
+        alert('Error al generar PDF.');
+    }finally{
+    pageContainer.remove();
+
+    const loading=document.getElementById('pdf-loading');
+    if(loading){
+        loading.remove();
+    }
+
+    const mini=document.getElementById('pdf-mini-progress');
+    if(mini){
+        mini.remove();
+    }
+
+    pdfGenerating=false;
+}
 }
 
         // --- 精准背景锁定逻辑：只针对结算清单 ---
