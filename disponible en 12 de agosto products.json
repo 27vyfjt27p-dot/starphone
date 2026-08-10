@@ -220,22 +220,11 @@
     "新到货": "NUEVO"
   },
   {
-    "MARCA": "XIAOMI",
-    "PRODUCTO": "Xiaomi Pad 8/8 Pro Floating Keyboard",
-    "DESC_FULL": "Diseño flotante con soporte multiángulo: Cuenta con una bisagra de alta precisión que permite un ajuste continuo (de 0° a 124°) para trabajar cómodamente en cualquier lugar.\nEscritura de nivel PC: Teclas de tamaño amplio (15 mm), separación de 18 mm, recorrido de 1,3 mm y retroiluminación adaptable para una escritura fluida y cómoda.\nPanel táctil (Trackpad) avanzado: Superficie de vidrio premium con soporte completo para gestos multitáctiles y rechazo de toques accidentales.\nConexión magnética instantánea: Se acopla de forma inmediata mediante pogo pins magnéticos, sin necesidad de emparejamiento Bluetooth.\nActivación inteligente: Activa la pantalla al abrir la cubierta o al pulsar cualquier tecla, y la pone en suspensión al cerrarla.",
-    "Precio ( USD )": 115,
-    "Imagen_Path": "disponible en 12 de agosto products_images/disponible en 12 de agosto products_021.png",
-    "VIENE_LA_CAJA": "D",
-    "video_url": "",
-    "qcy-yf": "qcy",
-    "新到货": "NUEVO"
-  },
-  {
     "MARCA": "QCY",
     "PRODUCTO": "QCY WATCH  Elite Rosado",
     "DESC_FULL": "Modo de uso: Correa reemplazable, marco de aleación de zinc, corona de aleación de aluminio.\nLlamadas: Bluetooth, pantalla siempre encendida 24h.\nResistencia al agua: IPX8.\nBatería: 210mAh, 7 días en espera, 4 días de uso.\nSensor de frecuencia cardíaca: VC9202+VP60A2.\nBluetooth: BLE5.3, BT3.0.\nPantalla: AMOLED HD de 1.19\" (390*390, 326PPI).\nCarga: Inalámbrica magnética.\nRango: 15 metros.\nConexión: QCY APP, emparejamiento rápido.\nFunciones: Monitoreo de frecuencia cardíaca, sueño, oxígeno en sangre, control de música, ciclo femenino, esferas personalizables.",
     "Precio ( USD )": 22,
-    "Imagen_Path": "disponible en 12 de agosto products_images/disponible en 12 de agosto products_022.png",
+    "Imagen_Path": "disponible en 12 de agosto products_images/disponible en 12 de agosto products_021.png",
     "VIENE_LA_CAJA": "D",
     "video_url": "",
     "qcy-yf": "qcy",
