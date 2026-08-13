@@ -10,5 +10,17 @@
     "label": "OFERTA",
     "desc": "OFERTA",
     "file": "OFERTA.json"
+  },
+  {
+    "key": "va a llegar agosto 2 products",
+    "label": "VA A LLEGAR AGOSTO 2 PRODUCTS",
+    "desc": "va a llegar agosto 2 products",
+    "file": "va a llegar agosto 2 products.json"
+  },
+  {
+    "key": "va a llegar agosto products",
+    "label": "VA A LLEGAR AGOSTO PRODUCTS",
+    "desc": "va a llegar agosto products",
+    "file": "va a llegar agosto products.json"
   }
 ]
