@@ -57,11 +57,11 @@
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjckY1tYpLGpaPn4Q4Ru04nHU7PZKRdSTSYy60OZF2dpQaUCQoFetw_3Rq&s=10'
       },
       {
-        filter: 'GAMESIR',
-        title: 'GAMESIR',
-        description: 'Accesorios para gaming',
+        filter: 'BLUETTI',
+        title: 'BLUETTI',
+        description: 'Energía para hogar y aventura',
         image:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQER1yZcReVco--0LA8RYmRvnm7M0laq3vQ7THyvDAAMEMkIhUdT0Gh478&s=10'
+          'https://static.wixstatic.com/media/50b12e_15e287bb9d6f4fc381a8ce9d53524141~mv2.png/v1/fill/w_980,h_911,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/50b12e_15e287bb9d6f4fc381a8ce9d53524141~mv2.png'
       },
       {
         filter: 'SOLOHOUR',
@@ -750,7 +750,7 @@
     .spv3-brand-card[data-brand="DJI"] img { object-position: 50% 45%; }
     .spv3-brand-card[data-brand="HUAWEI"] img { object-position: 50% 48%; }
     .spv3-brand-card[data-brand="QCY"] img { object-position: 50% 38%; }
-    .spv3-brand-card[data-brand="GAMESIR"] img { object-position: 50% 52%; }
+    .spv3-brand-card[data-brand="BLUETTI"] img { object-position: 50% 52%; }
     .spv3-brand-card[data-brand="SOLOHOUR"] img { object-position: 50% 48%; }
 
     .spv3-brand-card::after {

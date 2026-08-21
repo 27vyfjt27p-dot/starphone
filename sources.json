@@ -22,5 +22,11 @@
     "label": "VA A LLEGAR AGOSTO PRODUCTS",
     "desc": "va a llegar agosto products",
     "file": "va a llegar agosto products.json"
+  },
+  {
+    "key": "va a llegar fin de septiempre products",
+    "label": "VA A LLEGAR FIN DE SEPTIEMPRE PRODUCTS",
+    "desc": "va a llegar fin de septiempre products",
+    "file": "va a llegar fin de septiempre products.json"
   }
 ]
