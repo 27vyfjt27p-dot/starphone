@@ -650,12 +650,12 @@
   {
     "MARCA": "DJI",
     "TIPO": "Micrófonos inalámbricos",
-    "PRODUCTO": "DJI Mic Mini 2 (2 TX+1 RX+Charging Case black）Activado",
-    "DESC_FULL": "Diseño Ultra-ligero (11g): El transmisor pesa solo 11g. No deforma la ropa y cuenta con 4 carcasas magnéticas de colores para un uso discreto y elegante.\n3 Ajustes de Tono de Voz: Permite elegir entre tonos Natural, Rico o Brillante para que la voz se escuche más profesional según el locutor.\nCancelación de Ruido de 2 Niveles: Se adapta a interiores silenciosos o calles ruidosas. Incluye protección automática contra saturación (anti-pop/anti-clipping).\nBatería de 48 Horas: Los micrófonos duran hasta 11 horas continuas, y alcanzan un total de 48 horas de autonomía gracias al estuche de carga.\nConexión Directa DJI: Se conecta por Bluetooth directamente a las cámaras Osmo Pocket 3 o Action 4/5 Pro, sin necesidad de usar el receptor.",
-    "Precio ( USD )": 118.0,
+    "PRODUCTO": "DJI Mic Mini 2 (2 TX+1 Mobile RX+Charging Case black）Activado",
+    "DESC_FULL": "",
+    "Precio ( USD )": 85.0,
     "Imagen_Path": "products_images/products_055.png",
     "VIENE_LA_CAJA": "D",
-    "video_url": "https://youtu.be/x760ulKzbnE",
+    "video_url": "",
     "qcy-yf": "qcy",
     "新到货": "NUEVO"
   },
