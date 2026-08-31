@@ -12,21 +12,21 @@
     "file": "OFERTA.json"
   },
   {
-    "key": "va a llegar agosto 2 products",
-    "label": "VA A LLEGAR AGOSTO 2 PRODUCTS",
-    "desc": "va a llegar agosto 2 products",
-    "file": "va a llegar agosto 2 products.json"
-  },
-  {
-    "key": "va a llegar agosto products",
-    "label": "VA A LLEGAR AGOSTO PRODUCTS",
-    "desc": "va a llegar agosto products",
-    "file": "va a llegar agosto products.json"
-  },
-  {
     "key": "va a llegar fin de septiempre products",
     "label": "VA A LLEGAR FIN DE SEPTIEMPRE PRODUCTS",
     "desc": "va a llegar fin de septiempre products",
     "file": "va a llegar fin de septiempre products.json"
+  },
+  {
+    "key": "va a llegar primera semana de sept. 2 products",
+    "label": "VA A LLEGAR PRIMERA SEMANA DE SEPT. 2 PRODUCTS",
+    "desc": "va a llegar primera semana de Sept. 2 products",
+    "file": "va a llegar primera semana de Sept. 2 products.json"
+  },
+  {
+    "key": "va a llegar primera semana de sept. products",
+    "label": "VA A LLEGAR PRIMERA SEMANA DE SEPT. PRODUCTS",
+    "desc": "va a llegar primera semana de Sept. products",
+    "file": "va a llegar primera semana de Sept. products.json"
   }
 ]
