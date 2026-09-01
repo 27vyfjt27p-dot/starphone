@@ -28,5 +28,11 @@
     "label": "VA A LLEGAR PRIMERA SEMANA DE SEPT. PRODUCTS",
     "desc": "va a llegar primera semana de Sept. products",
     "file": "va a llegar primera semana de Sept. products.json"
+  },
+  {
+    "key": "va a llegar segunda semana de sept. products",
+    "label": "VA A LLEGAR SEGUNDA SEMANA DE SEPT. PRODUCTS",
+    "desc": "va a llegar segunda semana de Sept. products",
+    "file": "va a llegar segunda semana de Sept. products.json"
   }
 ]
