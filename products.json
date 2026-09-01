@@ -1898,13 +1898,13 @@
   {
     "MARCA": "XIAOMI",
     "TIPO": "Power Bank",
-    "PRODUCTO": "Xiaomi Power Bank 10000mAh 22.5W Lite GL White",
-    "DESC_FULL": "Capacidad: 10000mAh (5500mAh nominal a 5V/3A)\nPotencia máxima de salida: 22.5W\nPuertos: 1 USB-C y 2 USB-A\nCarga rápida bidireccional: Cargando la power bank en 4.5 horas\nDiseño: Ligero (227g), dimensiones 148.4 x 73 x 15 mm",
-    "Precio ( USD )": 10.0,
+    "PRODUCTO": "Xiaomi Power Bank 20000mAh (Integrated Cable) GL Light Gray Y Dark Gray",
+    "DESC_FULL": "Gran capacidad: 20000 mAh (≈74 Wh), adecuado para llevar en avión \nCarga rápida bidireccional: hasta 22.5 W (versión cable integrado) o 50 W (versión sin cable integrado), carga el banco y dispositivos rápidamente\nMúltiples puertos: USB‑A, USB‑C y cable USB‑C integrado; permite cargar hasta tres dispositivos a la vez\nInteligente y seguro: chip ajusta corriente automáticamente, modo baja corriente para accesorios, y Proteger contra sobrecarga, sobretemperatura, cortocircuito, etc.\nDiseño portátil: compacto (128 × 73 × 32 mm), peso ligueo (~342 g), acabado mate minimalista",
+    "Precio ( USD )": 16.0,
     "Imagen_Path": "products_images/products_159.png",
-    "VIENE_LA_CAJA": "ultimo \n2 uni",
+    "VIENE_LA_CAJA": "ultimo 5 uni",
     "video_url": "",
-    "qcy-yf": "yf",
+    "qcy-yf": "qcy",
     "新到货": ""
   },
   {
