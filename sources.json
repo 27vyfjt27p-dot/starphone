@@ -12,6 +12,12 @@
     "file": "Con pedido abono traer. products.json"
   },
   {
+    "key": "disponible lunes (7 de sept.) products",
+    "label": "DISPONIBLE LUNES (7 DE SEPT.) PRODUCTS",
+    "desc": "Disponible lunes (7 de Sept.) products",
+    "file": "Disponible lunes (7 de Sept.) products.json"
+  },
+  {
     "key": "oferta",
     "label": "OFERTA",
     "desc": "OFERTA",
@@ -22,18 +28,6 @@
     "label": "VA A LLEGAR FIN DE SEPTIEMPRE PRODUCTS",
     "desc": "va a llegar fin de septiempre products",
     "file": "va a llegar fin de septiempre products.json"
-  },
-  {
-    "key": "va a llegar primera semana de sept. 2 products",
-    "label": "VA A LLEGAR PRIMERA SEMANA DE SEPT. 2 PRODUCTS",
-    "desc": "va a llegar primera semana de Sept. 2 products",
-    "file": "va a llegar primera semana de Sept. 2 products.json"
-  },
-  {
-    "key": "va a llegar primera semana de sept. products",
-    "label": "VA A LLEGAR PRIMERA SEMANA DE SEPT. PRODUCTS",
-    "desc": "va a llegar primera semana de Sept. products",
-    "file": "va a llegar primera semana de Sept. products.json"
   },
   {
     "key": "va a llegar segunda semana de sept. products",
