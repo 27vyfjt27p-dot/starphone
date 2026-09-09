@@ -6,21 +6,9 @@
     "file": "products.json"
   },
   {
-    "key": "con pedido abono traer. products",
-    "label": "CON PEDIDO ABONO TRAER. PRODUCTS",
-    "desc": "Con pedido abono traer. products",
-    "file": "Con pedido abono traer. products.json"
-  },
-  {
     "key": "oferta",
     "label": "OFERTA",
     "desc": "OFERTA",
     "file": "OFERTA.json"
-  },
-  {
-    "key": "va a llegar fin de septiempre products",
-    "label": "VA A LLEGAR FIN DE SEPTIEMPRE PRODUCTS",
-    "desc": "va a llegar fin de septiempre products",
-    "file": "va a llegar fin de septiempre products.json"
   }
 ]
