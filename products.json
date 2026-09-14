@@ -1862,7 +1862,7 @@
   {
     "MARCA": "XIAOMI",
     "TIPO": "parlante",
-    "PRODUCTO": "Xiaomi Sound Pocket 5W Negro rosado gris",
+    "PRODUCTO": "Xiaomi Sound Pocket 5W rosado gris",
     "DESC_FULL": "Compacto y portátil: Diseño ligero y ultra portátil, ideal para llevar a cualquier lugar fácilmente.\nSonido nítido: Ofrece una salida de audio de 5 W con graves profundos para una experiencia sonora equilibrada.\nConectividad Bluetooth: Equipado con Bluetooth 5.4 para una conexión estable y rápida; además, permite conectar dos altavoces para obtener sonido estéreo (TWS).\nResistente: Cuenta con certificación IP67, siendo totalmente resistente al polvo y al agua.\nBatería duradera: Disfruta de hasta 10 horas de reproducción continua con una sola carga, ideal para largas sesiones de música.",
     "Precio ( USD )": 12.0,
     "Imagen_Path": "products_images/products_156.png",
@@ -1878,7 +1878,7 @@
     "DESC_FULL": "Resistente al agua: Ideal para uso al aire libre sin preocupaciones por el agua.\nSonido envolvente 360°: Experiencia inmersiva en todas direcciones.\nConexión versátil: Se conecta por Bluetooth o cable AUX.\nBatería de larga duración: Disfruta de música por más tiempo.\nPortabilidad práctica: Ligero y fácil de llevar.\nDuradero y resistente: Construido para condiciones exteriores difíciles.",
     "Precio ( USD )": 32.0,
     "Imagen_Path": "products_images/products_157.png",
-    "VIENE_LA_CAJA": 12,
+    "VIENE_LA_CAJA": "ultimo \n1 uni",
     "video_url": "",
     "qcy-yf": "yf",
     "新到货": ""
