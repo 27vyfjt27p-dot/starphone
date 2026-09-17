@@ -118,5 +118,37 @@
     "Precio ( USD )": 445,
     "Imagen_Path": "Con pedido abono traer. products_images/Con pedido abono traer. products_015.png",
     "VIENE_LA_CAJA": "Pedido abono"
+  },
+  {
+    "MARCA": "SJCAM",
+    "PRODUCTO": "SJCAM C100 PRO",
+    "DESC_FULL": "Grabación 4K y diseño ligero: Admite grabación de video 4K/30 fps y pesa solo 32 gramos, lo que la hace muy portátil.\nMultifuncionalidad magnética y funcionamiento manos libres: La cámara y los accesorios cuentan con un diseño magnético que permite fijarlos fácilmente a la ropa, cascos o diversas superficies para grabar con manos libres.\nResistencia al agua: Con una carcasa impermeable, permite grabar bajo el agua hasta 30 metros de profundidad.\nWi-Fi y control por aplicación: Conéctate mediante una aplicación móvil para previsualizar, editar y transferir contenido de forma inalámbrica.",
+    "Precio ( USD )": 67,
+    "Imagen_Path": "Con pedido abono traer. products_images/Con pedido abono traer. products_016.png",
+    "VIENE_LA_CAJA": "1 ano garantia"
+  },
+  {
+    "MARCA": "SJCAM",
+    "PRODUCTO": "SJCAM SJ6 ultra",
+    "DESC_FULL": "Video 4K y fotos de 20 MP: Captura imágenes de alta definición y gran nitidez a 4K/30 fps, junto con fotografías de hasta 20 megapíxeles.\nDiseño de doble pantalla: Cuenta con una pantalla táctil trasera de 2.0 pulgadas y una pantalla frontal de 1.3 pulgadas para facilitar el encuadre en selfies y vlogs.\nEstabilización avanzada y corrección de horizonte: Integra la tecnología SteadyMotion 2.0 con giroscopio de 6 ejes y nivelación de horizonte de 45° para mantener los vídeos fluidos en movimiento.\nLente ultra gran angular y funciones inteligentes: Incorpora un lente de 166°, soporte para disparo vertical sin pérdidas, control por voz y conectividad Wi-Fi de doble banda (2.4G/5G).",
+    "Precio ( USD )": 105,
+    "Imagen_Path": "Con pedido abono traer. products_images/Con pedido abono traer. products_017.png",
+    "VIENE_LA_CAJA": "1 ano garantia"
+  },
+  {
+    "MARCA": "SJCAM",
+    "PRODUCTO": "SJCAM C400 PRO",
+    "DESC_FULL": "Grabación 4K con sensor mejorado: Equipada con un sensor de 1/1.8 pulgadas y lente de 160° para capturar videos nítidos y detallados en alta definición.\nDiseño modular y desmontable: Su estructura innovadora permite separar la cámara para tomas en primera persona (POV) o utilizarla de manera versátil según las necesidades de la escena.\nEstabilización avanzada: Cuenta con la tecnología SteadyMotion V2.0 y giroscopio de 6 ejes para asegurar videos sumamente estables y fluidos durante el movimiento.\nControl y audio optimizados: Incorpora una pantalla táctil flexible, control remoto inalámbrico y compatibilidad con micrófonos externos (como el M4) para garantizar una experiencia de vlogging profesional y un audio claro.",
+    "Precio ( USD )": 180,
+    "Imagen_Path": "Con pedido abono traer. products_images/Con pedido abono traer. products_018.png",
+    "VIENE_LA_CAJA": "1 ano garantia"
+  },
+  {
+    "MARCA": "SJCAM",
+    "PRODUCTO": "SJCAM S10 128G",
+    "DESC_FULL": "Grabación 4K y diseño ultraligero: Captura video hasta en 4K/30 fps, y su unidad de cámara principal pesa solo unos 45 gramos.\nEstabilización avanzada: Equipada con tecnología SteadyMotion V2.0 y giroscopio de 6 ejes para mantener videos fluidos en movimiento.\nDiseño magnético y versátil: Cuenta con un sistema de sujeción magnética y una base con pantalla táctil abatible de 2.51 pulgadas (Boost Pod) para facilitar la visualización y el control de los vlogs.\nBatería de gran autonomía: Su cámara independiente ofrece hasta 115 minutos de grabación continua en 4K, la cual se extiende significativamente al acoplarla a su estuche/módulo de batería.",
+    "Precio ( USD )": 210,
+    "Imagen_Path": "",
+    "VIENE_LA_CAJA": ""
   }
 ]
