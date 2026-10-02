@@ -22,5 +22,11 @@
     "label": "OFERTA",
     "desc": "OFERTA",
     "file": "OFERTA.json"
+  },
+  {
+    "key": "va a llegar la segunda semana de octubre",
+    "label": "VA A LLEGAR LA SEGUNDA SEMANA DE OCTUBRE",
+    "desc": "Va a llegar la segunda semana de octubre",
+    "file": "Va a llegar la segunda semana de octubre.json"
   }
 ]
