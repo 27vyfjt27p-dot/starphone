@@ -57,7 +57,7 @@
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjckY1tYpLGpaPn4Q4Ru04nHU7PZKRdSTSYy60OZF2dpQaUCQoFetw_3Rq&s=10'
       },
       {
-        filter: 'BLUETTI',
+        filter: 'BLUETTI 1ano garantia',
         title: 'BLUETTI',
         description: 'Energía para hogar y aventura',
         image:
