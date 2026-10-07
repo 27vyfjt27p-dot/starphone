@@ -57,7 +57,7 @@
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjckY1tYpLGpaPn4Q4Ru04nHU7PZKRdSTSYy60OZF2dpQaUCQoFetw_3Rq&s=10'
       },
       {
-        filter: 'BLUETTI 1ano garantia',
+        filter: 'BLUETTI',
         title: 'BLUETTI',
         description: 'Energía para hogar y aventura',
         image:
@@ -1331,7 +1331,13 @@
     const normalized = normalizeBrandName(name);
 
     try {
-      activeFilters.MARCA = normalized;
+      if (String(name).trim().toUpperCase() === 'BLUETTI') {
+        activeFilters.keyword = 'BLUETTI';
+        activeFilters.MARCA = null;
+      } else {
+        activeFilters.MARCA = normalized;
+      }
+
       isFavoriteMode = false;
     } catch (error) {
       console.warn('[Starphone Home V4.0] No se pudo aplicar la marca:', error);
