@@ -12,15 +12,15 @@
     "file": "Con pedido abono traer. products.json"
   },
   {
+    "key": "la cuarta semana de octubre llegarán productos",
+    "label": "LA CUARTA SEMANA DE OCTUBRE LLEGARÁN PRODUCTOS",
+    "desc": "La cuarta semana de octubre llegarán productos",
+    "file": "La cuarta semana de octubre llegarán productos.json"
+  },
+  {
     "key": "oferta",
     "label": "OFERTA",
     "desc": "OFERTA",
     "file": "OFERTA.json"
-  },
-  {
-    "key": "va a llegar fin de octubre.products",
-    "label": "VA A LLEGAR FIN DE OCTUBRE.PRODUCTS",
-    "desc": "Va a llegar fin de octubre.products",
-    "file": "Va a llegar fin de octubre.products.json"
   }
 ]
