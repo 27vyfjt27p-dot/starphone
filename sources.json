@@ -18,6 +18,12 @@
     "file": "La cuarta semana de octubre llegarán productos.json"
   },
   {
+    "key": "los productos llegarán en noviembre.",
+    "label": "LOS PRODUCTOS LLEGARÁN EN NOVIEMBRE.",
+    "desc": "Los productos llegarán en noviembre.",
+    "file": "Los productos llegarán en noviembre..json"
+  },
+  {
     "key": "oferta",
     "label": "OFERTA",
     "desc": "OFERTA",
