@@ -1,5 +1,11 @@
 [
   {
+    "key": "lista_actual",
+    "label": "LISTA ACTUAL",
+    "desc": "Lista actual",
+    "file": "products.json"
+  },
+  {
     "key": "con pedido abono traer. products",
     "label": "CON PEDIDO ABONO TRAER. PRODUCTS",
     "desc": "Con pedido abono traer. products",
