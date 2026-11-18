@@ -144,33 +144,11 @@
   },
   {
     "MARCA": "XIAOMI",
-    "PRODUCTO": "Xiaomi Electric Glass Kettle",
-    "DESC_FULL": "Vidrio de Borosilicato de Alta Calidad: Cuerpo transparente y duradero, resistente al frío y al calor, que garantiza un uso seguro y sin olores.\nGran Capacidad de 1,7 L: Permite hervir suficiente agua para preparar hasta 7 vasos, ideal para visitas o familias.\nAlta Potencia de 2200 W: Calentamiento rápido y eficiente que hierve el agua en aproximadamente 5 minutos.\nIndicador LED y Apertura One-Touch: Luz LED de funcionamiento integrada y diseño ergonómico con apertura de tapa con un solo toque para evitar quemaduras.\nCuádruple Protección de Seguridad: Sistema de apagado automático tras la ebullición, protección contra funcionamiento en seco, termostato avanzado y diseño seguro al tacto.",
-    "Precio ( USD )": 18.0,
-    "Imagen_Path": "Los productos llegarán en noviembre._images/Los productos llegarán en noviembre._014.png",
-    "VIENE_LA_CAJA": 6,
-    "video_url": "",
-    "qcy-yf": "qcy",
-    "新到货": ""
-  },
-  {
-    "MARCA": "XIAOMI",
     "PRODUCTO": "Xiaomi Smart Multifunctional Rice Cooker 3L",
     "DESC_FULL": "Funcionalidad 8 en 1: Ofrece 8 modos de cocción versátiles para preparar arroz, sopas, guisados y alimentos al vapor con un solo toque.\nCapacidad Ideal de 3 Litros: Rendimiento perfecto para 2 a 6 personas, permitiendo cocinar de 1 a 5 tazas de arroz crudo (hasta 10 tazones de arroz cocido).\nControl Inteligente mediante App: Conexión remota con Mi Home/Xiaomi Home para ajustar programas, elegir tipos de arroz y personalizar texturas.\nProgramación de 24h y Conservación de Calor de 12h: Temporizador de inicio diferido de hasta 24 horas y mantenimiento automático de temperatura hasta por 12 horas.\nCalentamiento de Alta Potencia con Doble Sensor: Elevación rápida de temperatura con sensores inteligentes superiores e inferiores que evitan el desbordamiento o que el arroz se queme.\nDiseño Práctico y Limpieza Sencilla: Panel de botones superior para cómoda lectura, recipiente interno antiadherente de grado alimentario, y tapa interior/válvula de vapor desmontables.",
     "Precio ( USD )": 40.0,
-    "Imagen_Path": "Los productos llegarán en noviembre._images/Los productos llegarán en noviembre._015.png",
+    "Imagen_Path": "Los productos llegarán en noviembre._images/Los productos llegarán en noviembre._014.png",
     "VIENE_LA_CAJA": 1,
-    "video_url": "",
-    "qcy-yf": "qcy",
-    "新到货": ""
-  },
-  {
-    "MARCA": "XIAOMI",
-    "PRODUCTO": "Xiaomi Fan Heater EU",
-    "DESC_FULL": "Alta Potencia de 2000W con Calefactor PTC: Permite un calentamiento rápido e instantáneo para eliminar el frío con eficacia.\nOscilación de Amplio Ángulo (70°): Distribución uniforme y fluida del aire cálido mediante un ventilador centrífugo para envolver toda la estancia.\nDos Modos de Calefacción: Niveles ajustables de aire caliente (2000W) y cálido (1200W) adaptados a diferentes necesidades de temperatura.\nDiseño Compacto y Silencioso: Estructura ligera con asa de transporte, funcionamiento sin luces molestas y funcionamiento silencioso ideal para estudiar o trabajar.\nMúltiples Medidas de Seguridad: Incorpora protección contra sobrecalentamiento, sistema de apagado antivuelco y materiales ignífugos.",
-    "Precio ( USD )": 43.0,
-    "Imagen_Path": "Los productos llegarán en noviembre._images/Los productos llegarán en noviembre._016.png",
-    "VIENE_LA_CAJA": "D",
     "video_url": "",
     "qcy-yf": "qcy",
     "新到货": ""
@@ -180,10 +158,21 @@
     "PRODUCTO": "Xiaomi Body Composition Scale S400",
     "DESC_FULL": "Precisión de Doble Frecuencia (BIA): Corrientes alternas de alta y baja frecuencia (50 kHz y 250 kHz) para medir líquidos intra y extracelulares con datos de masa grasa validados frente al estándar DEXA.\nAnálisis Completo de 25 Indicadores: Evalúa peso, porcentaje de grasa corporal, masa muscular, agua, proteína, densidad ósea, grasa visceral y frecuencia cardíaca en reposo.\nControl Inteligente y Perfiles Familiares: Conexión con la aplicación Mi Home/Xiaomi Home, compatible con almacenamiento de datos para hasta 36 usuarios (de 6 a 80 años).\nMúltiples Modos de Pesaje: Permite cambiar fácilmente entre pesaje de objetos pequeños (desde 0,1 kg), modo con soporte para bebé y modo visitante.\nDiseño Seguro y Larga Duración: Electrodo de gran diámetro (58 mm), superficie antideslitante ampliada y autonomía de batería de hasta 180 días.",
     "Precio ( USD )": 18.0,
-    "Imagen_Path": "Los productos llegarán en noviembre._images/Los productos llegarán en noviembre._017.png",
+    "Imagen_Path": "Los productos llegarán en noviembre._images/Los productos llegarán en noviembre._015.png",
     "VIENE_LA_CAJA": 5,
     "video_url": "",
-    "qcy-yf": "qcy",
+    "qcy-yf": "yf",
     "新到货": "NUEVO"
+  },
+  {
+    "MARCA": "XIAOMI",
+    "PRODUCTO": "Xiaomi Smart Graphene Heater EU",
+    "DESC_FULL": "Calentamiento Instantáneo de Grafeno y 2000 W: Tecnología de recubrimiento de grafeno con calentador cerámico PTC de 2000 W que calienta el aire en solo 3 segundos y emite infrarrojos lejanos (FIR) para un calor envolvente.\nOscilación de 70° y Múltiples Modos: Distribución uniforme del aire con 70° de oscilación y 3 modos de flujo de aire (caliente 2000 W, cálido 1200 W y brisa natural).\nControl Inteligente de Temperatura: Sistema de temperatura constante que ajusta automáticamente la potencia para ahorrar energía y evitar fluctuaciones térmicas.\nConectividad Inteligente y Panel Táctil: Compatible con la aplicación Xiaomi Home, control por voz mediante Google Assistant y un amplio panel táctil superior.\nSeguridad Integral: Equipado con apagado automático por inclinación, protección contra sobrecalentamiento y materiales ignífugos de clasificación V-0.",
+    "Precio ( USD )": 58.0,
+    "Imagen_Path": "Los productos llegarán en noviembre._images/Los productos llegarán en noviembre._016.png",
+    "VIENE_LA_CAJA": 1,
+    "video_url": "",
+    "qcy-yf": "yf",
+    "新到货": 1
   }
 ]
