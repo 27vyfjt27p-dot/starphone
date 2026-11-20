@@ -6,6 +6,30 @@
     "file": "products.json"
   },
   {
+    "key": "con pedido abono traer. products",
+    "label": "CON PEDIDO ABONO TRAER. PRODUCTS",
+    "desc": "Con pedido abono traer. products",
+    "file": "Con pedido abono traer. products.json"
+  },
+  {
+    "key": "los productos llegarán en diciembre.",
+    "label": "LOS PRODUCTOS LLEGARÁN EN DICIEMBRE.",
+    "desc": "Los productos llegarán en diciembre.",
+    "file": "Los productos llegarán en diciembre..json"
+  },
+  {
+    "key": "los productos llegarán en noviembre.",
+    "label": "LOS PRODUCTOS LLEGARÁN EN NOVIEMBRE.",
+    "desc": "Los productos llegarán en noviembre.",
+    "file": "Los productos llegarán en noviembre..json"
+  },
+  {
+    "key": "los productos llegarán en noviembre2",
+    "label": "LOS PRODUCTOS LLEGARÁN EN NOVIEMBRE2",
+    "desc": "Los productos llegarán en noviembre2",
+    "file": "Los productos llegarán en noviembre2.json"
+  },
+  {
     "key": "oferta",
     "label": "OFERTA",
     "desc": "OFERTA",
