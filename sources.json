@@ -12,12 +12,6 @@
     "file": "Con pedido abono traer. products.json"
   },
   {
-    "key": "los productos llegarán en diciembre.",
-    "label": "LOS PRODUCTOS LLEGARÁN EN DICIEMBRE.",
-    "desc": "Los productos llegarán en diciembre.",
-    "file": "Los productos llegarán en diciembre..json"
-  },
-  {
     "key": "los productos llegarán en diciembre1.",
     "label": "LOS PRODUCTOS LLEGARÁN EN DICIEMBRE1.",
     "desc": "Los productos llegarán en diciembre1.",
@@ -30,22 +24,10 @@
     "file": "Los productos llegarán en diciembre2.json"
   },
   {
-    "key": "los productos llegarán en diciembre3",
-    "label": "LOS PRODUCTOS LLEGARÁN EN DICIEMBRE3",
-    "desc": "Los productos llegarán en diciembre3",
-    "file": "Los productos llegarán en diciembre3.json"
-  },
-  {
-    "key": "los productos llegarán en noviembre.",
-    "label": "LOS PRODUCTOS LLEGARÁN EN NOVIEMBRE.",
-    "desc": "Los productos llegarán en noviembre.",
-    "file": "Los productos llegarán en noviembre..json"
-  },
-  {
-    "key": "los productos llegarán en noviembre2",
-    "label": "LOS PRODUCTOS LLEGARÁN EN NOVIEMBRE2",
-    "desc": "Los productos llegarán en noviembre2",
-    "file": "Los productos llegarán en noviembre2.json"
+    "key": "los productos llegarán en noviembre",
+    "label": "LOS PRODUCTOS LLEGARÁN EN NOVIEMBRE",
+    "desc": "Los productos llegarán en noviembre",
+    "file": "Los productos llegarán en noviembre.json"
   },
   {
     "key": "oferta",
