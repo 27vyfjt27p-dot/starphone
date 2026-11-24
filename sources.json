@@ -6,22 +6,34 @@
     "file": "products.json"
   },
   {
-    "key": "los productos llegarán en diciembre1.",
-    "label": "LOS PRODUCTOS LLEGARÁN EN DICIEMBRE1.",
-    "desc": "Los productos llegarán en diciembre1.",
-    "file": "Los productos llegarán en diciembre1..json"
+    "key": "con pedido abono traer. products",
+    "label": "CON PEDIDO ABONO TRAER. PRODUCTS",
+    "desc": "Con pedido abono traer. products",
+    "file": "Con pedido abono traer. products.json"
+  },
+  {
+    "key": "los productos disponible en 26 de noviembre",
+    "label": "LOS PRODUCTOS DISPONIBLE EN 26 DE NOVIEMBRE",
+    "desc": "Los productos disponible en 26 de noviembre",
+    "file": "Los productos disponible en 26 de noviembre.json"
+  },
+  {
+    "key": "los productos disponible en 27 de noviembre",
+    "label": "LOS PRODUCTOS DISPONIBLE EN 27 DE NOVIEMBRE",
+    "desc": "Los productos disponible en 27 de noviembre",
+    "file": "Los productos disponible en 27 de noviembre.json"
+  },
+  {
+    "key": "los productos llegarán en diciembre",
+    "label": "LOS PRODUCTOS LLEGARÁN EN DICIEMBRE",
+    "desc": "Los productos llegarán en diciembre",
+    "file": "Los productos llegarán en diciembre.json"
   },
   {
     "key": "los productos llegarán en diciembre2",
     "label": "LOS PRODUCTOS LLEGARÁN EN DICIEMBRE2",
     "desc": "Los productos llegarán en diciembre2",
     "file": "Los productos llegarán en diciembre2.json"
-  },
-  {
-    "key": "los productos llegarán en noviembre",
-    "label": "LOS PRODUCTOS LLEGARÁN EN NOVIEMBRE",
-    "desc": "Los productos llegarán en noviembre",
-    "file": "Los productos llegarán en noviembre.json"
   },
   {
     "key": "oferta",
